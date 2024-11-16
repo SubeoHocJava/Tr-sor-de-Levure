@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery UI CSS for Datepicker -->
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <!-- Bootstrap Select CSS for country selection -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css"
+        rel="stylesheet">
+    <!-- Font Awesome CSS for eye icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <div class="container mt-5">
+        <!-- Phần Tab chọn: Đã đăng ký hoặc Tạo tài khoản -->
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <div class="d-flex justify-content-between">
+                    <!-- Tab: Đã đăng ký -->
+                    <a class="btn btn-link btn-lg text-uppercase text-dark font-weight-bold" href="login.html">
+                        Already Registered? <!-- Đã có tài khoản? -->
+                    </a>
+
+                    <!-- Tab: Tạo tài khoản mới -->
+                    <a class="btn btn-link btn-lg text-uppercase text-dark font-weight-bold" href="register.html">
+                        Create Your Account <!-- Tạo tài khoản mới -->
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <!-- Registration Form -->
+                <div class="col-md-6 col-lg-8">
+                    <div class="card-body">
+                        <!-- <h2 class="text-center">Register</h2> -->
+                        <p class="text-center">Create an account to join the elite with Trésor de Levure <!-- Đăng ký --></p>
+                        <form action="/register" method="POST" id="registration-form">
+                            <!-- Tên người dùng -->
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="registration-form-firstname"
+                                    name="firstName" placeholder=" " required>
+                                <label for="registration-form-firstname">First Name <!-- Tên --></label>
+                            </div>
+
+                            <!-- Họ người dùng -->
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="registration-form-lastname" name="lastName"
+                                    placeholder=" " required>
+                                <label for="registration-form-lastname">Last Name <!-- Họ --></label>
+                            </div>
+
+                            <!-- Email người dùng -->
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="registration-form-email" name="email"
+                                    placeholder=" " required>
+                                <label for="registration-form-email">Email Address <!-- Địa chỉ email --></label>
+                            </div>
+
+                            <!-- Ngày sinh -->
+                            <div class="form-group">
+                                <label for="registration-form-dob">Date of Birth <!-- Ngày sinh --></label>
+                                <input type="text" class="form-control" id="registration-form-dob" name="dob"
+                                    placeholder=" " required>
+                            </div>
+
+                            <!-- Số điện thoại -->
+                            <div class="form-group">
+                                <input type="tel" class="form-control" id="registration-form-phone" name="phone"
+                                    placeholder=" " required>
+                                <label for="registration-form-phone">Phone Number <!-- Số điện thoại --></label>
+                            </div>
+
+                            <!-- Địa điểm (Chưa áp dụng hiệu ứng label cho select) -->
+                            <div class="form-group">
+                                <label for="location" class="form-label"></label>
+                                <select class="form-select" id="location" name="location" required>
+                                    <option selected disabled value="">Loading countries...
+                                        <!-- Đang tải các quốc gia... --></option>
+                                </select>
+                            </div>
+
+                            <!-- Mật khẩu -->
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="registration-form-password"
+                                    name="password" placeholder=" " required>
+                                <label for="registration-form-password">Password <!-- Mật khẩu --></label>
+                                <i id="togglePassword" class="fas fa-eye eye-icon"></i>
+                            </div>
+
+                            <!-- Xác nhận mật khẩu -->
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="registration-form-password-confirm"
+                                    name="passwordConfirm" placeholder=" " required>
+                                <label for="registration-form-password-confirm">Confirm Password
+                                    <!-- Xác nhận mật khẩu --></label>
+                                <i id="togglePassword" class="fas fa-eye eye-icon"></i>
+                            </div>
+
+                            <!-- Chính sách bảo mật -->
+                            <div class="form-group text-center">
+                                <p>By registering, you agree to our <a href="/privacy-policy">Privacy Policy</a>.</p>
+                            </div>
+
+                            <!-- Nút đăng ký -->
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-dark w-100">Register <!-- Đăng ký --></button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery, jQuery UI, and Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+        <!-- External JS -->
+        <script src="scripts.js"></script>
+    </div>
+</body>
+
+</html>

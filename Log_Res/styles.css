@@ -1,0 +1,112 @@
+/* Định dạng chung cho form-group */
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+/* Định dạng cho nhãn label */
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #6c757d;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+}
+
+/* Khi input có focus, hoặc đã có giá trị, label sẽ di chuyển lên */
+.form-control:focus~label,
+.form-control:not(:placeholder-shown)~label {
+    top: -10px;
+    font-size: 0.75rem;
+    color: #495057;
+}
+
+/* Định dạng cho trường nhập liệu khi có focus */
+.form-control:focus {
+    border-bottom: 2px solid #495057;
+    box-shadow: none;
+}
+
+/* Định dạng cho trường input */
+.form-control, input[type="email"], input[type="password"], input[type="text"], input[type="tel"] {
+    padding: 0.5rem 0;
+    border: none;
+    border-bottom: 2px solid #ccc; /* Đường line dưới input */
+    border-radius: 0;
+    outline: none;
+    font-size: 1rem;
+    transition: border-bottom 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Định dạng cho trường nhập liệu khi focus */
+.form-control:focus {
+    border-bottom: 2px solid #495057;
+    box-shadow: none;
+}
+
+/* Định dạng cho biểu tượng "mắt" */
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Định dạng cho phần Tab chọn: Đã đăng ký hoặc Tạo tài khoản */
+.d-flex {
+    margin-bottom: 20px;
+}
+
+/* Căn giữa các form */
+.container {
+    max-width: 1200px;
+}
+
+/* Tùy chỉnh kích thước cho các ô nhập liệu và card */
+.col-md-6 {
+    max-width: 100%;
+}
+
+/* Định dạng cho phần liên kết trong tab */
+.btn-link {
+    text-decoration: none;
+    color: #495057;
+}
+
+.btn-link:hover {
+    color: #0056b3;
+}
+
+/* Định dạng cho phần header form */
+h4.text-center {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Định dạng cho các trường nhập mật khẩu */
+input[type="password"] {
+    font-family: Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Định dạng cho input khi có lỗi (sai định dạng hoặc còn trống) */
+input:invalid {
+    border-color: white;
+}
+
+/* Định dạng cho nút submit trong form đăng ký */
+.w-100, #login {
+    width: 100% !important;
+}
+
+/* Định dạng cho Select (chọn quốc gia) */
+.form-select {
+    padding: 0.5rem;
+    border-radius: 0;
+    border: 2px solid #ccc;
+}
