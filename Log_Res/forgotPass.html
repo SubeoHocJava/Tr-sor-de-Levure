@@ -5,7 +5,7 @@
     <meta charset="UTF-8"> <!-- Đảm bảo mã hóa ký tự UTF-8 cho trang web, hỗ trợ tiếng Việt -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Đảm bảo trang hiển thị đẹp trên tất cả các thiết bị -->
-    <title>Login Form</title> <!-- Tiêu đề trang web -->
+    <title>Forgot Password</title> <!-- Tiêu đề trang web -->
 
     <!-- Thêm liên kết tới Bootstrap để tạo giao diện đẹp, dễ sử dụng -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -36,55 +36,37 @@
             </div>
         </div>
 
-        <!-- Form đăng nhập -->
+        <!-- Form quên mật khẩu -->
         <div class="row justify-content-center mt-4">
             <div class="col-md-6 col-lg-8">
                 <div class="card-body p-5">
-                    <!-- <h2 class="text-center">Login</h2> -->
+                    <!-- Tiêu đề của form -->
+                    <h2 class="text-center mb-4">Forgot Password</h2>
                     <p class="text-center">
-                        If you are already registered, login here:
+                        Please enter your email address to reset your password:
                     </p>
 
                     <!-- Trường nhập email -->
                     <div class="form-group">
-                        <input type="email" class="form-control" id="login-email" placeholder=" " required>
-                        <label for="login-email">Email address</label>
+                        <input type="email" class="form-control" id="forgot-email" placeholder=" " required>
+                        <label for="forgot-email">Email address</label>
                     </div>
 
-                    <!-- Trường nhập mật khẩu -->
-                    <div class="form-group">
-                        <input type="password" class="form-control" id="login-password" placeholder=" " required>
-                        <label for="login-password">Password</label>
-                        <!-- Biểu tượng "mắt" để bật/tắt hiển thị mật khẩu -->
-                        <i id="togglePassword" class="fas fa-eye eye-icon"></i>
+                    <!-- Nút Gửi yêu cầu -->
+                    <div class="text-center"> <button type="submit" class="btn btn-dark"
+                            id="sendResetLink">Send</button>
                     </div>
 
-                    <!-- Checkbox "Nhớ tôi" và liên kết quên mật khẩu -->
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="rememberMe">
-                            <label class="form-check-label" for="rememberMe">Remember me</label>
-                        </div>
-                        <a href="/forgotPass.html" class="text-muted small">Forgot password?</a>
+                    <!-- Liên kết quay lại trang đăng nhập -->
+                    <div class="text-center mt-3">
+                        <a href="login.html" class="text-muted small">Remembered your password? Login here</a>
                     </div>
-
-                    <!-- Liên kết tới Chính sách bảo mật -->
-                    <div class="cms-generic-copy text-center mb-3">
-                        Read the
-                        <a href="#" title="Privacy Policy." target="_blank" rel="noopener noreferrer">
-                            Privacy Policy.
-                        </a>
-                        for further information
-                    </div>
-
-                    <!-- Nút Đăng nhập -->
-                    <button type="submit" class="btn btn-dark" id="login">Login</button>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    <!-- JavaScript để bật/tắt mật khẩu -->
+
+    <!-- JavaScript để xử lý các sự kiện -->
     <script src="scripts.js"></script>
 </body>
 

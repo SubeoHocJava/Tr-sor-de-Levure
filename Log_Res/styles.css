@@ -110,12 +110,3 @@ input:invalid {
     border-radius: 0;
     border: 2px solid #ccc;
 }
-/* Đổi màu danh mục */
-.navbar-nav .nav-link {
-    color: #000000; /* Màu chữ thông thường */
-}
-
-.navbar-nav .nav-link:hover {
-    color: #F5A623; /* Màu chữ khi hover */
-}
-
