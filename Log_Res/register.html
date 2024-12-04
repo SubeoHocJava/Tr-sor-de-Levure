@@ -16,7 +16,7 @@
     <!-- Font Awesome CSS for eye icon -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <!-- External CSS -->
-    <link href="styles.css" rel="stylesheet">
+    <link href="/Log_Res/styles.css" rel="stylesheet">
 </head>
 
 <body class="bg-light">
@@ -38,7 +38,7 @@
             </div>
         </div>
 
-        <div class="container mt-5">
+        <div class="container mt-4">
             <div class="row justify-content-center">
                 <!-- Registration Form -->
                 <div class="col-md-6 col-lg-8">
@@ -48,29 +48,12 @@
                             <!-- Đăng ký -->
                         </p>
                         <form action="/register" method="POST" id="registration-form">
-                             <!-- Giới tính -->
-                             <div class="form-group">
-                                <label for="gender" class="form-label"> <!-- Giới tính --></label>
-                                <select class="form-control" id="gender" name="gender" required>
-                                    <option value="" disabled selected>Select your solution.. <!-- Chọn giới tính --></option>
-                                    <option value="mr">Mr <!-- Quý ông --></option>
-                                    <option value="ms">Ms <!-- Quý bà --></option>
-                                    <option value="mrs">Mrs <!-- Quý bà --></option>
-                                </select>
-                            </div>
 
                             <!-- Tên người dùng -->
                             <div class="form-group">
-                                <input type="text" class="form-control" id="registration-form-firstname"
-                                    name="firstName" placeholder=" " required>
-                                <label for="registration-form-firstname">First Name <!-- Tên --></label>
-                            </div>
-
-                            <!-- Họ người dùng -->
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="registration-form-lastname" name="lastName"
+                                <input type="text" class="form-control" id="registration-form-fullname" name="fullName"
                                     placeholder=" " required>
-                                <label for="registration-form-lastname">Last Name <!-- Họ --></label>
+                                <label for="registration-form-firstname">Full Name <!-- Tên --></label>
                             </div>
 
                             <!-- Ngày sinh -->
@@ -93,7 +76,7 @@
                                     placeholder=" " required>
                                 <label for="registration-form-phone">Phone Number <!-- Số điện thoại --></label>
                             </div>
-               
+
                             <!-- Địa điểm -->
                             <div class="form-group">
                                 <label for="location" class="form-label"></label>
@@ -104,12 +87,33 @@
                                 </select>
                             </div>
 
+                            <div class="mb-2 mt-4 d-flex">
+                                <div class="form-check form-check-inline">
+                                    <label for="gender" class="form-label">Gender:</label>
+                                </div>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="male" name="gender" onclick="onlyOne(this)">
+                                        <label class="form-check-label" for="male">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="female" name="gender">
+                                        <label class="form-check-label" for="female">Female</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="other" name="gender">
+                                        <label class="form-check-label" for="other">Other</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
                             <!-- Mật khẩu -->
                             <div class="form-group">
                                 <input type="password" class="form-control" id="registration-form-password"
                                     name="password" placeholder=" " required>
                                 <label for="registration-form-password">Password <!-- Mật khẩu --></label>
-                                <i id="togglePassword" class="fas fa-eye eye-icon"></i>
+                                <i id="togglePassword" class="fas fa-eye-slash eye-icon"></i>
                             </div>
 
                             <!-- Xác nhận mật khẩu -->
@@ -118,7 +122,7 @@
                                     name="passwordConfirm" placeholder=" " required>
                                 <label for="registration-form-password-confirm">Confirm Password
                                     <!-- Xác nhận mật khẩu --></label>
-                                <i id="togglePassword" class="fas fa-eye eye-icon"></i>
+                                <i id="togglePassword" class="fas fa-eye-slash eye-icon"></i>
                             </div>
 
                             <!-- Chính sách bảo mật -->
@@ -136,6 +140,7 @@
                 </div>
             </div>
         </div>
+
 
         <!-- jQuery, jQuery UI, and Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
