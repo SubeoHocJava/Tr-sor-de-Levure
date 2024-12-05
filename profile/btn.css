@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* Button styles for all buttons */
+.btn-profile {
+    background-color: #be9650 !important; /* Force black background */
+    color: white !important; /* Text color white */
+    border: black !important;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+/* Hover effect for all buttons */
+.btn-profile:hover {
+    background-color: #d29d43 !important; /* Hover background color */
+    color: rgb(253, 253, 253) !important; /* Text color changes to black on hover */
+}
+.collapse-btn{
+    cursor: pointer;
+}
