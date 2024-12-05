@@ -1,0 +1,182 @@
+:root {
+    --color-primary: #F2CD95;
+}
+
+.primary-color-hover {
+    cursor: pointer;
+}
+
+.primary-color-btn {
+    background-color: black;
+    color: white;
+}
+
+.primary-text-color:hover {
+    color: var(--color-primary) !important;
+}
+
+.primary-color-hover:hover,
+.primary-color-btn:hover,
+.primary-color-active {
+    background-color: var(--color-primary) !important;
+    color: black !important;
+}
+
+.avatar-img {
+    object-fit: contain;
+    margin-right: 1rem;
+}
+
+:root {
+    --color-primary: #F2CD95;
+}
+
+.img-80px {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.img-40px {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.no-transition {
+    transition: none !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.fs-15rem {
+    font-size: 1.5rem;
+}
+
+.img-300px {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.h-395px {
+    height: 395px !important;
+    ;
+}
+
+.hover-dark {
+    border: 1px solid transparent;
+}
+
+.hover-zoom img {
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+.hover-zoom:hover img {
+    transform: scale(1.1);
+}
+
+.hover-dark:hover {
+    border: 1px solid black;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.collapse-content {
+    width: 100% !important;
+}
+
+.remove-bank-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+.remove-bank-btn:hover {
+    opacity: 0.8;
+    background-color: var(--color-primary);
+}
+
+#addBankModal .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: initial;
+}
+
+
+.star {
+    border: 2px solid transparent;
+    background-color: transparent !important;
+    border-radius: 50%;
+}
+
+.star i {
+    font-size: 1.5rem;
+    color: gray;
+    transition: all 0.5s ease;
+}
+
+.star:hover i {
+    color: gold;
+    transform: scale(1.1);
+}
+
+.star:hover {
+    border-color: gold;
+    box-shadow: 0 0 15px rgba(255, 223, 0, 0.7), 0 0 30px rgba(255, 223, 0, 0.5);
+}
+
+.star_active i {
+    color: gold;
+}
+
+.page-infor-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.25rem;
+}
+
+.comfirmRating {
+    background-color: green;
+    color: white;
+}
+
+.comfirmRating:hover {
+    opacity: 0.4;
+}
+
+.cancelRating {
+    background-color: red;
+    color: white;
+}
+
+/* Hover effect */
+.cancelRating:hover {
+    opacity: 0.4;
+}
+
+.star-active {
+    color: gold;
+}
