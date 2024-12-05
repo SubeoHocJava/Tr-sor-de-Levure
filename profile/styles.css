@@ -1,0 +1,61 @@
+/* Center the ul container */
+.new-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+.new-list {
+    padding-left: 0;
+    width: 100%; /* Optional: To take full width */
+    max-width: 300px; /* Optional: to limit the max width */
+}
+
+.new-list li {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    padding: 10px 0; /* Add padding for space between items */
+    border-bottom: 2px solid #ddd; /* Add bottom border */
+}
+
+.new-list span {
+    margin-left: 20px; /* Space between the icon and text */
+}
+
+.new-list i {
+    font-size: 1.5rem; /* Adjust icon size */
+    margin-left: 50px;
+    color: #be9650;
+}
+
+.new-list li:hover {
+    border-bottom: 2px solid #be9650; /* Change border color on hover */
+}
+
+.border-top {
+    border-top: 2px solid #ddd !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.detail-form{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.new-list li.active {
+    border-bottom: 2px solid #be9650; /* Make the border bright for active item */
+    background-color: #f4f4f4; /* Optional: Add background highlight for the active item */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+.new-list li.active i {
+    color: #be9650; /* Change icon color for the active item */
+}
+
+.h3-color{
+    color: #be9650;
+}
+
+
+
