@@ -1,0 +1,142 @@
+/* Center the ul container */
+.new-list {
+	padding-left: 0;
+	width: 100%;
+}
+
+.new-list li {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	transition: background-color 0.3s ease;
+	/* border: 1px solid; */
+}
+
+.new-list span {
+	margin-left: 10px;
+	/* Space between the icon and text */
+}
+
+.new-list i {
+	font-size: 1.5rem;
+	margin-left: 10px;
+	color: #070707;
+}
+
+.new-list li:hover {
+	background-image: linear-gradient(145deg, #1f6fe7 40%, #a2c1ee 60%);
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+body{
+	background-image: linear-gradient(145deg, #dde1e3 70%, #BDC3C7 10%);
+}
+/* Style for body-card */
+.body-card {
+	background-color: white;
+	border-radius: 20px;
+	padding: 5px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	/* Add shadow for depth */
+}
+
+
+.search-box {
+	width: 35px;
+	height: 35px;
+	background-color: rgb(198, 192, 192);
+	position: relative;
+	overflow: hidden;
+	transition: all 0.5s ease;
+	border-radius: 50px;
+	margin-right: 10px;
+}
+
+.search-box.open {
+	width: 350px;
+	/* Expanding the box */
+}
+
+.search-input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	box-shadow: none;
+	background: transparent;
+	color: black;
+	padding: 10px 100px 10px 35px;
+	font-size: 15px;
+}
+
+.search-btn {
+	color: #242628;
+	outline: none;
+	border: none;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+	font-size: 20px;
+	/* Adjusted size of the search icon */
+}
+
+.admin-image-container {
+	width: 100px;   /* Set the size of the circle */
+	height: 100px;  /* Set the size of the circle */
+	border-radius: 50%; /* Makes the container round */
+	overflow: hidden; /* Ensures the image doesn't spill out */
+	margin: 20px auto; /* Center the image horizontally */
+	border: 2px solid #ccc; /* Optional: adds a border to the circle */
+}
+
+
+.admin-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Ensures the image covers the circle without distortion */
+}
+
+/* Hiding all content sections initially */
+.content-section {
+    display: none;
+}
+
+/* Active section shown */
+.content-section.active {
+    display: block;
+}
+
+.table-bordered{
+	border: 3px solid #0966f3;;
+}
+/* Table Header Styles */
+.table-bordered thead {
+    text-align: center; /* Align text to the left */
+    font-weight: bold; /* Bold font for the header */
+    font-size: 1rem; /* Font size */
+}
+
+.table-bordered thead th {
+    padding: 12px;
+    border-bottom: 3px solid #0966f3; /* Darker border for separation */
+    text-transform: uppercase; /* Uppercase text for better readability */
+	background-color: #2a79f0; /* Blue background */
+	color: white; /* White text color */
+
+}
+.table-bordered tbody{
+    text-align: center; /* Align text to the left */
+
+}
+
+.h1-title{
+	color: #2a79f0;
+	font-weight: bold;
+}
