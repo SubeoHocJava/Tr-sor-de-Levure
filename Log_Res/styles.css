@@ -31,7 +31,7 @@
 }
 
 /* Định dạng cho trường input */
-.form-control, input[type="email"], input[type="password"], input[type="text"], input[type="tel"] {
+.form-control, input[type="email"], input[type="password"], input[type="text"], input[type="tel"], input[type="address"] {
     padding: 0.5rem 0;
     border: none;
     border-bottom: 2px solid #ccc; /* Đường line dưới input */
@@ -109,13 +109,17 @@ input:invalid {
     padding: 0.5rem;
     border-radius: 0;
     border: 2px solid #ccc;
-}
-/* Đổi màu danh mục */
-.navbar-nav .nav-link {
-    color: #000000; /* Màu chữ thông thường */
+    width: 100%;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #F5A623; /* Màu chữ khi hover */
+/* By default, make all labels dimmed (reduced opacity and normal font weight) */
+.form-check label {
+    opacity: 0.5; /* Dim the labels */
+    font-weight: normal; /* Normal font weight */
+}
+
+/* When a radio button is checked, the associated label becomes normal (full opacity and bold) */
+input[type="radio"]:checked + label {
+    opacity: 1; /* Full opacity */
 }
 

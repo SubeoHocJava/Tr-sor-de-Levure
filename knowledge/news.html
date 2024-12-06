@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Tr-sor-de-Levure-views/head-foot/header_fotter/style-ruou.css">
 </head>
-<header>
-    <!-- phần header ở đây-->
-</header>
 
 <body>
     <main id="main" class="">
-        <!-- Ảnh lớn -->
+         <!-- Đoạn mã này bao gồm một phần của header, được lấy từ một file HTML khác -->
+            <div data-include="/Tr-sor-de-Levure-views/head-foot/header_fotter/head_2.html"></div>
         <section class="section" id="section_1642570407">
             <div class="bg section-bg fill bg-fill bg-loaded"></div>
             <div class="section-content relative">
@@ -330,9 +329,35 @@
 
     </main>
     <footer>
-        <!-- Nội dung footer: thông tin liên hệ, quyền riêng tư, bản quyền, etc. -->
+         <!-- Đoạn mã này bao gồm một phần của footer, được lấy từ một file HTML khác -->
+        <div data-include="/Tr-sor-de-Levure-views/head-foot/header_fotter/ruou.html"></div>
     </footer>
 </body>
+<script>
+    function includeHTML() {
+        const elements = document.querySelectorAll("[data-include]");
+        elements.forEach(async (el) => {
+            const file = el.getAttribute("data-include");
+            if (file) {
+                try {
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        const html = await response.text();
+                        el.innerHTML = html;
+                    } else {
+                        console.error(`Không thể tải file: ${file}. Lỗi: ${response.status}`);
+                        el.innerHTML = `Không tìm thấy nội dung: ${file}`;
+                    }
+                } catch (error) {
+                    console.error(`Lỗi khi tải file: ${file}`, error);
+                    el.innerHTML = "Đã xảy ra lỗi khi tải nội dung.";
+                }
+            }
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", includeHTML);
+</script>
 
 
 

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wishlist.css">
+    <title>Wishlist</title>
+</head>
+
+<body>
+    <div class="wishlist__items">
+        <form action="/wishlist" method="post" id="wishlist_form">
+            <!-- Wishlist Top Bar -->
+            <div class="wishlist__top--bar">
+                <span>2 items</span>
+                <button type="button" onclick="location.href='send_to_friend.html'">Send Wishlist to a Friend</button>
+            </div>
+
+            <!-- Hidden Input for Wishlist ID -->
+            <input type="hidden" name="wishlist_id" value="381699">
+
+            <!-- Wishlist Items -->
+            <ul class="wishlist__items--ul">
+                <!-- Item 1 -->
+                <li class="wishlist__item">
+                    <a class="wishlist__remove" href="#">X</a>
+                    <div class="wishlist__image">
+                        <a href="/gordons-pink-alcohol-free-p15792/s15826">
+                            <img src="https://www.thewhiskyworld.com/images/bimber-chris…24-release-tww-exclusive-p15646-28735_related.jpg" alt="Gordon's Pink Alcohol Free">
+                        </a>
+                    </div>
+                    <div class="wishlist__item--details">
+                        <div class="details--title">
+                            <a href="/gordons-pink-alcohol-free-p15792/s15826">Gordon's Pink Alcohol Free</a>
+                        </div>
+                        <div class="details--price">
+                            <span>£12.90 (inc. VAT)</span>
+                        </div>
+                    </div>
+                    <button>Move to Bag</button>
+                </li>
+
+                <!-- Item 2 -->
+                <li class="wishlist__item">
+                    <a class="wishlist__remove" href="#">X</a>
+                    <div class="wishlist__image">
+                        <a href="/ardbeg-1991-33-year-old-symington-s-choice-rare-reserve-p15791/s15825">
+                            <img src="https://www.thewhiskyworld.com/images/bimber-chris…24-release-tww-exclusive-p15646-28735_related.jpg" alt="Ardbeg 1991 - 33 Year Old">
+                        </a>
+                    </div>
+                    <div class="wishlist__item--details">
+                        <div class="details--title">
+                            <a href="/ardbeg-1991-33-year-old-symington-s-choice-rare-reserve-p15791/s15825">Ardbeg 1991 - 33 Year Old</a>
+                        </div>
+                        <div class="details--price">
+                            <span>£2,399.90 (inc. VAT)</span>
+                        </div>
+                    </div>
+                    <button>Move to Bag</button>
+                </li>
+            </ul>
+
+            <!-- Button Area -->
+            <div class="button__area">
+                <button type="button" onclick="location.href='send_to_friend.html'">Send Wishlist to a Friend</button>
+                <button type="button">Purchase Wishlist</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

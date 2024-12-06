@@ -6,13 +6,21 @@ const eyeIcons = document.querySelectorAll('.eye-icon');
 eyeIcons.forEach((eyeIcon, index) => {
     eyeIcon.addEventListener('click', function () {
         // Thay đổi kiểu hiển thị của trường mật khẩu giữa 'password' và 'text'
-        const type = passwordFields[index].type === 'password' ? 'text' : 'password';
-        passwordFields[index].type = type;
+        const passwordField = passwordFields[index];
+        const type = passwordField.type === 'password' ? 'text' : 'password';
+        passwordField.type = type;
 
-        // Thay đổi biểu tượng "mắt" thành "mắt gạt" khi mật khẩu được hiển thị
-        this.classList.toggle('fa-eye-slash');
+        // Thay đổi biểu tượng "mắt" thành "mắt" khi mật khẩu được hiển thị và ngược lại
+        if (passwordField.type === 'text') {
+            this.classList.remove('fa-eye-slash');
+            this.classList.add('fa-eye');
+        } else {
+            this.classList.remove('fa-eye');
+            this.classList.add('fa-eye-slash');
+        }
     });
 });
+
 
 // Khởi tạo jQuery UI Datepicker cho trường ngày sinh
 $("#registration-form-dob").datepicker({

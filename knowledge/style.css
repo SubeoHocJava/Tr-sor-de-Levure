@@ -1,207 +1,343 @@
+/* Kết nối font Montserrat từ Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap');
 
+/* Cài đặt font chữ mặc định cho toàn bộ trang */
 body {
     font-family: "Montserrat", sans-serif;
 }
 
+/* Chỉnh sửa tiêu đề bài viết (h5.post-title) */
 h5.post-title a {
     text-decoration: none;
+    /* Loại bỏ gạch chân khi di chuột qua */
     color: inherit;
+    /* Giữ nguyên màu chữ */
     transition: color 0.3s ease;
+    /* Hiệu ứng chuyển màu khi hover */
 }
 
+/* Màu sắc của tiêu đề khi hover */
 h5.post-title a:hover {
     color: #BE9650;
+    /* Đổi màu chữ thành màu vàng khi hover */
 }
 
+/* Định dạng tiêu đề bài viết */
 h5.post-title {
     font-size: 20px;
+    /* Kích thước font */
     font-weight: bold;
+    /* Chữ đậm */
     margin-bottom: 10px;
+    /* Khoảng cách dưới tiêu đề */
 }
 
+/* Định dạng đoạn văn tóm tắt từ blog */
 p.from_the_blog_excerpt {
     font-size: 12px;
+    /* Kích thước font nhỏ */
     line-height: 1.5;
+    /* Khoảng cách giữa các dòng */
     color: #555;
+    /* Màu chữ xám */
 }
 
+/* Định dạng khối hình ảnh lớn */
 .box-image.large-image {
     position: relative;
+    /* Đặt vị trí của box là tương đối */
 }
 
+/* Định dạng hình ảnh với độ rộng 100% và chiều cao cố định */
 .image-cover.large-image {
     width: 100%;
+    /* Chiều rộng bằng 100% */
     height: 500px;
+    /* Chiều cao cố định */
     background-size: cover;
+    /* Đảm bảo hình ảnh không bị méo */
     background-position: center;
+    /* Căn giữa hình ảnh */
 }
 
+/* Định dạng khối văn bản trên hình ảnh */
 .box-text.large-image {
     position: absolute;
+    /* Vị trí tuyệt đối so với box cha */
     bottom: 20px;
+    /* Căn lề dưới */
     left: 20px;
+    /* Căn lề trái */
     color: white;
+    /* Màu chữ trắng */
     padding: 10px;
+    /* Khoảng cách bên trong */
     border-radius: 5px;
+    /* Bo góc */
 }
 
+/* Định dạng khối hình ảnh nhỏ */
 .box-image.small-image {
     position: relative;
+    /* Vị trí tương đối */
     overflow: hidden;
+    /* Ẩn phần hình ảnh bị tràn ra ngoài */
 }
 
+/* Định dạng hình ảnh trong box nhỏ */
 .box-image.small-image img {
     width: 100%;
+    /* Chiều rộng 100% */
     height: auto;
+    /* Tự động điều chỉnh chiều cao */
     display: block;
+    /* Hiển thị hình ảnh như block */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Hiệu ứng chuyển động */
 }
 
+/* Hiệu ứng khi hover vào hình ảnh trong box nhỏ */
 .col.post-item:hover .box-image.small-image img {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Thêm bóng đổ */
 }
 
+/* Định dạng mục bài viết */
 .col.post-item {
     cursor: pointer;
+    /* Thay đổi con trỏ thành dạng tay */
     transition: transform 0.3s ease;
+    /* Hiệu ứng khi hover */
 }
 
+/* Hiệu ứng khi hover vào mục bài viết */
 .col.post-item:hover {
     transform: scale(1.0);
+    /* Tăng kích thước mục bài viết */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Thêm bóng đổ */
 }
 
+/* Định dạng phần bài viết */
 .section.posts {
     margin-top: 30px;
+    /* Khoảng cách trên phần bài viết */
 }
 
-.row {
+/* Định dạng cho phần bài viết có lưới */
+body .section .row {
     display: grid;
+    /* Sử dụng lưới */
     grid-template-columns: repeat(4, 1fr);
+    /* Chia 4 cột đều */
     grid-gap: 30px;
+    /* Khoảng cách giữa các mục */
     width: 90%;
+    /* Chiều rộng 90% */
     margin: 0 auto;
+    /* Căn giữa */
 }
 
+/* Định dạng các mục bài viết */
 .post-item {
     width: 100%;
+    /* Chiều rộng 100% */
     display: flex;
+    /* Sử dụng flexbox */
     justify-content: center;
+    /* Căn giữa */
     align-items: center;
+    /* Căn giữa theo chiều dọc */
     text-align: center;
+    /* Căn giữa chữ */
 }
 
+/* Quy tắc cho màn hình có độ rộng nhỏ hơn 1024px */
 @media (max-width: 1024px) {
     .row {
         grid-template-columns: repeat(2, 1fr);
+        /* Chia thành 2 cột */
         grid-gap: 15px;
+        /* Khoảng cách giữa các mục */
         width: 80%;
+        /* Chiều rộng 80% */
     }
 }
 
+/* Quy tắc cho màn hình có độ rộng nhỏ hơn 768px */
 @media (max-width: 768px) {
     .row {
         grid-template-columns: 1fr;
+        /* Chia thành 1 cột */
         grid-gap: 20px;
+        /* Khoảng cách giữa các mục */
         width: 90%;
+        /* Chiều rộng 90% */
     }
 }
 
-.row.text-center {
+/* Định dạng cho các phần tử trong phần nội dung chính */
+body .section .row.text-center {
     display: flex;
+    /* Sử dụng flexbox */
     justify-content: center;
+    /* Căn giữa */
     margin-top: 20px;
+    /* Khoảng cách trên */
 }
 
+/* Định dạng nút bấm chính */
 .button.primary {
     background-color: #BE9650;
+    /* Màu nền */
     color: white;
+    /* Màu chữ */
     font-weight: bold;
+    /* Chữ đậm */
     padding: 10px 20px;
+    /* Khoảng cách trong */
     text-align: center;
+    /* Căn giữa chữ */
     text-decoration: none;
+    /* Loại bỏ gạch chân */
     border-radius: 5px;
+    /* Bo góc */
     display: inline-block;
+    /* Hiển thị inline-block */
     transition: background-color 0.3s ease;
+    /* Hiệu ứng chuyển màu nền */
 }
 
+/* Hiệu ứng khi hover vào nút bấm */
 .button.primary:hover {
     background-color: #8f6318;
+    /* Màu nền thay đổi khi hover */
 }
 
+/* Định dạng phần nội dung của một section tùy chỉnh */
 .custom-section-content {
     width: 90%;
+    /* Chiều rộng 90% */
     margin: 0 auto;
+    /* Căn giữa */
     padding: 0;
+    /* Không có padding */
     background-color: rgb(252, 243, 234);
+    /* Màu nền */
     display: grid;
+    /* Sử dụng lưới */
     grid-template-columns: 1fr 1fr;
+    /* Chia thành 2 cột */
     margin-top: 50px;
+    /* Khoảng cách trên */
 }
 
+/* Định dạng các cột trong phần nội dung */
 .custom-section-content .row {
     display: contents;
+    /* Không có thẻ cha, chỉ có các phần tử con */
 }
 
+/* Định dạng các cột con trong phần nội dung */
 .custom-section-content .col {
     padding: 0;
+    /* Không có padding */
     display: flex;
+    /* Sử dụng flexbox */
     flex-direction: column;
+    /* Cột hướng theo chiều dọc */
     justify-content: center;
+    /* Căn giữa */
     align-items: center;
+    /* Căn giữa theo chiều ngang */
 }
 
+/* Định dạng phần nội dung bên trong cột */
 .custom-section-content .col-inner {
     background-color: rgb(252, 243, 234);
+    /* Màu nền */
     text-align: left;
+    /* Căn trái */
 }
 
+/* Định dạng tiêu đề trong phần nội dung */
 .custom-section-content .section-title-main {
     font-size: 120%;
+    /* Kích thước font */
     font-weight: bold;
+    /* Chữ đậm */
     margin-bottom: 15px;
+    /* Khoảng cách dưới tiêu đề */
 }
 
+/* Định dạng nút bấm trong phần nội dung */
 .custom-section-content .button {
     display: inline-block;
+    /* Hiển thị inline-block */
     margin-top: 10px;
+    /* Khoảng cách trên */
     padding: 6px 12px;
+    /* Khoảng cách trong */
     font-size: 14px;
+    /* Kích thước font */
     border: 1px solid #BE9650;
+    /* Đường viền */
     text-decoration: none;
+    /* Loại bỏ gạch chân */
     background-color: transparent;
+    /* Nền trong suốt */
     color: #BE9650;
+    /* Màu chữ vàng */
     text-align: center;
+    /* Căn giữa chữ */
     transition: all 0.3s ease;
+    /* Hiệu ứng chuyển đổi */
 }
 
+/* Hiệu ứng khi hover vào nút bấm trong phần nội dung */
 .custom-section-content .button:hover {
     background-color: #BE9650;
+    /* Màu nền khi hover */
     color: white;
+    /* Màu chữ khi hover */
     border-color: #BE9650;
+    /* Đổi màu viền khi hover */
 }
 
+/* Định dạng cho hình ảnh trong phần nội dung của custom section */
 .custom-section-content .img img {
     width: 100%;
+    /* Chiều rộng hình ảnh chiếm toàn bộ không gian của phần tử chứa */
     height: auto;
+    /* Chiều cao của hình ảnh tự động điều chỉnh theo tỷ lệ để giữ nguyên tỷ lệ của ảnh */
 }
 
+/* Định dạng cho tiêu đề chính của custom section */
 .custom-section-content h2.section-title {
     font-size: 100%;
+    /* Kích thước font cho tiêu đề chính bằng 100% so với kích thước mặc định */
     margin-bottom: 10px;
+    /* Khoảng cách dưới tiêu đề chính */
 }
 
+/* Định dạng cho tiêu đề phụ trong custom section */
 .custom-section-content h2.section-title .section-title-main {
     font-size: 110%;
+    /* Kích thước font cho tiêu đề phụ lớn hơn 10% so với tiêu đề chính */
 }
 
+/* Định dạng cho đoạn văn bản trong custom section */
 .custom-section-content p {
     font-size: 90%;
+    /* Kích thước font cho đoạn văn nhỏ hơn 10% so với font mặc định */
     line-height: 1.4;
+    /* Khoảng cách giữa các dòng trong đoạn văn */
 }
 
+/* Định dạng cho phần tử con trong custom section */
 .col-inner {
     flex-direction: column;
+    /* Các phần tử con trong .col-inner sẽ được xếp theo chiều dọc */
     align-items: center;
+    /* Căn giữa các phần tử con theo chiều ngang */
 }
