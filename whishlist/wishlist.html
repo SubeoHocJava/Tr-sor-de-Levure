@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <div data-include="/Tr-sor-de-Levure-views/head-foot/header_fotter/head_2.html"></div>
     <div class="wishlist__items">
         <form action="/wishlist" method="post" id="wishlist_form">
             <!-- Wishlist Top Bar -->
@@ -68,6 +69,32 @@
             </div>
         </form>
     </div>
+    <div data-include="/Tr-sor-de-Levure-views/head-foot/header_fotter/ruou.html"></div>
+    <script>
+        function includeHTML() {
+            const elements = document.querySelectorAll("[data-include]");
+            elements.forEach(async (el) => {
+                const file = el.getAttribute("data-include");
+                if (file) {
+                    try {
+                        const response = await fetch(file);
+                        if (response.ok) {
+                            const html = await response.text();
+                            el.innerHTML = html;
+                        } else {
+                            console.error(`Không thể tải file: ${file}. Lỗi: ${response.status}`);
+                            el.innerHTML = `Không tìm thấy nội dung: ${file}`;
+                        }
+                    } catch (error) {
+                        console.error(`Lỗi khi tải file: ${file}`, error);
+                        el.innerHTML = "Đã xảy ra lỗi khi tải nội dung.";
+                    }
+                }
+            });
+        }
+    
+        document.addEventListener("DOMContentLoaded", includeHTML);
+    </script>
 </body>
 
 </html>
