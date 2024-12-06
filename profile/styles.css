@@ -191,7 +191,9 @@
     font-size: 1.5rem;
     color: black;
 }
-
 .star_active {
     color: #f1c40f!important;
+}
+.stars-selected{
+    pointer-events: none;
 }
