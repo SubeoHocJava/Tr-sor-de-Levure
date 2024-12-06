@@ -1,0 +1,57 @@
+.btn-warning {
+  background-color: #923b08 !important;
+  border-color: #923b08 !important;
+  color: #fff !important;
+}
+.btn-warning:hover {
+  background-color: #e07436 !important;
+  border-color: #f09560 !important;
+}
+
+.custom-table {
+  border: 2px solid #923b08;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.custom-table thead {
+  background-color: #f8f9fa;
+  border: 2px solid #923b08;
+  font-weight: bold;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.custom-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.btn-outline-secondary {
+  background-color: transparent !important;
+  border-color: #ffbe99;
+  color: #ffbe99;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-secondary.active {
+  border-color: #923b08;
+  color: #923b08;
+}
+
+.btn-outline-secondary:hover {
+  background-color: transparent !important;
+  color: #923b08 !important;
+  border-color: #923b08;
+}
+
+.content-area {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-top: 15px;
+}

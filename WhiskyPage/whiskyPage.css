@@ -79,18 +79,18 @@
 }
 
 .product-card .hover-buttons .btn-wishlist {
-  background-color: transparent;
-  color: #ff9900;
+  color: #ebb7abec;
   border: none;
   font-size: 18px;
 }
-
 .product-card .hover-buttons button:hover {
   background-color: #d4af77;
   color: #fff;
 }
 
 .product-card .hover-buttons .btn-wishlist:hover {
+  background-color: #fff;
+  border: #f98d00;
   color: #d9534f;
 }
 
