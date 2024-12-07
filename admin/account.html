@@ -36,18 +36,21 @@
                             </li>
                             <li data-target="product-management">
                                 <i class="bi bi-box"></i><span> Product Management</span>
-                            </li>     
+                            </li>
                             <li data-target="brand-management">
                                 <i class="bi bi-map"></i><span> Brand Management</span>
-                            </li>                    
+                            </li>
                             <li data-target="category-management">
                                 <i class="bi bi-book"></i><span> Category Management</span>
-                            </li>      
+                            </li>
                             <li data-target="voucher-management">
                                 <i class="bi bi-book"></i><span> Voucher Management</span>
-                            </li>                     
+                            </li>
                             <li data-target="solving-order">
                                 <i class="bi bi-heart"></i><span>Solving Order</span>
+                            </li>
+                            <li data-target="payment-management">
+                                <i class="bi bi-credit-card"></i><span>Payment Manager</span>
                             </li>
                             <li data-target="settings">
                                 <i class="bi bi-gear"></i><span> Settings</span>
@@ -60,7 +63,7 @@
                 </div>
             </div>
             <!-- CONTENT AREA -->
-            <div class="col">              
+            <div class="col">
                 <div class="body-card mt-4 p-4">
                     <div class="container-fluid d-flex justify-content-end mt-2">
                         <div class="d-flex align-items-center p-2">
@@ -76,9 +79,9 @@
                                 </button>
                             </div> -->
                         </div>
-                    </div>                   
+                    </div>
                     <!-- Product Management Section -->
-                    <div class="main" data-section="product-management">                       
+                    <div class="main" data-section="product-management">
                         <h1 class="h1-title text-center">Product Management</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2">
@@ -94,7 +97,7 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>         
+                        </div>
                         <!-- Table -->
                         <div class="container-fluid p-2">
                             <table class="table table-bordered">
@@ -106,7 +109,7 @@
                                         <th>Quantity</th>
                                         <th>Type</th>
                                         <th>Brand</th>
-                                        <th>Description</th>                                     
+                                        <th>Description</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -123,7 +126,7 @@
                                         <td class="actions">
                                             <button class="btn btn-warning edit-btn">
                                                 <i class="bi bi-pencil"></i>
-                                            </button>                                       
+                                            </button>
                                             <button class="btn btn-danger delete-btn">
                                                 <i class="bi bi-trash"></i>
                                             </button>
@@ -135,7 +138,7 @@
                     </div>
                     <!-- User Management Section -->
                     <div class="main" data-section="user-management">
-                        <h1 class="h1-title text-center">User Management</h1>  
+                        <h1 class="h1-title text-center">User Management</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2">
                                 <div class="search-box">
@@ -150,7 +153,7 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>                             
+                        </div>
                         <!-- Table -->
                         <div class="container-fluid p-2">
                             <table class="table table-bordered">
@@ -160,7 +163,7 @@
                                         <th>Full Name</th>
                                         <th>Date of Birth</th>
                                         <th>Gender</th>
-                                        <th>Phone</th>                                       
+                                        <th>Phone</th>
                                         <th>Email</th>
                                         <th>Actions</th>
                                     </tr>
@@ -172,24 +175,24 @@
                                         <td>John Doe</td>
                                         <td>1990-01-01</td>
                                         <td>Male</td>
-                                        <td>+1234567890</td>                                     
+                                        <td>+1234567890</td>
                                         <td>johndoe@example.com</td>
                                         <td class="actions">
                                             <button class="btn btn-warning edit-btn">
                                                 <i class="bi bi-pencil"></i>
-                                            </button>                                       
+                                            </button>
                                             <button class="btn btn-danger delete-btn">
                                                 <i class="bi bi-trash"></i>
                                             </button>
                                         </td>
-                                    </tr>                                   
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                     <!-- Brand Management Section -->
                     <div class="main" data-section="brand-management">
-                        <h1 class="h1-title text-center">Brand Management</h1>      
+                        <h1 class="h1-title text-center">Brand Management</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2">
                                 <div class="search-box">
@@ -204,34 +207,35 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>                         
+                        </div>
                     </div>
-                     <!-- Category Management Section -->
-                     <div class="main" data-section="category-management">
-                        <h1 class="h1-title text-center">Category Management</h1> 
+                    <!-- Category Management Section -->
+                    <div class="main" data-section="category-management">
+                        <h1 class="h1-title text-center">Category Management</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2">
                                 <div class="search-box">
                                     <!-- set controller to searching -->
-                                    <input type="text" class="search-input" placeholder="Search..." data-target="controller">
+                                    <input type="text" class="search-input" placeholder="Search..."
+                                        data-target="controller">
                                     <button class="search-btn">
                                         <i class="bi bi-search"></i>
                                     </button>
                                 </div>
                                 <div class="search-box link" data-href="add_category.html">
-                                    <button class="search-btn" >
+                                    <button class="search-btn">
                                         <i class="bi bi-plus"></i>
                                     </button>
                                 </div>
                             </div>
-                        </div>  
+                        </div>
                         <!-- Table catogory -->
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>Active</th>
                                     <th>Name</th>
-                                    <th>Category parent</th>                            
+                                    <th>Category parent</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -245,15 +249,15 @@
                                         <!-- set id -->
                                         <button class="btn btn-warning edit-btn" value="id">
                                             <i class="bi bi-pencil"></i>
-                                        </button>                                       
+                                        </button>
                                     </td>
                                 </tr>
                             </tbody>
-                        </table>                  
+                        </table>
                     </div>
-                     <!-- Voucher Management Section -->
-                     <div class="main" data-section="voucher-management">
-                        <h1 class="h1-title text-center">Voucher Management</h1> 
+                    <!-- Voucher Management Section -->
+                    <div class="main" data-section="voucher-management">
+                        <h1 class="h1-title text-center">Voucher Management</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2">
                                 <div class="search-box">
@@ -268,33 +272,66 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>  
-                     </div>
-                       <!-- Solving Order Section -->
-                       <div class="main" data-section="solving-order">
-                        <h1 class="h1-title text-center">Solving Order</h1> 
-                        <div class="container-fluid d-flex justify-content-end mt-2">
-                            <div class="d-flex align-items-center p-2">
-                                <div class="search-box">
-                                    <input type="text" class="search-input" placeholder="Search...">
-                                    <button class="search-btn">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                                </div>
-                                <div class="search-box">
-                                    <button class="search-btn">
-                                        <i class="bi bi-plus"></i>
-                                    </button>
-                                </div>
+                        </div>
+                    </div>
+                <!-- Solving Order Section -->
+                <div class="main" data-section="solving-order">
+                    <h1 class="h1-title text-center">Solving Order</h1>
+                    <div class="container-fluid d-flex justify-content-end mt-2">
+                        <div class="d-flex align-items-center p-2">
+                            <div class="search-box">
+                                <input type="text" class="search-input" placeholder="Search...">
+                                <button class="search-btn">
+                                    <i class="bi bi-search"></i>
+                                </button>
                             </div>
-                        </div>  
-                     </div>
+                            <div class="search-box">
+                                <button class="search-btn">
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Payment Method Section -->
+                <div class="main" data-section="payment-management">
+                    <h1 class="h1-title text-center">Payment Method Management</h1>
+                    <div class="container-fluid d-flex justify-content-end mt-2">
+                        <div class="d-flex align-items-center p-2">
+                            <div class="search-box">
+                                <!-- set controller to searching -->
+                                <input type="text" class="search-input" placeholder="Search..."
+                                    data-target="controller">
+                                <button class="search-btn">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Table catogory -->
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Active</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- row 1 -->
+                            <tr>
+                                <td><input type="checkbox" class="select-item"></td>
+                                <td>Bank Transfer</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <script src="/admin/scripts.js"></script>
-            <script src="/admin/link.js">
+        </div>
+    </div>
+    <script src="/admin/scripts.js"></script>
+    <script src="/admin/link.js">
 
-            </script>
+    </script>
 </body>
 
 </html>
