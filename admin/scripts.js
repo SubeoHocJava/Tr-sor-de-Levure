@@ -50,3 +50,66 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+//ffun-nha
+$(document).ready(function () {
+    // Hide add product form when cancel button is clicked
+    $('.bi-plus').click(function () {
+        if ($('.add-product').hasClass('d-none')) {
+            $('.title-product').addClass('d-none');  // Hide the table
+            $('.table-product').addClass('d-none');  // Hide the table
+            $('.bi-list').removeClass('d-none');
+            $('.title-product-add').removeClass('d-none');
+            $('.add-product').removeClass('d-none');
+            $('.bi-plus').addClass('d-none');  // Hide the table
+        }
+    });
+    $('.bi-list').click(function () {
+        $('.title-product').removeClass('d-none');
+        $('.table-product').removeClass('d-none');
+        $('.title-product-add').addClass('d-none');
+        $('.add-product').addClass('d-none');
+        $('.bi-plus').removeClass('d-none');
+        $('.bi-list').addClass('d-none');
+        
+    });
+});
+
+function displayImages(input) {
+    const fileList = input.files;  // Get the list of selected files
+    const previewContainer = document.getElementById('imagePreviewContainer');
+    previewContainer.innerHTML = '';  // Clear any previous previews
+
+    // Loop through all files and create image previews and file paths
+    for (let i = 0; i < fileList.length; i++) {
+        const file = fileList[i];
+
+        // Create a container for each image and its path
+        const imageContainer = document.createElement('div');
+        imageContainer.classList.add('image-preview-item');
+        imageContainer.style.marginBottom = '15px';
+
+        // Create an image element
+        const img = document.createElement('img');
+        img.classList.add('image-preview');
+        img.file = file;
+
+        // Create a file path element
+        const path = document.createElement('span');
+        path.classList.add('image-path');
+        path.textContent = file.name;
+
+        // Create a FileReader to display the image
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            img.src = e.target.result;  // Set the image source to the reader's result
+        };
+        reader.readAsDataURL(file);  // Read the file as a data URL
+
+        // Append the image and path to the container
+        imageContainer.appendChild(img);
+        imageContainer.appendChild(path);
+
+        // Append the container to the preview container
+        previewContainer.appendChild(imageContainer);
+    }
+}
