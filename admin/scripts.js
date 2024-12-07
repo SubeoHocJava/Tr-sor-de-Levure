@@ -1,7 +1,16 @@
-document.querySelector('.search-btn').addEventListener('click', function () {
-	this.parentElement.classList.toggle('open')
-	this.previousElementSibling.focus()
-})
+Array.from(document.getElementsByClassName('search-btn')).forEach(function (element) {
+    element.addEventListener('click', function () {
+        this.parentElement.classList.toggle('open')
+        this.previousElementSibling.focus();
+    });
+    element.previousElementSibling?.addEventListener('input', function () {
+        const text = this.value; // Get the value of the previous element (assumed to be an input)
+        const link = this.getAttribute('data-target'); // Get the data-target attribute
+        // AJAX request or any action
+    });
+    
+});
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // Lấy tất cả các thẻ li và div content-section

@@ -197,3 +197,9 @@
 .stars-selected{
     pointer-events: none;
 }
+
+.btn.disabled-btn{
+    cursor: not-allowed !important;
+    pointer-events: none;
+    background-color: #ccc !important;
+}

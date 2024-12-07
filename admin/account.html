@@ -212,24 +212,26 @@
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2">
                                 <div class="search-box">
-                                    <input type="text" class="search-input" placeholder="Search...">
+                                    <!-- set controller to searching -->
+                                    <input type="text" class="search-input" placeholder="Search..." data-target="controller">
                                     <button class="search-btn">
                                         <i class="bi bi-search"></i>
                                     </button>
                                 </div>
-                                <div class="search-box">
-                                    <button class="search-btn">
+                                <div class="search-box link" data-href="add_category.html">
+                                    <button class="search-btn" >
                                         <i class="bi bi-plus"></i>
                                     </button>
                                 </div>
                             </div>
-                        </div>            
+                        </div>  
+                        <!-- Table catogory -->
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th><input type="checkbox" id="select-all"></th>
-                                    <th>Type</th>
-                                                                  
+                                    <th>Active</th>
+                                    <th>Name</th>
+                                    <th>Category parent</th>                            
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -238,14 +240,12 @@
                                 <tr>
                                     <td><input type="checkbox" class="select-item"></td>
                                     <td>Whisky</td>
-                                    
+                                    <td>Empty</td>
                                     <td class="actions">
-                                        <button class="btn btn-warning edit-btn">
+                                        <!-- set id -->
+                                        <button class="btn btn-warning edit-btn" value="id">
                                             <i class="bi bi-pencil"></i>
                                         </button>                                       
-                                        <button class="btn btn-danger delete-btn">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -292,6 +292,9 @@
                 </div>
             </div>
             <script src="/admin/scripts.js"></script>
+            <script src="/admin/link.js">
+
+            </script>
 </body>
 
 </html>

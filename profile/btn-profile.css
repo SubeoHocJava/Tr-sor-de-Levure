@@ -7,8 +7,9 @@
 
 }
 .btn-profile:focus {
-    outline-color: #e3c89c !important; /* Màu viền nhạt hơn khi nhấp */
+    outline: none!important; /* Màu viền nhạt hơn khi nhấp */
 }
+
 
 /* Hover effect for all buttons */
 .btn-profile:hover {

@@ -252,7 +252,10 @@
                                                             <span class="star" data-value="5">&#9734;</span>
                                                         </div>
                                                     </div>
-                                                    <button class="btn btn-profile">Buy again</button>
+                                                    <div class="d-flex">
+                                                        <button class="btn btn-profile mr-2 buy_again-btn disabled-btn">Buy again</button>
+                                                        <button class="btn btn-profile recieved_order-btn">Recieved</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -275,7 +278,10 @@
                                                         <span class="star" data-value="5">&#9734;</span>
                                                     </div>
                                                 </div>
-                                                <button class="btn btn-profile">Buy again</button>
+                                                <div class="d-flex">
+                                                    <button class="btn btn-profile mr-2 buy_again-btn disabled-btn">Buy again</button>
+                                                    <button class="btn btn-profile recieved_order-btn">Recieved</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -284,50 +290,6 @@
                                 <p><strong>Total Price:</strong> $<span id="total-price">75.00</span></p>
                                 <p><strong>Discount:</strong> $<span id="discount">10.00</span></p>
                                 <p><strong>Total Amount:</strong> $<span id="total-amount">90.00</span></p>
-                            </div>
-                        </div>
-
-                        <!-- Invoice 2 -->
-                        <div class="collapse-btn">
-                            <div class="border p-3">
-                                <h5 class="font-weight-bold">Invoice #123457</h5>
-                                <p><strong>Date:</strong> 2024-12-06</p>
-                                <p><strong>Total Amount:</strong> $75.00</p>
-                                <p><strong>Status:</strong> Processing</p>
-                                <ul class="timeline">
-                                    <li><strong>Order Placed:</strong> 2024-12-05, 02:00 PM</li>
-                                    <li><strong>Payment Confirmed:</strong> Pending</li>
-                                </ul>
-                                <hr>
-                            </div>
-                            <div class="collapse-content">
-                                <p><strong>Products:</strong></p>
-                                <div class="d-flex align-items-center mb-3">
-                                    <img src="https://whisky.vn/wp-content/uploads/2023/11/Meikle-Toir-The-Chinquapin-One-5-Year-Old-300x450.jpg"
-                                        alt="Product C" class="img-thumbnail" style="width: 160px; height: auto;">
-                                    <div class="ml-3">
-                                        <p><strong>Product C</strong></p>
-                                        <p>1 x $75.00</p>
-                                        <p><strong>Price:</strong> $75.00</p>
-                                        <div class="d-flex flex-column">
-                                            <div class="d-flex align-items-center mb-3">
-                                                <strong>Review:</strong>
-                                                <div class="stars ml-2" data-value="0">
-                                                    <span class="star" data-value="1">&#9734;</span>
-                                                    <span class="star" data-value="2">&#9734;</span>
-                                                    <span class="star" data-value="3">&#9734;</span>
-                                                    <span class="star" data-value="4">&#9734;</span>
-                                                    <span class="star" data-value="5">&#9734;</span>
-                                                </div>
-                                            </div>
-                                            <button class="btn btn-profile">Buy again</button>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                </div>
-                                <p><strong>Total Price:</strong> $<span id="total-price">75.00</span></p>
-                                <p><strong>Discount:</strong> $<span id="discount">0.00</span></p>
-                                <p><strong>Total Amount:</strong> $<span id="total-amount">75.00</span></p>
                             </div>
                         </div>
                     </div>
@@ -342,8 +304,8 @@
     </div>
 
     <script src="rating.js"></script>
-    <script src="scripts.js">
-    </script>
+    <script src="scripts.js"></script>
+    <script src="recieve_order.js"></script>
 </body>
 
 </html>
