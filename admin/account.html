@@ -78,8 +78,9 @@
                         </div>
                     </div>                   
                     <!-- Product Management Section -->
-                    <div class="main" data-section="product-management">                       
-                        <h1 class="h1-title text-center">Product Management</h1>
+                    <div class="main" data-section="product-management">
+                        <h1 class="h1-title text-center title-product">Product Management</h1>
+                        <h1 class="h1-title text-center title-product-add d-none">Add Product</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2">
                                 <div class="search-box">
@@ -89,15 +90,16 @@
                                     </button>
                                 </div>
                                 <div class="search-box">
-                                    <button class="search-btn">
+                                    <button class="product-btn">
                                         <i class="bi bi-plus"></i>
+                                        <i class="bi bi-list d-none"></i>
                                     </button>
                                 </div>
                             </div>
-                        </div>         
+                        </div>
                         <!-- Table -->
                         <div class="container-fluid p-2">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered table-product">
                                 <thead>
                                     <tr>
                                         <th><input type="checkbox" id="select-all"></th>
@@ -106,7 +108,7 @@
                                         <th>Quantity</th>
                                         <th>Type</th>
                                         <th>Brand</th>
-                                        <th>Description</th>                                     
+                                        <th>Description</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -123,7 +125,7 @@
                                         <td class="actions">
                                             <button class="btn btn-warning edit-btn">
                                                 <i class="bi bi-pencil"></i>
-                                            </button>                                       
+                                            </button>
                                             <button class="btn btn-danger delete-btn">
                                                 <i class="bi bi-trash"></i>
                                             </button>
@@ -131,6 +133,99 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <!-- add product -->
+                            <div class="container row p-4 add-product d-none">
+                                <form id="productForm">
+                                    <!-- Form inputs -->
+                                    <div class="input-group">
+                                        <label for="productId">ID</label>
+                                        <input type="number" class="input-field" id="productId"
+                                            placeholder="Enter product ID">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productName">NAME PRODUCT</label>
+                                        <input type="text" class="input-field" id="productName"
+                                            placeholder="Enter product name">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productPrice">PRICE</label>
+                                        <div class="d-flex"> <input type="number" class="input-field" id="productPrice"
+                                                placeholder="Enter price">
+                                            <select id="currency" name="currency">
+                                                <option value="USD">USD</option>
+                                                <option value="EUR">EUR</option>
+                                                <option value="VND">VND</option>
+                                                <option value="GBP">GBP</option>
+                                                <option value="JPY">JPY</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productSize">SIZE (ml)</label>
+                                        <input type="text" class="input-field" id="productSize"
+                                            placeholder="Enter size">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productABV">ACOHOL BY VOLUME (%)</label>
+                                        <input type="text" class="input-field" id="productABV" placeholder="Enter ABV">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productQuantity">QUANTITY</label>
+                                        <input type="number" class="input-field" id="productQuantity"
+                                            placeholder="Enter quantity">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productDescription">DESCRIPTION</label>
+                                        <textarea class="input-field" id="productNotes" rows="6"
+                                            placeholder="Enter any additional notes about the product..."></textarea>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productAge">AGE (year)</label>
+                                        <input type="number" class="input-field" id="productAge"
+                                            placeholder="Enter age">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productVarietal">VARIETAL</label>
+                                        <input type="text" class="input-field" id="productVarietal"
+                                            placeholder="Enter varietal">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productStatus">STATUS</label>
+                                        <input type="text" class="input-field" id="productStatus"
+                                            placeholder="Enter status">
+                                    </div>
+
+                                    <!-- Featured Product Checkbox -->
+                                    <div class=" featured-checkbox">
+                                        <input type="checkbox" id="productFeatured" class="checkbox-input">
+                                        <label for="productFeatured" class="checkbox-label"><strong>Make this product
+                                                featured</strong></label>
+                                    </div>
+                                    <div class="product-image-section text-center">
+                                        <h5>Product Images</h5>
+                                        <div class="image-upload-section">
+                                            <input type="file" class="upload-file" id="productImages" multiple
+                                                onchange="displayImages(this)">
+                                        </div>
+                                        <div id="imagePreviewContainer" class="image-preview-container">
+                                            <!-- Images and paths will be displayed here -->
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center"> <button type="submit" class="submit-btn btn-block">Add
+                                            Product</button></div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <!-- User Management Section -->
@@ -291,6 +386,8 @@
                      </div>
                 </div>
             </div>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
             <script src="/admin/scripts.js"></script>
             <script src="/admin/link.js">
 
