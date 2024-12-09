@@ -337,5 +337,13 @@ textarea.input-field {
     left: -3px; /* Di chuyển qua trái 1px */
     
 }
-
-
+/* màu btn voucher */
+.btn-color-real {
+    background-color: #f0ad4e; /* màu xanh cam */
+    color: white; /* màu đen */
+}
+.btn-color-real:hover {
+    background-color: white;
+    color: #f0ad4e;
+    border: 1px solid #f0ad4e;
+}
