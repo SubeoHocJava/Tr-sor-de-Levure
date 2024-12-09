@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Load header
-    fetch("../head-foot/head_2.html")
+    fetch("../Header_Footer/head_2.html")
         .then(response => response.text())
         .then(data => {
             // Chèn HTML vào phần tử header
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     // Load footer
-    fetch("../head-foot/footer.html")
+    fetch("../Header_Footer/footer.html")
         .then(response => response.text())
         .then(data => document.getElementById("footer").innerHTML = data);
 });

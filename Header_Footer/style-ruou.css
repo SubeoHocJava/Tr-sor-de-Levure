@@ -130,13 +130,13 @@ ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border: none;
+    border: none !important;
     padding: 5px;
     border-radius: 0px;
 }
 .card-container:hover {
     background-color: white;
-    border-bottom: 2px solid #BE9650;
+    border-bottom: 2px solid #BE9650 !important;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Đ�� bóng khi hover */
 }
 .thanhtoan {
