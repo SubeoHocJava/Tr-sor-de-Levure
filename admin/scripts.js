@@ -113,3 +113,39 @@ function displayImages(input) {
         previewContainer.appendChild(imageContainer);
     }
 }
+/* Brand Management*/ 
+document.addEventListener("DOMContentLoaded", function () {
+    const brandAddButton = document.querySelector(".brand-btn"); // Nút "+" để thêm brand
+    const brandAddForm = document.querySelector(".add-brand"); // Form nhập brand
+    const titleBrandAdd = document.querySelector(".title-brand-add"); // Tiêu đề "Add Brand"
+    const titleBrand = document.querySelector(".title-brand"); // Tiêu đề "Brand Management"
+    const closeButton = document.querySelector(".close-btn"); // Nút đóng form
+
+    // Khi nhấn nút "+" (thêm brand), kiểm tra trạng thái của form
+    brandAddButton.addEventListener("click", function () {
+        // Kiểm tra xem form đã hiển thị chưa
+        if (brandAddForm.classList.contains("d-none")) {
+            // Nếu form chưa hiển thị, hiển thị form và thay đổi tiêu đề
+            titleBrand.classList.add("d-none"); // Ẩn tiêu đề Brand Management
+            titleBrandAdd.classList.remove("d-none"); // Hiển thị tiêu đề Add Brand
+            brandAddForm.classList.remove("d-none"); // Hiển thị form thêm brand
+            closeButton.classList.remove("d-none"); // Hiển thị nút quay lại
+        } else {
+            // Nếu form đã hiển thị, ẩn form và thay đổi tiêu đề
+            titleBrand.classList.remove("d-none"); // Hiển thị lại tiêu đề Brand Management
+            titleBrandAdd.classList.add("d-none"); // Ẩn tiêu đề Add Brand
+            brandAddForm.classList.add("d-none"); // Ẩn form thêm brand
+            closeButton.classList.add("d-none"); // Ẩn nút quay lại
+        }
+    });
+
+    // Khi nhấn nút "Back to Brand List", sẽ quay lại màn hình quản lý
+    closeButton.addEventListener("click", function () {
+        titleBrand.classList.remove("d-none"); // Hiển thị lại tiêu đề Brand Management
+        titleBrandAdd.classList.add("d-none"); // Ẩn tiêu đề Add Brand
+        brandAddForm.classList.add("d-none"); // Ẩn form thêm brand
+        closeButton.classList.add("d-none"); // Ẩn nút quay lại
+    });
+});
+
+

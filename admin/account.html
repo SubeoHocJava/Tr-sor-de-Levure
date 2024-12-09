@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/Tr-sor-de-Levure/admin/styles.css">
 </head>
 
 <body>
@@ -287,23 +287,113 @@
                     </div>
                     <!-- Brand Management Section -->
                     <div class="main" data-section="brand-management">
-                        <h1 class="h1-title text-center">Brand Management</h1>
+                        <h1 class="h1-title text-center title-brand">Brand Management</h1>
+                        <h1 class="h1-title text-center title-brand-add d-none">Add Brand</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
-                            <div class="d-flex align-items-center p-2">
-                                <div class="search-box">
-                                    <input type="text" class="search-input" placeholder="Search...">
-                                    <button class="search-btn">
+                            <div class="d-flex align-items-center p-2 gap-2">
+                                <!-- Search Box -->
+                                <div class="search-box d-flex align-items-center position-relative">
+                                    <input type="text" class="search-input form-control" placeholder="Search...">
+                                    <button
+                                        class="search-btn btn btn-outline-secondary d-flex align-items-center justify-content-center">
                                         <i class="bi bi-search"></i>
                                     </button>
                                 </div>
+                                <!-- Add/List Button -->
                                 <div class="search-box">
-                                    <button class="search-btn">
+                                    <button
+                                        class="brand-btn btn btn-outline-primary d-flex align-items-center justify-content-center">
                                         <i class="bi bi-plus"></i>
+                                        <i class="bi bi-list d-none"></i>
                                     </button>
                                 </div>
                             </div>
                         </div>
+                        <!-- Table -->
+                        <div class="container-fluid p-2">
+                            <table class="table table-bordered table-brand">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" id="select-all"></th>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Country</th>
+                                        <th>Image</th>
+                                        <th>Collab</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Example row -->
+                                    <tr>
+                                        <td><input type="checkbox" class="select-item"></td>
+                                        <td>BR001</td>
+                                        <td>Brand A</td>
+                                        <td>USA</td>
+                                        <td>
+                                            <img src="images/brand_a.jpg" alt="Brand A"
+                                                style="width: 50px; height: 50px;">
+                                        </td>
+                                        <td>Yes</td>
+                                        <td class="actions">
+                                            <button class="btn btn-warning edit-btn">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-danger delete-btn">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- Add Brand Form -->
+                            <div class="container row p-4 add-brand d-none">
+                                <form id="brandForm">
+                                    <!-- Form inputs -->
+                                    <div class="input-group">
+                                        <label for="brandId">ID</label>
+                                        <input type="text" class="input-field" id="brandId"
+                                            placeholder="Enter brand ID">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="brandName">Name</label>
+                                        <input type="text" class="input-field" id="brandName"
+                                            placeholder="Enter brand name">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="brandCountry">Country</label>
+                                        <input type="text" class="input-field" id="brandCountry"
+                                            placeholder="Enter country">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="brandImage">Image</label>
+                                        <input type="file" class="input-field" id="brandImage">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="brandCollab">Collab</label>
+                                        <select id="brandCollab" class="input-field">
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="submit-btn btn btn-primary btn-block">Add
+                                            Brand</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Close Button for Add Brand Form -->
+                            <div class="text-center mt-3">
+                                <button class="btn btn-outline-secondary close-btn d-none">Back to Brand List</button>
+                            </div>
+                        </div>
                     </div>
+
+
+
+
                     <!-- Category Management Section -->
                     <div class="main" data-section="category-management">
                         <h1 class="h1-title text-center">Category Management</h1>
@@ -424,8 +514,10 @@
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="/admin/scripts.js"></script>
-        <script src="/admin/link.js"></script>
+        <script src="/Tr-sor-de-Levure/admin/scripts.js"></script>
+        <script src="/Tr-sor-de-Levure/admin/link.js"></script>
+
+
 
 </body>
 
