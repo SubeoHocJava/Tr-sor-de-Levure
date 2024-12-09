@@ -1,0 +1,62 @@
+.container-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+}
+
+.table {
+    width: 100%; 
+    margin: auto; 
+    text-align: center; 
+    border-collapse: collapse; 
+}
+
+.table th, .table td {
+    vertical-align: middle; 
+    text-align: center; 
+    padding: 15px; 
+}
+
+.quantity-input {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+.text-color { 
+    color: #BE9650;
+}
+/* .btn-items-x{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    color :#BE9650;
+    padding: 5px 10px;
+    border-radius: 50%;
+    border: 1px solid #BE9650;
+} */
+.text-size-16 {
+    font-size: 13px;
+}
+.card-container {
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    border: none;
+    padding: 5px;
+    border-radius: 0px;
+}
+.thanhtoan {
+    background-color: #BE9650;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: transparent;
+    cursor: pointer;
+}
+.thanhtoan:hover {
+    background-color: white;
+    color: #BE9650;
+    border: 1px solid #BE9650;
+}
