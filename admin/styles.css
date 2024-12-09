@@ -322,3 +322,20 @@ textarea.input-field {
 	cursor: pointer;
 	font-size: 20px;
 }
+/* Thay đổi màu của icon dấu + */
+.brand-btn .bi-plus {
+    color: black; /* Đặt màu đen cho dấu + */
+}
+/* Thay đổi màu của icon dấu ba gạch */
+.brand-btn .bi-list {
+    color: black; /* Đặt màu đen cho dấu ba gạch */
+}
+/* Di chuyển nút chứa dấu + lên trên và qua trái 1px */
+.brand-btn {
+    position: relative;
+    top: -1px; /* Di chuyển lên trên 1px */
+    left: -3px; /* Di chuyển qua trái 1px */
+    
+}
+
+

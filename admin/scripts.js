@@ -114,38 +114,26 @@ function displayImages(input) {
     }
 }
 /* Brand Management*/ 
-document.addEventListener("DOMContentLoaded", function () {
-    const brandAddButton = document.querySelector(".brand-btn"); // Nút "+" để thêm brand
-    const brandAddForm = document.querySelector(".add-brand"); // Form nhập brand
-    const titleBrandAdd = document.querySelector(".title-brand-add"); // Tiêu đề "Add Brand"
-    const titleBrand = document.querySelector(".title-brand"); // Tiêu đề "Brand Management"
-    const closeButton = document.querySelector(".close-btn"); // Nút đóng form
-
-    // Khi nhấn nút "+" (thêm brand), kiểm tra trạng thái của form
-    brandAddButton.addEventListener("click", function () {
-        // Kiểm tra xem form đã hiển thị chưa
-        if (brandAddForm.classList.contains("d-none")) {
-            // Nếu form chưa hiển thị, hiển thị form và thay đổi tiêu đề
-            titleBrand.classList.add("d-none"); // Ẩn tiêu đề Brand Management
-            titleBrandAdd.classList.remove("d-none"); // Hiển thị tiêu đề Add Brand
-            brandAddForm.classList.remove("d-none"); // Hiển thị form thêm brand
-            closeButton.classList.remove("d-none"); // Hiển thị nút quay lại
+$(document).ready(function () {
+    // Xử lý nút "+" và "3 gạch" trong Brand Management
+    $('.brand-btn').click(function () {
+        // Nếu nút "+" (Add Brand) đang hiển thị
+        if ($('.bi-plus').is(':visible')) {
+            // Chuyển sang trạng thái thêm Brand
+            $('.title-brand').addClass('d-none'); // Ẩn tiêu đề "Brand Management"
+            $('.table-brand').addClass('d-none'); // Ẩn bảng Brand
+            $('.title-brand-add').removeClass('d-none'); // Hiển thị tiêu đề "Add Brand"
+            $('.add-brand').removeClass('d-none'); // Hiển thị form thêm Brand
+            $('.bi-plus').addClass('d-none'); // Ẩn nút "+"
+            $('.bi-list').removeClass('d-none'); // Hiển thị nút "3 gạch"
         } else {
-            // Nếu form đã hiển thị, ẩn form và thay đổi tiêu đề
-            titleBrand.classList.remove("d-none"); // Hiển thị lại tiêu đề Brand Management
-            titleBrandAdd.classList.add("d-none"); // Ẩn tiêu đề Add Brand
-            brandAddForm.classList.add("d-none"); // Ẩn form thêm brand
-            closeButton.classList.add("d-none"); // Ẩn nút quay lại
+            // Nếu nút "3 gạch" (Back to List) đang hiển thị
+            $('.title-brand').removeClass('d-none'); // Hiển thị tiêu đề "Brand Management"
+            $('.table-brand').removeClass('d-none'); // Hiển thị bảng Brand
+            $('.title-brand-add').addClass('d-none'); // Ẩn tiêu đề "Add Brand"
+            $('.add-brand').addClass('d-none'); // Ẩn form thêm Brand
+            $('.bi-plus').removeClass('d-none'); // Hiển thị nút "+"
+            $('.bi-list').addClass('d-none'); // Ẩn nút "3 gạch"
         }
     });
-
-    // Khi nhấn nút "Back to Brand List", sẽ quay lại màn hình quản lý
-    closeButton.addEventListener("click", function () {
-        titleBrand.classList.remove("d-none"); // Hiển thị lại tiêu đề Brand Management
-        titleBrandAdd.classList.add("d-none"); // Ẩn tiêu đề Add Brand
-        brandAddForm.classList.add("d-none"); // Ẩn form thêm brand
-        closeButton.classList.add("d-none"); // Ẩn nút quay lại
-    });
 });
-
-
