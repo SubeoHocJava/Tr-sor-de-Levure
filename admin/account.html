@@ -446,10 +446,8 @@
                                     <button class="product-btn" data-bs-toggle="modal"
                                         data-bs-target="#addVoucherModal">
                                         <i class="bi bi-plus"></i>
-
                                     </button>
                                 </div>
-
                             </div>
                         </div>
                         <!-- Table Voucher-->
@@ -554,9 +552,61 @@
                                 <div class="search-box">
                                     <button class="search-btn">
                                         <i class="bi bi-plus"></i>
+                                        <i class="bi bi-list d-none"></i>
                                     </button>
                                 </div>
                             </div>
+                        </div>
+                        <div class="container-fluid p-2">
+                            <table class="table table-bordered table-Voucher">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" id="select-all"></th>
+                                        <th>ID CART</th>
+                                        <th>NAME_CUSTOMER</th>
+                                        <th>USER_EMAIL</th>
+                                        <th>LIST_PRODUCT</th>
+                                        <th>TOTAL_PRICE</th>
+                                        <th>CREATION_DATE</th>
+                                        <th>STATUS</th>
+                                        <th>CONFIRM</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- row 1 -->
+                                    <tr>
+                                        <td><input type="checkbox" class="select-item"></td>
+                                        <td>AAA1234AAA</td>
+                                        <td>USER_A</td>
+                                        <td>
+                                            221300@gmail.com
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-color-real" data-bs-toggle="popover" title="list"
+                                                data-bs-content='
+                                                    <ul class="product-list">
+                                                        <li>Sản phẩm 1</li>
+                                                        <li>Sản phẩm 2</li>
+                                                        <li>Sản phẩm 3</li>
+                                                    </ul>' id="productPopover">Click
+                                                me</button>
+
+                                        </td>
+                                        <td>1.000.000Đ</td>
+                                        <td>20/10/2024</td>
+                                        <td>waiting...</td>
+                                        <td class="actions">
+                                            <!--btn xac nhan-->
+                                            <button class="btn btn-color-real">
+                                                <i class="bi bi-check-circle"></i>
+                                            </button>
+                                            <button class="btn btn-danger delete-btn">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                     <!-- Payment Method Section -->

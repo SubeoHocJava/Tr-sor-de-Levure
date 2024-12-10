@@ -146,3 +146,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+// solving order btn xac nhan
+
+// solving order btn list product
+document.addEventListener('DOMContentLoaded', function () {
+    const popover = new bootstrap.Popover(document.getElementById('productPopover'), {
+        html: true
+    });
+});
