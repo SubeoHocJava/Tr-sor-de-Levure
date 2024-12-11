@@ -140,3 +140,226 @@ body{
 	color: #2a79f0;
 	font-weight: bold;
 }
+
+/* ffun-nha */
+/* Container Styles */
+.add-product {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Left Section: Product Information Form */
+.product-info-form {
+    padding: 20px;
+    flex: 1 1 45%;
+    border-right: 2px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.product-info-form h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* General Input Group Styles */
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.input-field {
+	width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+textarea.input-field {
+    height: 150px;
+	border: none;
+}
+
+/* Featured Product Checkbox */
+.featured-checkbox {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.checkbox-input {
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Buttons */
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design: Mobile View */
+@media screen and (max-width: 768px) {
+    .product-info-form {
+        flex: 1 1 100%;
+        border-right: none;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    .input-field {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+}
+/* Styling for the image upload section */
+.image-upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.upload-file {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Container for the image previews and paths */
+.image-preview-container {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap; /* Allow the images to wrap when the screen is small */
+    justify-content: center; /* Center the images in the container */
+}
+
+/* Styling for individual image preview */
+.image-preview-item {
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-preview {
+    width: 150px; /* Set width of all images to be the same */
+    height: 150px; /* Set height to maintain a square aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.image-path {
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+    word-wrap: break-word;
+    margin-top: 8px;
+}
+
+.product-btn{
+	color: #242628;
+	outline: none;
+	border: none;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+	font-size: 20px;
+}
+/* Thay đổi màu của icon dấu + */
+.brand-btn .bi-plus {
+    color: black; /* Đặt màu đen cho dấu + */
+}
+/* Thay đổi màu của icon dấu ba gạch */
+.brand-btn .bi-list {
+    color: black; /* Đặt màu đen cho dấu ba gạch */
+}
+/* Di chuyển nút chứa dấu + lên trên và qua trái 1px */
+.brand-btn {
+    position: relative;
+    top: -1px; /* Di chuyển lên trên 1px */
+    left: -3px; /* Di chuyển qua trái 1px */
+    
+}
+/* màu btn voucher */
+.btn-color-real {
+    background-color: #f0ad4e; /* màu xanh cam */
+    color: white; /* màu đen */
+}
+.btn-color-real:hover {
+    background-color: white;
+    color: #f0ad4e;
+    border: 1px solid #f0ad4e;
+}
+/* solving order */
+/* btn check */
+/* btn list product */
+.product-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.product-list li {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.product-list li:hover {
+    color: #f0ad4e;
+    cursor: pointer;
+}

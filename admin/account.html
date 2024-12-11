@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../admin/styles.css">
 </head>
 
 <body>
@@ -36,18 +36,21 @@
                             </li>
                             <li data-target="product-management">
                                 <i class="bi bi-box"></i><span> Product Management</span>
-                            </li>     
+                            </li>
                             <li data-target="brand-management">
                                 <i class="bi bi-map"></i><span> Brand Management</span>
-                            </li>                    
+                            </li>
                             <li data-target="category-management">
                                 <i class="bi bi-book"></i><span> Category Management</span>
-                            </li>      
+                            </li>
                             <li data-target="voucher-management">
                                 <i class="bi bi-book"></i><span> Voucher Management</span>
-                            </li>                     
+                            </li>
                             <li data-target="solving-order">
                                 <i class="bi bi-heart"></i><span>Solving Order</span>
+                            </li>
+                            <li data-target="payment-management">
+                                <i class="bi bi-credit-card"></i><span>Payment Manager</span>
                             </li>
                             <li data-target="settings">
                                 <i class="bi bi-gear"></i><span> Settings</span>
@@ -60,7 +63,7 @@
                 </div>
             </div>
             <!-- CONTENT AREA -->
-            <div class="col">              
+            <div class="col">
                 <div class="body-card mt-4 p-4">
                     <div class="container-fluid d-flex justify-content-end mt-2">
                         <div class="d-flex align-items-center p-2">
@@ -76,10 +79,11 @@
                                 </button>
                             </div> -->
                         </div>
-                    </div>                   
+                    </div>
                     <!-- Product Management Section -->
-                    <div class="main" data-section="product-management">                       
-                        <h1 class="h1-title text-center">Product Management</h1>
+                    <div class="main" data-section="product-management">
+                        <h1 class="h1-title text-center title-items">Product Management</h1>
+                        <h1 class="h1-title text-center title-items-add d-none">Add Product</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2">
                                 <div class="search-box">
@@ -89,15 +93,16 @@
                                     </button>
                                 </div>
                                 <div class="search-box">
-                                    <button class="search-btn">
-                                        <i class="bi bi-plus"></i>
+                                    <button class="product-btn">
+                                        <i class="bi bi-plus bi-plus-admin"></i>
+                                        <i class="bi bi-list  bi-list-admin d-none"></i>
                                     </button>
                                 </div>
                             </div>
-                        </div>         
+                        </div>
                         <!-- Table -->
                         <div class="container-fluid p-2">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered table-items">
                                 <thead>
                                     <tr>
                                         <th><input type="checkbox" id="select-all"></th>
@@ -106,7 +111,7 @@
                                         <th>Quantity</th>
                                         <th>Type</th>
                                         <th>Brand</th>
-                                        <th>Description</th>                                     
+                                        <th>Description</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -123,7 +128,7 @@
                                         <td class="actions">
                                             <button class="btn btn-warning edit-btn">
                                                 <i class="bi bi-pencil"></i>
-                                            </button>                                       
+                                            </button>
                                             <button class="btn btn-danger delete-btn">
                                                 <i class="bi bi-trash"></i>
                                             </button>
@@ -131,11 +136,97 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <!-- add product -->
+                            <div class="container row p-4 add-items d-none">
+                                <form id="productForm">
+                                    <!-- Form inputs -->
+                                    <div class="input-group">
+                                        <label for="productId">ID</label>
+                                        <input type="number" class="input-field" id="productId"
+                                            placeholder="Enter product ID">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productName">NAME PRODUCT</label>
+                                        <input type="text" class="input-field" id="productName"
+                                            placeholder="Enter product name">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productPrice">PRICE</label>
+                                        <div class="d-flex"> <input type="number" class="input-field" id="productPrice"
+                                                placeholder="Enter price">                                         
+                                        </div>
+
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productSize">SIZE (ml)</label>
+                                        <input type="text" class="input-field" id="productSize"
+                                            placeholder="Enter size">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productABV">ACOHOL BY VOLUME (%)</label>
+                                        <input type="text" class="input-field" id="productABV" placeholder="Enter ABV">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productQuantity">QUANTITY</label>
+                                        <input type="number" class="input-field" id="productQuantity"
+                                            placeholder="Enter quantity">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productDescription">DESCRIPTION</label>
+                                        <textarea class="input-field border" id="productNotes" rows="6"
+                                            placeholder="Enter any additional notes about the product..."></textarea>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productAge">AGE (year)</label>
+                                        <input type="number" class="input-field" id="productAge"
+                                            placeholder="Enter age">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productVarietal">VARIETAL</label>
+                                        <input type="text" class="input-field" id="productVarietal"
+                                            placeholder="Enter varietal">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="productStatus">STATUS</label>
+                                        <input type="text" class="input-field" id="productStatus"
+                                            placeholder="Enter status">
+                                    </div>
+
+                                    <!-- Featured Product Checkbox -->
+                                    <div class=" featured-checkbox">
+                                        <input type="checkbox" id="productFeatured" class="checkbox-input">
+                                        <label for="productFeatured" class="checkbox-label"><strong>Make this product
+                                                featured</strong></label>
+                                    </div>
+                                    <div class="product-image-section text-center">
+                                        <h5>Product Images</h5>
+                                        <div class="image-upload-section">
+                                            <input type="file" class="upload-file" id="productImages" multiple
+                                                onchange="displayImages(this)">
+                                        </div>
+                                        <div id="imagePreviewContainer" class="image-preview-container">
+                                            <!-- Images and paths will be displayed here -->
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center"> <button type="submit" class="submit-btn btn-block">Add
+                                            Product</button></div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    <!-- User Management Section -->
+                    <!-- User Management Section -->                   
                     <div class="main" data-section="user-management">
-                        <h1 class="h1-title text-center">User Management</h1>  
+                        <h1 class="h1-title text-center">User Management</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2">
                                 <div class="search-box">
@@ -150,7 +241,7 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>                             
+                        </div>
                         <!-- Table -->
                         <div class="container-fluid p-2">
                             <table class="table table-bordered">
@@ -160,7 +251,7 @@
                                         <th>Full Name</th>
                                         <th>Date of Birth</th>
                                         <th>Gender</th>
-                                        <th>Phone</th>                                       
+                                        <th>Phone</th>
                                         <th>Email</th>
                                         <th>Actions</th>
                                     </tr>
@@ -172,64 +263,147 @@
                                         <td>John Doe</td>
                                         <td>1990-01-01</td>
                                         <td>Male</td>
-                                        <td>+1234567890</td>                                     
+                                        <td>+1234567890</td>
                                         <td>johndoe@example.com</td>
                                         <td class="actions">
                                             <button class="btn btn-warning edit-btn">
                                                 <i class="bi bi-pencil"></i>
-                                            </button>                                       
+                                            </button>
                                             <button class="btn btn-danger delete-btn">
                                                 <i class="bi bi-trash"></i>
                                             </button>
                                         </td>
-                                    </tr>                                   
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                     <!-- Brand Management Section -->
                     <div class="main" data-section="brand-management">
-                        <h1 class="h1-title text-center">Brand Management</h1>      
+                        <h1 class="h1-title text-center title-items">Brand Management</h1>
+                        <h1 class="h1-title text-center title-items-add d-none">Add Brand</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
-                            <div class="d-flex align-items-center p-2">
-                                <div class="search-box">
-                                    <input type="text" class="search-input" placeholder="Search...">
-                                    <button class="search-btn">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                                </div>
-                                <div class="search-box">
-                                    <button class="search-btn">
-                                        <i class="bi bi-plus"></i>
-                                    </button>
+                            <div class="d-flex align-items-center p-2 gap-2">
+                                <div class="d-flex align-items-center p-2">
+                                    <div class="search-box">
+                                        <input type="text" class="search-input" placeholder="Search...">
+                                        <button class="search-btn">
+                                            <i class="bi bi-search"></i>
+                                        </button>
+                                    </div>
+                                    <div class="search-box">
+                                        <button class="product-btn">
+                                            <i class="bi bi-plus bi-plus-admin"></i>
+                                            <i class="bi bi-list  bi-list-admin d-none"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>                         
+                        </div>
+                        <!-- Table -->
+                        <div class="container-fluid p-2">
+                            <table class="table table-bordered table-items">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" id="select-all"></th>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Country</th>
+                                        <th>Image</th>
+                                        <th>Collab</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Example row -->
+                                    <tr>
+                                        <td><input type="checkbox" class="select-item"></td>
+                                        <td>BR001</td>
+                                        <td>Brand A</td>
+                                        <td>USA</td>
+                                        <td>
+                                            <img src="images/brand_a.jpg" alt="Brand A"
+                                                style="width: 50px; height: 50px;">
+                                        </td>
+                                        <td>Yes</td>
+                                        <td class="actions">
+                                            <button class="btn btn-warning edit-btn">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-danger delete-btn">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- Add Brand Form -->
+                            <div class="container row p-4 add-items d-none">
+                                <form id="brandForm">
+                                    <!-- Form inputs -->
+                                    <div class="input-group">
+                                        <label for="brandId">ID</label>
+                                        <input type="text" class="input-field" id="brandId"
+                                            placeholder="Enter brand ID">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="brandName">Name</label>
+                                        <input type="text" class="input-field" id="brandName"
+                                            placeholder="Enter brand name">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="brandCountry">Country</label>
+                                        <input type="text" class="input-field" id="brandCountry"
+                                            placeholder="Enter country">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="brandImage">Image</label>
+                                        <input type="file" class="input-field" id="brandImage">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="brandCollab">Collab</label>
+                                        <select id="brandCollab" class="input-field">
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="submit-btn btn btn-primary btn-block">Add
+                                            Brand</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                     <!-- Category Management Section -->
-                     <div class="main" data-section="category-management">
-                        <h1 class="h1-title text-center">Category Management</h1> 
+                    <!-- Category Management Section -->
+                    <div class="main" data-section="category-management">
+                        <h1 class="h1-title text-center title-items">Category Management</h1>
+                        <h1 class="h1-title text-center title-items-add d-none">Add New Category</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2">
                                 <div class="search-box">
-                                    <input type="text" class="search-input" placeholder="Search...">
+                                    <!-- set controller to searching -->
+                                    <input type="text" class="search-input" placeholder="Search..."
+                                        data-target="controller">
                                     <button class="search-btn">
                                         <i class="bi bi-search"></i>
                                     </button>
                                 </div>
                                 <div class="search-box">
-                                    <button class="search-btn">
-                                        <i class="bi bi-plus"></i>
+                                    <button class="product-btn">
+                                        <i class="bi bi-plus bi-plus-admin"></i>
+                                        <i class="bi bi-plus bi-list-admin d-none"></i>
                                     </button>
                                 </div>
                             </div>
-                        </div>            
-                        <table class="table table-bordered">
+                        </div>
+                        <!-- Table catogory -->
+                        <table class="table table-bordered table-items">
                             <thead>
                                 <tr>
-                                    <th><input type="checkbox" id="select-all"></th>
-                                    <th>Type</th>
-                                                                  
+                                    <th>Active</th>
+                                    <th>Name</th>
+                                    <th>Category parent</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -238,22 +412,153 @@
                                 <tr>
                                     <td><input type="checkbox" class="select-item"></td>
                                     <td>Whisky</td>
-                                    
+                                    <td>Empty</td>
                                     <td class="actions">
-                                        <button class="btn btn-warning edit-btn">
+                                        <!-- set id -->
+                                        <button class="btn btn-warning edit-btn" value="id">
                                             <i class="bi bi-pencil"></i>
-                                        </button>                                       
-                                        <button class="btn btn-danger delete-btn">
-                                            <i class="bi bi-trash"></i>
                                         </button>
                                     </td>
                                 </tr>
                             </tbody>
-                        </table>                  
+                        </table>
+                        <div class="container row p-4 add-items d-none">
+                            <form action="" method="post">
+                                <!-- Parent Name -->
+                                <div class="input-group">
+                                    <label class="form-label">Parent Name</label>
+                                    <input type="text" class="input-field" readonly value="Whisky" data-value="mã_parent">
+                                </div>
+                                <!-- Name -->
+                                <div class="input-group">
+                                    <label  class="form-label">Category Name</label>
+                                    <input type="text" class="input-field" name="name-category" placeholder="Enter category name" required/>
+                                </div>
+                                <!-- Describe -->
+                                <div class="input-group">
+                                    <label class="form-label" >Description</label>
+                                    <textarea class="input-field border"  name="describe-category"
+                                        placeholder="Enter category description"></textarea>
+                                </div>
+                        
+                                <!-- Buttons -->
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                     <!-- Voucher Management Section -->
-                     <div class="main" data-section="voucher-management">
-                        <h1 class="h1-title text-center">Voucher Management</h1> 
+                    <!-- Voucher Management Section -->
+                    <div class="main" data-section="voucher-management">
+                        <h1 class="h1-title text-center">Voucher Management</h1>
+                        <div class="container-fluid d-flex justify-content-end mt-2">
+                            <div class="d-flex align-items-center p-2">
+                                <div class="search-box">
+                                    <input type="text" class="search-input" placeholder="Search...">
+                                    <button class="search-btn">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </div>
+                                <div class="search-box">
+                                    <button class="product-btn" data-bs-toggle="modal"
+                                        data-bs-target="#addVoucherModal">
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Table Voucher-->
+                        <div class="container-fluid p-2">
+                            <table class="table table-bordered table-Voucher">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" id="select-all"></th>
+                                        <th>ID</th>
+                                        <th>Voucher Name</th>
+                                        <th>DECRIPTION </th>
+                                        <th>PERCENTAGE</th>
+                                        <th>MAX_DISCOUNT</th>
+                                        <th>EXPIRATION</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- row 1 -->
+                                    <tr>
+                                        <td><input type="checkbox" class="select-item"></td>
+                                        <td>AAA1234AAA</td>
+                                        <td>Voucher Vip1</td>
+                                        <td>
+                                            <span data-bs-toggle="popover" title="Voucher vip1"
+                                                data-bs-content="Đối tượng là khách hàng thuộc vip 1">Hover me</span>
+                                        </td>
+                                        <td>20%</td>
+                                        <td>2.000.000Đ</td>
+                                        <td>20/10/2024</td>
+                                        <td class="actions">
+                                            <button class="btn btn-warning edit-btn">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-danger delete-btn">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- add new voucher -->
+                            <div class="modal fade" id="addVoucherModal" tabindex="-1"
+                                aria-labelledby="addVoucherModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="addVoucherModalLabel">Add New Voucher</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="voucherName" class="form-label">Voucher Name</label>
+                                                    <input type="text" class="form-control" id="voucherName"
+                                                        placeholder="Enter voucher name">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="voucherDescription"
+                                                        class="form-label">Description</label>
+                                                    <textarea class="form-control" id="voucherDescription" rows="3"
+                                                        placeholder="Enter description"></textarea>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="percentage" class="form-label">Percentage</label>
+                                                    <input type="number" class="form-control" id="percentage"
+                                                        placeholder="Enter percentage" min="1" max="50">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="maxDiscount" class="form-label">Max Discount</label>
+                                                    <input type="text" class="form-control" id="maxDiscount"
+                                                        placeholder="Enter max discount">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="expiration" class="form-label">Expiration Date</label>
+                                                    <input type="date" class="form-control" id="expiration">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-color-real"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-color-real">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Solving Order Section -->
+                    <div class="main" data-section="solving-order">
+                        <h1 class="h1-title text-center">Solving Order</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2">
                                 <div class="search-box">
@@ -265,33 +570,103 @@
                                 <div class="search-box">
                                     <button class="search-btn">
                                         <i class="bi bi-plus"></i>
+                                        <i class="bi bi-list d-none"></i>
                                     </button>
                                 </div>
                             </div>
-                        </div>  
-                     </div>
-                       <!-- Solving Order Section -->
-                       <div class="main" data-section="solving-order">
-                        <h1 class="h1-title text-center">Solving Order</h1> 
+                        </div>
+                        <div class="container-fluid p-2">
+                            <table class="table table-bordered table-Voucher">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" id="select-all"></th>
+                                        <th>ID CART</th>
+                                        <th>NAME_CUSTOMER</th>
+                                        <th>USER_EMAIL</th>
+                                        <th>LIST_PRODUCT</th>
+                                        <th>TOTAL_PRICE</th>
+                                        <th>CREATION_DATE</th>
+                                        <th>STATUS</th>
+                                        <th>CONFIRM</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- row 1 -->
+                                    <tr>
+                                        <td><input type="checkbox" class="select-item"></td>
+                                        <td>AAA1234AAA</td>
+                                        <td>USER_A</td>
+                                        <td>
+                                            221300@gmail.com
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-color-real" data-bs-toggle="popover" title="list"
+                                                data-bs-content='
+                                                    <ul class="product-list">
+                                                        <li>Sản phẩm 1</li>
+                                                        <li>Sản phẩm 2</li>
+                                                        <li>Sản phẩm 3</li>
+                                                    </ul>' id="productPopover">Click
+                                                me</button>
+
+                                        </td>
+                                        <td>1.000.000Đ</td>
+                                        <td>20/10/2024</td>
+                                        <td>waiting...</td>
+                                        <td class="actions">
+                                            <!--btn xac nhan-->
+                                            <button class="btn btn-color-real">
+                                                <i class="bi bi-check-circle"></i>
+                                            </button>
+                                            <button class="btn btn-danger delete-btn">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Payment Method Section -->
+                    <div class="main" data-section="payment-management">
+                        <h1 class="h1-title text-center">Payment Method Management</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2">
                                 <div class="search-box">
-                                    <input type="text" class="search-input" placeholder="Search...">
+                                    <!-- set controller to searching -->
+                                    <input type="text" class="search-input" placeholder="Search..."
+                                        data-target="controller">
                                     <button class="search-btn">
                                         <i class="bi bi-search"></i>
                                     </button>
                                 </div>
-                                <div class="search-box">
-                                    <button class="search-btn">
-                                        <i class="bi bi-plus"></i>
-                                    </button>
-                                </div>
                             </div>
-                        </div>  
-                     </div>
+                        </div>
+                        <!-- Table catogory -->
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Active</th>
+                                    <th>Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- row 1 -->
+                                <tr>
+                                    <td><input type="checkbox" class="select-item"></td>
+                                    <td>Bank Transfer</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-            <script src="/admin/scripts.js"></script>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../admin/scripts.js"></script>
+        <script src="../admin/link.js"></script>
+
 </body>
 
 </html>
