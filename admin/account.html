@@ -387,7 +387,8 @@
                     </div>
                     <!-- Category Management Section -->
                     <div class="main" data-section="category-management">
-                        <h1 class="h1-title text-center">Category Management</h1>
+                        <h1 class="h1-title text-center title-items">Category Management</h1>
+                        <h1 class="h1-title text-center title-items-add d-none">Add New Category</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2">
                                 <div class="search-box">
@@ -398,15 +399,16 @@
                                         <i class="bi bi-search"></i>
                                     </button>
                                 </div>
-                                <div class="search-box link" data-href="add_category.html">
-                                    <button class="search-btn">
-                                        <i class="bi bi-plus"></i>
+                                <div class="search-box">
+                                    <button class="product-btn">
+                                        <i class="bi bi-plus bi-plus-admin"></i>
+                                        <i class="bi bi-plus bi-list-admin d-none"></i>
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <!-- Table catogory -->
-                        <table class="table table-bordered">
+                        <table class="table table-bordered table-items">
                             <thead>
                                 <tr>
                                     <th>Active</th>
@@ -430,6 +432,32 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="container row p-4 add-items d-none">
+                            <form action="" method="post">
+                                <!-- Parent Name -->
+                                <div class="input-group">
+                                    <label class="form-label">Parent Name</label>
+                                    <input type="text" class="input-field" readonly value="Whisky" data-value="mã_parent">
+                                </div>
+                                <!-- Name -->
+                                <div class="input-group">
+                                    <label  class="form-label">Category Name</label>
+                                    <input type="text" class="input-field" name="name-category" placeholder="Enter category name" required/>
+                                </div>
+                                <!-- Describe -->
+                                <div class="input-group">
+                                    <label class="form-label" >Description</label>
+                                    <textarea class="input-field border"  name="describe-category"
+                                        placeholder="Enter category description"></textarea>
+                                </div>
+                        
+                                <!-- Buttons -->
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                     <!-- Voucher Management Section -->
                     <div class="main" data-section="voucher-management">
