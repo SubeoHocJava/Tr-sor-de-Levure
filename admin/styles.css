@@ -198,10 +198,7 @@ body{
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
 }
-#currency {
-    padding: 4px;
-	background-color: rgb(183, 191, 215);
-}
+
 textarea.input-field {
     height: 150px;
 	border: none;

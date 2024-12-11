@@ -50,29 +50,30 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-//ffun-nha
 $(document).ready(function () {
     // Hide add product form when cancel button is clicked
-    $('.bi-plus').click(function () {
-        if ($('.add-product').hasClass('d-none')) {
-            $('.title-product').addClass('d-none');  // Hide the table
-            $('.table-product').addClass('d-none');  // Hide the table
-            $('.bi-list').removeClass('d-none');
-            $('.title-product-add').removeClass('d-none');
-            $('.add-product').removeClass('d-none');
-            $('.bi-plus').addClass('d-none');  // Hide the table
+    $('.bi-plus-admin').click(function () {
+        if ($('.add-items').hasClass('d-none')) {
+            $('.title-items').addClass('d-none');  // Hide the table
+            $('.table-items').addClass('d-none');  // Hide the table
+            $('.bi-list-admin').removeClass('d-none');
+            $('.title-items-add').removeClass('d-none');
+            $('.add-items').removeClass('d-none');
+            $('.bi-plus-admin').addClass('d-none');  // Hide the table
         }
     });
-    $('.bi-list').click(function () {
-        $('.title-product').removeClass('d-none');
-        $('.table-product').removeClass('d-none');
-        $('.title-product-add').addClass('d-none');
-        $('.add-product').addClass('d-none');
-        $('.bi-plus').removeClass('d-none');
-        $('.bi-list').addClass('d-none');
+    $('.bi-list-admin').click(function () {
+        $('.title-items').removeClass('d-none');
+        $('.table-items').removeClass('d-none');
+        $('.title-items-add').addClass('d-none');
+        $('.add-items').addClass('d-none');
+        $('.bi-plus-admin').removeClass('d-none');
+        $('.bi-list-admin').addClass('d-none');
         
     });
 });
+
+
 
 function displayImages(input) {
     const fileList = input.files;  // Get the list of selected files
@@ -113,30 +114,6 @@ function displayImages(input) {
         previewContainer.appendChild(imageContainer);
     }
 }
-/* Brand Management*/ 
-$(document).ready(function () {
-    // Xử lý nút "+" và "3 gạch" trong Brand Management
-    $('.brand-btn').click(function () {
-        // Nếu nút "+" (Add Brand) đang hiển thị
-        if ($('.bi-plus').is(':visible')) {
-            // Chuyển sang trạng thái thêm Brand
-            $('.title-brand').addClass('d-none'); // Ẩn tiêu đề "Brand Management"
-            $('.table-brand').addClass('d-none'); // Ẩn bảng Brand
-            $('.title-brand-add').removeClass('d-none'); // Hiển thị tiêu đề "Add Brand"
-            $('.add-brand').removeClass('d-none'); // Hiển thị form thêm Brand
-            $('.bi-plus').addClass('d-none'); // Ẩn nút "+"
-            $('.bi-list').removeClass('d-none'); // Hiển thị nút "3 gạch"
-        } else {
-            // Nếu nút "3 gạch" (Back to List) đang hiển thị
-            $('.title-brand').removeClass('d-none'); // Hiển thị tiêu đề "Brand Management"
-            $('.table-brand').removeClass('d-none'); // Hiển thị bảng Brand
-            $('.title-brand-add').addClass('d-none'); // Ẩn tiêu đề "Add Brand"
-            $('.add-brand').addClass('d-none'); // Ẩn form thêm Brand
-            $('.bi-plus').removeClass('d-none'); // Hiển thị nút "+"
-            $('.bi-list').addClass('d-none'); // Ẩn nút "3 gạch"
-        }
-    });
-});
 // voucher hover me
 document.addEventListener("DOMContentLoaded", function () {
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
