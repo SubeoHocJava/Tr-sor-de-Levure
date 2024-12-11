@@ -54,9 +54,10 @@
     border-radius: 5px;
     border: transparent;
     cursor: pointer;
+    border: 1px solid transparent;
 }
 .pay-btn:hover {
     background-color: white;
     color: #BE9650;
-    border: 1px solid #BE9650;
+    border-color: #BE9650;
 }
