@@ -274,8 +274,100 @@
                                             </button>
                                         </td>
                                     </tr>
+                                    <!-- row 2 -->
+                                    <tr>
+                                        <td><input type="checkbox" class="select-item"></td>
+                                        <td>John Doe</td>
+                                        <td>1990-01-01</td>
+                                        <td>Male</td>
+                                        <td>+1234567890</td>
+                                        <td>johndoe@example.com</td>
+                                        <td class="actions">
+                                            <button class="btn btn-warning edit-btn">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-danger delete-btn">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <!-- row 3 -->
+                                    <tr>
+                                        <td><input type="checkbox" class="select-item"></td>
+                                        <td>John Doe</td>
+                                        <td>1990-01-01</td>
+                                        <td>Male</td>
+                                        <td>+1234567890</td>
+                                        <td>johndoe@example.com</td>
+                                        <td class="actions">
+                                            <button class="btn btn-warning edit-btn">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-danger delete-btn">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
+                            <!--Edit User-->
+                            <div class="container row p-4 edit-user-form d-none">
+                                <form id="userForm">
+                                    <h2 class="text-center">Edit User</h2>
+                                    <!-- Form inputs -->
+                                    <div class="input-group">
+                                        <label for="userFullName">Full Name</label>
+                                        <input type="text" class="input-field" id="userFullName" placeholder="Enter full name">
+                                    </div>
+                            
+                                    <div class="input-group">
+                                        <label for="userDOB">Date of Birth</label>
+                                        <input type="date" class="input-field" id="userDOB" placeholder="Enter date of birth">
+                                    </div>
+                            
+                                    <div class="input-group">
+                                        <label for="userGender">Gender</label>
+                                        <select class="input-field" id="userGender">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                            
+                                    <div class="input-group">
+                                        <label for="userPhone">Phone</label>
+                                        <input type="text" class="input-field" id="userPhone" placeholder="Enter phone number">
+                                    </div>
+                            
+                                    <div class="input-group">
+                                        <label for="userEmail">Email</label>
+                                        <input type="email" class="input-field" id="userEmail" placeholder="Enter email">
+                                    </div>
+                            
+                                    <div class="text-center">
+                                        <button type="submit" class="submit-btn btn-block">Save Changes</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!--Delete Confirmation Modal-->
+                            <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="deleteConfirmationModalLabel">Confirmation of deletion</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Are you sure you want to delete this user? This action cannot be undone.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                            <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Yes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- Brand Management Section -->
@@ -284,21 +376,19 @@
                         <h1 class="h1-title text-center title-items-add d-none">Add Brand</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2 gap-2">
-                                <!-- Search Box -->
-                                <div class="search-box d-flex align-items-center position-relative">
-                                    <input type="text" class="search-input form-control" placeholder="Search...">
-                                    <button
-                                        class="search-btn btn btn-outline-secondary d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                                </div>
-                                <!-- Add/List Button -->
-                                <div class="search-box">
-                                    <button
-                                        class="brand-btn btn btn-outline-primary d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-plus bi-plus-admin"></i>
-                                        <i class="bi bi-list bi-list-admin d-none"></i>
-                                    </button>
+                                <div class="d-flex align-items-center p-2">
+                                    <div class="search-box">
+                                        <input type="text" class="search-input" placeholder="Search...">
+                                        <button class="search-btn">
+                                            <i class="bi bi-search"></i>
+                                        </button>
+                                    </div>
+                                    <div class="search-box">
+                                        <button class="product-btn">
+                                            <i class="bi bi-plus bi-plus-admin"></i>
+                                            <i class="bi bi-list  bi-list-admin d-none"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -463,16 +553,16 @@
                                     </button>
                                 </div>
                                 <div class="search-box">
-                                    <button class="product-btn" data-bs-toggle="modal"
-                                        data-bs-target="#addVoucherModal">
-                                        <i class="bi bi-plus"></i>
+                                    <button class="product-btn">
+                                        <i class="bi bi-plus"></i> 
+                                        <i class="bi bi-list d-none"></i> 
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <!-- Table Voucher-->
                         <div class="container-fluid p-2">
-                            <table class="table table-bordered table-Voucher">
+                            <table class="table table-bordered table-items">
                                 <thead>
                                     <tr>
                                         <th><input type="checkbox" id="select-all"></th>
@@ -510,50 +600,34 @@
                                 </tbody>
                             </table>
                             <!-- add new voucher -->
-                            <div class="modal fade" id="addVoucherModal" tabindex="-1"
-                                aria-labelledby="addVoucherModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="addVoucherModalLabel">Add New Voucher</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form>
-                                                <div class="mb-3">
-                                                    <label for="voucherName" class="form-label">Voucher Name</label>
-                                                    <input type="text" class="form-control" id="voucherName"
-                                                        placeholder="Enter voucher name">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="voucherDescription"
-                                                        class="form-label">Description</label>
-                                                    <textarea class="form-control" id="voucherDescription" rows="3"
-                                                        placeholder="Enter description"></textarea>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="percentage" class="form-label">Percentage</label>
-                                                    <input type="number" class="form-control" id="percentage"
-                                                        placeholder="Enter percentage" min="1" max="50">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="maxDiscount" class="form-label">Max Discount</label>
-                                                    <input type="text" class="form-control" id="maxDiscount"
-                                                        placeholder="Enter max discount">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="expiration" class="form-label">Expiration Date</label>
-                                                    <input type="date" class="form-control" id="expiration">
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-color-real"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-color-real">Save</button>
-                                        </div>
+                            <div class="container row p-4 add-items d-none">
+                                <form id="voucher-form">
+                                    <div class="mb-3">
+                                        <label for="voucherName" class="form-label">Voucher Name</label>
+                                        <input type="text" class="form-control" id="voucherName" placeholder="Enter voucher name">
                                     </div>
+                                    <div class="mb-3">
+                                        <label for="voucherDescription" class="form-label">Description</label>
+                                        <textarea class="form-control" id="voucherDescription" rows="3"
+                                            placeholder="Enter description"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="percentage" class="form-label">Percentage</label>
+                                        <input type="number" class="form-control" id="percentage" placeholder="Enter percentage" min="1"
+                                            max="50">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="maxDiscount" class="form-label">Max Discount</label>
+                                        <input type="text" class="form-control" id="maxDiscount" placeholder="Enter max discount">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="expiration" class="form-label">Expiration Date</label>
+                                        <input type="date" class="form-control" id="expiration">
+                                    </div>
+                                </form>
+                                <div>
+                                    <button type="button" class="btn btn-color-real" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-color-real">Save</button>
                                 </div>
                             </div>
                         </div>
