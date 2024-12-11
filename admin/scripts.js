@@ -123,6 +123,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+// Voucher add voucher
+$(document).ready(function () {
+    // Khi nút "plus" được nhấn
+    $('.bi-plus').click(function () {
+        if ($('.add-items').hasClass('d-none')) {
+            $('.table-items').addClass('d-none'); 
+            $('.bi-list').removeClass('d-none'); 
+            $('.add-items').removeClass('d-none'); 
+            $('.bi-plus').addClass('d-none');
+        }
+    });
+
+    // Khi nút "list" được nhấn
+    $('.bi-list').click(function () {
+        $('.table-items').removeClass('d-none');
+        $('.add-items').addClass('d-none'); 
+        $('.bi-plus').removeClass('d-none'); 
+        $('.bi-list').addClass('d-none'); 
+    });
+});
+
 // solving order btn xac nhan
 
 // solving order btn list product
