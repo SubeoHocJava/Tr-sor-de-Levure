@@ -82,8 +82,8 @@
                     </div>
                     <!-- Product Management Section -->
                     <div class="main" data-section="product-management">
-                        <h1 class="h1-title text-center title-product">Product Management</h1>
-                        <h1 class="h1-title text-center title-product-add d-none">Add Product</h1>
+                        <h1 class="h1-title text-center title-items">Product Management</h1>
+                        <h1 class="h1-title text-center title-items-add d-none">Add Product</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2">
                                 <div class="search-box">
@@ -94,15 +94,15 @@
                                 </div>
                                 <div class="search-box">
                                     <button class="product-btn">
-                                        <i class="bi bi-plus"></i>
-                                        <i class="bi bi-list d-none"></i>
+                                        <i class="bi bi-plus bi-plus-admin"></i>
+                                        <i class="bi bi-list  bi-list-admin d-none"></i>
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <!-- Table -->
                         <div class="container-fluid p-2">
-                            <table class="table table-bordered table-product">
+                            <table class="table table-bordered table-items">
                                 <thead>
                                     <tr>
                                         <th><input type="checkbox" id="select-all"></th>
@@ -137,7 +137,7 @@
                                 </tbody>
                             </table>
                             <!-- add product -->
-                            <div class="container row p-4 add-product d-none">
+                            <div class="container row p-4 add-items d-none">
                                 <form id="productForm">
                                     <!-- Form inputs -->
                                     <div class="input-group">
@@ -155,14 +155,7 @@
                                     <div class="input-group">
                                         <label for="productPrice">PRICE</label>
                                         <div class="d-flex"> <input type="number" class="input-field" id="productPrice"
-                                                placeholder="Enter price">
-                                            <select id="currency" name="currency">
-                                                <option value="USD">USD</option>
-                                                <option value="EUR">EUR</option>
-                                                <option value="VND">VND</option>
-                                                <option value="GBP">GBP</option>
-                                                <option value="JPY">JPY</option>
-                                            </select>
+                                                placeholder="Enter price">                                         
                                         </div>
 
                                     </div>
@@ -186,7 +179,7 @@
 
                                     <div class="input-group">
                                         <label for="productDescription">DESCRIPTION</label>
-                                        <textarea class="input-field" id="productNotes" rows="6"
+                                        <textarea class="input-field border" id="productNotes" rows="6"
                                             placeholder="Enter any additional notes about the product..."></textarea>
                                     </div>
 
@@ -231,7 +224,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- User Management Section -->
+                    <!-- User Management Section -->                   
                     <div class="main" data-section="user-management">
                         <h1 class="h1-title text-center">User Management</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
@@ -287,8 +280,8 @@
                     </div>
                     <!-- Brand Management Section -->
                     <div class="main" data-section="brand-management">
-                        <h1 class="h1-title text-center title-brand">Brand Management</h1>
-                        <h1 class="h1-title text-center title-brand-add d-none">Add Brand</h1>
+                        <h1 class="h1-title text-center title-items">Brand Management</h1>
+                        <h1 class="h1-title text-center title-items-add d-none">Add Brand</h1>
                         <div class="container-fluid d-flex justify-content-end mt-2">
                             <div class="d-flex align-items-center p-2 gap-2">
                                 <!-- Search Box -->
@@ -303,15 +296,15 @@
                                 <div class="search-box">
                                     <button
                                         class="brand-btn btn btn-outline-primary d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-plus"></i>
-                                        <i class="bi bi-list d-none"></i>
+                                        <i class="bi bi-plus bi-plus-admin"></i>
+                                        <i class="bi bi-list bi-list-admin d-none"></i>
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <!-- Table -->
                         <div class="container-fluid p-2">
-                            <table class="table table-bordered table-brand">
+                            <table class="table table-bordered table-items">
                                 <thead>
                                     <tr>
                                         <th><input type="checkbox" id="select-all"></th>
@@ -346,9 +339,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-
                             <!-- Add Brand Form -->
-                            <div class="container row p-4 add-brand d-none">
+                            <div class="container row p-4 add-items d-none">
                                 <form id="brandForm">
                                     <!-- Form inputs -->
                                     <div class="input-group">

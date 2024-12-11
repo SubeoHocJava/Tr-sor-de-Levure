@@ -73,6 +73,8 @@ $(document).ready(function () {
     });
 });
 
+
+
 function displayImages(input) {
     const fileList = input.files;  // Get the list of selected files
     const previewContainer = document.getElementById('imagePreviewContainer');
