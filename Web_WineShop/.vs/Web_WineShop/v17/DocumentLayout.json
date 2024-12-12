@@ -1,12 +1,75 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\",
-  "Documents": [],
+  "WorkspaceRootPath": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_WineShop\\Models\\Voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_WineShop\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_WineShop\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Voucher.cs",
+              "DocumentMoniker": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Voucher.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Models\\Voucher.cs",
+              "ToolTip": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Voucher.cs",
+              "RelativeToolTip": "Web_WineShop\\Models\\Voucher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T17:12:32.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Program.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Program.cs",
+              "ToolTip": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Program.cs",
+              "RelativeToolTip": "Web_WineShop\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T16:58:49.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Controllers\\HomeController.cs",
+              "ToolTip": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Web_WineShop\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T16:48:20.955Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
