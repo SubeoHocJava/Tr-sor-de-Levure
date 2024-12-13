@@ -29,6 +29,7 @@ S:\Project\LapTrinhNet\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8
 S:\Project\LapTrinhNet\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.pdb
 S:\Project\LapTrinhNet\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.genruntimeconfig.cache
 S:\Project\LapTrinhNet\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\ref\Web_WineShop.dll
+D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.csproj.AssemblyReference.cache
 D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.GeneratedMSBuildEditorConfig.editorconfig
 D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.AssemblyInfoInputs.cache
 D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.AssemblyInfo.cs
@@ -37,6 +38,3 @@ D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_Wi
 D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.RazorAssemblyInfo.cache
 D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.RazorAssemblyInfo.cs
 D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.sourcelink.json
-D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.dll
-D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\refint\Web_WineShop.dll
-D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.pdb
