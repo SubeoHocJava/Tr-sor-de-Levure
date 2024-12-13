@@ -3,32 +3,44 @@
   "WorkspaceRootPath": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Knowledge\\Knowledge.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_WineShop\\Views\\Knowledge\\Knowledge.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\wineshop\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\knowledgemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\knowledgemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Wishlist\\SendToFriend.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_WineShop\\Views\\Wishlist\\SendToFriend.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\wineshop\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Wishlist\\SendToFriend.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_WineShop\\Views\\Wishlist\\SendToFriend.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\wineshop\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\sendtofriend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\sendtofriend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Knowledge\\Knowledge.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_WineShop\\Views\\Knowledge\\Knowledge.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\wineshop\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\views\\wishlist\\sendtofriend.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\views\\wishlist\\sendtofriend.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Controllers\\WishlistController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_WineShop\\Controllers\\WishlistController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\wineshop\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\views\\knowledge\\knowledge.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\views\\knowledge\\knowledge.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Wishlist\\Wishlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_WineShop\\Views\\Wishlist\\Wishlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\wineshop\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\views\\wishlist\\sendtofriend.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\views\\wishlist\\sendtofriend.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Controllers\\KnowledgeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_WineShop\\Controllers\\KnowledgeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\wineshop\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\views\\knowledge\\knowledge.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\views\\knowledge\\knowledge.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\wineshop\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\controllers\\wishlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\controllers\\wishlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\wineshop\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\views\\wishlist\\wishlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\views\\wishlist\\wishlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\wineshop\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\controllers\\knowledgecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\controllers\\knowledgecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,43 +55,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Invoice.cs",
+              "DocumentMoniker": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Invoice.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Models\\Invoice.cs",
+              "ToolTip": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Invoice.cs",
+              "RelativeToolTip": "Web_WineShop\\Models\\Invoice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T15:28:40.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KnowledgeModel.cs",
+              "DocumentMoniker": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\KnowledgeModel.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Models\\KnowledgeModel.cs",
+              "ToolTip": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\KnowledgeModel.cs",
+              "RelativeToolTip": "Web_WineShop\\Models\\KnowledgeModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T15:25:31.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SendToFriend.cs",
+              "DocumentMoniker": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\SendToFriend.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Models\\SendToFriend.cs",
+              "ToolTip": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\SendToFriend.cs",
+              "RelativeToolTip": "Web_WineShop\\Models\\SendToFriend.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T15:24:12.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SendToFriend.cshtml",
               "DocumentMoniker": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Wishlist\\SendToFriend.cshtml",
               "RelativeDocumentMoniker": "Web_WineShop\\Views\\Wishlist\\SendToFriend.cshtml",
               "ToolTip": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Wishlist\\SendToFriend.cshtml",
               "RelativeToolTip": "Web_WineShop\\Views\\Wishlist\\SendToFriend.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAuwDoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-13T07:50:57.716Z"
+              "WhenOpened": "2024-12-13T07:50:57.716Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Knowledge.cshtml.css",
               "DocumentMoniker": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Knowledge\\Knowledge.cshtml.css",
               "RelativeDocumentMoniker": "Web_WineShop\\Views\\Knowledge\\Knowledge.cshtml.css",
               "ToolTip": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Knowledge\\Knowledge.cshtml.css",
               "RelativeToolTip": "Web_WineShop\\Views\\Knowledge\\Knowledge.cshtml.css",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-12-13T07:33:12.853Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "SendToFriend.cshtml.css",
               "DocumentMoniker": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Wishlist\\SendToFriend.cshtml.css",
               "RelativeDocumentMoniker": "Web_WineShop\\Views\\Wishlist\\SendToFriend.cshtml.css",
               "ToolTip": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Wishlist\\SendToFriend.cshtml.css",
               "RelativeToolTip": "Web_WineShop\\Views\\Wishlist\\SendToFriend.cshtml.css",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-13T07:31:29.173Z"
+              "WhenOpened": "2024-12-13T07:31:29.173Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Knowledge.cshtml",
               "DocumentMoniker": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Knowledge\\Knowledge.cshtml",
               "RelativeDocumentMoniker": "Web_WineShop\\Views\\Knowledge\\Knowledge.cshtml",
@@ -91,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "WishlistController.cs",
               "DocumentMoniker": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Controllers\\WishlistController.cs",
               "RelativeDocumentMoniker": "Web_WineShop\\Controllers\\WishlistController.cs",
@@ -103,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Wishlist.cshtml",
               "DocumentMoniker": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Wishlist\\Wishlist.cshtml",
               "RelativeDocumentMoniker": "Web_WineShop\\Views\\Wishlist\\Wishlist.cshtml",
@@ -115,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "KnowledgeController.cs",
               "DocumentMoniker": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Controllers\\KnowledgeController.cs",
               "RelativeDocumentMoniker": "Web_WineShop\\Controllers\\KnowledgeController.cs",
