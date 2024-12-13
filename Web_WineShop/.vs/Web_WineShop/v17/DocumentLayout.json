@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Bank.cs",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Bank.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Models\\Bank.cs",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Bank.cs",
+              "RelativeToolTip": "Web_WineShop\\Models\\Bank.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T03:25:41.525Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
