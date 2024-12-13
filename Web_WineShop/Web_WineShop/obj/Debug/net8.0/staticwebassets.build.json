@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "ed9vsy/6HI4Hnj44L0e2JYUOR2r1kbsCxYHSzmra3fw=",
+=======
+  "Hash": "0F7tkkQ9O1XtpTNnFGfRSaUZmbwYgnOh013NqGsQHtg=",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
   "Source": "Web_WineShop",
   "BasePath": "_content/Web_WineShop",
   "Mode": "Default",
@@ -10,17 +14,28 @@
     {
       "Name": "Web_WineShop\\wwwroot",
       "Source": "Web_WineShop",
+<<<<<<< HEAD
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Web_WineShop.styles.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Computed",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Web_WineShop.styles.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "Web_WineShop.styles.css",
       "AssetKind": "All",
@@ -33,6 +48,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Web_WineShop.styles.css"
     },
     {
@@ -40,6 +56,15 @@
       "SourceId": "Web_WineShop",
       "SourceType": "Computed",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+=======
+      "OriginalItemSpec": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Web_WineShop.styles.css"
+    },
+    {
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Web_WineShop.bundle.scp.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "Web_WineShop.bundle.scp.css",
       "AssetKind": "All",
@@ -52,6 +77,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Web_WineShop.bundle.scp.css"
     },
     {
@@ -59,6 +85,15 @@
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "OriginalItemSpec": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Web_WineShop.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\favicon.ico",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -74,12 +109,21 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\js\\admin.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "js/admin.js",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\js\\Wishlist\\Send_to_friend.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+      "BasePath": "_content/Web_WineShop",
+      "RelativePath": "js/Wishlist/Send_to_friend.js",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,6 +134,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\js\\admin.js"
     },
     {
@@ -154,6 +199,15 @@
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "OriginalItemSpec": "wwwroot\\js\\Wishlist\\Send_to_friend.js"
+    },
+    {
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -169,10 +223,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -188,10 +249,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -207,10 +275,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -226,10 +301,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -245,10 +327,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -264,10 +353,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -283,10 +379,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -302,10 +405,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -321,10 +431,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -340,10 +457,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -359,10 +483,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -378,10 +509,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -397,10 +535,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -416,10 +561,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -435,10 +587,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -454,10 +613,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -473,10 +639,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -492,10 +665,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -511,10 +691,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -530,10 +717,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -549,10 +743,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -568,10 +769,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -587,10 +795,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -606,10 +821,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -625,10 +847,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -644,10 +873,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -663,10 +899,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -682,10 +925,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -701,10 +951,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -720,10 +977,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -739,10 +1003,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -758,10 +1029,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -777,10 +1055,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -796,10 +1081,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -815,10 +1107,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -834,10 +1133,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -853,10 +1159,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -872,10 +1185,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -891,10 +1211,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -910,10 +1237,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -929,10 +1263,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -948,10 +1289,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -967,10 +1315,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -986,10 +1341,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1005,10 +1367,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1024,10 +1393,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1043,10 +1419,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1062,10 +1445,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1081,10 +1471,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1100,10 +1497,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1119,10 +1523,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1138,10 +1549,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1157,10 +1575,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1176,10 +1601,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1195,10 +1627,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1214,10 +1653,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Web_WineShop",
       "SourceType": "Discovered",
       "ContentRoot": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+=======
+      "Identity": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "SourceId": "Web_WineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\",
+>>>>>>> b718b963a8192703d175460e55a06d8cfad9daa7
       "BasePath": "_content/Web_WineShop",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
