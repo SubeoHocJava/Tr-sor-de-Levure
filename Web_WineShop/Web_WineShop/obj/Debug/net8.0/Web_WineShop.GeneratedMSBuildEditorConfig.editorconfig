@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Web_WineShop
 build_property.RootNamespace = Web_WineShop
@@ -28,10 +36,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Code Files/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Login/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ290UGFzc3dvcmQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Code Files/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Login/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Code Files/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Login/Register.cshtml]
@@ -61,6 +65,10 @@ build_metadata.AdditionalFiles.CssScope = b-e4qsldy8ql
 [D:/Code Files/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Knowledge/Knowledge.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25vd2xlZGdlXEtub3dsZWRnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-q4y1guerpd
+
+[D:/Code Files/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-b88a07zuv4
 
 [D:/Code Files/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Profile/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxQcm9maWxlLmNzaHRtbA==
