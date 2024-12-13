@@ -1,0 +1,35 @@
+# Ignore Visual Studio files
+.vs/
+.vs2019/
+.vs2017/
+.vs2015/
+
+# Ignore .NET build results
+/obj/
+/bin/
+
+# Ignore user-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Ignore Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Ignore Mac files
+.DS_Store
+
+# Ignore temporary files created by IDEs
+.idea/
+.vscode/
+
+# Ignore build logs
+*.log
+
+# Ignore the directory created by .NET Core
+project.lock.json
+project.fragment.lock.json

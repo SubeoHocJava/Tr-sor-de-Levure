@@ -38,3 +38,43 @@ D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_Wi
 D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.RazorAssemblyInfo.cache
 D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.RazorAssemblyInfo.cs
 D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.sourcelink.json
+<<<<<<< HEAD
+=======
+D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.dll
+D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\refint\Web_WineShop.dll
+D:\Code Files\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.pdb
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.GeneratedMSBuildEditorConfig.editorconfig
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.AssemblyInfoInputs.cache
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.AssemblyInfo.cs
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.csproj.CoreCompileInputs.cache
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.MvcApplicationPartsAssemblyInfo.cache
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.RazorAssemblyInfo.cache
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.RazorAssemblyInfo.cs
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.sourcelink.json
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\staticwebassets.build.json
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\staticwebassets.development.json
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\staticwebassets\msbuild.Web_WineShop.Microsoft.AspNetCore.StaticWebAssets.props
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\staticwebassets\msbuild.build.Web_WineShop.props
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Web_WineShop.props
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Web_WineShop.props
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\staticwebassets.pack.json
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.dll
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\refint\Web_WineShop.dll
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.pdb
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\bin\Debug\net8.0\appsettings.Development.json
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\bin\Debug\net8.0\appsettings.json
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\bin\Debug\net8.0\Web_WineShop.staticwebassets.runtime.json
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\bin\Debug\net8.0\Web_WineShop.exe
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\bin\Debug\net8.0\Web_WineShop.deps.json
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\bin\Debug\net8.0\Web_WineShop.runtimeconfig.json
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\bin\Debug\net8.0\Web_WineShop.dll
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\bin\Debug\net8.0\Web_WineShop.pdb
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\scopedcss\Views\Knowledge\Knowledge.cshtml.rz.scp.css
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\scopedcss\Views\Wishlist\SendToFriend.cshtml.rz.scp.css
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\scopedcss\Views\Wishlist\Wishlist.cshtml.rz.scp.css
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\scopedcss\bundle\Web_WineShop.styles.css
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\scopedcss\projectbundle\Web_WineShop.bundle.scp.css
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\Web_WineShop.genruntimeconfig.cache
+D:\WineShop\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\obj\Debug\net8.0\ref\Web_WineShop.dll
+>>>>>>> ace3e69d65250386f8652de167ef5946b1f355a6
