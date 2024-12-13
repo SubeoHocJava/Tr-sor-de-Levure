@@ -1,23 +1,7 @@
-﻿@{
-    Layout = null;  // Thay null bằng tên layout nếu có, ví dụ "_Layout".
-    ViewData["Title"] = "Send Wishlist to a Friend";  // Thiết lập tiêu đề trang
+﻿@page
+@{
+    ViewData["Title"] = "Home Page";
 }
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/Wishlist/Send_to_friend.css" asp-append-version="true" />
-    <title>@ViewData["Title"]</title>
-</head>
-
-<body>
-    <!-- Header -->
-    <div id="header">
-        <!-- Nội dung header nếu có -->
-    </div>
 
     <div class="wishlist-container">
         <div id="wishlist_friend_form_container" class="form-builder">
@@ -34,25 +18,25 @@
                     <div class="form-group friend_name_wrapper">
                         <label for="friend_name">Friend's Name <span class="mandatory">*</span></label>
                         <input id="friend_name" class="input--expand" type="text" name="friend_name" value="">
-                        <div class="checkout-select-message--error" style="display: none;">Name required</div> <!-- Chỉnh lại lớp ở đây -->
+                        <div class="checkout-select-message--error" >Name required</div> <!-- Chỉnh lại lớp ở đây -->
                     </div>
 
                     <div class="form-group friend_email_wrapper">
                         <label for="friend_email">Friend's Email <span class="mandatory">*</span></label>
                         <input id="friend_email" class="input--expand" type="email" name="friend_email" value="">
-                        <div class="checkout-select-message--error" style="display: none;">Email required</div> <!-- Chỉnh lại lớp ở đây -->
+                        <div class="checkout-select-message--error";">Email required</div> <!-- Chỉnh lại lớp ở đây -->
                     </div>
 
                     <div class="form-group your_name_wrapper">
                         <label for="your_name">Your Name <span class="mandatory">*</span></label>
                         <input id="your_name" class="input--expand" type="text" name="your_name" value="">
-                        <div class="checkout-select-message--error" style="display: none;">Your name is required</div> <!-- Chỉnh lại lớp ở đây -->
+                        <div class="checkout-select-message--error" >Your name is required</div> <!-- Chỉnh lại lớp ở đây -->
                     </div>
 
                     <div class="form-group your_email_wrapper">
                         <label for="your_email">Your Email <span class="mandatory">*</span></label>
                         <input id="your_email" class="input--expand" type="email" name="your_email" value="">
-                        <div class="checkout-select-message--error" style="display: none;">Your email is required</div> <!-- Chỉnh lại lớp ở đây -->
+                        <div class="checkout-select-message--error">Your email is required</div> <!-- Chỉnh lại lớp ở đây -->
                     </div>
 
                     <div class="form-group message_wrapper">
@@ -75,12 +59,7 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <div id="footer">
-        <!-- Nội dung footer nếu có -->
-    </div>
-
     <script src="~/js/Wishlist/Send_to_friend.js"></script>
-</body>
 
-</html>
+
+

@@ -1,24 +1,7 @@
-﻿@{
-    Layout = null; // Nếu có Layout chung, thay đổi Layout = "_Layout";
-    ViewData["Title"] = "Wishlist"; // Thiết lập tiêu đề trang
+﻿@page
+@{
+    ViewData["Title"] = "Home Page";
 }
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/Wishlist/Wishlist.css"> <!-- Đường dẫn tĩnh tới file CSS -->
-    <title>@ViewData["Title"]</title>
-</head>
-
-<body>
-    <!-- Include header -->
-   <div>
- 
-    </div>
-
     <!-- Wishlist Items -->
     <div class="wishlist__items">
         <form asp-action="Wishlist" method="post" id="wishlist_form">
@@ -80,38 +63,4 @@
         </form>
     </div>
 
-    <!-- Include footer -->
-    <div>
-
-    </div>
-
-    <!-- JavaScript -->
-    <script>
-        function includeHTML() {
-            const elements = document.querySelectorAll("[data-include]");
-            elements.forEach(async (el) => {
-                const file = el.getAttribute("data-include");
-                if (file) {
-                    try {
-                        const response = await fetch(file);
-                        if (response.ok) {
-                            const html = await response.text();
-                            el.innerHTML = html;
-                        } else {
-                            console.error(`Không thể tải file: ${file}. Lỗi: ${response.status}`);
-                            el.innerHTML = `Không tìm thấy nội dung: ${file}`;
-                        }
-                    } catch (error) {
-                        console.error(`Lỗi khi tải file: ${file}`, error);
-                        el.innerHTML = "Đã xảy ra lỗi khi tải nội dung.";
-                    }
-                }
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", includeHTML);
-    </script>
-</body>
-
-</html>
-
+   

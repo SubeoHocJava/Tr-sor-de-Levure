@@ -4,9 +4,14 @@ namespace Web_WineShop.Controllers
 {
     public class WishlistController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Wishlist()
         {
-            return View("~/Views/Wishlist/Wishlist.cshtml");
+            return View();
         }
+        public IActionResult SendToFriend()
+        {
+            return View();
+        }
+
     }
 }
