@@ -143,6 +143,7 @@ button {
         transform: scale(1);
     }
 }
+
 .checkout-select-message--error {
     color: #ff0000; /* Màu đỏ cho thông báo lỗi */
     font-size: 12px; /* Kích thước chữ thông báo lỗi */

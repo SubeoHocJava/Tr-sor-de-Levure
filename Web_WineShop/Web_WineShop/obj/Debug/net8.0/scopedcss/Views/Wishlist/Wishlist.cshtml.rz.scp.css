@@ -1,0 +1,178 @@
+/* Reset Styles */
+*[b-phsu5iil1p] {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body[b-phsu5iil1p] {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Top Bar */
+.wishlist__top--bar[b-phsu5iil1p] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+    .wishlist__top--bar span[b-phsu5iil1p] {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+
+
+/* Wishlist Items */
+.wishlist__items--ul[b-phsu5iil1p] {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu không đủ không gian */
+    gap: 20px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.wishlist__item[b-phsu5iil1p] {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: calc(25% - 20px); /* Chia đều mỗi sản phẩm chiếm 1/4 chiều ngang */
+    position: relative;
+}
+
+.wishlist__image[b-phsu5iil1p] {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+    .wishlist__image img[b-phsu5iil1p] {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+    }
+
+/* Remove Button */
+.wishlist__remove[b-phsu5iil1p] {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #bf9650; /* Màu nền của hình vuông */
+    width: 25px; /* Chiều rộng hình vuông */
+    height: 25px; /* Chiều cao hình vuông */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0%; /* Hình vuông */
+    text-align: center;
+    padding: 5px;
+}
+
+    .wishlist__remove:hover[b-phsu5iil1p] {
+        background-color: #b17814; /* Màu nền khi hover */
+    }
+
+/* Item Details */
+.wishlist__item--details[b-phsu5iil1p] {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center; /* Căn giữa toàn bộ nội dung */
+}
+
+.details--title a[b-phsu5iil1p] {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+
+    .details--title a:hover[b-phsu5iil1p] {
+        text-decoration: underline;
+        color: #888888;
+    }
+
+/* Price Details */
+.details--price[b-phsu5iil1p] {
+    font-size: 14px;
+    color: #888888;
+    text-align: center; /* Căn giữa giá sản phẩm */
+    font-weight: bold;
+}
+
+    .details--price span[b-phsu5iil1p] {
+        display: inline-block; /* Đảm bảo span căn giữa trong container */
+    }
+
+/* Add to Basket Button */
+.wishlist__item button[b-phsu5iil1p] {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #bf9650;
+    color: #fff;
+    border: none;
+    outline: none; /* Loại bỏ outline mặc định */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, outline 0.3s ease;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+    /* Hover effect */
+    .wishlist__item button:hover[b-phsu5iil1p] {
+        background-color: #fff;
+        color: #000;
+        outline: 2px solid #bf9650; /* Sử dụng outline thay vì border */
+    }
+
+
+/* Nút "Send Wishlist to a Friend" trong wishlist__top--bar */
+.wishlist__top--bar button[b-phsu5iil1p] {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .wishlist__top--bar button:hover[b-phsu5iil1p] {
+        background-color: #fff;
+        color: #000;
+    }
+
+/* Tạo khoảng cách giữa button__area và form trên */
+.button__area[b-phsu5iil1p] {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+    .button__area button[b-phsu5iil1p] {
+        padding: 12px 25px;
+        font-size: 16px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+        .button__area button:hover[b-phsu5iil1p] {
+            background-color: #fff;
+            color: #000;
+        }

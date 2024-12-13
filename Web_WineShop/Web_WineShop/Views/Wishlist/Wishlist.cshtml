@@ -1,14 +1,15 @@
-﻿@page
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
+
 }
+
     <!-- Wishlist Items -->
     <div class="wishlist__items">
         <form asp-action="Wishlist" method="post" id="wishlist_form">
             <!-- Wishlist Top Bar -->
             <div class="wishlist__top--bar">
                 <span>2 items</span>
-                <button type="button" onclick="location.href='/Send_to_friend/Index'">Send Wishlist to a Friend</button>
+            <button type="button" class="link" data-href="Wishlist/SendToFriend">Send Wishlist to a Friend</button>
             </div>
 
             <!-- Hidden Input for Wishlist ID -->
@@ -57,10 +58,21 @@
 
             <!-- Button Area -->
             <div class="button__area">
-                <button type="button" onclick="location.href='/Send_to_friend/Index'">Send Wishlist to a Friend</button>
+                <button type="button" class="link" data-href="Wishlist/SendToFriend">Send Wishlist to a Friend</button>
                 <button type="button">Purchase Wishlist</button>
             </div>
         </form>
     </div>
+<script>
+    // Chạy khi nhấn vào nút có class .link
+    document.querySelectorAll('.link').forEach(function (button) {
+        button.addEventListener('click', function () {
+            // Lấy URL từ thuộc tính data-href
+            var href = button.getAttribute('data-href');
+            // Chuyển hướng tới URL này
+            window.location.href = href;
+        });
+    });
+</script>
 
    
