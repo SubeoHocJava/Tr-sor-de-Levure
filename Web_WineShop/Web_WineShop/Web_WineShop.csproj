@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\css\Wishlist\Send_to_friend.css" />
+    <None Include="wwwroot\css\Wishlist\Wishlist.css" />
+  </ItemGroup>
+
 </Project>

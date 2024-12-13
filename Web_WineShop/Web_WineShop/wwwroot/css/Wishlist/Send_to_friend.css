@@ -1,0 +1,166 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px 150px;
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+.wishlist-friend-form-holder {
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    margin: 0 auto; /* Căn giữa form */
+    text-align: left; /* Đảm bảo chữ trong form vẫn căn lề trái */
+}
+
+h1 {
+    color: #b17814;
+    font-size: 2rem; /* Điều chỉnh kích thước chữ tiêu đề */
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+.row {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.col {
+    display: 1;
+    padding: 5px;
+}
+
+.form {
+    display: flex;
+    justify-content: center; /* Căn giữa form theo chiều ngang */
+    align-items: center; /* Căn giữa form theo chiều dọc */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #5b9bd5;
+    }
+
+.mandatory {
+    color: red;
+}
+
+.checkout-select--error {
+    border-color: red;
+}
+
+.checkout-select-message--error {
+    color: #ff0000; /* Màu chữ đỏ cho thông báo lỗi */
+    font-size: 12px;
+    font-weight: bold; /* Đặt chữ đậm để nổi bật */
+}
+
+/* Các lớp CSS mới để thêm màu cho cảnh báo */
+.checkout-select-message--error {
+    color: #ff4d4d; /* Màu đỏ sáng cho thông báo lỗi */
+    font-size: 14px; /* Tăng kích thước chữ cho dễ nhìn */
+    font-weight: bold; /* Đảm bảo chữ cảnh báo đậm */
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #000000;
+}
+
+    button:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+.g_recaptcha_response_wrapper {
+    margin-top: 20px;
+}
+
+.form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bounce1,
+.bounce2,
+.bounce3 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #333;
+    animation: bounce 1.2s infinite ease-in-out;
+}
+
+.bounce1 {
+    animation-delay: -0.32s;
+}
+
+.bounce2 {
+    animation-delay: -0.16s;
+}
+
+.bounce3 {
+    animation-delay: 0;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+.checkout-select-message--error {
+    color: #ff0000; /* Màu đỏ cho thông báo lỗi */
+    font-size: 12px; /* Kích thước chữ thông báo lỗi */
+    font-weight: bold; /* Đặt chữ đậm để làm nổi bật */
+}
+
+.friend_name_wrapper .checkout-select-message--error {
+    color: #ff4d4d; /* Màu đỏ sáng cho lỗi tên bạn */
+}
+
+.friend_email_wrapper .checkout-select-message--error {
+    color: #ff4d4d; /* Màu đỏ sáng cho lỗi email bạn */
+}
+
+.your_name_wrapper .checkout-select-message--error {
+    color: #ff4d4d; /* Màu đỏ sáng cho lỗi tên của bạn */
+}
+
+.your_email_wrapper .checkout-select-message--error {
+    color: #ff4d4d; /* Màu đỏ sáng cho lỗi email của bạn */
+}

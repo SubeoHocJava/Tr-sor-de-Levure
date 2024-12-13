@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj": {}
+    "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj": {
+    "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
+        "projectUniqueName": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
         "projectName": "Web_WineShop",
-        "projectPath": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
-        "packagesPath": "C:\\Users\\LAPTOP MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\",
+        "projectPath": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
+        "packagesPath": "C:\\Users\\xieml\\.nuget\\packages\\",
+        "outputPath": "D:\\WineShop\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LAPTOP MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\xieml\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
