@@ -1,8 +1,8 @@
 ﻿namespace Web_WineShop.Models
 {
-	public class Bank
+	public class OrderState
 	{
 		public int Id { get; set; }
-		public string Name { get; set; }
+		public string StateName { get; set; }
 	}
 }
