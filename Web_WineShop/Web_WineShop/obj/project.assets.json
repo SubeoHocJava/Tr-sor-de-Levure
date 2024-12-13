@@ -5566,19 +5566,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nguye\\.nuget\\packages\\": {}
+    "C:\\Users\\LAPTOP MSI\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
+      "projectUniqueName": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
       "projectName": "Web_WineShop",
-      "projectPath": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
-      "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-      "outputPath": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\",
+      "projectPath": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
+      "packagesPath": "C:\\Users\\LAPTOP MSI\\.nuget\\packages\\",
+      "outputPath": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LAPTOP MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
