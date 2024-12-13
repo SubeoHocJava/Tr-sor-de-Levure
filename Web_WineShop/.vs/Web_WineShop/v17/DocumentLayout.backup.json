@@ -1,46 +1,62 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "WorkspaceRootPath": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-  "WorkspaceRootPath": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\code files\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\code files\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\views\\admin\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\views\\admin\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\code files\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\violate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\violate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\code files\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\code files\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\code files\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\code files\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\code files\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> 7b824c63ab94e593a9175f1171bf5af06370ce8a
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\wwwroot\\js\\admin.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\wwwroot\\js\\admin.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\views\\admin\\admin.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\views\\admin\\admin.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\orderstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\orderstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\views\\profile\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\views\\profile\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\bankaccont.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\bankaccont.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\programming\\project\\dotnet\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,122 +66,189 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-<<<<<<< HEAD
-              "Title": "Bank.cs",
-              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Bank.cs",
-              "RelativeDocumentMoniker": "Web_WineShop\\Models\\Bank.cs",
-              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Bank.cs",
-              "RelativeToolTip": "Web_WineShop\\Models\\Bank.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T03:25:41.525Z",
-              "EditorCaption": ""
-=======
-              "Title": "Detail.cs",
-              "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Detail.cs",
-              "RelativeDocumentMoniker": "Web_WineShop\\Models\\Detail.cs",
-              "ToolTip": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Detail.cs",
-              "RelativeToolTip": "Web_WineShop\\Models\\Detail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T03:20:12.728Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Violate.cs",
-              "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Violate.cs",
-              "RelativeDocumentMoniker": "Web_WineShop\\Models\\Violate.cs",
-              "ToolTip": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Violate.cs",
-              "RelativeToolTip": "Web_WineShop\\Models\\Violate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Program.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Program.cs",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Program.cs",
+              "RelativeToolTip": "Web_WineShop\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T03:17:20.626Z",
+              "WhenOpened": "2024-12-13T07:29:57.543Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Web_WineShop\\Models\\User.cs",
-              "ToolTip": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\User.cs",
-              "RelativeToolTip": "Web_WineShop\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T03:10:50.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Account.cs",
-              "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Account.cs",
-              "RelativeDocumentMoniker": "Web_WineShop\\Models\\Account.cs",
-              "ToolTip": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Account.cs",
-              "RelativeToolTip": "Web_WineShop\\Models\\Account.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T02:22:12.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Web_WineShop\\Models\\ErrorViewModel.cs",
-              "ToolTip": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Web_WineShop\\Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T02:16:22.599Z",
+              "Title": "admin.js",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\js\\admin.js",
+              "RelativeDocumentMoniker": "Web_WineShop\\wwwroot\\js\\admin.js",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\wwwroot\\js\\admin.js",
+              "RelativeToolTip": "Web_WineShop\\wwwroot\\js\\admin.js",
+              "ViewState": "AgIAAOwAAAAAAAAAAAAhwAgAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-13T07:28:29.285Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Voucher.cs",
-              "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Voucher.cs",
-              "RelativeDocumentMoniker": "Web_WineShop\\Models\\Voucher.cs",
-              "ToolTip": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Voucher.cs",
-              "RelativeToolTip": "Web_WineShop\\Models\\Voucher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T17:12:32.669Z",
+              "Title": "Admin.cshtml.css",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Admin\\Admin.cshtml.css",
+              "RelativeDocumentMoniker": "Web_WineShop\\Views\\Admin\\Admin.cshtml.css",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Admin\\Admin.cshtml.css",
+              "RelativeToolTip": "Web_WineShop\\Views\\Admin\\Admin.cshtml.css",
+              "ViewState": "AgIAAFgBAAAAAAAAAAAAwGEBAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-13T07:27:45.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Admin.cshtml",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Admin\\Admin.cshtml",
+              "RelativeDocumentMoniker": "Web_WineShop\\Views\\Admin\\Admin.cshtml",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Admin\\Admin.cshtml",
+              "RelativeToolTip": "Web_WineShop\\Views\\Admin\\Admin.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-13T07:25:56.843Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Program.cs",
-              "RelativeDocumentMoniker": "Web_WineShop\\Program.cs",
-              "ToolTip": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Program.cs",
-              "RelativeToolTip": "Web_WineShop\\Program.cs",
+              "Title": "OrderState.cs",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\OrderState.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Models\\OrderState.cs",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\OrderState.cs",
+              "RelativeToolTip": "Web_WineShop\\Models\\OrderState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T05:47:14.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Models\\User.cs",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\User.cs",
+              "RelativeToolTip": "Web_WineShop\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T16:58:49.147Z",
+              "WhenOpened": "2024-12-13T05:43:20.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BankAccont.cs",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\BankAccont.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Models\\BankAccont.cs",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\BankAccont.cs",
+              "RelativeToolTip": "Web_WineShop\\Models\\BankAccont.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T05:43:18.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Web_WineShop\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Web_WineShop\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-13T05:42:43.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Web_WineShop\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T07:29:37.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Web_WineShop\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Web_WineShop\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-13T05:42:28.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Controllers\\ProfileController.cs",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "Web_WineShop\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T05:42:12.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Bank.cs",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Bank.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Models\\Bank.cs",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Bank.cs",
+              "RelativeToolTip": "Web_WineShop\\Models\\Bank.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T05:41:59.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "Web_WineShop\\Models\\Account.cs",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Account.cs",
+              "RelativeToolTip": "Web_WineShop\\Models\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T05:41:58.149Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Web_WineShop\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Web_WineShop\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T16:48:20.955Z"
->>>>>>> 7b824c63ab94e593a9175f1171bf5af06370ce8a
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Profile\\Profile.cshtml",
+              "RelativeDocumentMoniker": "Web_WineShop\\Views\\Profile\\Profile.cshtml",
+              "ToolTip": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Profile\\Profile.cshtml",
+              "RelativeToolTip": "Web_WineShop\\Views\\Profile\\Profile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-13T05:38:35.884Z",
+              "EditorCaption": ""
             }
           ]
         }

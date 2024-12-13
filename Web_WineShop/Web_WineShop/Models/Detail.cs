@@ -3,7 +3,7 @@
     public class Detail
     {
         public int Id { get; set; }
-        public Product product { get; set; }
+        //public Product product { get; set; }
         public string description { get; set; }
         public int size { get; set; }
         public double ABV { get; set; }
