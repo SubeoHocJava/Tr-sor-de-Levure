@@ -7,5 +7,6 @@ public class Voucher
     public int decription { get; set; }
     public string percentage { get; set; }
     public double maxDiscount { get; set; }
+
     
 }
