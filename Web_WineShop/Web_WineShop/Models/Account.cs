@@ -8,7 +8,7 @@
         public string password { get; set; }
         public DateTime createDate { get; set; }
         public int role { get; set; }
-        public Boolean Ban { get; set; }
+        public bool Ban { get; set; }
 
     }
 }

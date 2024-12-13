@@ -4,9 +4,10 @@
 	{
 		public int Id { get; set; }
 		public int BankId { get; set; }
-		public int UserId { get; set; }
-		public long AccountNo {  get; set; }
+		public long AccountNo { get; set; }
 		public double Balance { get; set; }
+
+		public Bank Bank { get; set; }
 
 	}
 }
