@@ -1,0 +1,362 @@
+/* Center the ul container */
+.new-list[b-e4qsldy8ql] {
+    padding-left: 0;
+    width: 100%;
+}
+
+    .new-list li[b-e4qsldy8ql] {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+        /* border: 1px solid; */
+    }
+
+    .new-list span[b-e4qsldy8ql] {
+        margin-left: 10px;
+        /* Space between the icon and text */
+    }
+
+    .new-list i[b-e4qsldy8ql] {
+        font-size: 1.5rem;
+        margin-left: 10px;
+        color: #070707;
+    }
+
+    .new-list li:hover[b-e4qsldy8ql] {
+        background-image: linear-gradient(145deg, #1f6fe7 40%, #a2c1ee 60%);
+    }
+
+.cursor-pointer[b-e4qsldy8ql] {
+    cursor: pointer;
+}
+
+body[b-e4qsldy8ql] {
+    background-image: linear-gradient(145deg, #dde1e3 70%, #bdc3c7 10%);
+}
+/* Style for body-card */
+.body-card[b-e4qsldy8ql] {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add shadow for depth */
+}
+
+.search-box[b-e4qsldy8ql] {
+    width: 35px;
+    height: 35px;
+    background-color: rgb(198, 192, 192);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+    .search-box.open[b-e4qsldy8ql] {
+        width: 350px;
+        /* Expanding the box */
+    }
+
+.search-input[b-e4qsldy8ql] {
+    width: 100%;
+    height: 100%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    color: black;
+    padding: 10px 100px 10px 35px;
+    font-size: 15px;
+}
+
+.search-btn[b-e4qsldy8ql] {
+    color: #242628;
+    outline: none;
+    border: none;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    font-size: 20px;
+    /* Adjusted size of the search icon */
+}
+
+.admin-image-container[b-e4qsldy8ql] {
+    width: 100px; /* Set the size of the circle */
+    height: 100px; /* Set the size of the circle */
+    border-radius: 50%; /* Makes the container round */
+    overflow: hidden; /* Ensures the image doesn't spill out */
+    margin: 20px auto; /* Center the image horizontally */
+    border: 2px solid #ccc; /* Optional: adds a border to the circle */
+}
+
+.admin-image[b-e4qsldy8ql] {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
+}
+
+/* Hiding all content sections initially */
+.content-section[b-e4qsldy8ql] {
+    display: none;
+}
+
+    /* Active section shown */
+    .content-section.active[b-e4qsldy8ql] {
+        display: block;
+    }
+
+.table-bordered[b-e4qsldy8ql] {
+    border: 3px solid #0966f3;
+}
+    /* Table Header Styles */
+    .table-bordered thead[b-e4qsldy8ql] {
+        text-align: center; /* Align text to the left */
+        font-weight: bold; /* Bold font for the header */
+        font-size: 1rem; /* Font size */
+    }
+
+        .table-bordered thead th[b-e4qsldy8ql] {
+            padding: 12px;
+            border-bottom: 3px solid #0966f3; /* Darker border for separation */
+            text-transform: uppercase; /* Uppercase text for better readability */
+            background-color: #2a79f0; /* Blue background */
+            color: white; /* White text color */
+        }
+
+    .table-bordered tbody[b-e4qsldy8ql] {
+        text-align: center; /* Align text to the left */
+    }
+
+.h1-title[b-e4qsldy8ql] {
+    color: #2a79f0;
+    font-weight: bold;
+}
+
+/* ffun-nha */
+/* Container Styles */
+.add-product[b-e4qsldy8ql] {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Left Section: Product Information Form */
+.product-info-form[b-e4qsldy8ql] {
+    padding: 20px;
+    flex: 1 1 45%;
+    border-right: 2px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+    .product-info-form h2[b-e4qsldy8ql] {
+        font-family: "Arial", sans-serif;
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+/* General Input Group Styles */
+.input-group[b-e4qsldy8ql] {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .input-group label[b-e4qsldy8ql] {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+.input-field[b-e4qsldy8ql] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .input-field:focus[b-e4qsldy8ql] {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    }
+
+textarea.input-field[b-e4qsldy8ql] {
+    height: 150px;
+    border: none;
+}
+
+/* Featured Product Checkbox */
+.featured-checkbox[b-e4qsldy8ql] {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.checkbox-input[b-e4qsldy8ql] {
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox-label[b-e4qsldy8ql] {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Buttons */
+.submit-btn[b-e4qsldy8ql] {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .submit-btn:hover[b-e4qsldy8ql] {
+        background-color: #0056b3;
+    }
+
+/* Responsive Design: Mobile View */
+@media screen and (max-width: 768px) {
+    .product-info-form[b-e4qsldy8ql] {
+        flex: 1 1 100%;
+        border-right: none;
+    }
+
+    .input-group[b-e4qsldy8ql] {
+        margin-bottom: 15px;
+    }
+
+    .input-field[b-e4qsldy8ql] {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .submit-btn[b-e4qsldy8ql] {
+        width: 100%;
+    }
+}
+/* Styling for the image upload section */
+.image-upload-section[b-e4qsldy8ql] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.upload-file[b-e4qsldy8ql] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Container for the image previews and paths */
+.image-preview-container[b-e4qsldy8ql] {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap; /* Allow the images to wrap when the screen is small */
+    justify-content: center; /* Center the images in the container */
+}
+
+/* Styling for individual image preview */
+.image-preview-item[b-e4qsldy8ql] {
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-preview[b-e4qsldy8ql] {
+    width: 150px; /* Set width of all images to be the same */
+    height: 150px; /* Set height to maintain a square aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.image-path[b-e4qsldy8ql] {
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+    word-wrap: break-word;
+    margin-top: 8px;
+}
+
+.product-btn[b-e4qsldy8ql] {
+    color: #242628;
+    outline: none;
+    border: none;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+/* Thay đổi màu của icon dấu + */
+.brand-btn .bi-plus[b-e4qsldy8ql] {
+    color: black; /* Đặt màu đen cho dấu + */
+}
+/* Thay đổi màu của icon dấu ba gạch */
+.brand-btn .bi-list[b-e4qsldy8ql] {
+    color: black; /* Đặt màu đen cho dấu ba gạch */
+}
+/* Di chuyển nút chứa dấu + lên trên và qua trái 1px */
+.brand-btn[b-e4qsldy8ql] {
+    position: relative;
+    top: -1px; /* Di chuyển lên trên 1px */
+    left: -3px; /* Di chuyển qua trái 1px */
+}
+/* màu btn voucher */
+.btn-color-real[b-e4qsldy8ql] {
+    background-color: #f0ad4e; /* màu xanh cam */
+    color: white; /* màu đen */
+}
+
+    .btn-color-real:hover[b-e4qsldy8ql] {
+        background-color: white;
+        color: #f0ad4e;
+        border: 1px solid #f0ad4e;
+    }
+/* solving order */
+/* btn check */
+/* btn list product */
+.product-list[b-e4qsldy8ql] {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    .product-list li[b-e4qsldy8ql] {
+        padding: 5px 0;
+        font-size: 14px;
+        color: #333;
+    }
+
+        .product-list li:hover[b-e4qsldy8ql] {
+            color: #f0ad4e;
+            cursor: pointer;
+        }
