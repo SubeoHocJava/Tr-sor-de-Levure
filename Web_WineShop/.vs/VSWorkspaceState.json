@@ -2,11 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Web_WineShop",
-    "\\Web_WineShop\\Models",
-    "\\Web_WineShop\\obj\\Debug",
-    "\\Web_WineShop\\obj\\Debug\\net8.0\\refint",
-    "\\Web_WineShop\\Properties"
+    "\\Web_WineShop\\Models"
   ],
-  "SelectedNode": "\\Web_WineShop\\Models\\Voucher.cs",
+  "SelectedNode": "\\Web_WineShop\\Models\\Bank.cs",
   "PreviewInSolutionExplorer": false
 }
