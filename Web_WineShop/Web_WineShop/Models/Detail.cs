@@ -4,11 +4,11 @@
     {
         public int Id { get; set; }
         //public Product product { get; set; }
-        public string description { get; set; }
-        public int size { get; set; }
+        public string Description { get; set; }
+        public int Size { get; set; }
         public double ABV { get; set; }
-        public string  varietal { get; set; }
-        public string status { get; set; }
+        public string Varietal { get; set; }
+        public string Status { get; set; }
             
     } 
 }
