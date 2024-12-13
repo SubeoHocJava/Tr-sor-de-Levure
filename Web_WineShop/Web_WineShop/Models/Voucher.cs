@@ -2,10 +2,10 @@
 
 public class Voucher
 {
-    private int id { get; set; }
-    private string name { get; set; }
-    private int decription { get; set; }
-    private string percentage { get; set; }
-    private double maxDiscount { get; set}
+    public int id { get; set; }
+    public string name { get; set; }
+    public int decription { get; set; }
+    public string percentage { get; set; }
+    public double maxDiscount { get; set; }
     
 }

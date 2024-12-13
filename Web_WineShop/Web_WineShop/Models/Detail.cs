@@ -10,5 +10,5 @@
         public string  varietal { get; set; }
         public string status { get; set; }
             
-    }
+    } 
 }
