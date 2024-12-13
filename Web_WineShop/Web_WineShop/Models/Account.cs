@@ -2,13 +2,13 @@
 {
     public class Account
     {
-        private Violate violate {  get; set; }
-        private int id { get; set; }
-        private string email { get; set; }
-        private string password { get; set; }
-        private DateTime createDate { get; set; }
-        private int role { get; set; }
-        private Boolean Ban { get; set; }
+        public Violate violate {  get; set; }
+        public int id { get; set; }
+        public string email { get; set; }
+        public string password { get; set; }
+        public DateTime createDate { get; set; }
+        public int role { get; set; }
+        public Boolean Ban { get; set; }
 
     }
 }

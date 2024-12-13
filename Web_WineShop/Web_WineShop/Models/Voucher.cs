@@ -1,11 +1,20 @@
-﻿using System;
-
-public class Voucher
+﻿namespace Web_WineShop.Models
 {
-    private int id { get; set; }
-    private string name { get; set; }
-    private int decription { get; set; }
-    private string percentage { get; set; }
-    private double maxDiscount { get; set; }
-    
+    public class Voucher
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public int decription { get; set; }
+        public string percentage { get; set; }
+        public double maxDiscount { get; set; }
+
+        public Voucher (int id, string name, int decription, string percentage, double maxDiscount)
+        {
+            this.id = id;
+            this.name = name;
+            this.decription = decription;
+            this.percentage = percentage;
+            this.maxDiscount = maxDiscount;
+        }
+    }
 }
