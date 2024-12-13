@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\code files\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|d:\\code files\\tr-sor-de-levure\\web_wineshop\\web_wineshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{603ED634-2F0A-462F-81A0-F2C591761158}|Web_WineShop\\Web_WineShop.csproj|solutionrelative:web_wineshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -45,11 +49,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Web_WineShop\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Web_WineShop\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-13T15:02:04.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\danhp\\AppData\\Local\\Temp\\.vsdbgsrc\\322beca6c653df40fb7abfcb55a7a46253dfea90e1249383f5e06ec31f0dc786\\Program.cs",
               "ToolTip": "C:\\Users\\danhp\\AppData\\Local\\Temp\\.vsdbgsrc\\322beca6c653df40fb7abfcb55a7a46253dfea90e1249383f5e06ec31f0dc786\\Program.cs",
@@ -59,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ForgotPassword.cshtml",
               "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Login\\ForgotPassword.cshtml",
               "RelativeDocumentMoniker": "Web_WineShop\\Views\\Login\\ForgotPassword.cshtml",
@@ -71,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Register.cshtml",
               "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Login\\Register.cshtml",
               "RelativeDocumentMoniker": "Web_WineShop\\Views\\Login\\Register.cshtml",
@@ -83,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Login.cshtml",
               "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Views\\Login\\Login.cshtml",
               "RelativeDocumentMoniker": "Web_WineShop\\Views\\Login\\Login.cshtml",
@@ -95,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Program.cs",
               "RelativeDocumentMoniker": "Web_WineShop\\Program.cs",
@@ -108,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LoginController.cs",
               "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Web_WineShop\\Controllers\\LoginController.cs",
@@ -121,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ShoppingCart.cs",
               "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\ShoppingCart.cs",
               "RelativeDocumentMoniker": "Web_WineShop\\Models\\ShoppingCart.cs",
@@ -133,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Web_WineShop\\Models\\ErrorViewModel.cs",
@@ -145,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Account.cs",
               "DocumentMoniker": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Models\\Account.cs",
               "RelativeDocumentMoniker": "Web_WineShop\\Models\\Account.cs",
