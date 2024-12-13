@@ -5,8 +5,9 @@
 .vs2015/
 
 # Ignore .NET build results
-/obj/
-/bin/
+bin/
+obj/
+
 
 # Ignore user-specific files
 *.user

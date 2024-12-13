@@ -22,6 +22,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
 	name: "default",
-	pattern: "{controller=Admin}/{action=Admin}/{id?}");
+	pattern: "{controller=Wishlist}/{action=Wishlist" + "}/{id?}");
 
 app.Run();
