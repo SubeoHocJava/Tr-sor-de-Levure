@@ -361,6 +361,8 @@ textarea.input-field[b-e4qsldy8ql] {
             color: #f0ad4e;
             cursor: pointer;
         }
+<<<<<<< HEAD
+=======
 /* _content/Web_WineShop/Views/Knowledge/Knowledge.cshtml.rz.scp.css */
 /* Kết nối font Montserrat từ Google Fonts */
 /*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap');*/
@@ -667,6 +669,7 @@ textarea.input-field[b-e4qsldy8ql] {
             /*color: white;*/
             /* Đổi màu chữ */
         /*}*/
+>>>>>>> 907e4da8b819737d1384bd2f9fada778b6b626b9
 /* _content/Web_WineShop/Views/Profile/Profile.cshtml.rz.scp.css */
 /* Center the ul container */
 .new-container[b-7ct24ng0f4] {
@@ -897,6 +900,52 @@ textarea.input-field[b-e4qsldy8ql] {
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand[b-2bnhcxbw9q] {
+<<<<<<< HEAD
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-2bnhcxbw9q] {
+  color: #0077cc;
+}
+
+.btn-primary[b-2bnhcxbw9q] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-2bnhcxbw9q], .nav-pills .show > .nav-link[b-2bnhcxbw9q] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-2bnhcxbw9q] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-2bnhcxbw9q] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-2bnhcxbw9q] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-2bnhcxbw9q] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-2bnhcxbw9q] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+=======
     white-space: normal;
     text-align: center;
     word-break: break-all;
@@ -1289,3 +1338,4 @@ body[b-phsu5iil1p] {
             background-color: #fff;
             color: #000;
         }
+>>>>>>> 907e4da8b819737d1384bd2f9fada778b6b626b9

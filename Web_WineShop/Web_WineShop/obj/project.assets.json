@@ -5566,12 +5566,26 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "C:\\Users\\phamn\\.nuget\\packages\\": {}
+=======
     "C:\\Users\\danhp\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+>>>>>>> 907e4da8b819737d1384bd2f9fada778b6b626b9
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "D:\\Code HK1 Năm 3\\Treso'r de Levure\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
+      "projectName": "Web_WineShop",
+      "projectPath": "D:\\Code HK1 Năm 3\\Treso'r de Levure\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
+      "packagesPath": "C:\\Users\\phamn\\.nuget\\packages\\",
+      "outputPath": "D:\\Code HK1 Năm 3\\Treso'r de Levure\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\phamn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
       "projectUniqueName": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
       "projectName": "Web_WineShop",
       "projectPath": "D:\\Code Files\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
@@ -5584,6 +5598,7 @@
       "configFilePaths": [
         "C:\\Users\\danhp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> 907e4da8b819737d1384bd2f9fada778b6b626b9
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5639,7 +5654,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+>>>>>>> 907e4da8b819737d1384bd2f9fada778b6b626b9
       }
     }
   }
