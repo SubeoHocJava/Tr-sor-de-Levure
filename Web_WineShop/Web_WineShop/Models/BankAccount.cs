@@ -1,6 +1,6 @@
 ﻿namespace Web_WineShop.Models
 {
-	public class BankAccont
+	public class BankAccount
 	{
 		public int Id { get; set; }
 		public int BankId { get; set; }

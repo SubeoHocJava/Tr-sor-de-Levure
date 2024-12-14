@@ -40,28 +40,28 @@
                                     <div class="card card-container-shopping" style="max-width: 400px;">
                                         <div class="row g-0 align-items-center">
                                             <div class="col-md-3 d-flex justify-content-center">
-                                                <img src="@item.ImageUrl" class="img-fluid rounded-start" alt="@item.Name">
+                                                <img src="@item" class="img-fluid rounded-start" alt="@item">
                                             </div>
                                             <div class="col-md-9">
                                                 <div class="card-body">
                                                     <span class="card-title text-color text-size-16">
-                                                        @item.Name
+                                                        @* @item.Name *@
                                                     </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
-                                <td class="text-center">@item.Price.ToString("C")</td>
+                                @* <td class="text-center">@item.Price.ToString("C")</td> *@
                                 <td class="text-center">
                                     <div class="d-flex align-items-center quantity-input">
-                                        <button class="btn btn-outline-secondary btn-sm me-1" type="button" onclick="updateQuantity(@item.Id, -1)">−</button>
-                                        <input type="number" value="@item.Quantity" min="1" class="form-control text-center"
-                                               style="width: 60px;" onchange="updateQuantity(@item.Id, this.value)">
-                                        <button class="btn btn-outline-secondary btn-sm ms-1" type="button" onclick="updateQuantity(@item.Id, 1)">+</button>
+                                        @* <button class="btn btn-outline-secondary btn-sm me-1" type="button" onclick="updateQuantity(@item.Id, -1)">−</button> *@
+                                        @* <input type="number" value="@item.Quantity" min="1" class="form-control text-center" *@
+                                               @* style="width: 60px;" onchange="updateQuantity(@item.Id, this.value)"> *@
+                                        @* <button class="btn btn-outline-secondary btn-sm ms-1" type="button" onclick="updateQuantity(@item.Id, 1)">+</button> *@
                                     </div>
                                 </td>
-                                <td class="text-center">@item.Total.ToString("C")</td>
+                                @* <td class="text-center">@item.Total.ToString("C")</td> *@
                             </tr>
                         }
                     </tbody>
@@ -73,16 +73,16 @@
                     <h5 class="mb-3">Order Summary</h5>
                     <div class="d-flex justify-content-between">
                         <span>Temporary calculation:</span>
-                        <span>@Model.Items.Sum(i => i.Price * i.Quantity).ToString("C")</span>
+                        @* <span>@Model.Items.Sum(i => i.Price * i.Quantity).ToString("C")</span> *@
                     </div>
                     <div class="d-flex justify-content-between mt-2">
                         <span>Discount:</span>
-                        <span>@Model.Discount.ToString("C")</span>
+                        @* <span>@Model.Discount.ToString("C")</span> *@
                     </div>
                     <hr>
                     <div class="d-flex justify-content-between fw-bold">
                         <span>Totals:</span>
-                        <span>@Model.Total.ToString("C")</span>
+                        @* <span>@Model.Total.ToString("C")</span> *@
                     </div>
                     <hr>
                     <div class="d-flex align-items-center mb-3">
@@ -104,11 +104,11 @@
                                         @foreach (var item in Model.Items)
                                         {
                                             <div class="d-flex align-items-center mb-4">
-                                                <img src="@item.ImageUrl" alt="@item.Name" class="img-fluid" style="max-width: 120px; height: auto;">
+                                                @* <img src="@item.ImageUrl" alt="@item.Name" class="img-fluid" style="max-width: 120px; height: auto;"> *@
                                                 <div class="ms-3">
-                                                    <p class="mb-1"><strong>@item.Name</strong></p>
-                                                    <p class="mb-1"><strong>Quantity:</strong> @item.Quantity</p>
-                                                    <p class="mb-1"><strong>Price:</strong> @item.Total.ToString("C")</p>
+                                                    @* <p class="mb-1"><strong>@item.Name</strong></p> *@
+                                                    @* <p class="mb-1"><strong>Quantity:</strong> @item.Quantity</p> *@
+                                                    @* <p class="mb-1"><strong>Price:</strong> @item.Total.ToString("C")</p> *@
                                                 </div>
                                             </div>
                                         }
@@ -117,7 +117,7 @@
                                         <!-- Subtotal, Shipping, Voucher, Total -->
                                         <div class="d-flex justify-content-between mb-3">
                                             <p class="fw-bold">SubTotal:</p>
-                                            <p class="text-end fw-bold">@Model.Items.Sum(i => i.Price * i.Quantity).ToString("C")</p>
+                                            @* <p class="text-end fw-bold">@Model.Items.Sum(i => i.Price * i.Quantity).ToString("C")</p> *@
                                         </div>
                                         <hr>
                                         <div class="d-flex justify-content-between mb-3">
@@ -127,19 +127,19 @@
                                         <hr>
                                         <div class="d-flex justify-content-between mb-3">
                                             <p class="fw-bold">Voucher:</p>
-                                            <p class="text-end">@Model.Discount.ToString("C")</p>
+                                            @* <p class="text-end">@Model.Discount.ToString("C")</p> *@
                                         </div>
                                         <hr>
                                         <div class="d-flex justify-content-between mb-3">
                                             <p class="fw-bold">Total:</p>
-                                            <p class="text-end text-danger fw-bold fs-2">@Model.Total.ToString("C")</p>
+                                            @* <p class="text-end text-danger fw-bold fs-2">@Model.Total.ToString("C")</p> *@
                                         </div>
                                         <hr>
 
                                         <!-- Address Information -->
                                         <div class="mb-4">
                                             <label for="address" class="form-label fw-bold">Shipping Address</label>
-                                            <p id="address" class="border p-2 rounded-3 bg-light">@Model.ShippingAddress</p>
+                                            @* <p id="address" class="border p-2 rounded-3 bg-light">@Model.ShippingAddress</p> *@
                                         </div>
 
                                         <!-- Payment Method -->

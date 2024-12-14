@@ -9,5 +9,7 @@
         public string Img { get; set; }
 
         public string Collab { get; set; }
+
+        public ICollection<Product> Products { get; set; }
     }
 }
