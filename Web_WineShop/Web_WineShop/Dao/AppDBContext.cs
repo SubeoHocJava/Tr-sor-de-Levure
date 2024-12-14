@@ -390,11 +390,12 @@ namespace Web_WineShop.Dao
 					.OnDelete(DeleteBehavior.Restrict);
 
 				// fk Details
-				entity.HasOne(p => p.Details)
+				entity.HasOne(p => p.Detail)
 					.WithOne(d => d.Product)
 					.HasForeignKey<Product>(p => p.DetailsId)
 					.OnDelete(DeleteBehavior.Restrict);
-			});
+                entity.HasIndex(p => p.DetailsId).IsUnique();
+            });
 			modelBuilder.Entity<Violate>(entity =>
 			{
 				entity.HasKey(v => v.Id);
@@ -408,22 +409,22 @@ namespace Web_WineShop.Dao
 					.HasMaxLength(500)  // Adjust the max length as per your requirement
 					.IsRequired();
 			});
-			modelBuilder.Entity<Details>(entity =>
+			modelBuilder.Entity<Detail>(entity =>
 			{
 				entity.HasKey(d => d.Id);
 				entity.Property(d => d.Id).HasColumnName("ID").IsRequired();
 				entity.Property(d => d.ProductId).HasColumnName("PRODUCT_ID").IsRequired();
 				entity.Property(d => d.Description).HasColumnName("DESCRIPTION").HasMaxLength(500);
 				entity.Property(d => d.Size).HasColumnName("SIZE").HasMaxLength(50);
-				entity.Property(d => d.Abv).HasColumnName("ABV");
+				entity.Property(d => d.ABV).HasColumnName("ABV");
 				entity.Property(d => d.Age).HasColumnName("AGE");
 				entity.Property(d => d.Varietal).HasColumnName("VARIETAL").HasMaxLength(100);
 				entity.Property(d => d.Status).HasColumnName("STATUS").HasMaxLength(50);
 
 				// fk Product
 				entity.HasOne(d => d.Product)
-					.WithOne(p => p.Details)
-					.HasForeignKey<Details>(d => d.ProductId)
+					.WithOne(p => p.Detail)
+					.HasForeignKey<Detail>(d => d.ProductId)
 					.OnDelete(DeleteBehavior.Cascade);
 			});
 			// Cấu hình WishItemModel

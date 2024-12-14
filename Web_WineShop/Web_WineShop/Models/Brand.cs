@@ -6,8 +6,10 @@
         public string Name { get; set; }
         public string Country { get; set; }
 
-        public string img { get; set; }
+        public string Img { get; set; }
 
-        public string collab { get; set; }
+        public string Collab { get; set; }
+
+        public ICollection<Product> Products { get; set; }
     }
 }
