@@ -1,13 +1,10 @@
-﻿namespace Web_WineShop.Models;
+﻿using Web_WineShop.Models;
 
 public class CartItem
 {
-    public Product product { get; set; }
-    public int quantity { get; set; }
+    public int UserId { get; set; }
+    public int ProductId { get; set; } // Foreign Key
+    public int Quantity { get; set; }
 
-    public CartItem(Product product, int quantity)
-    {
-        this.product = product;
-        this.quantity = quantity;
-    }
+    public Product Product { get; set; }
 }

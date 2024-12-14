@@ -11,7 +11,8 @@ namespace Web_WineShop.Models
 
         public Category category { get; set; }
 
-        public String name { get; set; }
+        public String Name { get; set; }
+        public String ImageUrl { get; set; }
 
         public String appcreciation { get; set; }
 
