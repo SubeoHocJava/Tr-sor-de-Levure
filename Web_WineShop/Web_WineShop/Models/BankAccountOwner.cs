@@ -5,6 +5,6 @@
 		public int BankAccountId { get; set; }
 		public int UserId { get; set; }
 
-		public BankAccont BankAccont { get; set; }
+		public BankAccount BankAccount { get; set; }
 	}
 }
