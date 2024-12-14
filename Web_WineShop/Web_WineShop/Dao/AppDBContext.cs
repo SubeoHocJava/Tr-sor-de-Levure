@@ -1,25 +1,20 @@
-﻿using System.Configuration;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
+﻿using Microsoft.EntityFrameworkCore;
 using Web_WineShop.Models;
 
 namespace Web_WineShop.Dao
 {
 	public class AppDBContext : DbContext
 	{
-		private readonly IConfiguration _configuration;
+			
+		public AppDBContext(DbContextOptions<AppDBContext> options) : base(options) { }
+		public AppDBContext() { }
 
-		public AppDBContext(DbContextOptions<AppDBContext> options, IConfiguration configuration)
-			: base(options)
-		{
-			_configuration = configuration;
-		}
 		public DbSet<Account> Accounts { get; set; }
 		public DbSet<Bank> Banks { get; set; }
 		public DbSet<BankAccountOwner> BankAccountOwners { get; set; }
 		public DbSet<Brand> Brands { get; set; }
 		public DbSet<CartItem> CartItems { get; set; }
-		public DbSet<Category> Categorys { get; set; }
+		public DbSet<Category> Categories { get; set; }
 		public DbSet<Detail> Details { get; set; }
 		public DbSet<Invoice> Invoices { get; set; }
 		public DbSet<Knowledge> Knowledges { get; set; }
@@ -40,10 +35,6 @@ namespace Web_WineShop.Dao
 		public DbSet<Voucher> Vouchers { get; set; }
 		public DbSet<WishItem> WishItems { get; set; }
 
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		{
-			optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
-		}
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			//Bank
@@ -394,8 +385,8 @@ namespace Web_WineShop.Dao
 					.WithOne(d => d.Product)
 					.HasForeignKey<Product>(p => p.DetailsId)
 					.OnDelete(DeleteBehavior.Restrict);
-                entity.HasIndex(p => p.DetailsId).IsUnique();
-            });
+				entity.HasIndex(p => p.DetailsId).IsUnique();
+			});
 			modelBuilder.Entity<Violate>(entity =>
 			{
 				entity.HasKey(v => v.Id);
@@ -442,7 +433,7 @@ namespace Web_WineShop.Dao
 			   .OnDelete(DeleteBehavior.Cascade);
 			});
 			//CartItem
-			modelBuilder.Entity<CartItem>(static entity =>
+			modelBuilder.Entity<CartItem>(entity =>
 			{
 				// Composite key
 				entity.HasKey(c => new { c.UserId, c.ProductId });
