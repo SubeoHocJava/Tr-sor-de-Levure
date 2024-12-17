@@ -9,7 +9,7 @@ namespace Web_WineShop.Models
 		public virtual Product Product { get; set; }
 		public virtual User User { get; set; }
 
-		// public virtual Product Product { get; set; }  // Mối quan hệ với Product 
-		// public virtual User User { get; set; }  // Mối quan hệ với User 
+		 public virtual Product Product { get; set; }  // Mối quan hệ với Product 
+		 public virtual User User { get; set; }  // Mối quan hệ với User 
 	}
 }
