@@ -5,14 +5,25 @@ namespace Web_WineShop.Models
     public class ShoppingCart
     {
         public List<CartItem> Items { get; set; }
-        public ShoppingCart() { 
-        this.Items = new List<CartItem>();
+
+        // Thêm thuộc tính Total vào ShoppingCart
+        public double Total
+        {
+            get
+            {
+                return Items.Sum(item => item.Product.Price * item.Quantity);
+            }
         }
- 
-    // Phương thức thêm item vào giỏ hàng
-    public void AddItem(CartItem item)
-    {
+
+        public ShoppingCart()
+        {
+            this.Items = new List<CartItem>();
+        }
+
+        public void AddItem(CartItem item)
+        {
             Items.Add(item);
+        }
     }
+
 }
-    }
