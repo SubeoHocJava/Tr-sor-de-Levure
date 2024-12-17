@@ -3,28 +3,6 @@ using Web_WineShop.Models;
 
 namespace Web_WineShop.Dao
 {
-<<<<<<< HEAD
-    public class AppDBContext : DbContext
-    {
-        private readonly IConfiguration _configuration;
-
-        public AppDBContext(DbContextOptions<AppDBContext> options, IConfiguration configuration)
-            : base(options)
-        {
-            _configuration = configuration;
-        }
-        public DbSet<Account> Accounts { get; set; }
-        public DbSet<Bank> Banks { get; set; }
-        public DbSet<BankAccountOwner> BankAccountOwners { get; set; }
-        public DbSet<Brand> Brands { get; set; }
-        public DbSet<CartItem> CartItems { get; set; }
-        public DbSet<Category> Categorys { get; set; }
-        public DbSet<Detail> Details { get; set; }
-        public DbSet<Invoice> Invoices { get; set; }
-        public DbSet<Knowledge> Knowledges { get; set; }
-        public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderDate> OrderDates { get; set; }
-=======
 	public class AppDBContext : DbContext
 	{
 			
@@ -42,7 +20,6 @@ namespace Web_WineShop.Dao
 		public DbSet<Knowledge> Knowledges { get; set; }
 		public DbSet<Order> Orders { get; set; }
 		public DbSet<OrderDate> OrderDates { get; set; }
->>>>>>> dfa9bbb3f90d2c93cbebd77c4d31756f83f9609f
 
         public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<OrderState> OrderStates { get; set; }
@@ -58,45 +35,6 @@ namespace Web_WineShop.Dao
         public DbSet<Voucher> Vouchers { get; set; }
         public DbSet<WishItem> WishItems { get; set; }
 
-<<<<<<< HEAD
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
-        }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            //Bank
-            modelBuilder.Entity<Bank>(entity =>
-            {
-                entity.ToTable("Bank");
-                entity.HasKey(b => b.Id);
-                entity.Property(b => b.Id)
-                    .HasColumnName("Id")
-                    .ValueGeneratedOnAdd();
-                entity.Property(b => b.Name)
-                    .HasColumnName("Name")
-                    .HasColumnType("varchar(100)")
-                    .IsRequired();
-            });
-            //BankAccount
-            modelBuilder.Entity<BankAccount>(entity =>
-            {
-                entity.ToTable("Bank_Account");
-                entity.HasKey(ba => ba.Id);
-                entity.Property(ba => ba.Id)
-                    .HasColumnName("Id")
-                    .ValueGeneratedOnAdd();
-                entity.Property(ba => ba.BankId)
-                    .HasColumnName("Bank_Id")
-                    .IsRequired();
-                entity.Property(ba => ba.AccountNo)
-                    .HasColumnName("Account_No")
-                    .IsRequired();
-                entity.Property(ba => ba.Balance)
-                    .HasColumnName("Balance")
-                    .HasColumnType("real")
-                    .IsRequired();
-=======
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			//Bank
@@ -130,7 +68,6 @@ namespace Web_WineShop.Dao
 					.HasColumnName("Balance")
 					.HasColumnType("real")
 					.IsRequired();
->>>>>>> dfa9bbb3f90d2c93cbebd77c4d31756f83f9609f
 
                 entity.HasOne(ba => ba.Bank)
                     .WithMany()
@@ -443,18 +380,7 @@ namespace Web_WineShop.Dao
                     .HasForeignKey(p => p.CategoryId)
                     .OnDelete(DeleteBehavior.Restrict);
 
-<<<<<<< HEAD
-                // fk Details
-                entity.HasOne(p => p.Detail)
-                    .WithOne(d => d.Product)
-                    .HasForeignKey<Product>(p => p.DetailsId)
-                    .OnDelete(DeleteBehavior.Restrict);
-                entity.HasIndex(p => p.DetailsId).IsUnique();
-            });
-            modelBuilder.Entity<Violate>(entity =>
-            {
-                entity.HasKey(v => v.Id);
-=======
+
 				// fk Details
 				entity.HasOne(p => p.Detail)
 					.WithOne(d => d.Product)
@@ -465,7 +391,6 @@ namespace Web_WineShop.Dao
 			modelBuilder.Entity<Violate>(entity =>
 			{
 				entity.HasKey(v => v.Id);
->>>>>>> dfa9bbb3f90d2c93cbebd77c4d31756f83f9609f
 
                 entity.Property(v => v.Id)
                     .HasColumnName("ID")
@@ -488,33 +413,7 @@ namespace Web_WineShop.Dao
                 entity.Property(d => d.Varietal).HasColumnName("VARIETAL").HasMaxLength(100);
                 entity.Property(d => d.Status).HasColumnName("STATUS").HasMaxLength(50);
 
-<<<<<<< HEAD
-                // fk Product
-                entity.HasOne(d => d.Product)
-                    .WithOne(p => p.Detail)
-                    .HasForeignKey<Detail>(d => d.ProductId)
-                    .OnDelete(DeleteBehavior.Cascade);
-            });
-            // Cấu hình WishItemModel
-            modelBuilder.Entity<WishItem>(entity =>
-            {
-                entity.HasKey(w => new { w.ProductId, w.UserId });
-                entity.ToTable("WishItem");
-                entity.HasOne(w => w.Product)
-                      .WithMany()
-                      .HasForeignKey(w => w.ProductId)
-                      .OnDelete(DeleteBehavior.Cascade);
-                entity.HasOne(w => w.User)
-               .WithMany()
-               .HasForeignKey(w => w.UserId)
-               .OnDelete(DeleteBehavior.Cascade);
-            });
-            //CartItem
-            modelBuilder.Entity<CartItem>(static entity =>
-            {
-                // Composite key
-                entity.HasKey(c => new { c.UserId, c.ProductId });
-=======
+
 				// fk Product
 				entity.HasOne(d => d.Product)
 					.WithOne(p => p.Detail)
@@ -540,7 +439,6 @@ namespace Web_WineShop.Dao
 			{
 				// Composite key
 				entity.HasKey(c => new { c.UserId, c.ProductId });
->>>>>>> dfa9bbb3f90d2c93cbebd77c4d31756f83f9609f
 
                 // Cấu hình thuộc tính
                 entity.Property(c => c.Quantity)
