@@ -1,16 +1,10 @@
-$(document).ready(function () {
+$(document).on('ready',function () {
     //collapse
     $('.collapse-content').hide();
-    $('.collapse-btn').click(function () {
+    $('.collapse-btn').on('click',function () {
         var index = $(this).index('.collapse-btn');
         $('.collapse-content').eq(index).slideToggle();
     });
-    //revieved-order
-    $('.recieved_order-btn').on('click', function () {
-        $(this).prev('.buy_again-btn').removeClass('disabled-btn');
-        $(this).addClass('disabled-btn');
-    });
-
     // Hiển thị phần "Account Overview" mặc định khi trang được tải
     $('#account-overview').removeClass('d-none');
 
