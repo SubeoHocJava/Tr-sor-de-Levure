@@ -45,7 +45,7 @@
                                             <div class="col-md-9">
                                                 <div class="card-body">
                                                     <span class="card-title text-color text-size-16">
-                                                        @* @item.Name *@
+                                                         @* @item.Name *@
                                                     </span>
                                                 </div>
                                             </div>
@@ -90,7 +90,7 @@
                         <input type="text" class="form-control me-2" placeholder="Enter coupon code">
                         <button class="pay-btn">Apply</button>
                     </div>
-                    <button class="mt-3 pay-btn" data-bs-toggle="modal" data-bs-target="#orderSummaryModal">Payment</button>
+                    <button class="mt-3 pay-btn link" data-bs-toggle="modal" data-bs-target="#orderSummaryModal" data-href="">Payment</button>
                     <!-- Order detail -->
                     <div class="modal fade" id="orderSummaryModal" tabindex="-1" aria-labelledby="orderSummaryModalLabel"
                          aria-hidden="true">
@@ -99,25 +99,24 @@
                                 <div class="modal-body">
                                     <div class="w-100 h-auto p-4">
                                         <h2 class="text-center mb-4">Order Summary</h2>
-
                                         <!-- Product Information -->
                                         @foreach (var item in Model.Items)
                                         {
+                                            var product = item.Product;
                                             <div class="d-flex align-items-center mb-4">
-                                                @* <img src="@item.ImageUrl" alt="@item.Name" class="img-fluid" style="max-width: 120px; height: auto;"> *@
+                                                @* <img src="@product.ImageUrl" alt="@product.Name" class="img-fluid" style="max-width: 120px; height: auto;"> *@
                                                 <div class="ms-3">
-                                                    @* <p class="mb-1"><strong>@item.Name</strong></p> *@
-                                                    @* <p class="mb-1"><strong>Quantity:</strong> @item.Quantity</p> *@
-                                                    @* <p class="mb-1"><strong>Price:</strong> @item.Total.ToString("C")</p> *@
+                                                    <p class="mb-1"><strong>@product.Name</strong></p>
+                                                    <p class="mb-1"><strong>Quantity:</strong> @item.Quantity</p>
+                                                    <p class="mb-1"><strong>Price:</strong> @product.Price</p>
                                                 </div>
                                             </div>
                                         }
-
                                         <hr>
-                                        <!-- Subtotal, Shipping, Voucher, Total -->
+                                        <!-- Subtotal -->
                                         <div class="d-flex justify-content-between mb-3">
                                             <p class="fw-bold">SubTotal:</p>
-                                            @* <p class="text-end fw-bold">@Model.Items.Sum(i => i.Price * i.Quantity).ToString("C")</p> *@
+                                            <p class="text-end fw-bold">@Model.Items.Sum(i => i.Product.Price * i.Quantity)</p>
                                         </div>
                                         <hr>
                                         <div class="d-flex justify-content-between mb-3">
@@ -125,21 +124,23 @@
                                             <p class="text-end">$0.00</p>
                                         </div>
                                         <hr>
+                                        <!-- Discount-->
                                         <div class="d-flex justify-content-between mb-3">
                                             <p class="fw-bold">Voucher:</p>
-                                            @* <p class="text-end">@Model.Discount.ToString("C")</p> *@
+                                            <p class="text-end"></p>
                                         </div>
                                         <hr>
+                                        <!-- Totaol amount-->
                                         <div class="d-flex justify-content-between mb-3">
                                             <p class="fw-bold">Total:</p>
-                                            @* <p class="text-end text-danger fw-bold fs-2">@Model.Total.ToString("C")</p> *@
+                                            <p class="text-end text-danger fw-bold fs-2"> </p>
                                         </div>
                                         <hr>
 
                                         <!-- Address Information -->
                                         <div class="mb-4">
                                             <label for="address" class="form-label fw-bold">Shipping Address</label>
-                                            @* <p id="address" class="border p-2 rounded-3 bg-light">@Model.ShippingAddress</p> *@
+                                            <p id="address" class="border p-2 rounded-3 bg-light"> </p>
                                         </div>
 
                                         <!-- Payment Method -->
