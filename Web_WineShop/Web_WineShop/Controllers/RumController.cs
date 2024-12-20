@@ -2,9 +2,9 @@
 
 namespace Web_WineShop.Controllers
 {
-    public class WhiskyController : Controller
+    public class RumController : Controller
     {
-        public IActionResult Whisky()
+        public IActionResult Rum()
         {
             return View();
         }

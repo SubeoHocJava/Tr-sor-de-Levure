@@ -1,26 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Web_WineShop.Models
 {
     public class WishItem
     {
-        [Key]
-        [Column("ID")]
-        public int Id { get; set; }
+		public int ProductId { get; set; }
+		public int UserId { get; set; }
+		public virtual Product Product { get; set; }
+		public virtual User User { get; set; }
 
-        [ForeignKey("Product")]
-        [Column("PRODUCT_ID")]
-        public int ProductId { get; set; } // Khóa ngoại trỏ đến bảng Product
-
-        [ForeignKey("User")]
-        [Column("USER_ID")]
-        public int UserId { get; set; }    // Khóa ngoại trỏ đến bảng User
-
-
-        public Product Product { get; set; }
-
-        public User User { get; set; }
-    }
+		 public virtual Product Product { get; set; }  // Mối quan hệ với Product 
+		 public virtual User User { get; set; }  // Mối quan hệ với User 
+	}
 }
