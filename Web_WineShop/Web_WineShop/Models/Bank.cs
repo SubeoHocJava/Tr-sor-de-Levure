@@ -1,8 +1,18 @@
-﻿namespace Web_WineShop.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Web_WineShop.Models
 {
-	public class Bank
+    [Table("BANK")]
+    public class Bank
 	{
-		public int Id { get; set; }
-		public string Name { get; set; }
-	}
+        [Key]
+        [Column("ID")]
+        public int Id { get; set; }
+        [Required]
+        [StringLength(100)]
+        [Column("NAME")]
+        public string Name { get; set; }
+        public virtual ICollection<BankAccount> BankAccounts { get; set; }
+    }
 }
