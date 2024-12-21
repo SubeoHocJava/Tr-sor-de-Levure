@@ -1,4 +1,4 @@
-﻿/*using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Web_WineShop.Dao;
 using Web_WineShop.Models;
 
@@ -25,9 +25,9 @@ namespace Web_WineShop.Controllers
 				User? u = _context.Users.Find(user.Id);
 				if (u != null)
 				{
-					u.Address = user.Address;
+					u.ReceiveAddress = user.ReceiveAddress;
 					u.Phone = user.Phone;
-					u.DoB = user.DoB;
+					u.DateOfBirth = user.DateOfBirth;
 					u.FullName = user.FullName;
 					_context.Users.Update(u);
 					return Json(new { success = true });
@@ -40,13 +40,13 @@ namespace Web_WineShop.Controllers
 		{
 				int? id = HttpContext.Session.GetInt32("userId");
 				Account? account = _context.Accounts.Find(id);
-				if (account?.password != password)
+				if (account?.Password != password)
 				{
 					return Json(new { success = false });
 				}
 				else
 				{
-					account.password = newPassword;
+					account.Password = newPassword;
 					_context.Accounts.Update(account);
 					return Json(new { success = true });
 				}
@@ -73,4 +73,3 @@ namespace Web_WineShop.Controllers
 
 	}
 }
-*/

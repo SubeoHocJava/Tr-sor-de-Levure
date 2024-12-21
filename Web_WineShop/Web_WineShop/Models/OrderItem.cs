@@ -3,13 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Web_WineShop.Models
 {
-    [Table("ORDER_ITEMS")]  // Tên bảng trong cơ sở dữ liệu
+    [Table("ORDER_ITEM")]  // Tên bảng trong cơ sở dữ liệu
     public class OrderItem
     {
         [Column("PRODUCT_ID")]
         public int ProductId { get; set; }
 
-        [Column("ORDER_ID")]
+        [Column("DETAIL_ID")]
         public int OrderId { get; set; }
 
         [Column("QUANTITY")]

@@ -15,9 +15,9 @@ namespace Web_WineShop.Dao
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Detail> Details { get; set; }
-        public DbSet<Invoice> Invoices { get; set; }
+        public DbSet<Order> Invoices { get; set; }
         public DbSet<Knowledge> Knowledges { get; set; }
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> Orders { get; set; }
         public DbSet<OrderDate> OrderDates { get; set; }
 
         public DbSet<OrderItem> OrderItems { get; set; }

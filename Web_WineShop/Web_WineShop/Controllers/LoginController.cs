@@ -16,5 +16,10 @@ namespace Web_WineShop.Controllers
         {
             return View();
         }
+        public IActionResult productDetails()
+        {
+            return View();
+        }
+
     }
 }
