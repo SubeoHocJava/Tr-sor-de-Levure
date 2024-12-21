@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Web_WineShop.Models
 {
+    [Table("SEND_TO_FRIEND")]
     public class SendToFriend
     {
         [Key]

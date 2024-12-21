@@ -5,7 +5,7 @@ namespace Web_WineShop.Models
 {
     public class UploadKnowledge
     {
-		public int IdKnowledge { get; set; } 
+		
 		public string Title { get; set; } 
 		public string Description { get; set; } // Mô tả bài báo
 		public string Category { get; set; } // Phân loại bài báo

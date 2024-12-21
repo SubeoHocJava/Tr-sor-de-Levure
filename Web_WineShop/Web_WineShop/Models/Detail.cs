@@ -19,7 +19,7 @@ namespace Web_WineShop.Models
         public string Size { get; set; }
 
         [Column("ABV")]
-        public double ABV { get; set; }
+        public decimal ABV { get; set; } // double -> decimal
 
         [Column("AGE")]
         public int Age { get; set; }
@@ -31,6 +31,6 @@ namespace Web_WineShop.Models
         public string Status { get; set; }
 
         [ForeignKey("ProductId")]
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; } // Virtual for Lazy Loading
     }
 }

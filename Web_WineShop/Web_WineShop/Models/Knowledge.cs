@@ -1,32 +1,34 @@
-﻿
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Web_WineShop.Models;
-
-public class Knowledge
-
+namespace Web_WineShop.Models
 {
-    [Key]
-    [Column("ID_KNOWLEDGE")]
-    public int IdKnowledge { get; set; }
+    [Table("KNOWLEDGE")]
+    public class Knowledge
+    {
+        [Key]
+        [Column("ID_KNOWLEDGE")]
+        public int Id { get; set; }
 
-    [Column("TITLE")]
-    public string Title { get; set; }
+        [Required]
+        [MaxLength(255)]
+        [Column("TITLE")]
+        public string Title { get; set; }
 
-    [Column("DESCRIPTION")]
-    public string Description { get; set; }
+        [MaxLength(1000)]
+        [Column("DESCRIPTION")]
+        public string Description { get; set; }
 
-    [Column("CATEGORY")]
-    public string Category { get; set; }
+        [MaxLength(255)]
+        [Column("CATEGORY")]
+        public string Category { get; set; }
 
-    [Column("UPLOAD_DATE")]
-    public DateTime UploadDate { get; set; }
+        [Column("UPLOAD_DATE")]
+        public DateTime UploadDate { get; set; } = DateTime.Now;
 
-    [Column("FILE_PATH")]
-    public string FilePath { get; set; }
+        [Required]
+        [MaxLength(500)]
+        [Column("FILE_PATH")]
+        public string FilePath { get; set; }
+    }
 }
-
-
-
-
