@@ -26,7 +26,7 @@ namespace Web_WineShop.Models
         public string Size { get; set; }
 
         [Column("ABV")]
-        public decimal ABV { get; set; }
+        public double ABV { get; set; }
 
         [Column("Age")]
         public int Age { get; set; }
