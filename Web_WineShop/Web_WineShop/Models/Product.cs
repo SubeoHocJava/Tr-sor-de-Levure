@@ -1,53 +1,28 @@
-﻿using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
 
 namespace Web_WineShop.Models
 {
     public class Product
     {
-
-        //public int Id { get; set; }
-
-        //public int BrandId { get; set; }
-
-        //public Brand Brand { get; set; }
-
-        //public int? DetailsId { get; set; }
-
-        //public Detail Detail{ get; set; }
-
-        //public int CategoryId { get; set; }
-        //public Category Category { get; set; }
-
-        //public String Name { get; set; }
-
-        //public String ImageUrl { get; set; }
-
-        //public string Appreciation { get; set; }
-
-        //public String Status { get; set; }
-
-        //public double Total()
-        //{
-        //    return Detail.;
-        //}
-
         [Key]
+        [Column("ID")]  // Set column name for ID
         public int Id { get; set; }
 
         [Required]
+        [Column("BrandId")]  // Set column name for BrandId
         public int BrandId { get; set; }
 
         [ForeignKey("BrandId")]
         public virtual Brand Brand { get; set; }
 
-        public int? DetailsId { get; set; }
+        [Column("DetailsId")] 
+        public int DetailsId { get; set; }
 
         [ForeignKey("DetailsId")]
-        public virtual Detail Detail { get; set; }
-
+     
         [Required]
+        [Column("CategoryId")]  // Set column name for CategoryId
         public int CategoryId { get; set; }
 
         [ForeignKey("CategoryId")]
@@ -55,17 +30,22 @@ namespace Web_WineShop.Models
 
         [Required]
         [MaxLength(255)]
+        [Column("ProductName")]
         public string Name { get; set; }
 
         [MaxLength(500)]
+        [Column("ProductImageUrl")]
         public string ImageUrl { get; set; }
 
+        [Column("ProductAppreciation")]
         public string Appreciation { get; set; }
 
         [MaxLength(50)]
+        [Column("ProductStatus")]
         public string Status { get; set; }
+
+        [Column("Price")]
         public double Price { get; set; }
 
     }
-    
 }
