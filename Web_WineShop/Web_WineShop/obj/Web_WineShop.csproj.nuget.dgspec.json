@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj": {}
+    "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj": {
+    "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
+        "projectUniqueName": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
         "projectName": "Web_WineShop",
-        "projectPath": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
-        "packagesPath": "C:\\Users\\LAPTOP MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\",
+        "projectPath": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "S:\\Project\\LapTrinhNet\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LAPTOP MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,6 +65,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Microsoft.VisualStudio.Services.ServiceHooks.WebApi": {
+              "target": "Package",
+              "version": "[19.225.1, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

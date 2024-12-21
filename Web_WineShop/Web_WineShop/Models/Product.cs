@@ -25,11 +25,7 @@ namespace Web_WineShop.Models
 
         public String Status { get; set; }
 
-        public double Total()
-        {
-            return Detail.;
-        }
-
+        public double Price { get; set; }
     }
     
 }

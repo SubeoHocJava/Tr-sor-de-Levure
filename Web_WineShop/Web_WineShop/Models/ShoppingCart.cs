@@ -19,6 +19,10 @@ namespace Web_WineShop.Models
         {
             this.Items = new List<CartItem>();
         }
+        public ShoppingCart(List<CartItem> cartItems)
+        {
+            this.Items = cartItems;
+        }
 
         public void AddItem(CartItem item)
         {

@@ -1,52 +1,39 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
+using System.Threading.Tasks;
 using Web_WineShop.Models;
 
 namespace Web_WineShop.Controllers
 {
     public class ShoppingCartController : Controller
     {
-        private readonly ShoppingCart _shoppingCart;
+        private readonly HttpClient _httpClient;
 
-        public ShoppingCartController(ShoppingCart shoppingCart)
+        public ShoppingCartController(HttpClient httpClient)
         {
-            _shoppingCart = shoppingCart;
+            _httpClient = httpClient;
         }
 
-        public IActionResult ShoppingCartView()
+        public async Task<IActionResult> ShoppingCart()
         {
-            return View(_shoppingCart);
-        }
-
-        // Thêm các hành động khác như thêm sản phẩm vào giỏ hàng, áp dụng voucher, v.v.
-        [HttpPost]
-        public IActionResult UpdateQuantity([FromBody] UpdateQuantityModel model)
-        {
-            var item = ShoppingCart.Items.FirstOrDefault(x => x.ProductId == model.ProductId);
-            if (item != null)
+            // Lấy ID người dùng từ session
+            var userId = HttpContext.Session.GetInt32("UserId");
+            if (userId == null)
             {
-                item.Quantity = model.Quantity;
-                item.Total = item.Quantity * item.Price;
+                return Unauthorized();
             }
-            ShoppingCart.UpdateCartTotal();
-            return Json(new
-            {
-                total = item.Total,
-                cartTotal = ShoppingCart.Total,
-                finalTotal = ShoppingCart.FinalTotal,
-                discount = ShoppingCart.Discount
-            });
-        }
 
-        [HttpPost]
-        public IActionResult ApplyVoucher([FromBody] Voucher model)
-        {
-            ShoppingCart.ApplyVoucher(model.maxDiscount);
-            return Json(new
+            var response = await _httpClient.GetAsync($"http://yourapiurl.com/api/ShoppingCartAPI/{userId}");
+            if (response.IsSuccessStatusCode)
             {
-                cartTotal = ShoppingCart.Total,
-                finalTotal = ShoppingCart.FinalTotal,
-                discount = ShoppingCart.Discount
-            });
+                var shoppingCart = await response.Content.ReadAsAsync<ShoppingCart>();
+                return View(shoppingCart);
+            }
+            else
+            {
+                // Xử lý lỗi
+                return View(new ShoppingCart(new List<CartItem>()));
+            }
         }
     }
 }
