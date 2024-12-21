@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Web_WineShop.Models
 {
-    [Table("Order")]  // Tên bảng trong cơ sở dữ liệu
+    [Table("ORDERS")]  // Tên bảng trong cơ sở dữ liệu
     public class Order
     {
         [Key]  // Khóa chính

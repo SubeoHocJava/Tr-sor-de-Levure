@@ -1,4 +1,4 @@
-﻿@*  @model Models.User
+﻿ @model User
 @{
 	ViewData["Title"] = "Profile Page";
 }
@@ -80,7 +80,7 @@
 						<div class="mt-4">
 							<p><strong>Name:</strong> @Model.FullName</p>
 							<p><strong>Phone:</strong> @Model.FullName</p>
-							<p><strong>Address:</strong> @Model.Address</p>
+							<p><strong>Address:</strong> @Model.ReceiveAddress</p>
 							<p><strong>Country:</strong> @Model.Country</p>
 						</div>
 					</div>
@@ -168,13 +168,13 @@
 								<div class="form-group mt-3">
 									<label for="email">Email:</label>
 									<input type="email" id="email" name="Email" class="form-control"
-										   value="@Model.Account.email" disabled>
+										   value="@Model.Account.Email" disabled>
 								</div>
 								<!-- Date of Birth Input -->
 								<div class="form-group mt-3">
 									<label for="dob">Date of Birth:</label>
 									<input type="date" id="dob" name="Dob" class="form-control"
-										   value="@Model.Dob" required>
+										   value="@Model.DateOfBirth" required>
 								</div>
 								<!-- Phone Input -->
 								<div class="form-group mt-3">
@@ -186,7 +186,7 @@
 								<div class="form-group mt-3">
 									<label for="address">Address:</label>
 									<input type="text" id="address" name="Address" class="form-control"
-										   value="@Model.Address" required>
+										   value="@Model.ReceiveAddress" required>
 								</div>
 								<!-- Save Change Button -->
 								<div class="text-center">
@@ -261,18 +261,18 @@
 				<div id="order-history" class="detail-form d-none">
 					<h3 class="font-weight-bold h3-color text-center">ORDER HISTORY</h3>
 					<div class="mt-4">
-						@foreach (var invoice in Model.Invoices)
+						@foreach (var order in Model.Orders)
 						{
 							<!-- Invoice 1 -->
 							<div class="border p-3 mb-4">
 								<div class="collapse-btn">
-									<h5 class="font-weight-bold">Invoice #@invoice.Id</h5>
-									<p><strong>Date:</strong> @invoice.Orders.FirstOrDefault()?.Date.ToString("MM/dd/yyyy")</p>
-									<p><strong>Status:</strong> @invoice.IsDelivered</p>
+									<h5 class="font-weight-bold">Invoice #@order.Id</h5>
+									<p><strong>Date:</strong> @order.Details.Dates.FirstOrDefault()?.Date.ToString("MM/dd/yyyy")</p>
+									<p><strong>Status:</strong> @order.IsDelivered</p>
 									<ul class="timsline">
-										@foreach (var dates in invoice.Order.Dates)
+										@foreach (var dates in order.Details.Dates)
 										{
-											<li><strong>@dates.State.StateName</strong>@date.Date.ToString("yyyy-MM-dd, hh:mm tt")</li>
+											<li><strong>@dates.State.StateName</strong>@dates.Date.ToString("yyyy-MM-dd, hh:mm tt")</li>
 										}
 									</ul>
 									<hr>
@@ -283,9 +283,9 @@
 									<p><strong>Products:</strong></p>
 									<div class="mb-3" id="product-list">
 										<div class="d-flex align-items-center mb-3">
-											@foreach (var item in invoice.Order.Items)
+											@foreach (var item in order.Details.Items)
 											{
-												<img src="@item.Name"
+												<img src="@item.Product.Name"
 													 alt="Product A" class="img-thumbnail"
 													 style="width: 160px; height: auto;" />
 												<div class="ms-3">
@@ -295,7 +295,7 @@
 													<div class="d-flex flex-column">
 														<div class="d-flex align-items-center mb-3">
 															<strong>Review:</strong>
-															<div class="stars ms-2 @(invoice.IsDelivered ? "stars-selected" : "")" data-value="@item.Rating" data-id="@item.Id">
+															<div class="stars ms-2 @(order.IsDelivered ? "stars-selected" : "")" data-value="@item.Rating" data-id="@item.Product.Id-@item.OrderId">
 																<span class="star" data-value="1">&#9734;</span>
 																<span class="star" data-value="2">&#9734;</span>
 																<span class="star" data-value="3">&#9734;</span>
@@ -304,7 +304,7 @@
 															</div>
 														</div>
 														<div class="d-flex">
-															<button class="btn btn-profile me-2 buy_again-btn @(invoice.IsDelivered ? "disabled-btn" : "")">Buy again</button>
+															<button class="btn btn-profile me-2 buy_again-btn @(order.IsDelivered ? "disabled-btn" : "")">Buy again</button>
 														</div>
 													</div>
 												</div>
@@ -312,10 +312,10 @@
 										</div>
 									</div>
 								</div>
-								<p><strong>Total Price:</strong> $@invoice.Order.totalPrice()</p>
-								<p><strong>Discount:</strong> $@invoice.Order.getDiscount()</p>
+								<p><strong>Total Price:</strong> $@order.Details.TotalPrice()</p>
+								<p><strong>Discount:</strong> $@order.Details.GetDiscount()</p>
 							</div>
-							<p><strong>Total Amount:</strong> @invoice.TotalAmount</p>
+							<p><strong>Total Amount:</strong> @order.TotalAmount</p>
 						}
 					</div>
 				</div>
@@ -405,4 +405,3 @@
 	</script>
 }
 
- *@
