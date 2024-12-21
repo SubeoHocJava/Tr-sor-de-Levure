@@ -64,10 +64,11 @@ namespace Web_WineShop.Models
 
         [MaxLength(50)]
         public string Status { get; set; }
+        public double Price { get; set; }
 
         public double Total()
         {
-            return Detail.;
+            return Price;
 
         }
 
