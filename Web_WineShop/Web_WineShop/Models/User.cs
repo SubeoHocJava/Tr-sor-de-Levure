@@ -31,7 +31,7 @@ namespace Web_WineShop.Models
 
         public Account Account { get; set; }
         public ICollection<BankAccountOwner> BankAccounts { get; set; }
-        public ICollection<Invoice> Invoices { get; set; }
+        public ICollection<Order> Orders { get; set; }
         public bool IsDefaultBank(BankAccount bankAccount)
         {
             return BankAccountDefault.Equals(bankAccount);
