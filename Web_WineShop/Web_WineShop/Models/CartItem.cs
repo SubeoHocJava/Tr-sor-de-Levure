@@ -4,7 +4,7 @@ using Web_WineShop.Models;
 [Table("CART_ITEMS")]
 public class CartItem
 {
-    [Key, Column("ID_KNOWLEDGE")]
+    [Key, Column("ID_USER")]
     public int UserId { get; set; }
     [ForeignKey("PRODUCT"), Column("PRODUCT_ID")]
     public int ProductId { get; set; } // Foreign Key

@@ -21,7 +21,9 @@ namespace Web_WineShop.Models
         public DateTime Date { get; set; }
 
         // Mối quan hệ với OrderState
-        [ForeignKey("StateId")]
+        [ForeignKey("STATE_ID")]
         public OrderState State { get; set; }
+        [ForeignKey("ORDER_DETAIL_ID")]
+        public OrderDetail Detail { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Web_WineShop.Models
 {
@@ -23,11 +24,10 @@ namespace Web_WineShop.Models
 		public string Country { get; set; }
 		[Column("POINTS")]
 		public int Points { get; set; }
-		[Column("RECEIVE_ADDRESS")]
+		[Column("RECEIVE_ADDRESS"), AllowNull]
 		public string? ReceiveAddress { get; set; }
-		[Column("BANK_ACC_DEFAULT")]
+		[Column("BANK_ACC_DEFAULT"), AllowNull]
 		public int BankAccountDefaultId { get; set; }
-		public BankAccount BankAccountDefault { get; set; }
 
 		public Account Account { get; set; }
 		[InverseProperty(nameof(BankAccountOwner.User))]
@@ -42,10 +42,11 @@ namespace Web_WineShop.Models
 					: new List<BankAccount>();
 			}
 		}
+		[InverseProperty("User")]
 		public ICollection<Order> Orders { get; set; }
 		public bool IsDefaultBank(BankAccount bankAccount)
 		{
-			return BankAccountDefault.Equals(bankAccount);
+			return true;
 
 		}
 

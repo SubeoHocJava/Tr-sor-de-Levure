@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Web_WineShop.Models
 {
@@ -20,6 +21,8 @@ namespace Web_WineShop.Models
 
         [Column("IS_DELIVERED")]
         public bool IsDelivered { get; set; }
+        [ForeignKey("USER_ID")]
+		public User User { get; set; }
 
         // Mối quan hệ với Order
         public OrderDetail Details { get; set; }

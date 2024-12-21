@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Web_WineShop.Models
 {
@@ -15,9 +16,10 @@ namespace Web_WineShop.Models
         [Column("QUANTITY")]
         public int Quantity { get; set; }
 
-        [Column("RATING")]
+        [Column("RATING"), AllowNull]
         public int Rating { get; set; }
-
+        [ForeignKey("ORDER_DETAIL_ID")]
+        public OrderDetail OrderDetail { get; set; }
         // Các mối quan hệ khóa ngoại
         [ForeignKey("ProductId")]
         public Product Product { get; set; }
