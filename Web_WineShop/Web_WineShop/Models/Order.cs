@@ -1,51 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Web_WineShop.Models
 {
-    [Table("ORDERS")]  // Tên bảng trong cơ sở dữ liệu
+    [Table("Order")]  // Tên bảng trong cơ sở dữ liệu
     public class Order
     {
-        [Key]  
+        [Key]  // Khóa chính
         [Column("ID")]
         public int Id { get; set; }
 
-        [Column("VOUCHER_ID")]
-        public int VoucherId { get; set; }
+        [Column("CUSTOMER_ID")]
+        public int CustomerId { get; set; }
 
-        [Column("INVOICE_ID")]
-        public int InvoiceId { get; set; }
+        [Column("TOTAL_AMOUNT")]
+        public double TotalAmount { get; set; }
 
-        [Column("PAYMENT_METHOD_ID")]
-        public int PaymentMethodId { get; set; }
+        [Column("IS_DELIVERED")]
+        public bool IsDelivered { get; set; }
 
-        // Mối quan hệ với Voucher
-        [ForeignKey("VoucherId")]
-        public Voucher Voucher { get; set; }
-
-        // Mối quan hệ với PaymentMethod
-        [ForeignKey("PaymentMethodId")]
-        public PaymentMethod PaymentMethod { get; set; }
-
-        // Mối quan hệ với OrderItems
-        public ICollection<OrderItem> Items { get; set; }
-
-        // Mối quan hệ với OrderDates
-        public ICollection<OrderDate> Dates { get; set; }
-
-        // Tính tổng giá trị đơn hàng
-        public double TotalPrice()
-        {
-            return Items.Sum(item => item.GetPrice());
-        }
-
-        // Tính mức giảm giá của đơn hàng
-        public double GetDiscount()
-        {
-            return 0;
-        }
+        // Mối quan hệ với Order
+        public OrderDetail Details { get; set; }
     }
 }
