@@ -6,37 +6,46 @@ namespace Web_WineShop.Models
     [Table("PRODUCT")]
     public class Product
     {
-        [Key, Column("ID")]
+        [Key]
+        [Column("ID")]  // Set column name for ID
         public int Id { get; set; }
 
-        [Required, Column("BRAND_ID")]
+        [Required]
+        [Column("BrandId")]  // Set column name for BrandId
         public int BrandId { get; set; }
 
-        [Column("DETAILS_ID")]
-        public int? DetailsId { get; set; }
-
-        [Required, Column("CATEGORY_ID")]
-        public int CategoryId { get; set; }
-
-        [Required, Column("NAME"), MaxLength(200)]
-        public string Name { get; set; }
-
-        [Column("PRICE")]
-        public int Price { get; set; }
-
-        [Column("APPRECIATION")]
-        public string Appreciation { get; set; }
-
-        [Column("STATUS"), MaxLength(50)]
-        public string Status { get; set; }
-
         [ForeignKey("BrandId")]
-        public Brand Brand { get; set; }
+        public virtual Brand Brand { get; set; }
 
-        [ForeignKey("CategoryId")]
-        public Category Category { get; set; }
+        [Column("DetailsId")] 
+        public int DetailsId { get; set; }
 
         [ForeignKey("DetailsId")]
-        public Detail Detail { get; set; }
+     
+        [Required]
+        [Column("CategoryId")]  // Set column name for CategoryId
+        public int CategoryId { get; set; }
+
+        [ForeignKey("CategoryId")]
+        public virtual Category Category { get; set; }
+
+        [Required]
+        [MaxLength(255)]
+        [Column("ProductName")]
+        public string Name { get; set; }
+
+        [MaxLength(500)]
+        [Column("ProductImageUrl")]
+        public string ImageUrl { get; set; }
+
+        [Column("ProductAppreciation")]
+        public string Appreciation { get; set; }
+
+        [MaxLength(50)]
+        [Column("ProductStatus")]
+        public string Status { get; set; }
+
+        [Column("Price")]
+        public double Price { get; set; }
     }
 }

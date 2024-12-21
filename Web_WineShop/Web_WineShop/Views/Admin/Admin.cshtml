@@ -41,8 +41,8 @@
 						<li data-target="payment-management">
 							<i class="bi bi-credit-card"></i><span>Payment Manager</span>
 						</li>
-						<li data-target="settings">
-							<i class="bi bi-gear"></i><span> Settings</span>
+						<li data-target="upload-knowledge">
+							<i class="bi bi-upload-knowledge"></i><span>Upload Knowledge</span>
 						</li>
 						<li data-target="logout">
 							<i class="bi bi-box-arrow-right"></i><span> Logout</span>
@@ -734,6 +734,85 @@
 							</tr>
 						</tbody>
 					</table>
+				</div>
+				<!-- Upload Knowledge Section -->
+				<div class="main" data-section="upload-knowledge">
+					<h1 class="h1-title text-center">Upload Knowledge Management</h1>
+					<div class="container-fluid d-flex justify-content-end mt-2">
+						<div class="d-flex align-items-center p-2">
+							<div class="search-box">
+								<input type="text" class="search-input" placeholder="Search knowledge...">
+								<button class="search-btn">
+									<i class="bi bi-search"></i>
+								</button>
+							</div>
+							<div class="search-box">
+								<button class="upload-btn" id="knowledgeUploadBtn">
+									<i class="bi bi-plus"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- Knowledge Table -->
+					<div class="container-fluid p-2">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th><input type="checkbox" id="select-all"></th>
+									<th>Knowledge Name</th>
+									<th>Upload Date</th>
+									<th>Status</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Sample Row -->
+								<tr>
+									<td><input type="checkbox" class="select-item"></td>
+									<td>An AI Research Study</td>
+									<td>2024-12-01</td>
+									<td>Approved</td>
+									<td class="actions">
+										<button class="btn btn-warning edit-btn">
+											<i class="bi bi-pencil"></i>
+										</button>
+										<button class="btn btn-danger delete-btn">
+											<i class="bi bi-trash"></i>
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- Knowledge Upload Form -->
+					<div class="container row p-4 add-items d-none" id="uploadFormContainer">
+						<form id="uploadKnowledgeForm" enctype="multipart/form-data">
+							<div class="input-group">
+								<label for="knowledgeTitle">Knowledge Title</label>
+								<input type="text" class="input-field" id="knowledgeTitle" placeholder="Enter knowledge title">
+							</div>
+							<div class="input-group">
+								<label for="knowledgeDescription">Description</label>
+								<textarea class="input-field" id="knowledgeDescription" placeholder="Enter knowledge description"></textarea>
+							</div>
+							<div class="input-group">
+								<label for="knowledgeCategory">Category</label>
+								<input type="text" class="input-field" id="knowledgeCategory" placeholder="Enter category">
+							</div>
+							<div class="input-group">
+								<label for="uploadDate">Upload Date</label>
+								<input type="date" class="input-field" id="uploadDate">
+							</div>
+							<div class="input-group">
+								<label for="fileUpload">Select Knowledge File</label>
+								<input type="file" class="input-field" id="fileUpload" name="fileUpload">
+							</div>
+							<div class="text-center">
+								<button type="submit" class="submit-btn btn-block">Upload Knowledge</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

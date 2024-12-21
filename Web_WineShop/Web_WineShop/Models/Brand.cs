@@ -7,21 +7,25 @@ namespace Web_WineShop.Models
     [Table("BRAND")]
     public class Brand
     {
-        [Key, Column("ID")]
+        [Key]
+        [Column("ID")]  // Set column name for ID
         public int Id { get; set; }
 
-        [Required, Column("NAME"), MaxLength(100)]
+        [Required]
+        [MaxLength(100)]
+        [Column("Name")]  // Set column name for Name
         public string Name { get; set; }
 
-        [Column("COUNTRY"), MaxLength(100)]
+        [MaxLength(100)]
+        [Column("Country")]
         public string Country { get; set; }
 
-        [Column("IMG")]
+        [Column("Img")]
         public string Img { get; set; }
 
-        [Column("COLLAB"), MaxLength(50)]
+        [MaxLength(50)]
+        [Column("Collab")]
         public string Collab { get; set; }
-
-        public ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; } // Virtual for Lazy Loading
     }
 }

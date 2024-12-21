@@ -1,67 +1,65 @@
-﻿
-   @{
-       ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<KnowledgeModel>
 
-   }
-          <section class="section" id="section_1642570407">
-              <div class="bg section-bg fill bg-fill bg-loaded"></div>
-              <div class="section-content relative">
-                  <div class="box has-hover box-overlay dark box-text-bottom">
-                      <div class="box-image large-image">
-                          <div class="image-cover large-image"
-                               style="background-image: url('https://whisky.vn/wp-content/uploads/2024/05/banner-kien-thuc.jpg');">
-                              <div class="overlay"></div>
-                              <div class="box-text large-image text-left">
-                                  <div class="box-text-inner">
-                                      <div class="container section-title-container">
-                                          <h2 class="section-title section-title-normal">
-                                              <span class="section-title-main">Kiến thức</span>
-                                          </h2><br>
-                                      </div>
-                                      <p>
-                                          Whisky Single Malt là gì? Rượu whisky được chưng cất như thế nào? Cách nếm thử
-                                          rượu whisky... Hãy cùng chúng tôi bước vào hành trình khám phá thế giới hương vị
-                                          rượu whisky đầy say mê.
-                                      </p>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </section>
+@{
+    ViewData["Title"] = "Kiến thức";
+}
 
-          <!-- Bài viết -->
-          <section class="section posts">
-              <div class="row">
-                  <!-- Example post item -->
-                  <div class="col post-item">
-                      <div class="box box-normal box-text-bottom box-blog-post has-hover">
-                          <div class="box-image small-image">
-                              <div class="image-cover">
-                                  <a href="https://whisky.vn/rosebank-the-king-of-the-lowlands/" class="plain"
-                                     aria-label="Rosebank – ‘The King of the Lowlands’">
-                                      <img decoding="async" width="768" height="512"
-                                           src="https://whisky.vn/wp-content/uploads/2024/05/rosebank-the-king-of-the-lowlands-768x512.jpg"
-                                           alt="Rosebank - 'The King of the Lowlands'" />
-                                  </a>
-                              </div>
-                          </div>
-                          <div class="box-text text-center is-small">
-                              <div class="box-text-inner blog-post-inner">
-                                  <h5 class="post-title is-larger">
-                                      <a href="https://whisky.vn/rosebank-the-king-of-the-lowlands/" class="plain">
-                                          Rosebank – ‘The King of the Lowlands’
-                                      </a>
-                                  </h5>
-                                  <div class="is-divider"></div>
-                                  <p class="from_the_blog_excerpt">
-                                      Thăng trầm lịch sử Rosebank ra đời năm 1840 trên bờ kênh Forth &amp; Clyde, phía tây Falkirk, trung tâm [...]
-                                  </p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </section>
-   
+<section class="section" id="section_1642570407">
+    <div class="bg section-bg fill bg-fill bg-loaded"></div>
+    <div class="section-content relative">
+        <div class="box has-hover box-overlay dark box-text-bottom">
+            <div class="box-image large-image">
+                <div class="image-cover large-image"
+                     style="background-image: url('https://whisky.vn/wp-content/uploads/2024/05/banner-kien-thuc.jpg');">
+                    <div class="overlay"></div>
+                    <div class="box-text large-image text-left">
+                        <div class="box-text-inner">
+                            <div class="container section-title-container">
+                                <h2 class="section-title section-title-normal">
+                                    <span class="section-title-main">Kiến thức</span>
+                                </h2><br>
+                            </div>
+                            <p>
+                                Whisky Single Malt là gì? Rượu whisky được chưng cất như thế nào? Cách nếm thử
+                                rượu whisky... Hãy cùng chúng tôi bước vào hành trình khám phá thế giới hương vị
+                                rượu whisky đầy say mê.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bài viết -->
+<section class="section posts">
+    <div class="container">
+        <h1 class="text-center">Kiến thức</h1>
+        <div class="row">
+            @if (Model != null && Model.Any())
+            {
+                foreach (var knowledge in Model)
+                {
+                    <div class="col-lg-4 col-md-6 post-item mb-4">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="@knowledge.FilePath" alt="@knowledge.Title" />
+                            <div class="card-body">
+                                <h5 class="card-title">@knowledge.Title</h5>
+                                <p class="card-text">@knowledge.Description</p>
+                                <p class="card-text">
+                                    <small class="text-muted">Danh mục: @knowledge.Category</small><br />
+                                    <small class="text-muted">Ngày tải lên: @knowledge.UploadDate.ToString("dd/MM/yyyy")</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="text-center">Không có bài viết nào để hiển thị.</p>
+            }
+        </div>
+    </div>
+</section>

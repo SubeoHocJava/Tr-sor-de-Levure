@@ -31,7 +31,7 @@ $("#registration-form-dob").datepicker({
 });
 
 // Fetch dữ liệu các quốc gia từ API Restcountries và điền vào dropdown location
-$(document).ready(function () {
+$(function () {
     // Lấy danh sách quốc gia từ API
     $.get('https://restcountries.com/v3.1/all', function (data) {
         const locationSelect = $('#location');  // Lấy phần tử dropdown location

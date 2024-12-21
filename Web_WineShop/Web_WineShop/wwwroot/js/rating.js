@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
     var normalStar = '&#9734;'; // Empty star
     var filledStar = '&#9733;'; // Filled star
 
@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('.stars').each(function(){
         getRating(this);
     });
-    $('.star').click(function () {
+    $('.star').on('click',function () {
         var index = $(this).parent('.stars').children('.star').index(this); // Get the index of the clicked star
         $(this).parent('.stars').addClass('stars-selected');
         $(this).parent('.stars').data('value', index + 1);
@@ -16,14 +16,14 @@ $(document).ready(function () {
     });
 
     // Handle hover over a star
-    $('.star').mouseenter(function () {
+    $('.star').on('mouseenter',function () {
         $(this).prevAll().html(filledStar).addClass('star_active');
         $(this).html(filledStar).addClass('star_active');
         $(this).nextAll().html(normalStar).removeClass('star_active')
     });
 
     // Handle mouse leaving the stars area
-    $('.stars').mouseleave(function () {
+    $('.stars').on('mouseleave',function () {
         getRating(this);
     });
     function getRating(stars) {
