@@ -25,7 +25,7 @@ namespace Web_WineShop.Models
 
         [MaxLength(50)]
         [Column("Collab")]
-        public string Collab { get; set; }
+        public bool Collab { get; set; }
         public virtual ICollection<Product> Products { get; set; } // Virtual for Lazy Loading
     }
 }

@@ -17,10 +17,12 @@ namespace Web_WineShop.Models
         [ForeignKey("BrandId")]
         public virtual Brand Brand { get; set; }
 
+        [Required]
         [Column("DetailsId")] 
         public int DetailsId { get; set; }
 
         [ForeignKey("DetailsId")]
+        public virtual Detail Detail { get; set; }
      
         [Required]
         [Column("CategoryId")]  // Set column name for CategoryId
