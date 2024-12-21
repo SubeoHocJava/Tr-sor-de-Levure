@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Web_WineShop.Models
 {
@@ -13,7 +14,7 @@ namespace Web_WineShop.Models
         [Column("ID")]
         public int Id { get; set; }
 
-        [Column("VOUCHER_ID")]
+        [Column("VOUCHER_ID"), AllowNull]
         public int VoucherId { get; set; }
 
         [Column("ORDER_ID")]
@@ -30,7 +31,6 @@ namespace Web_WineShop.Models
         [ForeignKey("PaymentMethodId")]
         public PaymentMethod PaymentMethod { get; set; }
 
-        // Mối quan hệ với OrderItems
         public ICollection<OrderItem> Items { get; set; }
 
         // Mối quan hệ với OrderDates
