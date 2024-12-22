@@ -49,5 +49,8 @@ namespace Web_WineShop.Models
 
         [Column("Price")]
         public double Price { get; set; }
+
+        [Column("Img")]
+        public string Img { get; set; }
     }
 }
