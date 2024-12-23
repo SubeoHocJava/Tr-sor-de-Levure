@@ -17,8 +17,8 @@ namespace Web_WineShop.Models
         public int Quantity { get; set; }
 
         [Column("RATING"), AllowNull]
-        public int Rating { get; set; }
-        [ForeignKey("ORDER_DETAIL_ID")]
+        public int? Rating { get; set; }
+        [ForeignKey("OrderId")]
         public OrderDetail OrderDetail { get; set; }
         // Các mối quan hệ khóa ngoại
         [ForeignKey("ProductId")]

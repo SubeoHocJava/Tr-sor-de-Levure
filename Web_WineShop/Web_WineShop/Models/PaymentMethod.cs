@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Web_WineShop.Models
 {
-	[Table("PAYMENTMETHOD")]
+	[Table("PAYMENT_METHOD")]
 	public class PaymentMethod
 	{
 		[Key]

@@ -8,28 +8,34 @@ namespace Web_WineShop.Models
     [Table("CATEGORY")]
     public class Category
     {
-        [Key, Column("ID")]
+        [Key]
+        [Column("ID")]  // Set column name for ID
         public int Id { get; set; }
 
-        [Column("PARENT_ID")]
+        [Column("ParentId")]
         public int? ParentId { get; set; }
 
-        [Required, Column("NAME"), MaxLength(100)]
+        [ForeignKey("ParentId")]
+        public virtual Category ParentCategory { get; set; } // Virtual for Lazy Loading
+
+        [Required]
+        [MaxLength(100)]
+        [Column("Name")]  // Set column name for Name
         public string Name { get; set; }
 
-        [Column("DESCRIBE"), MaxLength(500)]
+        [MaxLength(500)]
+        [Column("Describe")]
         public string Describe { get; set; }
 
-        [Required, Column("CREATION_DATE", TypeName = "datetime")]
+        [Required]
+        [Column("CreationDate", TypeName = "datetime")]
         public DateTime CreationDate { get; set; }
 
-        [Column("STATUS"), MaxLength(50)]
+        [MaxLength(50)]
+        [Column("Status")]
         public string Status { get; set; }
 
-        [ForeignKey("ParentId")]
-        public Category ParentCategory { get; set; }
-
-        public ICollection<Category> SubCategories { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public virtual ICollection<Category> SubCategories { get; set; } // Virtual for Lazy Loading
+        public virtual ICollection<Product> Products { get; set; } // Virtual for Lazy Loading
     }
 }

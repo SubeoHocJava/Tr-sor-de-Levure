@@ -12,7 +12,7 @@ namespace Web_WineShop.Models
 		[Required, Column("NAME"), MaxLength(100)]
 		public string name { get; set; }
 		[Required, Column("DESCRIPTION")]
-        public int description { get; set; }
+        public string description { get; set; }
         [Required, Column("PERCENTAGE")]
         public double percentage { get; set; }
         [Required, Column("MAX_DISCOUNT")]

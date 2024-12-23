@@ -13,15 +13,15 @@ namespace Web_WineShop.Models
         [Column("ID")]
         public int Id { get; set; }
 
-        [Column("CUSTOMER_ID")]
-        public int CustomerId { get; set; }
+        [Column("USER_ID")]
+        public int userId { get; set; }
 
         [Column("TOTAL_AMOUNT")]
         public double TotalAmount { get; set; }
 
         [Column("IS_DELIVERED")]
         public bool IsDelivered { get; set; }
-        [ForeignKey("USER_ID")]
+        [ForeignKey("userId")]
 		public User User { get; set; }
 
         // Mối quan hệ với Order

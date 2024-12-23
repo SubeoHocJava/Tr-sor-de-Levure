@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Web_WineShop.Models
 {
-    [Table("PAYMENT_TRANSACTOIN")]
+    [Table("PAYMENT_TRANSACTION")]
     public class PaymentTransaction
     {
         [Key]
@@ -25,11 +25,13 @@ namespace Web_WineShop.Models
         [Column("STATUS")]
         public string Status { get; set; }
 
-        [Column("TRANSACTOIN_DATE")]
+        [Column("TRANSACTION_DATE")]
         public DateTime TransactionDate { get; set; }
 
-        [Column("METHOD")]
-        public string Method { get; set; }
+        [Column("METHOD_ID")]
+        [ForeignKey("PaymentMethod")]
+        public int Method_Id { get; set; }
+        public PaymentMethod PaymentMethod { get; set; }
         public Order Order { get; set; }
     }
 }

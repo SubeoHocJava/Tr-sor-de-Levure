@@ -9,6 +9,7 @@ namespace Web_WineShop.Dao
         public AppDBContext(DbContextOptions<AppDBContext> options) : base(options) { }
 
         public DbSet<Account> Accounts { get; set; }
+        public DbSet<PaymentTransaction> Transactions { get; set; }
         public DbSet<Bank> Banks { get; set; }
         public DbSet<BankAccountOwner> BankAccountOwners { get; set; }
         public DbSet<Brand> Brands { get; set; }

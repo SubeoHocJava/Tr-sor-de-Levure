@@ -11,8 +11,8 @@ namespace Web_WineShop.Models
         [Column("ID")]
         public int Id { get; set; }
 
-        [Column("ORDER_ID")]
-        public int OrderId { get; set; }
+        [Column("DETAIL_ID")]
+        public int OrderDetailId { get; set; }
 
         [Column("STATE_ID")]
         public int StateId { get; set; }
@@ -21,9 +21,9 @@ namespace Web_WineShop.Models
         public DateTime Date { get; set; }
 
         // Mối quan hệ với OrderState
-        [ForeignKey("STATE_ID")]
+        [ForeignKey("StateId")]
         public OrderState State { get; set; }
-        [ForeignKey("ORDER_DETAIL_ID")]
+        [ForeignKey("OrderDetailId")]
         public OrderDetail Detail { get; set; }
     }
 }

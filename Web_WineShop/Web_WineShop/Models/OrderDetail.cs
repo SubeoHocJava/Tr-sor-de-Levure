@@ -15,7 +15,7 @@ namespace Web_WineShop.Models
         public int Id { get; set; }
 
         [Column("VOUCHER_ID"), AllowNull]
-        public int VoucherId { get; set; }
+        public int? VoucherId { get; set; }
 
         [Column("ORDER_ID")]
         public int OrderId { get; set; }
@@ -25,7 +25,7 @@ namespace Web_WineShop.Models
 
         // Mối quan hệ với Voucher
         [ForeignKey("VoucherId")]
-        public Voucher Voucher { get; set; }
+        public Voucher? Voucher { get; set; }
 
         // Mối quan hệ với PaymentMethod
         [ForeignKey("PaymentMethodId")]

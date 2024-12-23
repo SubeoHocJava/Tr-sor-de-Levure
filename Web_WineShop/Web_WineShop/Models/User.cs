@@ -27,7 +27,7 @@ namespace Web_WineShop.Models
 		[Column("RECEIVE_ADDRESS"), AllowNull]
 		public string? ReceiveAddress { get; set; }
 		[Column("BANK_ACC_DEFAULT"), AllowNull]
-		public int BankAccountDefaultId { get; set; }
+		public int? BankAccountDefaultId { get; set; }
 
 		public Account Account { get; set; }
 		[InverseProperty(nameof(BankAccountOwner.User))]
