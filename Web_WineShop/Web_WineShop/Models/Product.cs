@@ -43,6 +43,7 @@ namespace Web_WineShop.Models
 		[Column("ProductAppreciation")]
 		public string Appreciation { get; set; }
 
+
 		[MaxLength(50)]
 		[Column("ProductStatus")]
 		public string Status { get; set; }
@@ -54,3 +55,4 @@ namespace Web_WineShop.Models
 		public string Img { get; set; }
 	}
 }
+
