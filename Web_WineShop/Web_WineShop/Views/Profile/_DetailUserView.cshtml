@@ -1,0 +1,44 @@
+﻿@model Web_WineShop.Models.ProfileModel.UserDetailModel
+
+	<div class="row">
+		<div class="col-6">
+			<h3 class="font-weight-bold h3-color text-center">UPDATE MY DETAILS</h3>
+			@using (Html.BeginForm(new { @id = "my-details-form" }))
+			{
+				@Html.HiddenFor(model => model.Id)
+				<!-- Full Name Input -->
+				<div class="form-group mt-5">
+					@Html.LabelFor(model => model.FullName, "Full Name:")
+					@Html.TextBoxFor(model => model.FullName, new { @class = "form-control", @id = "full-name-display", required = "required" })
+				</div>
+				<!-- Email Input -->
+				<div class="form-group mt-3">
+					@Html.LabelFor(model => model.Email, "Email")
+					@Html.TextBoxFor(model => model.Email, new { @class = "form-control", required = "required", disabled = "disabled" })
+				</div>
+				<!-- Date of Birth Input -->
+				<div class="form-group mt-3">
+					@Html.LabelFor(model => model.DateOfBirth, "Date of Birth:")
+					@Html.TextBoxFor(model => model.DateOfBirth, new { @id = "dob-display", @class = "form-control", required = "required", @type = "date" })
+				</div>
+				<!-- Phone Input -->
+				<div class="form-group mt-3">
+					@Html.LabelFor(model => model.Phone, "Phone Number:")
+					@Html.TextBoxFor(model => model.Phone, new { @type = "tel", @id = "phone-display", @class = "form-control", @placeholder = "Enter your phone number", required = "required" })
+					@Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+				</div>
+				<!-- Address Input -->
+				<div class="form-group mt-3">
+					@Html.LabelFor(model => model.ReceiveAddress, "Address:")
+					@Html.TextBoxFor(model => model.ReceiveAddress, new { @class = "form-control", required = "required", @id = "address-display" })
+				</div>
+				<!-- Save Change Button -->
+				<div class="text-center">
+					<input type="button" class="btn btn-dark w-100 mt-3" id="change-infor-btn" value="Save" />
+				</div>
+				<div id="success-message" class="alert alert-success text-center" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
+					Password changed successfully!
+				</div>
+			}
+		</div>
+	</div>

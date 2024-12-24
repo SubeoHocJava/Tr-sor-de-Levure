@@ -13,6 +13,6 @@ namespace Web_WineShop.Models
         [StringLength(100)]
         [Column("NAME")]
         public string Name { get; set; }
-        public virtual ICollection<BankAccount> BankAccounts { get; set; }
+        public virtual ICollection<BankAccount>? BankAccounts { get; set; }
     }
 }

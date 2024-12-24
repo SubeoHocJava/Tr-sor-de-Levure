@@ -17,8 +17,9 @@ namespace Web_WineShop.Controllers
 		[HttpGet]
 		public IActionResult GetAll()
 		{
-			var banks = _context.Banks.Select(b => new { b.Id, b.Name }).ToList();
+			var banks = _context.Banks.ToList();
 			return Ok(banks);
 		}
+
 	}
 }

@@ -14,17 +14,20 @@ namespace Web_WineShop.Models
         public int Id { get; set; }
 
         [Column("USER_ID")]
-        public int userId { get; set; }
+        public int UserId { get; set; }
+        [Column("ORDER_DETAIL_ID"),AllowNull]
+        public int? OrderDetailId { get; set; }
 
         [Column("TOTAL_AMOUNT")]
         public double TotalAmount { get; set; }
 
         [Column("IS_DELIVERED")]
         public bool IsDelivered { get; set; }
-        [ForeignKey("userId")]
+        [ForeignKey("UserId")]
 		public User User { get; set; }
 
         // Mối quan hệ với Order
-        public OrderDetail Details { get; set; }
+        [ForeignKey("OrderDetailId")]
+        public OrderDetail? Details { get; set; }
     }
 }

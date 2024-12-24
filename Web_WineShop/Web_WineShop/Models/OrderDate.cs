@@ -11,7 +11,7 @@ namespace Web_WineShop.Models
         [Column("ID")]
         public int Id { get; set; }
 
-        [Column("DETAIL_ID")]
+        [Column("ORDER_DETAIL_ID")]
         public int OrderDetailId { get; set; }
 
         [Column("STATE_ID")]

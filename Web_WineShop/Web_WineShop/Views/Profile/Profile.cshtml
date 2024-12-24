@@ -14,10 +14,13 @@
 					<li class="border-top" data-target="account-overview">
 						<i class="bi bi-house-door"></i><span> Account Overview</span>
 					</li>
-					<li data-target="my-details">
+					<li data-target="my-details" data-href="@Url.Action("Edit", "Profile")">
 						<i class="bi bi-person-lines-fill"></i><span> My Details</span>
 					</li>
-					<li data-target="order-history">
+					<li data-target="bank-accounts"  data-href="@Url.Action("BankAccount", "Profile")">
+						<i class="bi bi-credit-card"></i><span> Bank Account</span>
+					</li>
+					<li data-target="order-history" data-href="@Url.Action("OrderHistory", "Profile")">
 						<i class="bi bi-cart-check"></i><span> Order History</span>
 					</li>
 					<li data-target="customsr-service">
@@ -26,7 +29,7 @@
 					<li data-target="change-password">
 						<i class="bi bi-key"></i><span> Change Password</span>
 					</li>
-					<li data-target="sign-out">
+					<li id="sign-out">
 						<i class="bi bi-box-arrow-right"></i><span> Sign Out</span>
 					</li>
 				</ul>
@@ -79,7 +82,7 @@
 						</div>
 						<div class="mt-4">
 							<p><strong>Name:</strong> @Model.FullName</p>
-							<p><strong>Phone:</strong> @Model.FullName</p>
+							<p><strong>Phone:</strong> @Model.Phone</p>
 							<p><strong>Address:</strong> @Model.ReceiveAddress</p>
 							<p><strong>Country:</strong> @Model.Country</p>
 						</div>
@@ -87,7 +90,7 @@
 				</div>
 				<!-- Customsr Service -->
 				<div id="customsr-service" class="detail-form d-none">
-					<h3 class="font-weight-bold h3-color">CUSTOmsR SERVICE</h3>
+					<h3 class="font-weight-bold h3-color">CUSTOMER SERVICE</h3>
 					<!-- Add the Bootstrap Icons stylesheet -->
 					<div class="container mt-5">
 						<div class="service-item">
@@ -95,7 +98,7 @@
 								<i class="bi bi-telephone"></i>
 							</div>
 							<div>
-								<h5>Phone Customsr Services</h5>
+								<h5>Phone Customer Services</h5>
 								<p class="service-text">020 3805 6666</p>
 							</div>
 						</div>
@@ -104,7 +107,7 @@
 								<i class="bi bi-envelope"></i>
 							</div>
 							<div>
-								<p>Email Customsr Services</>
+								<p>Email Customer Services</p>
 								<p class="service-text">sales@thewhiskyworld.com</p>
 							</div>
 						</div>
@@ -120,288 +123,20 @@
 					</div>
 				</div>
 				<!-- CHANGE PASSWORD -->
-				<div id="change-password" class="detail-form d-none">
-					<div class="row">
-						<div class="col-8">
-							<h3 class="font-weight-bold h3-color text-center">UPDATE MY PASSWORD</h3>
-							<form id="change-password-form">
-								<!-- Current Password -->
-								<div class="form-group mt-5">
-									<label for="password">Current password:</label>
-									<input type="password" id="password" class="form-control" name="password"
-										   placeholder="Enter your current password" required>
-								</div>
-								<!-- New Password -->
-								<div class="form-group">
-									<label for="new-password">New password:</label>
-									<input type="password" id="new-password" class="form-control" name="newPassword"
-										   placeholder="Enter your new password" required>
-								</div>
-								<!-- Confirm Password -->
-								<div class="form-group">
-									<label for="confirm-password">Confirm password:</label>
-									<input type="password" id="confirm-password" class="form-control"
-										   placeholder="Confirm your new password" required>
-									<small id="confirm-password-error" class="text-danger"></small>
-								</div>
-
-								<!-- Save Change Button -->
-								<button type="submit" class="btn btn-dark w-100 mt-3" id="change-pass-btn">Save Changes</button>
-							</form>
-						</div>
-					</div>
-				</div>
+				@await Html.PartialAsync("_ChangePassView")
 				<!-- MY DETAILS -->
-				<div id="my-details" class="detail-form d-none">
-					<div class="row">
-						<div class="col-6">
-							<h3 class="font-weight-bold h3-color text-center">UPDATE MY DETAILS</h3>
-							<form id="my-details-form" method="post">
-								<!-- Full Name Input -->
-								<input type="hidden" name="id" value="@Model.Id" />
-								<div class="form-group mt-5">
-									<label for="full-name">Full Name:</label>
-									<input type="text" id="full-name" name="FullName" class="form-control"
-										   value="@Model.FullName" required>
-								</div>
-								<!-- Email Input -->
-								<div class="form-group mt-3">
-									<label for="email">Email:</label>
-									<input type="email" id="email" name="Email" class="form-control"
-										   value="@Model.Account.Email" disabled>
-								</div>
-								<!-- Date of Birth Input -->
-								<div class="form-group mt-3">
-									<label for="dob">Date of Birth:</label>
-									<input type="date" id="dob" name="Dob" class="form-control"
-										   value="@Model.DateOfBirth" required>
-								</div>
-								<!-- Phone Input -->
-								<div class="form-group mt-3">
-									<label for="phone">Phone Number:</label>
-									<input type="tel" id="phone" name="Phone" class="form-control"
-										   placeholder="Enter your phone number" value="@Model.Phone" required>
-								</div>
-								<!-- Address Input -->
-								<div class="form-group mt-3">
-									<label for="address">Address:</label>
-									<input type="text" id="address" name="Address" class="form-control"
-										   value="@Model.ReceiveAddress" required>
-								</div>
-								<!-- Save Change Button -->
-								<div class="text-center">
-									<button type="submit" class="btn btn-dark w-100 mt-3" id="change-password-btn">Save</button>
-								</div>
-								<div id="success-message" class="alert alert-success text-center" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
-									Password changed successfully!
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
+				<div id="my-details" class="detail-form d-none"></div>
 				<!-- BANK ACCOUNTS -->
-				<div id="bank-accounts" class="detail-form d-none">
-					<h3 class="font-weight-bold h3-color text-center">BANK ACCOUNTS</h3>
-					<div class="mt-4">
-						<!-- List Bank -->
-						<div id="bank-list" class="mb-4">
-							@if (Model.BankAccounts != null && Model.BankAccounts.Any())
-							{
-								foreach (var bank in Model.BankAccounts)
-								{
-									<div class="d-flex justify-content-between align-items-center border p-3 mb-2">
-										<div>
-											<p><strong>Bank:</strong> @bank.getBankName()</p>
-											<p><strong>Account Number:</strong> @bank.AccountNo</p>
-											<p class="text-muted">
-												@if (Model.IsDefaultBank(bank))
-												{
-													<span class="badge bg-success">Default</span>
-												}
-											</p>
-										</div>
-										<div>
-											@if (!Model.IsDefaultBank(bank))
-											{
-												<form method="post" asp-action="SetDefaultBank" asp-controller="Profile">
-													<input type="hidden" name="bankId" value="@bank.Id" />
-													<button type="submit" class="btn btn-primary btn-sm">Set Default</button>
-												</form>
-											}
-										</div>
-									</div>
-								}
-							}
-							else
-							{
-								<p>No bank accounts available. Add a new one below.</p>
-							}
-						</div>
-
-						<!-- bank form -->
-						<form id="add-bank-form">
-							<div class="form-group mb-3">
-								<label for="bank-name">Bank Name:</label>
-								<select class="form-control" id="bank-name" name="BankName" required>
-
-								</select>
-							</div>
-							<div class="form-group mb-3">
-								<label for="account-number">Account Number:</label>
-								<input type="text" class="form-control" id="account-number" name="AccountNumber" placeholder="Enter your account number" required />
-							</div>
-							<div class="text-center">
-								<button type="submit" class="btn btn-dark w-100 mt-3">Add Bank Account</button>
-							</div>
-						</form>
-					</div>
-				</div>
-
+				<div id="bank-accounts" class="detail-form d-none"></div>
 				<!-- Order History -->
-				<div id="order-history" class="detail-form d-none">
-					<h3 class="font-weight-bold h3-color text-center">ORDER HISTORY</h3>
-					<div class="mt-4">
-						@foreach (var order in Model.Orders)
-						{
-							<!-- Invoice 1 -->
-							<div class="border p-3 mb-4">
-								<div class="collapse-btn">
-									<h5 class="font-weight-bold">Invoice #@order.Id</h5>
-									<p><strong>Date:</strong> @order.Details.Dates.FirstOrDefault()?.Date.ToString("MM/dd/yyyy")</p>
-									<p><strong>Status:</strong> @order.IsDelivered</p>
-									<ul class="timsline">
-										@foreach (var dates in order.Details.Dates)
-										{
-											<li><strong>@dates.State.StateName</strong>@dates.Date.ToString("yyyy-MM-dd, hh:mm tt")</li>
-										}
-									</ul>
-									<hr>
-								</div>
-
-								<!-- Collapse content for invoice details -->
-								<div class="collapse-content">
-									<p><strong>Products:</strong></p>
-									<div class="mb-3" id="product-list">
-										<div class="d-flex align-items-center mb-3">
-											@foreach (var item in order.Details.Items)
-											{
-												<img src="@item.Product.Name"
-													 alt="Product A" class="img-thumbnail"
-													 style="width: 160px; height: auto;" />
-												<div class="ms-3">
-													<p><strong> @item.Product.Name</strong></p>
-													<p>@item.Quantity</p>
-													<p><strong>Price:</strong> $@item.Product.Price</p>
-													<div class="d-flex flex-column">
-														<div class="d-flex align-items-center mb-3">
-															<strong>Review:</strong>
-															<div class="stars ms-2 @(order.IsDelivered ? "stars-selected" : "")" data-value="@item.Rating" data-id="@item.Product.Id-@item.OrderId">
-																<span class="star" data-value="1">&#9734;</span>
-																<span class="star" data-value="2">&#9734;</span>
-																<span class="star" data-value="3">&#9734;</span>
-																<span class="star" data-value="4">&#9734;</span>
-																<span class="star" data-value="5">&#9734;</span>
-															</div>
-														</div>
-														<div class="d-flex">
-															<button class="btn btn-profile me-2 buy_again-btn @(order.IsDelivered ? "disabled-btn" : "")">Buy again</button>
-														</div>
-													</div>
-												</div>
-											}
-										</div>
-									</div>
-								</div>
-								<p><strong>Total Price:</strong> $@order.Details.TotalPrice()</p>
-								<p><strong>Discount:</strong> $@order.Details.GetDiscount()</p>
-							</div>
-							<p><strong>Total Amount:</strong> @order.TotalAmount</p>
-						}
-					</div>
-				</div>
-			</div> <!-- SIGN OUT -->
-			<div id="sign-out" class="detail-form d-none">
-				<h3 class="font-weight-bold h3-color">SIGN OUT</h3>
-				<p>You have been logged out successfully.</p>
+				<div id="order-history" class="detail-form d-none"></div>
 			</div>
 		</div>
 	</div>
 </div>
-@section Scripts {
-	<script src="~/js/profile.js"></script>
-	<script src="~/js/rating.js"></script>
-	<script src="~/js/bank.js"></script>
-	<script>
-		$(document).ready(function () {
-			// Xử lý sự kiện submit của form
-			$('.star').on('click', function (event) {
-				event.preventDefault();
-				const container = $(this).parent();
-				const value = container.data('value');
-				const id = container.data('id');
-				$.ajax({
-					url: '@Url.Action("Rating", "Profile")?value=${value}&id=${id}'
-							type: 'GET'
-				})
-			})
-			$('#sign-out').on('click', function () {
-				$.ajax({
-					url: '@Url.Action("LogOut", "Profile")',
-					type: 'GET'
-				})
-			});
-			$('#my-details-form').submit(function (event) {
-				event.preventDefault();
-				var formData = $(this).serialize();
-				$.ajax({
-					url: '@Url.Action("Edit", "Profile")',
-					type: 'POST',
-					data: formData,
-					success: function (response) {
-						if (response.success) {
-							$('#full-name-display').text($('#full-name').val());
-							$('#phone-display').text($('#phone').val());
-							$('#dob-display').text($('#dob').val());
-							$('#address-display').text($('#address').val());
+<script src="~/js/profile.js"></script>
+<script src="~/js/rating.js"></script>
+<script src="~/js/profile_ajax.js"></script>
 
-						}
-					}
-				});
-			});
-			$('#confirm-password').on('input', function () {
-				const newPassword = $('#new-password').val();
-				const confirmPassword = $(this).val();
-				if (newPassword != confirmPassword) {
-					$('#confirm-password-error').text("Passwords don't match.");
-					$('#change-password-btn').addClass('disable-btn')
-				}
-				else {
-					$('#confirm-password-error').text('');
-					$('#change-password-btn').removeClass('disable-btn')
-				}
-			});
-			$('#change-password-form').submit(function (event) {
-				event.preventDefault();
-				var formData = $(this).serialize();
 
-				$.ajax({
-					url: '@Url.Action("ChangePass", "Profile")',
-					type: 'POST',
-					data: formData,
-					success: function (response) {
-						if (response.success) {
-							$('#success-message').fadeIn();
-							setTimeout(function () {
-								$('#success-message').fadeOut();
-							}, 3000);
-						}
-					},
-					error: function () {
-						alert('There was an error processing your request.');
-					}
-				});
-			});
-
-	</script>
-}
 

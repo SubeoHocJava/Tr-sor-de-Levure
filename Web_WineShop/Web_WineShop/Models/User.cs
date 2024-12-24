@@ -19,6 +19,7 @@ namespace Web_WineShop.Models
 		[Column("DOB")]
 		public DateTime DateOfBirth { get; set; }
 		[Column("PHONE")]
+		[Phone(ErrorMessage = "Invalid phone number.")]
 		public string Phone { get; set; }
 		[Column("COUNTRY")]
 		public string Country { get; set; }
@@ -29,26 +30,18 @@ namespace Web_WineShop.Models
 		[Column("BANK_ACC_DEFAULT"), AllowNull]
 		public int? BankAccountDefaultId { get; set; }
 
+
 		public Account Account { get; set; }
 		[InverseProperty(nameof(BankAccountOwner.User))]
-		public ICollection<BankAccountOwner> BankAccountOwners { get; set; }
+		public ICollection<BankAccountOwner>? BankAccountOwners { get; set; }
 		[NotMapped]
-		public ICollection<BankAccount> BankAccounts
+		public ICollection<BankAccount>? BankAccounts
 		{
-			get
-			{
-				return BankAccountOwners != null
-					? BankAccountOwners.Select(bao => bao.BankAccount).ToList()
-					: new List<BankAccount>();
-			}
+			get; set;
 		}
 		[InverseProperty("User")]
 		public ICollection<Order> Orders { get; set; }
-		public bool IsDefaultBank(BankAccount bankAccount)
-		{
-			return true;
 
-		}
 
 	}
 }

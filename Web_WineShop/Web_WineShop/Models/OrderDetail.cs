@@ -17,9 +17,6 @@ namespace Web_WineShop.Models
         [Column("VOUCHER_ID"), AllowNull]
         public int? VoucherId { get; set; }
 
-        [Column("ORDER_ID")]
-        public int OrderId { get; set; }
-
         [Column("PAYMENT_METHOD_ID")]
         public int PaymentMethodId { get; set; }
 
