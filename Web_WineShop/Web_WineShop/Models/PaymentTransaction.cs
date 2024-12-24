@@ -14,13 +14,13 @@ namespace Web_WineShop.Models
         [Column("ACCOUNT_REF")]
         public int AccountRef { get; set; }
 
-        [ForeignKey("Order")]
+   
         [Column("ORDER_ID")]
         public int OrderId { get; set; }
 
 
         [Column("AMOUNT")]
-        public decimal Amount { get; set; }
+        public double Amount { get; set; }
 
         [Column("STATUS")]
         public string Status { get; set; }
@@ -29,9 +29,8 @@ namespace Web_WineShop.Models
         public DateTime TransactionDate { get; set; }
 
         [Column("METHOD_ID")]
-        [ForeignKey("PaymentMethod")]
-        public int Method_Id { get; set; }
+        public int MethodId { get; set; }
         public PaymentMethod PaymentMethod { get; set; }
-        public Order Order { get; set; }
+		public Order Order { get; set; }
     }
 }
