@@ -1,31 +1,79 @@
-﻿<div id="change-password" class="detail-form d-none">
-	<div class="row">
-		<div class="col-8">
-			<h3 class="font-weight-bold h3-color text-center">UPDATE MY PASSWORD</h3>
-			<form id="change-password-form">
-				<!-- Current Password -->
-				<div class="form-group mt-5">
-					<label for="password">Current password:</label>
-					<input type="password" id="password" class="form-control" name="password"
-						   placeholder="Enter your current password" required>
-				</div>
-				<!-- New Password -->
-				<div class="form-group my-3">
-					<label for="new-password">New password:</label>
-					<input type="password" id="new-password" class="form-control" name="newPassword"
-						   placeholder="Enter your new password" required>
-				</div>
-				<!-- Confirm Password -->
-				<div class="form-group">
-					<label for="confirm-password">Confirm password:</label>
-					<input type="password" id="confirm-password" class="form-control"
-						   placeholder="Confirm your new password" required>
-					<small id="confirm-password-error" class="text-danger"></small>
-				</div>
+﻿@model Web_WineShop.Models.ProfileModel.PasswordUserModel
 
-				<!-- Save Change Button -->
-				<button type="submit" class="btn btn-dark w-100 mt-3" id="change-pass-btn">Save Changes</button>
-			</form>
+<div class="mt-4">
+	<h3 class="font-weight-bold h3-color text-center">UPDATE MY PASSWORD</h3>
+	<form id="change-password-form" method="post">
+		<!-- Current Password -->
+		<div class="form-group mt-5">
+			<label for="password">Current password:</label>
+			@Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Enter your current password", autocomplete = "off" })
+			@Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
 		</div>
-	</div>
+
+		<!-- New Password -->
+		<div class="form-group my-3">
+			<label for="new-password">New password:</label>
+			@Html.PasswordFor(model => model.NewPassword, new { @class = "form-control", placeholder = "Enter your new password", autocomplete = "off" })
+			@Html.ValidationMessageFor(model => model.NewPassword, "", new { @class = "text-danger" })
+		</div>
+
+		<!-- Confirm Password -->
+		<div class="form-group">
+			<label for="confirm-password">Confirm password:</label>
+			@Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control", placeholder = "Confirm your new password", autocomplete = "off" })
+			@Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+		</div>
+
+		<div id="success-message" class="alert alert-success text-center" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
+			Password changed successfully!
+		</div>
+		<span class="text-danger field-validation-valid d-none" id="notfound-err"></span>
+		<!-- Save Change Button -->
+		<input type="button" class="btn btn-dark w-100 mt-3" id="change-pass-btn" value="Save Changes">
+	</form>
 </div>
+<script>
+	$(function () {
+		$('#change-pass-btn').on("click", function () {
+			
+			$('#loading-spinner').removeClass('d-none');
+			$(".text-danger").text("");
+			var formData = $('#change-password-form').serialize();
+			$.ajax({
+				url: '/Profile/ChangePass',
+				type: 'POST',
+				data: formData,
+				success: function (response) {
+					// Hide the loading spinner
+					$('#loading-spinner').addClass('d-none');
+					if (response.success) {
+						// Show success message
+						$('#success-message').fadeIn();
+						setTimeout(function () {
+							$('#success-message').fadeOut();
+						}, 1000);
+					} else if (response.errors) {
+						// Display field-specific error messages
+						$.each(response.errors, function (key, errorMessages) {
+							var field = $('input[name="' + key + '"]');
+							var errorElement = field.siblings('.text-danger');
+							if (errorElement.length > 0) {
+								errorElement.text(errorMessages[0]); // Display the first error message
+							}
+						});
+					} else if (response.message) {
+						$('#notfound-err').text(response.message);
+						$('#notfound-err').removeClass('d-none');
+					}
+				},
+				error: function () {
+					// Handle any errors from the AJAX request
+					$('#loading-spinner').addClass('d-none');
+					$('#notfound-err').text('An error occurred. Please try again.');
+					$('#notfound-err').removeClass('d-none');
+				}
+			});
+		});
+	});
+
+</script>

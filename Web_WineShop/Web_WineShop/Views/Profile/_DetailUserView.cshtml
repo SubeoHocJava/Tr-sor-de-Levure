@@ -1,44 +1,84 @@
 ﻿@model Web_WineShop.Models.ProfileModel.UserDetailModel
-
-	<div class="row">
-		<div class="col-6">
-			<h3 class="font-weight-bold h3-color text-center">UPDATE MY DETAILS</h3>
-			@using (Html.BeginForm(new { @id = "my-details-form" }))
-			{
-				@Html.HiddenFor(model => model.Id)
-				<!-- Full Name Input -->
-				<div class="form-group mt-5">
-					@Html.LabelFor(model => model.FullName, "Full Name:")
-					@Html.TextBoxFor(model => model.FullName, new { @class = "form-control", @id = "full-name-display", required = "required" })
-				</div>
-				<!-- Email Input -->
-				<div class="form-group mt-3">
-					@Html.LabelFor(model => model.Email, "Email")
-					@Html.TextBoxFor(model => model.Email, new { @class = "form-control", required = "required", disabled = "disabled" })
-				</div>
-				<!-- Date of Birth Input -->
-				<div class="form-group mt-3">
-					@Html.LabelFor(model => model.DateOfBirth, "Date of Birth:")
-					@Html.TextBoxFor(model => model.DateOfBirth, new { @id = "dob-display", @class = "form-control", required = "required", @type = "date" })
-				</div>
-				<!-- Phone Input -->
-				<div class="form-group mt-3">
-					@Html.LabelFor(model => model.Phone, "Phone Number:")
-					@Html.TextBoxFor(model => model.Phone, new { @type = "tel", @id = "phone-display", @class = "form-control", @placeholder = "Enter your phone number", required = "required" })
-					@Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
-				</div>
-				<!-- Address Input -->
-				<div class="form-group mt-3">
-					@Html.LabelFor(model => model.ReceiveAddress, "Address:")
-					@Html.TextBoxFor(model => model.ReceiveAddress, new { @class = "form-control", required = "required", @id = "address-display" })
-				</div>
-				<!-- Save Change Button -->
-				<div class="text-center">
-					<input type="button" class="btn btn-dark w-100 mt-3" id="change-infor-btn" value="Save" />
-				</div>
-				<div id="success-message" class="alert alert-success text-center" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
-					Password changed successfully!
-				</div>
-			}
+<script>
+	$(function () {
+		$('#change-infor-btn').on("click", function () {
+			var form = $('#my-details-form');
+			$('#loading-spinner').removeClass('d-none');
+			var formData = form.serialize();
+			$.ajax({
+				url: '/Profile/Edit',
+				type: 'POST',
+				data: formData,
+				success: function (response) {
+					if (response.success) {
+						$(".text-danger").text("");
+						$('#success-message').fadeIn().delay(1000).fadeOut();
+					} else {
+						$(".text-danger").text("");
+						$.each(response.errors, function (key, errorMessages) {
+							var field = $('input[name="' + key + '"]');
+							var errorElement = field.siblings(".text-danger");
+							if (errorElement.length > 0) {
+								errorElement.text(errorMessages[0]);
+							}
+						});
+						$('#error-message').fadeIn().delay(1000).fadeOut();
+					}
+					$('#loading-spinner').addClass('d-none');
+				},
+				error: function (xhr, status, error) {
+					console.log("Error: " + error);
+					console.log("Status: " + status);
+					console.log("Response: " + xhr.responseText);
+				}
+			});
+		});
+	});
+</script>
+<div class="mt-4">
+	<h3 class="font-weight-bold h3-color text-center">UPDATE MY DETAILS</h3>
+	@using (Html.BeginForm("Edit", "Profile", FormMethod.Post, new { @id = "my-details-form" }))
+	{
+		@Html.HiddenFor(model => model.Id)
+		<!-- Full Name Input -->
+		<div class="form-group mt-5">
+			@Html.LabelFor(model => model.FullName)
+			@Html.TextBoxFor(model => model.FullName, new { @class = "form-control", @id = "full-name-display", required = "required", autocomplete = "on" })
+			@Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
 		</div>
-	</div>
+		<!-- Email Input -->
+		<div class="form-group mt-3">
+			@Html.LabelFor(model => model.Email, "Email")
+			@Html.TextBoxFor(model => model.Email, new { @class = "form-control", required = "required", disabled = "disabled" })
+		</div>
+		<!-- Date of Birth Input -->
+		<div class="form-group mt-3">
+			@Html.LabelFor(model => model.DateOfBirth, "Date of Birth:")
+			<input type="date" class="form-control" id="dob-display" name="DateOfBirth" value="@Model.DateOfBirth.ToString("yyyy-MM-dd")" required="required" ,autocomplete="on" />
+			@Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
+		</div>
+		<!-- Phone Input -->
+		<div class="form-group mt-3">
+			@Html.LabelFor(model => model.Phone, "Phone Number:")
+			@Html.TextBoxFor(model => model.Phone, new { @type = "tel", @id = "phone-display", @class = "form-control", @placeholder = "Enter your phone number", required = "required", autocomplete = "on" })
+			@Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+		</div>
+		<!-- Address Input -->
+		<div class="form-group mt-3">
+			@Html.LabelFor(model => model.ReceiveAddress)
+			@Html.TextBoxFor(model => model.ReceiveAddress, new { @class = "form-control", required = "required", @id = "address-display", autocomplete = "on" })
+			@Html.ValidationMessageFor(model => model.ReceiveAddress, "", new { @class = "text-danger" })
+		</div>
+		<!-- Save Change Button -->
+		<div class="text-center">
+			<input type="button" class="btn btn-dark w-100 mt-3" id="change-infor-btn" value="Save" />
+		</div>
+		<div id="success-message" class="alert alert-success text-center" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
+			Update Successful!
+		</div>
+
+		<div id="error-message" class="alert alert-danger text-center" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
+			Update Failed! Please try again.
+		</div>
+	}
+</div>

@@ -8,25 +8,22 @@
 		<div class="col-3">
 			<div class="new-container mt-5">
 				<ul class="new-list cursor-pointer">
-					<li class="mb-5">
-						<i class="bi bi-person"></i><span> Hi! Customsr</span>
-					</li>
-					<li class="border-top" data-target="account-overview">
-						<i class="bi bi-house-door"></i><span> Account Overview</span>
+					<li class="border-top" data-target="account-overview" data-href="@Url.Action("Overview", "Profile", new { id = Model.Id })">
+						<i class="bi bi-house-door"></i><span>Account Overview</span>
 					</li>
 					<li data-target="my-details" data-href="@Url.Action("Edit", "Profile")">
 						<i class="bi bi-person-lines-fill"></i><span> My Details</span>
 					</li>
-					<li data-target="bank-accounts"  data-href="@Url.Action("BankAccount", "Profile")">
+					<li data-target="bank-accounts" data-href="@Url.Action("BankAccount", "Profile", new { id = Model.Id })">
 						<i class="bi bi-credit-card"></i><span> Bank Account</span>
 					</li>
-					<li data-target="order-history" data-href="@Url.Action("OrderHistory", "Profile")">
+					<li data-target="order-history" data-href="@Url.Action("OrderHistory", "Profile", new { id = Model.Id })">
 						<i class="bi bi-cart-check"></i><span> Order History</span>
 					</li>
 					<li data-target="customsr-service">
-						<i class="bi bi-headset"></i><span> Customsr Service</span>
+						<i class="bi bi-headset"></i><span> Customer Service</span>
 					</li>
-					<li data-target="change-password">
+					<li data-target="change-password" data-href="@Url.Action("ChangePassword", "Profile")">
 						<i class="bi bi-key"></i><span> Change Password</span>
 					</li>
 					<li id="sign-out">
@@ -40,53 +37,7 @@
 			<div class="container mt-5">
 				<!-- ACCOUNT OVERVIEW -->
 				<div id="account-overview" class="detail-form d-none">
-					<h3 class="font-weight-bold h3-color text-center">ACCOUNT OVERVIEW</h3>
-					<!-- Rank -->
-					<div class="customsr-tier-card">
-						<div class="tier-title mb-5">
-							<span><strong>Customsr Tier</strong></span>
-						</div>
-						<div class="tier-progress-wrapper">
-							<!-- Progress Bar Container -->
-							<div class="progress-bar-container">
-								<!-- Progress Bar -->
-								<div class="progress-bar-background">
-									<div class="progress-bar-fill" id="progressFill"></div>
-								</div>
-							</div>
-							<!-- Customsr Tier Labels -->
-							<div class="tier-labels-wrapper">
-								<!-- Tier 1: Bronze (Icon for 1000) -->
-								<span class="tier-label" data-tier="1">
-									<i class="bi bi-award icon-rank" aria-hidden="true"></i> 1000
-								</span>
-								<!-- Tier 2: Silver (Icon for 10000) -->
-								<span class="tier-label" data-tier="2">
-									<i class="bi bi-award icon-rank" aria-hidden="true"></i> 10000
-								</span>
-								<!-- Tier 3: Gold (Icon for 100000) -->
-								<span class="tier-label" data-tier="3">
-									<i class="bi bi-award icon-rank" aria-hidden="true"></i> 100000
-								</span>
-								<!-- Tier 4: Diamond (Icon for 1000000) -->
-								<span class="tier-label" data-tier="4">
-									<i class="bi bi-gem icon-rank" aria-hidden="true"></i> 1000000
-								</span>
-							</div>
-						</div>
-					</div>
-					<!-- Default Address Section -->
-					<div class="mt-5 customsr-tier-card">
-						<div class="border-bottom d-flex justify-content-between align-items-center pb-3">
-							<span><strong>Default Address</strong></span>
-						</div>
-						<div class="mt-4">
-							<p><strong>Name:</strong> @Model.FullName</p>
-							<p><strong>Phone:</strong> @Model.Phone</p>
-							<p><strong>Address:</strong> @Model.ReceiveAddress</p>
-							<p><strong>Country:</strong> @Model.Country</p>
-						</div>
-					</div>
+					@await Html.PartialAsync("_AccountOverviewView")
 				</div>
 				<!-- Customsr Service -->
 				<div id="customsr-service" class="detail-form d-none">
@@ -123,7 +74,7 @@
 					</div>
 				</div>
 				<!-- CHANGE PASSWORD -->
-				@await Html.PartialAsync("_ChangePassView")
+				<div id="change-password" class="detail-form d-none"></div>
 				<!-- MY DETAILS -->
 				<div id="my-details" class="detail-form d-none"></div>
 				<!-- BANK ACCOUNTS -->
@@ -134,9 +85,8 @@
 		</div>
 	</div>
 </div>
+
 <script src="~/js/profile.js"></script>
-<script src="~/js/rating.js"></script>
-<script src="~/js/profile_ajax.js"></script>
 
 
 
