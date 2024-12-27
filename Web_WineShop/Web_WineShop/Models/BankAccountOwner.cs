@@ -16,5 +16,15 @@ namespace Web_WineShop.Models
 		[Column("USER_ID", Order = 1)]
 		public int UserId { get; set; }
 		public User User { get; set; }
+
+		public BankAccountOwner(int bankAccountId, int userId)
+		{
+			BankAccountId = bankAccountId;
+			UserId = userId;
+		}
+
+		public BankAccountOwner()
+		{
+		}
 	}
 }
