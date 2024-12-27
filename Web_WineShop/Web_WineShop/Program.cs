@@ -2,7 +2,14 @@ using Microsoft.EntityFrameworkCore;
 using Web_WineShop.Dao;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddHttpClient();
+builder.Services.AddCors(options =>
+{
+	options.AddPolicy("AllowAll", policy =>
+	{
+		policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+	});
+});
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDBContext>(options =>
@@ -26,7 +33,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-	name: "default"
-	pattern: "{controller=Profile}/{action=Profile}/{id?}");
+	name: "default",
+	pattern: "{controller=Profile}/{action=Profile" + "}/{id?}");
 
 app.Run();
