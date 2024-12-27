@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj": {}
+    "E:\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj": {
+    "E:\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
+        "projectUniqueName": "E:\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
         "projectName": "Web_WineShop",
-        "projectPath": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
-        "packagesPath": "C:\\Users\\LAPTOP MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\Project\\DotNET\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\",
+        "projectPath": "E:\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\Web_WineShop.csproj",
+        "packagesPath": "C:\\Users\\danhp\\.nuget\\packages\\",
+        "outputPath": "E:\\Tr-sor-de-Levure\\Web_WineShop\\Web_WineShop\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\LAPTOP MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\danhp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -48,23 +52,23 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.VisualStudio.Services.ServiceHooks.WebApi": {
               "target": "Package",
@@ -72,7 +76,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[8.0.7, )"
             }
           },
           "imports": [
@@ -94,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

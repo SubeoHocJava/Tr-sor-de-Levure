@@ -1,39 +1,37 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Web_WineShop.Dao;
+using Web_WineShop.Services; // Assuming EmailService is in this namespace
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddHttpClient();
-builder.Services.AddCors(options =>
-{
-	options.AddPolicy("AllowAll", policy =>
-	{
-		policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-	});
-});
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+
+// Cấu hình DbContext cho SQL Server
 builder.Services.AddDbContext<AppDBContext>(options =>
-	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Cấu hình Session (và cache phân phối)
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);  // Thiết lập thời gian phiên
+});
+
+// Đăng ký EmailService và SmtpClient
+builder.Services.AddSingleton<EmailService>();
+
+// Thêm Controllers và Views
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-	app.UseExceptionHandler("/Home/Error");
-	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-	app.UseHsts();
-}
-
+// Cấu hình HTTP request pipeline
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
+app.UseSession();  // Đảm bảo session được sử dụng
 
-app.UseAuthorization();
-
+// Cấu hình route cho Login và Register controller
 app.MapControllerRoute(
-	name: "default",
-	pattern: "{controller=Profile}/{action=Profile" + "}/{id?}");
+    name: "login",
+    pattern: "{controller=Login}/{action=Login}/{id?}");
 
 app.Run();
