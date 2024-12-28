@@ -3,12 +3,12 @@ $(function () {
     var filledStar = '&#9733;'; // Filled star
 
     // Handle click on a star
-    $('.stars').each(function(){
+    $('.stars').each(function () {
         getRating(this);
     });
-    $('.star').on('click',function () {
-        var index = $(this).parent('.stars').children('.star').index(this); // Get the index of the clicked star
-        $(this).parent('.stars').addClass('stars-selected');
+    $('.star').on('click', function (event) {
+        var index = $(this).parent('.stars').children('.star').index(this);
+        $(this).parent('.stars').css("pointer-events", "none");
         $(this).parent('.stars').data('value', index + 1);
         $(this).prevAll().html(filledStar).addClass('stars_active');
         $(this).html(filledStar).addClass('star_active');
@@ -16,14 +16,14 @@ $(function () {
     });
 
     // Handle hover over a star
-    $('.star').on('mouseenter',function () {
+    $('.star').on('mouseenter', function () {
         $(this).prevAll().html(filledStar).addClass('star_active');
         $(this).html(filledStar).addClass('star_active');
         $(this).nextAll().html(normalStar).removeClass('star_active')
     });
 
     // Handle mouse leaving the stars area
-    $('.stars').on('mouseleave',function () {
+    $('.stars').on('mouseleave', function () {
         getRating(this);
     });
     function getRating(stars) {

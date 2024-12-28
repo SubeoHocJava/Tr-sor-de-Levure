@@ -29,5 +29,10 @@ namespace Web_WineShop.Models
         // Mối quan hệ với Order
         [ForeignKey("OrderDetailId")]
         public OrderDetail? Details { get; set; }
-    }
+		public override string ToString()
+		{
+			return $"Order ID: {Id}, User ID: {UserId}, Total Amount: {TotalAmount}, Is Delivered: {IsDelivered}";
+		}
+
+	}
 }
