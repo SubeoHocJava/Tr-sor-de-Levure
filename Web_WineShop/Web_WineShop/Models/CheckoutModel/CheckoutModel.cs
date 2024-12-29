@@ -9,12 +9,12 @@ namespace Web_WineShop.Models.CheckoutModel
 		public string? Name { get; set; }
 		public string? Phone { get; set; }
 		public string? Email { get; set; }
-		public string? VoucherId { get; set; }
+		public int? VoucherId { get; set; }
 		[Required(ErrorMessage = "Please choose a payment method")]
 		public int PaymentMethodId { get; set; }
 		public string Address { get; set; }
 		public Voucher? Voucher { get; set; }
-		public List<CartItem>? Items { get; set; }
+		public List<CartItem> Items { get; set; }
 
 		public Double SubTotal()
 		{
@@ -23,7 +23,7 @@ namespace Web_WineShop.Models.CheckoutModel
 
 		public Double Discount()
 		{
-			return Voucher.getDiscount(SubTotal());
+			return Voucher?.getDiscount(SubTotal()) ?? 0;
 		}
 
 		public Double TotalAmount()

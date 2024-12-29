@@ -1,14 +1,72 @@
 ﻿@model Web_WineShop.Models.CheckoutModel.CheckoutModel
-<div class="bg-light">
+@{
+	ViewData["Title"] = "Checkout";
+}
+<link href="~/Checkout.css" rel="stylesheet" />
+<script>
+	$(function () {
+		$.ajax({
+			url: "/Checkout/GetPaymentMethod",
+			type: "GET",
+			success: function (data) {
+				var container = $("#payment-method-list");
+				data.forEach(payment => {
+					container.append(`
+									<div class="form-check border rounded p-3">
+										<input class="form-check-input" type="radio" name="Payment" id="pm-${payment.id}" value="${payment.id}" checked>
+												<label class="form-check-label" for="pm-${payment.id}">
+									<span class="fw-bold">${payment.name}</span>
+										</label>
+									</div>
+														`);
+				});
+			}
+		});
+		$('input[name=Payment]').on('change', function () {
+			$(".form-check").removeClass("selected-payment");
+			$(this).closest('.form-check').addClass("selected-payment");
+		});
+		$("#payment-btn").on('click', function () {
+			var $loading = $("#loading-indicator");
+			var $message = $("#response-message");
+			$button.prop("disabled", true);
+			$loading.removeClass("d-none");
+			var formData = $('#payment-form').serialize();
+			$.ajax({
+				url: "/Checkout/Payment",
+				type: "Post",
+				data: formData,
+				success: function (response) {
+					$loading.addClass("d-none");
+					$button.prop("disabled", false);
+					if (response.success) {
+						$message.removeClass("text-danger").addClass("text-success").text(response.message);
+					} else {
+						$message.removeClass("text-success").addClass("text-danger").text(response.message);
+					}
+				}, error: function () {
+					$loading.addClass("d-none");
+					$button.prop("disabled", false);
+					$message.removeClass("text-success").addClass("text-danger").text("An unexpected error occurred. Please try again.");
+				}
+			})
+		})
+
+	});
+</script>
+
+<div class="bg-light min-vh-100">
 	<div class="container py-5">
 		<h2 class="text-center fw-bold mb-4">Checkout</h2>
-		<div class="row g-4">
-			@using (Html.BeginForm("", "", ""))
-			{
-				@Html.TextBoxFor(m => m.UserId, new { hidden = true })
-				<!-- Customer Information -->
+
+		@using (Html.BeginForm("", "", FormMethod.Post, new { @id = "payment-form" }))
+		{
+			@Html.HiddenFor(m => m.UserId)
+			<div class="row g-4">
+				<!-- Left Column - Customer Information -->
 				<div class="col-lg-7">
-					<div class="card border-0 shadow-sm">
+					<!-- Customer Information Card -->
+					<div class="card border-0 shadow-sm mb-4">
 						<div class="card-body p-4">
 							<div class="d-flex align-items-center mb-4">
 								<i class="bi bi-person-circle text-primary fs-4 me-2"></i>
@@ -16,8 +74,8 @@
 							</div>
 							<div class="row g-3">
 								<div class="col-12">
-									<label class="form-label small fw-bold">First Name</label>
-									@Html.TextBoxFor(m => m.Name, new { @class = "form-control", disabled = "disabled" })
+									<label class="form-label small fw-bold">Full Name</label>
+									@Html.TextBoxFor(m => m.Name, new { @class = "form-control form-control-lg", disabled = "disabled" })
 								</div>
 								<div class="col-12">
 									<label class="form-label small fw-bold">Email</label>
@@ -25,7 +83,7 @@
 										<span class="input-group-text bg-light">
 											<i class="bi bi-envelope text-primary"></i>
 										</span>
-										@Html.TextBoxFor(m => m.Email, new { @class = "form-control", disabled = "disabled" })
+										@Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-lg", disabled = "disabled" })
 									</div>
 								</div>
 								<div class="col-12">
@@ -34,7 +92,7 @@
 										<span class="input-group-text bg-light">
 											<i class="bi bi-telephone text-primary"></i>
 										</span>
-										@Html.TextBoxFor(m => m.Phone, new { @class = "form-control", disabled = "disabled" })
+										@Html.TextBoxFor(m => m.Phone, new { @class = "form-control form-control-lg", disabled = "disabled" })
 									</div>
 								</div>
 								<div class="col-12">
@@ -43,115 +101,98 @@
 										<span class="input-group-text bg-light">
 											<i class="bi bi-geo-alt text-primary"></i>
 										</span>
-										@Html.TextBoxFor(m => m.Address, new { @class = "form-control", rows = "3" })
-										@Html.ValidationMessageFor(m => m.Address, "Please don't leave this field blank", new { @class = "text-danger" })
+										@Html.TextBoxFor(m => m.Address, new { @class = "form-control form-control-lg" })
 									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-					<!-- Order Summary -->
-					<div class="col-lg-5">
-						<div class="card border-0 shadow-sm">
-							<div class="card-body p-4">
-								<div class="d-flex align-items-center mb-4">
-									<i class="bi bi-cart text-primary fs-4 me-2"></i>
-									<h5 class="mb-0">Order Summary</h5>
-								</div>
-								@foreach (var item in Model.Items.Select((value, index) => new { value, index }))
-								{
-									var product = item.value.Product;
-									<!-- Product -->
-									<div class="card border bg-light mb-4">
-										<div class="card-body">
-											<div class="d-flex gap-3">
-												<img src="~/img_product/glengoyne-15-year-old-1.jpg" alt="@product.Name" class="product-image rounded">
-												<div>
-													<h6 class="fw-bold mb-1">@product.Name</h6>
-													<p class="text-muted mb-1 small">Quantity: @item.value.Quantity</p>
-													<p class="fw-bold mb-0">@product.Price</p>
-												</div>
-											</div>
-										</div>
-									</div>
-									@Html.TextBoxFor(m => m.Items[item.index], new { hidden = true })
-								}
-								<!-- Price Details -->
-								<div class="mb-4">
-									<div class="d-flex justify-content-between mb-2">
-										<span class="text-muted">Subtotal</span>
-										<span>$@Model.SubTotal()</span>
-									</div>
-									<div class="d-flex justify-content-between mb-2">
-										<span class="text-muted">Shipping</span>
-										<span class="text-success">Free</span>
-									</div>
-									<div class="d-flex justify-content-between mb-2">
-										<span class="text-muted">Voucher</span>
-										<span>$@Model.Discount()</span>
-									</div>
-									<hr>
-									<div class="d-flex justify-content-between align-items-center">
-										<h6 class="mb-0 fw-bold">Total</h6>
-										<h5 class="mb-0 text-primary">$@Model.TotalAmount()</h5>
-									</div>
-								</div>
-
-								<!-- Payment Method -->
-								<div class="mb-4">
-									<div class="d-flex align-items-center mb-4">
-										<i class="bi bi-credit-card text-primary fs-4 me-2"></i>
-										<h5 class="mb-0">Payment Method</h5>
-									</div>
-
-									<div class="d-grid gap-3">
-										<div class="form-check border rounded p-3">
-											<input class="form-check-input" type="radio" name="payment" id="bank" checked>
-											<label class="form-check-label" for="bank">
-												<span class="fw-bold">Bank Transfer</span>
-											</label>
-										</div>
-										<div class="form-check border rounded p-3">
-											<input class="form-check-input" type="radio" name="payment" id="cod">
-											<label class="form-check-label" for="cod">
-												<span class="fw-bold">Cash on Delivery</span>
-											</label>
-										</div>
-									</div>
-								</div>
-
-								<!-- Checkout Button -->
-								<button class="btn btn-primary w-100 py-3 mb-3">
-									<i class="bi bi-lock-fill me-2"></i>Complete Order
-								</button>
-
-								<!-- Security Note -->
-								<div class="text-center">
-									<span class="d-inline-flex align-items-center text-muted small">
-										<i class="bi bi-shield-check me-2"></i>
-										Secure Checkout
-									</span>
+									@Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger small mt-1" })
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			}
-		</div>
+				<!-- Right Column - Order Summary -->
+				<div class="col-lg-5">
+					<div class="card border-0 shadow-sm">
+						<div class="card-body p-4">
+							<div class="d-flex align-items-center mb-4">
+								<i class="bi bi-cart text-primary fs-4 me-2"></i>
+								<h5 class="mb-0">Order Summary</h5>
+							</div>
+							<!-- Products List -->
+							@foreach (var item in Model.Items.Select((value, index) => new { value, index }))
+							{
+								var product = item.value.Product;
+								<div class="card border bg-light mb-4">
+									<div class="card-body">
+										<div class="d-flex gap-3">
+											<img src="~/img/tamdhu-15-year-old.jpg" alt="@product.Name" class="product-image rounded">
+											<div>
+												<h6 class="fw-bold mb-1">@product.Name</h6>
+												<p class="text-muted mb-1 small">Quantity: @item.value.Quantity</p>
+												<p class="fw-bold mb-0">$@product.Price</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								@Html.HiddenFor(m => m.Items[item.index].Product)
+								@Html.HiddenFor(m => m.Items[item.index].Quantity)
+							}
+							<!-- Price Summary -->
+							<div class="mb-4">
+								<div class="d-flex justify-content-between mb-2">
+									<span class="text-muted">Subtotal</span>
+									<span>$@Model.SubTotal()</span>
+								</div>
+								<div class="d-flex justify-content-between mb-2">
+									<span class="text-muted">Shipping</span>
+									<span class="text-success">Free</span>
+								</div>
+								<div class="d-flex justify-content-between mb-2">
+									<span class="text-muted">Voucher</span>
+									<span>-$@Model.Discount()</span>
+								</div>
+								<hr>
+								<div class="d-flex justify-content-between align-items-center">
+									<h6 class="mb-0 fw-bold">Total</h6>
+									<h5 class="mb-0 text-primary">$@Model.TotalAmount()</h5>
+								</div>
+							</div>
 
+							<!-- Payment Method -->
+							<div class="mb-4">
+								<div class="d-flex align-items-center mb-4">
+									<i class="bi bi-credit-card text-primary fs-4 me-2"></i>
+									<h5 class="mb-0">Payment Method</h5>
+								</div>
+								<div class="d-grid gap-3" id="payment-method-list">
+									<!-- Payment methods will be injected here by JavaScript -->
+								</div>
+							</div>
+
+							<!-- Checkout Button -->
+							<button class="btn btn-primary w-100 py-3 mb-3" id="payment-btn">
+								<i class="bi bi-lock-fill me-2"></i>Complete Order
+							</button>
+
+							<!-- Security Note -->
+							<div class="text-center">
+								<span class="d-inline-flex align-items-center text-muted small">
+									<i class="bi bi-shield-check me-2"></i>
+									Secure Checkout
+								</span>
+							</div>
+
+							<div id="loading-indicator" class="text-center d-none">
+								<div class="spinner-border text-primary" role="status">
+									<span class="visually-hidden">Loading...</span>
+								</div>
+							</div>
+
+							<!-- Hiển thị thông báo -->
+							<div id="response-message" class="mt-3 text-center"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		}
 	</div>
-
-	<script>
-		// Highlight selected payment method
-		document.querySelectorAll('[name="payment"]').forEach(radio => {
-			radio.addEventListener('change', () => {
-				document.querySelectorAll('.form-check').forEach(el => {
-					el.classList.remove('selected-payment');
-				});
-				radio.closest('.form-check').classList.add('selected-payment');
-			});
-		});
-	</script>
 </div>

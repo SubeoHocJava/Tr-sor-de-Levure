@@ -3,7 +3,7 @@ using Web_WineShop.Dao;
 using Web_WineShop.Services; // Assuming EmailService is in this namespace
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddHttpClient();
 // Cấu hình DbContext cho SQL Server
 builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -32,6 +32,6 @@ app.UseSession();  // Đảm bảo session được sử dụng
 // Cấu hình route cho Login và Register controller
 app.MapControllerRoute(
     name: "login",
-    pattern: "{controller=Login}/{action=Login}/{id?}");
+    pattern: "{controller=Checkout}/{action=Checkout}/{id?}");
 
 app.Run();

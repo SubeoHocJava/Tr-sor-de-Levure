@@ -52,3 +52,10 @@
     background-color: var(--primary-light);
     border-color: var(--primary) !important;
 }
+#loading-indicator {
+    margin-top: 10px;
+}
+
+#response-message {
+    font-weight: bold;
+}

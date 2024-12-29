@@ -9,7 +9,7 @@ namespace Web_WineShop.Dao
 		public AppDBContext(DbContextOptions<AppDBContext> options) : base(options) { }
 
 		public DbSet<Account> Accounts { get; set; }
-		public DbSet<PaymentTransaction> Transactions { get; set; }
+
 		public DbSet<Bank> Banks { get; set; }
 		public DbSet<BankAccountOwner> BankAccountOwners { get; set; }
 		public DbSet<Brand> Brands { get; set; }
@@ -40,16 +40,6 @@ namespace Web_WineShop.Dao
 			base.OnModelCreating(modelBuilder);
 			modelBuilder.Entity<BankAccountOwner>().HasKey(bao => new { bao.UserId, bao.BankAccountId });
 			modelBuilder.Entity<OrderItem>().HasKey(oi => new { oi.OrderDetailId, oi.ProductId });
-			modelBuilder.Entity<PaymentTransaction>()
-				.HasOne(p => p.PaymentMethod)
-				.WithMany()
-				.HasForeignKey(p => p.MethodId)
-				.OnDelete(DeleteBehavior.NoAction);
-			modelBuilder.Entity<PaymentTransaction>()
-				.HasOne(p => p.Order)
-				.WithMany()
-				.HasForeignKey(p => p.OrderId)
-				.OnDelete(DeleteBehavior.NoAction);
 		}
 
 

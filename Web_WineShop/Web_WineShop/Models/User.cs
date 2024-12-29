@@ -25,8 +25,8 @@ namespace Web_WineShop.Models
 		public string Country { get; set; }
 		[Column("POINTS")]
 		public int Points { get; set; }
-		[Column("RECEIVE_ADDRESS"), AllowNull]
-		public string? ReceiveAddress { get; set; }
+		[Column("ADDRESS"), AllowNull]
+		public string? Address { get; set; }
 		[Column("BANK_ACC_DEFAULT"), AllowNull]
 		public int? BankAccountDefaultId { get; set; }
 
