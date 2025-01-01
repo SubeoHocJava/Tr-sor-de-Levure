@@ -12,11 +12,6 @@ namespace Web_WineShop.Models
         [Column("ID")]  // Set column name for ID
         public int Id { get; set; }
 
-        [Column("ParentId")]
-        public int? ParentId { get; set; }
-
-        [ForeignKey("ParentId")]
-        public virtual Category ParentCategory { get; set; } // Virtual for Lazy Loading
 
         [Required]
         [MaxLength(100)]
@@ -35,7 +30,6 @@ namespace Web_WineShop.Models
         [Column("Status")]
         public string Status { get; set; }
 
-        public virtual ICollection<Category> SubCategories { get; set; } // Virtual for Lazy Loading
         public virtual ICollection<Product> Products { get; set; } // Virtual for Lazy Loading
     }
 }
