@@ -1,0 +1,128 @@
+﻿:root {
+    --bg-color-service: #FCF3EA;
+    --color-title--line: #BF9650;
+    --bg-color-trending-bundle: #644b32;
+}
+
+.bg-trending-bundle {
+    background-color: var(--bg-color-trending-bundle);
+}
+
+#slider-intro .intro-indicator {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 100%;
+}
+
+#slider-intro .intro-controll {
+    transition: opacity 0.2s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#slider-intro:hover .intro-controll {
+    opacity: 0.5;
+    pointer-events: auto;
+}
+
+.w-48px {
+    width: 48px;
+}
+
+.img-100px {
+    width: 100px;
+    width: 100px;
+}
+
+.bg-service {
+    background-color: var(--bg-color-service);
+}
+
+.img-hover-opacity {
+    transition: opacity 0.3s ease;
+}
+
+    .img-hover-opacity:hover {
+        opacity: 0.5;
+    }
+
+.title-line {
+    margin: 2rem auto 4rem auto;
+    width: 100px;
+    height: 1px;
+    background-color: var(--color-title--line);
+}
+
+.menu-tag-btn {
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #f2f2f2;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.menu-tag-btn-hover:hover {
+    background-color: lightgray !important;
+    color: var(--color-title--line);
+}
+
+.menu-tag-btn-select {
+    background-color: #f2f2f2;
+}
+
+.img-259px {
+    width: 259px;
+    height: 259px;
+}
+
+#trending-menu .conatiner-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+#trending-menu .label-offer-product {
+    position: absolute;
+    text-transform: uppercase;
+    text-align: center;
+    width: 150px;
+    line-height: 24px;
+    top: 27px;
+    left: -30px;
+    transform: rotate(315deg);
+    color: white;
+}
+
+.btn-outline-w {
+    border: 1px solid white;
+    color: white;
+}
+
+    .btn-outline-w:hover {
+        background-color: white;
+        color: black;
+    }
+
+.outline-trending-bundle {
+    border: 1px solid var(--color-title--line);
+    padding: 16px;
+}
+
+.brand-img {
+    width: 162px;
+    -webkit-user-drag: none;
+}
+
+.wrapper-brand {
+    width: 90%;
+    margin: auto;
+    user-select: none;
+    scroll-behavior: smooth;
+}

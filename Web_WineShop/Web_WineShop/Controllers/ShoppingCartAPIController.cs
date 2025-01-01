@@ -15,7 +15,7 @@ namespace Web_WineShop.Controllers
         [HttpGet("{id_User}")]
         public ActionResult<ShoppingCart> GetShoppingCart(int id_User)
         {
-            List<CartItem> list = _context.CartItems.Where(ci => ci.UserId == id_User).Include(ci => ci.Product).ToList();
+            List<CartItem> list = _context.CartItems.Where(ci => ci.User_ID == id_User).Include(ci => ci.Product).ToList();
             if (list == null || !list.Any())
             {
                 return NotFound();

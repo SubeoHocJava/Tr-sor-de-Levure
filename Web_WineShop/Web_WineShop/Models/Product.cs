@@ -18,12 +18,12 @@ namespace Web_WineShop.Models
         public virtual Brand Brand { get; set; }
 
         [Required]
-        [Column("DetailsId")] 
+        [Column("DetailsId")]
         public int DetailsId { get; set; }
 
         [ForeignKey("DetailsId")]
         public virtual Detail Detail { get; set; }
-     
+
         [Required]
         [Column("CategoryId")]  // Set column name for CategoryId
         public int CategoryId { get; set; }
@@ -43,6 +43,7 @@ namespace Web_WineShop.Models
         [Column("ProductAppreciation")]
         public string Appreciation { get; set; }
 
+
         [MaxLength(50)]
         [Column("ProductStatus")]
         public string Status { get; set; }
@@ -50,7 +51,8 @@ namespace Web_WineShop.Models
         [Column("Price")]
         public double Price { get; set; }
 
-        [Column("Img")]
-        public string Img { get; set; }
+        [Column("Stock")]
+        public int Stock { get; set; }
+
     }
 }

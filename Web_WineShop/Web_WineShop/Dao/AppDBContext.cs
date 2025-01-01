@@ -38,7 +38,7 @@ namespace Web_WineShop.Dao
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<BankAccountOwner>().HasKey(bao => new { bao.UserId, bao.BankAccountId });
-            modelBuilder.Entity<OrderItem>().HasKey(oi => new { oi.OrderId, oi.ProductId });
+            modelBuilder.Entity<OrderItem>().HasKey(oi => new { oi.OrderDetailId, oi.ProductId });
         }
 
 
