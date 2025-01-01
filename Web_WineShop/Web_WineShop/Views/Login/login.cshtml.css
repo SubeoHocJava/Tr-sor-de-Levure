@@ -82,12 +82,6 @@
         color: #0056b3;
     }
 
-/* Định dạng cho phần header form */
-h4.text-center {
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-}
-
 /* Định dạng cho các trường nhập mật khẩu */
 input[type="password"] {
     font-family: Arial, sans-serif;
@@ -99,26 +93,7 @@ input:invalid {
     border-color: white;
 }
 
-/* Định dạng cho nút submit trong form đăng ký */
-.w-100, #login {
-    width: 100% !important;
-}
-
-/* Định dạng cho Select (chọn quốc gia) */
-.form-select {
-    padding: 0.5rem;
-    border-radius: 0;
-    border: 2px solid #ccc;
-    width: 100%;
-}
-
-/* By default, make all labels dimmed (reduced opacity and normal font weight) */
-.form-check label {
-    opacity: 0.5; /* Dim the labels */
-    font-weight: normal; /* Normal font weight */
-}
-
-/* When a radio button is checked, the associated label becomes normal (full opacity and bold) */
-input[type="radio"]:checked + label {
-    opacity: 1; /* Full opacity */
+.text-danger {
+    color: red;
+    font-size: 0.875rem;
 }

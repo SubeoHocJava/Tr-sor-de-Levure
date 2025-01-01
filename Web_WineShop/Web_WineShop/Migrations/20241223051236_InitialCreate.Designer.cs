@@ -12,7 +12,7 @@ using Web_WineShop.Dao;
 namespace Web_WineShop.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20241220094750_InitialCreate")]
+    [Migration("20241223051236_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace Web_WineShop.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Web_WineShop.Models.Account", b =>
+            modelBuilder.Entity("Account", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -53,7 +53,7 @@ namespace Web_WineShop.Migrations
                         .HasColumnType("int")
                         .HasColumnName("ROLE");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int")
                         .HasColumnName("USER_ID");
 
@@ -64,9 +64,40 @@ namespace Web_WineShop.Migrations
                     b.HasKey("id");
 
                     b.HasIndex("UserId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[USER_ID] IS NOT NULL");
 
                     b.ToTable("ACCOUNT");
+                });
+
+            modelBuilder.Entity("CartItem", b =>
+                {
+                    b.Property<int>("CartId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("ID_CART_ITEMS");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CartId"));
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int")
+                        .HasColumnName("PRODUCT_ID");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int")
+                        .HasColumnName("QUANTITY");
+
+                    b.Property<int>("User_ID")
+                        .HasColumnType("int")
+                        .HasColumnName("USER_ID");
+
+                    b.HasKey("CartId");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("User_ID");
+
+                    b.ToTable("CART_ITEMS");
                 });
 
             modelBuilder.Entity("Web_WineShop.Models.Bank", b =>
@@ -131,6 +162,8 @@ namespace Web_WineShop.Migrations
 
                     b.HasKey("UserId", "BankAccountId");
 
+                    b.HasIndex("BankAccountId");
+
                     b.ToTable("BANK_ACCOUNT_OWNER");
                 });
 
@@ -143,53 +176,31 @@ namespace Web_WineShop.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Collab")
-                        .IsRequired()
+                    b.Property<bool>("Collab")
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("COLLAB");
+                        .HasColumnType("bit")
+                        .HasColumnName("Collab");
 
                     b.Property<string>("Country")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)")
-                        .HasColumnName("COUNTRY");
+                        .HasColumnName("Country");
 
                     b.Property<string>("Img")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("IMG");
+                        .HasColumnName("Img");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)")
-                        .HasColumnName("NAME");
+                        .HasColumnName("Name");
 
                     b.HasKey("Id");
 
                     b.ToTable("BRAND");
-                });
-
-            modelBuilder.Entity("Web_WineShop.Models.CartItem", b =>
-                {
-                    b.Property<int>("UserId")
-                        .HasColumnType("int")
-                        .HasColumnName("USER_ID");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int")
-                        .HasColumnName("PRODUCT_ID");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int")
-                        .HasColumnName("QUANTITY");
-
-                    b.HasKey("UserId");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("CART_ITEM");
                 });
 
             modelBuilder.Entity("Web_WineShop.Models.Category", b =>
@@ -203,29 +214,29 @@ namespace Web_WineShop.Migrations
 
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime")
-                        .HasColumnName("CREATION_DATE");
+                        .HasColumnName("CreationDate");
 
                     b.Property<string>("Describe")
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)")
-                        .HasColumnName("DESCRIBE");
+                        .HasColumnName("Describe");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)")
-                        .HasColumnName("NAME");
+                        .HasColumnName("Name");
 
                     b.Property<int?>("ParentId")
                         .HasColumnType("int")
-                        .HasColumnName("PARENT_ID");
+                        .HasColumnName("ParentId");
 
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
-                        .HasColumnName("STATUS");
+                        .HasColumnName("Status");
 
                     b.HasKey("Id");
 
@@ -249,110 +260,77 @@ namespace Web_WineShop.Migrations
 
                     b.Property<int>("Age")
                         .HasColumnType("int")
-                        .HasColumnName("AGE");
+                        .HasColumnName("Age");
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)")
-                        .HasColumnName("DESCRIPTION");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int")
-                        .HasColumnName("PRODUCT_ID");
+                        .HasColumnName("Description");
 
                     b.Property<string>("Size")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
-                        .HasColumnName("SIZE");
+                        .HasColumnName("Size");
 
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
-                        .HasColumnName("STATUS");
+                        .HasColumnName("Status");
 
                     b.Property<string>("Varietal")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)")
-                        .HasColumnName("VARIETAL");
+                        .HasColumnName("Varietal");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
 
                     b.ToTable("DETAIL");
                 });
 
-            modelBuilder.Entity("Web_WineShop.Models.Invoice", b =>
+            modelBuilder.Entity("Web_WineShop.Models.Knowledge", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("ID");
+                        .HasColumnName("ID_KNOWLEDGE");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int")
-                        .HasColumnName("CUSTOMER_ID");
-
-                    b.Property<bool>("IsDelivered")
-                        .HasColumnType("bit")
-                        .HasColumnName("IS_DELIVERED");
-
-                    b.Property<double>("TotalAmount")
-                        .HasColumnType("float")
-                        .HasColumnName("TOTAL_AMOUNT");
-
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("INVOICES");
-                });
-
-            modelBuilder.Entity("Web_WineShop.Models.Knowledge", b =>
-                {
-                    b.Property<int>("IdKnowledge")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("ID_KNOWLEDGE");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdKnowledge"));
-
                     b.Property<string>("Category")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
                         .HasColumnName("CATEGORY");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)")
                         .HasColumnName("DESCRIPTION");
 
                     b.Property<string>("FilePath")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)")
                         .HasColumnName("FILE_PATH");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
                         .HasColumnName("TITLE");
 
                     b.Property<DateTime>("UploadDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("UPLOAD_DATE");
 
-                    b.HasKey("IdKnowledge");
+                    b.HasKey("Id");
 
-                    b.ToTable("Knowledges");
+                    b.ToTable("KNOWLEDGE");
                 });
 
             modelBuilder.Entity("Web_WineShop.Models.Order", b =>
@@ -364,25 +342,21 @@ namespace Web_WineShop.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("InvoiceId")
-                        .HasColumnType("int")
-                        .HasColumnName("INVOICE_ID");
+                    b.Property<bool>("IsDelivered")
+                        .HasColumnType("bit")
+                        .HasColumnName("IS_DELIVERED");
 
-                    b.Property<int>("PaymentMethodId")
-                        .HasColumnType("int")
-                        .HasColumnName("PAYMENT_METHOD_ID");
+                    b.Property<double>("TotalAmount")
+                        .HasColumnType("float")
+                        .HasColumnName("TOTAL_AMOUNT");
 
-                    b.Property<int>("VoucherId")
+                    b.Property<int>("userId")
                         .HasColumnType("int")
-                        .HasColumnName("VOUCHER_ID");
+                        .HasColumnName("USER_ID");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("InvoiceId");
-
-                    b.HasIndex("PaymentMethodId");
-
-                    b.HasIndex("VoucherId");
+                    b.HasIndex("userId");
 
                     b.ToTable("ORDERS");
                 });
@@ -400,9 +374,9 @@ namespace Web_WineShop.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("DATE");
 
-                    b.Property<int>("OrderId")
+                    b.Property<int>("OrderDetailId")
                         .HasColumnType("int")
-                        .HasColumnName("ORDER_ID");
+                        .HasColumnName("DETAIL_ID");
 
                     b.Property<int>("StateId")
                         .HasColumnType("int")
@@ -410,18 +384,51 @@ namespace Web_WineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrderId");
+                    b.HasIndex("OrderDetailId");
 
                     b.HasIndex("StateId");
 
                     b.ToTable("ORDER_DATES");
                 });
 
+            modelBuilder.Entity("Web_WineShop.Models.OrderDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("ID");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int")
+                        .HasColumnName("ORDER_ID");
+
+                    b.Property<int>("PaymentMethodId")
+                        .HasColumnType("int")
+                        .HasColumnName("PAYMENT_METHOD_ID");
+
+                    b.Property<int?>("VoucherId")
+                        .HasColumnType("int")
+                        .HasColumnName("VOUCHER_ID");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId")
+                        .IsUnique();
+
+                    b.HasIndex("PaymentMethodId");
+
+                    b.HasIndex("VoucherId");
+
+                    b.ToTable("ORDER_DETAIL");
+                });
+
             modelBuilder.Entity("Web_WineShop.Models.OrderItem", b =>
                 {
                     b.Property<int>("OrderId")
                         .HasColumnType("int")
-                        .HasColumnName("ORDER_ID");
+                        .HasColumnName("DETAIL_ID");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int")
@@ -431,7 +438,7 @@ namespace Web_WineShop.Migrations
                         .HasColumnType("int")
                         .HasColumnName("QUANTITY");
 
-                    b.Property<int>("Rating")
+                    b.Property<int?>("Rating")
                         .HasColumnType("int")
                         .HasColumnName("RATING");
 
@@ -439,7 +446,7 @@ namespace Web_WineShop.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ORDER_ITEMS");
+                    b.ToTable("ORDER_ITEM");
                 });
 
             modelBuilder.Entity("Web_WineShop.Models.OrderState", b =>
@@ -478,7 +485,50 @@ namespace Web_WineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PAYMENTMETHOD");
+                    b.ToTable("PAYMENT_METHOD");
+                });
+
+            modelBuilder.Entity("Web_WineShop.Models.PaymentTransaction", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("ID");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AccountRef")
+                        .HasColumnType("int")
+                        .HasColumnName("ACCOUNT_REF");
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("AMOUNT");
+
+                    b.Property<int>("Method_Id")
+                        .HasColumnType("int")
+                        .HasColumnName("METHOD_ID");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int")
+                        .HasColumnName("ORDER_ID");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("STATUS");
+
+                    b.Property<DateTime>("TransactionDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("TRANSACTION_DATE");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Method_Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("PAYMENT_TRANSACTION");
                 });
 
             modelBuilder.Entity("Web_WineShop.Models.Product", b =>
@@ -493,35 +543,46 @@ namespace Web_WineShop.Migrations
                     b.Property<string>("Appreciation")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("APPRECIATION");
+                        .HasColumnName("ProductAppreciation");
 
                     b.Property<int>("BrandId")
                         .HasColumnType("int")
-                        .HasColumnName("BRAND_ID");
+                        .HasColumnName("BrandId");
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int")
-                        .HasColumnName("CATEGORY_ID");
+                        .HasColumnName("CategoryId");
 
-                    b.Property<int?>("DetailsId")
+                    b.Property<int>("DetailsId")
                         .HasColumnType("int")
-                        .HasColumnName("DETAILS_ID");
+                        .HasColumnName("DetailsId");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)")
+                        .HasColumnName("ProductImageUrl");
+
+                    b.Property<string>("Img")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Img");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)")
-                        .HasColumnName("NAME");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("ProductName");
 
-                    b.Property<int>("Price")
-                        .HasColumnType("int")
-                        .HasColumnName("PRICE");
+                    b.Property<double>("Price")
+                        .HasColumnType("float")
+                        .HasColumnName("Price");
 
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
-                        .HasColumnName("STATUS");
+                        .HasColumnName("ProductStatus");
 
                     b.HasKey("Id");
 
@@ -529,9 +590,7 @@ namespace Web_WineShop.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("DetailsId")
-                        .IsUnique()
-                        .HasFilter("[DETAILS_ID] IS NOT NULL");
+                    b.HasIndex("DetailsId");
 
                     b.ToTable("PRODUCT");
                 });
@@ -599,7 +658,7 @@ namespace Web_WineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SendToFriends");
+                    b.ToTable("SEND_TO_FRIEND");
                 });
 
             modelBuilder.Entity("Web_WineShop.Models.User", b =>
@@ -611,7 +670,7 @@ namespace Web_WineShop.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("BankAccountDefaultId")
+                    b.Property<int?>("BankAccountDefaultId")
                         .HasColumnType("int")
                         .HasColumnName("BANK_ACC_DEFAULT");
 
@@ -649,8 +708,6 @@ namespace Web_WineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BankAccountDefaultId");
-
                     b.ToTable("USER");
                 });
 
@@ -685,28 +742,35 @@ namespace Web_WineShop.Migrations
 
             modelBuilder.Entity("Web_WineShop.Models.Voucher", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("ID");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("description")
-                        .HasColumnType("int");
+                    b.Property<string>("description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("DESCRIPTION");
 
                     b.Property<double>("maxDiscount")
-                        .HasColumnType("float");
+                        .HasColumnType("float")
+                        .HasColumnName("MAX_DISCOUNT");
 
                     b.Property<string>("name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("NAME");
 
                     b.Property<double>("percentage")
-                        .HasColumnType("float");
+                        .HasColumnType("float")
+                        .HasColumnName("PERCENTAGE");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
-                    b.ToTable("Vouchers");
+                    b.ToTable("VOUCHER");
                 });
 
             modelBuilder.Entity("Web_WineShop.Models.WishItem", b =>
@@ -732,16 +796,33 @@ namespace Web_WineShop.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("WishItems");
+                    b.ToTable("WISH_ITEM");
                 });
 
-            modelBuilder.Entity("Web_WineShop.Models.Account", b =>
+            modelBuilder.Entity("Account", b =>
                 {
                     b.HasOne("Web_WineShop.Models.User", "User")
                         .WithOne("Account")
-                        .HasForeignKey("Web_WineShop.Models.Account", "UserId")
+                        .HasForeignKey("Account", "UserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("CartItem", b =>
+                {
+                    b.HasOne("Web_WineShop.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("Web_WineShop.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("User_ID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
 
                     b.Navigation("User");
                 });
@@ -759,28 +840,19 @@ namespace Web_WineShop.Migrations
 
             modelBuilder.Entity("Web_WineShop.Models.BankAccountOwner", b =>
                 {
-                    b.HasOne("Web_WineShop.Models.User", null)
-                        .WithMany("BankAccounts")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Web_WineShop.Models.CartItem", b =>
-                {
-                    b.HasOne("Web_WineShop.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
+                    b.HasOne("Web_WineShop.Models.BankAccount", "BankAccount")
+                        .WithMany("BankAccountOwners")
+                        .HasForeignKey("BankAccountId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Web_WineShop.Models.User", "User")
-                        .WithMany()
+                        .WithMany("BankAccountOwners")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Product");
+                    b.Navigation("BankAccount");
 
                     b.Navigation("User");
                 });
@@ -794,29 +866,41 @@ namespace Web_WineShop.Migrations
                     b.Navigation("ParentCategory");
                 });
 
-            modelBuilder.Entity("Web_WineShop.Models.Detail", b =>
+            modelBuilder.Entity("Web_WineShop.Models.Order", b =>
                 {
-                    b.HasOne("Web_WineShop.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
+                    b.HasOne("Web_WineShop.Models.User", "User")
+                        .WithMany("Orders")
+                        .HasForeignKey("userId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Product");
+                    b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Web_WineShop.Models.Invoice", b =>
+            modelBuilder.Entity("Web_WineShop.Models.OrderDate", b =>
                 {
-                    b.HasOne("Web_WineShop.Models.User", null)
-                        .WithMany("Invoices")
-                        .HasForeignKey("UserId");
+                    b.HasOne("Web_WineShop.Models.OrderDetail", "Detail")
+                        .WithMany("Dates")
+                        .HasForeignKey("OrderDetailId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Web_WineShop.Models.OrderState", "State")
+                        .WithMany()
+                        .HasForeignKey("StateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Detail");
+
+                    b.Navigation("State");
                 });
 
-            modelBuilder.Entity("Web_WineShop.Models.Order", b =>
+            modelBuilder.Entity("Web_WineShop.Models.OrderDetail", b =>
                 {
-                    b.HasOne("Web_WineShop.Models.Invoice", null)
-                        .WithMany("Orders")
-                        .HasForeignKey("InvoiceId")
+                    b.HasOne("Web_WineShop.Models.Order", null)
+                        .WithOne("Details")
+                        .HasForeignKey("Web_WineShop.Models.OrderDetail", "OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -828,35 +912,16 @@ namespace Web_WineShop.Migrations
 
                     b.HasOne("Web_WineShop.Models.Voucher", "Voucher")
                         .WithMany()
-                        .HasForeignKey("VoucherId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("VoucherId");
 
                     b.Navigation("PaymentMethod");
 
                     b.Navigation("Voucher");
                 });
 
-            modelBuilder.Entity("Web_WineShop.Models.OrderDate", b =>
-                {
-                    b.HasOne("Web_WineShop.Models.Order", null)
-                        .WithMany("Dates")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Web_WineShop.Models.OrderState", "State")
-                        .WithMany()
-                        .HasForeignKey("StateId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("State");
-                });
-
             modelBuilder.Entity("Web_WineShop.Models.OrderItem", b =>
                 {
-                    b.HasOne("Web_WineShop.Models.Order", null)
+                    b.HasOne("Web_WineShop.Models.OrderDetail", "OrderDetail")
                         .WithMany("Items")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -868,7 +933,28 @@ namespace Web_WineShop.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("OrderDetail");
+
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Web_WineShop.Models.PaymentTransaction", b =>
+                {
+                    b.HasOne("Web_WineShop.Models.PaymentMethod", "PaymentMethod")
+                        .WithMany()
+                        .HasForeignKey("Method_Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Web_WineShop.Models.Order", "Order")
+                        .WithMany()
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("PaymentMethod");
                 });
 
             modelBuilder.Entity("Web_WineShop.Models.Product", b =>
@@ -886,8 +972,10 @@ namespace Web_WineShop.Migrations
                         .IsRequired();
 
                     b.HasOne("Web_WineShop.Models.Detail", "Detail")
-                        .WithOne()
-                        .HasForeignKey("Web_WineShop.Models.Product", "DetailsId");
+                        .WithMany("Products")
+                        .HasForeignKey("DetailsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Brand");
 
@@ -896,20 +984,9 @@ namespace Web_WineShop.Migrations
                     b.Navigation("Detail");
                 });
 
-            modelBuilder.Entity("Web_WineShop.Models.User", b =>
-                {
-                    b.HasOne("Web_WineShop.Models.BankAccount", "BankAccountDefault")
-                        .WithMany()
-                        .HasForeignKey("BankAccountDefaultId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("BankAccountDefault");
-                });
-
             modelBuilder.Entity("Web_WineShop.Models.Violate", b =>
                 {
-                    b.HasOne("Web_WineShop.Models.Account", "Account")
+                    b.HasOne("Account", "Account")
                         .WithMany("Violates")
                         .HasForeignKey("AccountId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -937,7 +1014,7 @@ namespace Web_WineShop.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Web_WineShop.Models.Account", b =>
+            modelBuilder.Entity("Account", b =>
                 {
                     b.Navigation("Violates");
                 });
@@ -945,6 +1022,11 @@ namespace Web_WineShop.Migrations
             modelBuilder.Entity("Web_WineShop.Models.Bank", b =>
                 {
                     b.Navigation("BankAccounts");
+                });
+
+            modelBuilder.Entity("Web_WineShop.Models.BankAccount", b =>
+                {
+                    b.Navigation("BankAccountOwners");
                 });
 
             modelBuilder.Entity("Web_WineShop.Models.Brand", b =>
@@ -959,12 +1041,18 @@ namespace Web_WineShop.Migrations
                     b.Navigation("SubCategories");
                 });
 
-            modelBuilder.Entity("Web_WineShop.Models.Invoice", b =>
+            modelBuilder.Entity("Web_WineShop.Models.Detail", b =>
                 {
-                    b.Navigation("Orders");
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("Web_WineShop.Models.Order", b =>
+                {
+                    b.Navigation("Details")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Web_WineShop.Models.OrderDetail", b =>
                 {
                     b.Navigation("Dates");
 
@@ -976,9 +1064,9 @@ namespace Web_WineShop.Migrations
                     b.Navigation("Account")
                         .IsRequired();
 
-                    b.Navigation("BankAccounts");
+                    b.Navigation("BankAccountOwners");
 
-                    b.Navigation("Invoices");
+                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }

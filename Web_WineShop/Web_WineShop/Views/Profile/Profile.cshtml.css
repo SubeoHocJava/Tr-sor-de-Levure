@@ -13,32 +13,32 @@
     /* Optional: to limit the max width */
 }
 
-.new-list li {
-    display: flex;
-    align-items: center;
-    /* Align icon and text vertically */
-    padding: 10px 0;
-    /* Add padding for space between items */
-    border-bottom: 2px solid #ddd;
-    /* Add bottom border */
-}
+    .new-list li {
+        display: flex;
+        align-items: center;
+        /* Align icon and text vertically */
+        padding: 10px 0;
+        /* Add padding for space between items */
+        border-bottom: 2px solid #ddd;
+        /* Add bottom border */
+    }
 
-.new-list span {
-    margin-left: 20px;
-    /* Space between the icon and text */
-}
+    .new-list span {
+        margin-left: 20px;
+        /* Space between the icon and text */
+    }
 
-.new-list i {
-    font-size: 1.5rem;
-    /* Adjust icon size */
-    margin-left: 50px;
-    color: #be9650;
-}
+    .new-list i {
+        font-size: 1.5rem;
+        /* Adjust icon size */
+        margin-left: 50px;
+        color: #be9650;
+    }
 
-.new-list li:hover {
-    border-bottom: 2px solid #be9650;
-    /* Change border color on hover */
-}
+    .new-list li:hover {
+        border-bottom: 2px solid #be9650;
+        /* Change border color on hover */
+    }
 
 .border-top {
     border-top: 2px solid #ddd !important;
@@ -62,10 +62,10 @@
     /* Optional: Make the text bold */
 }
 
-.new-list li.active i {
-    color: #be9650;
-    /* Change icon color for the active item */
-}
+    .new-list li.active i {
+        color: #be9650;
+        /* Change icon color for the active item */
+    }
 
 .h3-color {
     color: #be9650;
@@ -134,25 +134,25 @@
     color: #333;
 }
 
-.tier-label[data-tier="1"] i {
-    color: #cd7f32;
-    /* Bronze color */
-}
+    .tier-label[data-tier="1"] i {
+        color: #cd7f32;
+        /* Bronze color */
+    }
 
-.tier-label[data-tier="2"] i {
-    color: #c0c0c0;
-    /* Silver color */
-}
+    .tier-label[data-tier="2"] i {
+        color: #c0c0c0;
+        /* Silver color */
+    }
 
-.tier-label[data-tier="3"] i {
-    color: #ffd700;
-    /* Gold color */
-}
+    .tier-label[data-tier="3"] i {
+        color: #ffd700;
+        /* Gold color */
+    }
 
-.tier-label[data-tier="4"] i {
-    color: #b9f2ff;
-    /* Diamond color */
-}
+    .tier-label[data-tier="4"] i {
+        color: #b9f2ff;
+        /* Diamond color */
+    }
 
 .icon-rank {
     font-size: 30px !important;
@@ -177,48 +177,21 @@
     margin: 15px 0;
 }
 
-.service-item .icon-circle {
-    margin-right: 15px;
-}
+    .service-item .icon-circle {
+        margin-right: 15px;
+    }
 
 /* Hiển   */
-.collapse-btn {
-    cursor: pointer;
-}
 
-.stars .star {
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: black;
+#loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.star_active {
-    color: #f1c40f!important;
-}
-.stars-selected{
-    pointer-events: none;
-}
-
-.btn.disabled-btn{
-    cursor: not-allowed !important;
-    pointer-events: none;
-    background-color: #ccc !important;
-}
-/* Button styles for all buttons */
-.btn-profile {
-    background-color: #be9650 !important; /* Force black background */
-    color: white !important; /* Text color white */
-    border: black !important;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
-}
-
-    .btn-profile:focus {
-        outline: none !important; /* Màu viền nhạt hơn khi nhấp */
-    }
-
-
-    /* Hover effect for all buttons */
-    .btn-profile:hover {
-        background-color: #d29d43 !important; /* Hover background color */
-        color: rgb(253, 253, 253) !important; /* Text color changes to black on hover */
-    }
-

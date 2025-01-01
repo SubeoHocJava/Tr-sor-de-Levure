@@ -1,0 +1,62 @@
+﻿@model Web_WineShop.Models.ProfileModel.BankAccountModel;
+<h3 class="font-weight-bold h3-color text-center">BANK ACCOUNTS</h3>
+<div class="mt-4">
+	<!-- List Bank -->
+	<div id="bank-list" class="mb-4">
+		@if (Model.BankAccounts != null && Model.BankAccounts.Any())
+		{
+			var BankAccounts = Model.BankAccounts;
+			<div class="d-flex justify-content-between align-items-center border p-3 mb-2">
+				<div>
+					<p><strong>Bank:</strong> @BankAccounts.First().getBankName()</p>
+					<p><strong>Account Number:</strong> @BankAccounts.First().AccountNo</p>
+					<p class="text-muted">
+						<span class="badge bg-success">Default</span>
+					</p>
+				</div>
+			</div>
+			foreach (var bank in BankAccounts.Skip(1))
+			{
+				<div class="d-flex justify-content-between align-items-center border p-3 mb-2">
+					<div>
+						<p><strong>Bank:</strong> @bank.getBankName()</p>
+						<p><strong>Account Number:</strong> @bank.AccountNo</p>
+					</div>
+					<div>
+						<button class="btn text-light btn-sm set-default-btn" style="background-color:#be9650"
+								data-id="@bank.Id" data-target="@Model.Id">
+							Set Default
+						</button>
+					</div>
+				</div>
+			}
+		}
+		else
+		{
+			<p>No bank accounts available. Add a new one below.</p>
+		}
+	</div>
+	<!-- bank form -->
+	@using (Html.BeginForm("AddBankAccount", "Profile", FormMethod.Post, new { @id = "add-bank-form" }))
+	{
+		<input type="hidden" name="Id" value="@Model.Id" />
+		<div class="form-group mb-3">
+			<label for="bank-name">Bank Name:</label>
+			<select class="form-control" id="bank-name" name="BankId" required>
+			</select>
+			@Html.ValidationMessageFor(model => model.BankId, "", new { @class = "text-danger" })
+
+		</div>
+		<div class="form-group mb-3">
+			<label for="account-number">Account Number:</label>
+			<input type="text" name="AccountNo" id="account-number" class="form-control" placeholder="Enter your account number" />
+			@Html.ValidationMessageFor(model => model.AccountNo, "", new { @class = "text-danger" })
+		</div>
+		<span class="text-danger field-validation-valid d-none" id="notfound-err"></span>
+		<div class="text-center">
+			<input type="button" class="btn btn-dark w-100 mt-3" id="add-bank-btn" value="Add Bank Account">
+		</div>
+
+	}
+</div>
+<script src="~/js/bank.js"></script>

@@ -1,7 +1,12 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Web_WineShop.Dao;
+using Web_WineShop.Services; // Assuming EmailService is in this namespace
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddHttpClient();
+// Cấu hình DbContext cho SQL Server
+builder.Services.AddDbContext<AppDBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDBContext>(options =>
@@ -29,6 +34,7 @@ app.UseSession();
 app.UseRouting();
 app.UseAuthorization();
 
+// Cấu hình route cho Login và Register controller
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=ShoppingCart}/{action=ShoppingCart}/{id?}");

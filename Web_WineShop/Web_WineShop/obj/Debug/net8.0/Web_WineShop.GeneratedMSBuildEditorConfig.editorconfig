@@ -17,107 +17,131 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Web_WineShop
 build_property.RootNamespace = Web_WineShop
-build_property.ProjectDir = S:\Project\LapTrinhNet\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\
+build_property.ProjectDir = E:\Tr-sor-de-Levure\Web_WineShop\Web_WineShop\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = S:\Project\LapTrinhNet\Tr-sor-de-Levure\Web_WineShop\Web_WineShop
+build_property.MSBuildProjectDirectory = E:\Tr-sor-de-Levure\Web_WineShop\Web_WineShop
 build_property._RazorSourceGeneratorDebug = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Gin/Gin.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Gin/Gin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2luXEdpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Gin/_LayoutGin.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Gin/_LayoutGin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2luXF9MYXlvdXRHaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Home/Index.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Home/Privacy.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Login/ForgotPassword.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ290UGFzc3dvcmQuY3NodG1s
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Profile/_AccountOverviewView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxfQWNjb3VudE92ZXJ2aWV3Vmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Login/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0ZXIuY3NodG1s
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Profile/_BankAccountView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxfQmFua0FjY291bnRWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Rum/Rum.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Profile/_ChangePassView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxfQ2hhbmdlUGFzc1ZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Profile/_DetailUserView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxfRGV0YWlsVXNlclZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Profile/_OrderHistoryView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxfT3JkZXJIaXN0b3J5Vmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Rum/Rum.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUnVtXFJ1bS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Rum/_LayoutRum.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Rum/_LayoutRum.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUnVtXF9MYXlvdXRSdW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Shared/Error.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Shared/_layoutMain.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Shared/_layoutMain.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9sYXlvdXRNYWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Whisky/Whisky.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Whisky/Whisky.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2hpc2t5XFdoaXNreS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Whisky/_LayoutWhisky.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Whisky/_LayoutWhisky.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2hpc2t5XF9MYXlvdXRXaGlza3kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/_ViewImports.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/_ViewStart.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Admin/Admin.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Admin/Admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-e4qsldy8ql
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Knowledge/Knowledge.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Knowledge/Knowledge.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25vd2xlZGdlXEtub3dsZWRnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-q4y1guerpd
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Login/Login.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Login/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ290UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-xc342jvydt
+
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-b88a07zuv4
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Login/ProductDetails.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Login/ProductDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUHJvZHVjdERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-nba2n4hsei
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Profile/Profile.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Login/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-6iukqvb2ky
+
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Profile/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-7ct24ng0f4
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Shared/_Layout.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Profile/_OrderView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxfT3JkZXJWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-sz4x7ls41i
+
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2bnhcxbw9q
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/shopping_cart/ShoppingCart.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/shopping_cart/ShoppingCart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2hvcHBpbmdfY2FydFxTaG9wcGluZ0NhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ks1f3j7cgb
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Wishlist/SendToFriend.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Wishlist/SendToFriend.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lzaGxpc3RcU2VuZFRvRnJpZW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-h6q7ykewuz
 
-[S:/Project/LapTrinhNet/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Wishlist/Wishlist.cshtml]
+[E:/Tr-sor-de-Levure/Web_WineShop/Web_WineShop/Views/Wishlist/Wishlist.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lzaGxpc3RcV2lzaGxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-phsu5iil1p

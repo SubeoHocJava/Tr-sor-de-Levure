@@ -21,11 +21,8 @@ namespace Web_WineShop.Models
 		public Bank Bank { get; set; }
 
 		[InverseProperty(nameof(BankAccountOwner.BankAccount))]
-		public ICollection<BankAccountOwner> BankAccountOwners { get; set; }
-		public string getBankName()
-		{
-			return this.Bank.Name;
-		}
+		public ICollection<BankAccountOwner>? BankAccountOwners { get; set; }
+		public string getBankName() => this.Bank.Name;
 
 	}
 }

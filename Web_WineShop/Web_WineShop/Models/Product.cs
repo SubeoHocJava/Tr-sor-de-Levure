@@ -14,22 +14,22 @@ namespace Web_WineShop.Models
         [Column("BrandId")]  // Set column name for BrandId
         public int BrandId { get; set; }
 
-        [ForeignKey("BrandId")]
-        public virtual Brand Brand { get; set; }
+		[ForeignKey("BrandId")]
+		public virtual Brand Brand { get; set; }
 
         [Required]
         [Column("DetailsId")]
         public int DetailsId { get; set; }
 
-        [ForeignKey("DetailsId")]
-        public virtual Detail Detail { get; set; }
+		[ForeignKey("DetailsId")]
+		public virtual Detail Detail { get; set; }
 
         [Required]
         [Column("CategoryId")]  // Set column name for CategoryId
         public int CategoryId { get; set; }
 
-        [ForeignKey("CategoryId")]
-        public virtual Category Category { get; set; }
+		[ForeignKey("CategoryId")]
+		public virtual Category Category { get; set; }
 
         [Required]
         [MaxLength(255)]

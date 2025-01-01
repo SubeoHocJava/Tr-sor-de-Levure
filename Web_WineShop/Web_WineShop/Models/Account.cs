@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Web_WineShop.Models;
-
+[Table("ACCOUNT")]
 public class Account
 {
     [Key]
@@ -10,7 +10,7 @@ public class Account
 
     [ForeignKey("User")]
     [Column("USER_ID")]
-    public int UserId { get; set; }
+    public int? UserId { get; set; }
 
     [Required]
     [EmailAddress]
