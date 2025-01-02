@@ -1,61 +1,64 @@
-﻿// Get buttons and content area
-const btnDescription = document.getElementById("btnDescription");
-const btnDetails = document.getElementById("btnDetails");
-const contentArea = document.getElementById("contentArea");
+﻿document.addEventListener("DOMContentLoaded", function () {
+    // Lấy các phần tử của nút và khu vực nội dung
+    const btnDescription = document.getElementById("btnDescription");
+    const btnDetails = document.getElementById("btnDetails");
+    const contentArea = document.getElementById("contentArea");
+    const quantityInput = document.getElementById("quantityInput");
+    const priceSpan = document.getElementById("priceSpan");
+    const productId = document.getElementById("productId").value; // Lấy ID sản phẩm
 
-// Add click events for buttons
-btnDescription.addEventListener("click", () => {
+    // Lấy giá gốc từ trang
+    const basePrice = parseFloat(priceSpan.innerText.replace('£', ''));
+
+    // Đảm bảo nút mô tả là mặc định khi trang tải
     btnDescription.classList.add("active");
-    btnDetails.classList.remove("active");
-    contentArea.innerHTML = `
-    <p>
-      Be the first to review Indri Dru Ex Bourbon Cask Strength. Write
-      a review!
-    </p>
-  `;
-});
+    // Tải mô tả sản phẩm khi trang tải
+    fetchProductDetails('description', productId);
 
-btnDetails.addEventListener("click", () => {
-    btnDetails.classList.add("active");
-    btnDescription.classList.remove("active");
-    contentArea.innerHTML = `
-    <table class="custom-table w-100">
-      <thead>
-        <tr>
-          <th>Attribute</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><b>Brand</b></td>
-          <td>Hazelwood</td>
-        </tr>
-        <tr>
-          <td><b>Country</b></td>
-          <td>Scotland</td>
-        </tr>
-        <tr>
-          <td><b>Size</b></td>
-          <td>70cl</td>
-        </tr>
-        <tr>
-          <td><b>ABV / Strength</td>
-          <td>46.4%</td>
-        </tr>
-        <tr>
-          <td><b>Age</b></td>
-          <td>37 Year Old</td>
-        </tr>
-        <tr>
-          <td><b>Varietal</b></td>
-          <td>Blended Grain</td>
-        </tr>
-        <tr>
-          <td><b>Status</b></td>
-          <td>Non-Chill Filtered</td>
-        </tr>
-      </tbody>
-    </table>
-  `;
+    // Lắng nghe sự kiện khi người dùng nhấn nút mô tả
+    btnDescription.addEventListener("click", () => {
+        btnDescription.classList.add("active");
+        btnDetails.classList.remove("active");
+        fetchProductDetails('description', productId); // Tải mô tả
+    });
+
+    // Lắng nghe sự kiện khi người dùng nhấn nút chi tiết
+    btnDetails.addEventListener("click", () => {
+        btnDetails.classList.add("active");
+        btnDescription.classList.remove("active");
+        fetchProductDetails('details', productId); // Tải chi tiết
+    });
+
+    // Hàm để tải thông tin mô tả hoặc chi tiết
+    function fetchProductDetails(viewType, productId) {
+        // Xóa nội dung cũ trong contentArea
+        contentArea.innerHTML = '';
+
+        // Gửi yêu cầu AJAX tới controller
+        fetch(`/Product/LoadProductDetails?viewType=${viewType}&productId=${productId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (viewType === 'description') {
+                    contentArea.innerHTML = data.descriptionHtml; // Cập nhật mô tả
+                } else if (viewType === 'details') {
+                    contentArea.innerHTML = data.detailsHtml; // Cập nhật chi tiết
+                }
+            })
+            .catch(error => console.error('Error loading product details:', error));
+    }
+
+    // Lắng nghe sự thay đổi của input số lượng
+    quantityInput.addEventListener("input", function () {
+        // Lấy số lượng từ input
+        const quantity = parseInt(quantityInput.value);
+
+        // Kiểm tra nếu số lượng hợp lệ (lớn hơn 0)
+        if (quantity > 0) {
+            // Tính lại giá mới (giá cơ bản * số lượng)
+            const updatedPrice = (basePrice * quantity).toFixed(2);
+
+            // Cập nhật giá hiển thị
+            priceSpan.innerText = `£${updatedPrice}`;
+        }
+    });
 });

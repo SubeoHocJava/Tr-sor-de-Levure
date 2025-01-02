@@ -1,10 +1,16 @@
-﻿/* Định dạng chung cho form-group */
-.form-group {
-    position: relative;
-    margin-bottom: 1.5rem;
+﻿/* General styling for the container */
+.container {
+    max-width: 1200px;
+    margin-top: 50px;
 }
 
-    /* Định dạng cho nhãn label */
+/* Form label styling */
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 5px;
+}
+
     .form-group label {
         position: absolute;
         top: 50%;
@@ -16,38 +22,42 @@
         transition: 0.2s ease-in-out;
     }
 
-/* Khi input có focus, hoặc đã có giá trị, label sẽ di chuyển lên */
+/* Label behavior when input is focused or has value */
 .form-control:focus ~ label,
 .form-control:not(:placeholder-shown) ~ label {
-    top: -10px;
+    top: -12px;
     font-size: 0.75rem;
     color: #495057;
 }
 
-/* Định dạng cho trường nhập liệu khi có focus */
-.form-control:focus {
-    border-bottom: 2px solid #495057;
-    box-shadow: none;
-}
-
-/* Định dạng cho trường input */
-.form-control, input[type="email"], input[type="password"], input[type="text"], input[type="tel"], input[type="address"] {
-    padding: 0.5rem 0;
+/* Input styles */
+.form-control {
+    padding: 0.75rem 0;
     border: none;
-    border-bottom: 2px solid #ccc; /* Đường line dưới input */
+    border-bottom: 2px solid #ccc; /* Default gray color for the bottom border */
     border-radius: 0;
     outline: none;
     font-size: 1rem;
-    transition: border-bottom 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-    /* Định dạng cho trường nhập liệu khi focus */
+    /* Border color when input is focused */
     .form-control:focus {
-        border-bottom: 2px solid #495057;
+        border-bottom: 2px solid #ccc; /* Gray color remains on focus */
         box-shadow: none;
     }
 
-/* Định dạng cho biểu tượng "mắt" */
+    /* Border color on hover */
+    .form-control:hover {
+        border-bottom: 2px solid #ccc; /* Gray color remains on hover */
+    }
+
+    /* Removed red border for invalid input */
+    .form-control:invalid {
+        border-bottom: 2px solid #ccc; /* Gray color remains for invalid inputs */
+    }
+
+/* Styling for the eye icon */
 .eye-icon {
     position: absolute;
     right: 15px;
@@ -57,24 +67,24 @@
     z-index: 10;
 }
 
-/* Định dạng cho phần Tab chọn: Đã đăng ký hoặc Tạo tài khoản */
+/* Tab selection styling (Register or Create Account) */
 .d-flex {
     margin-bottom: 20px;
 }
 
-/* Căn giữa các form */
+/* Centering forms */
 .container {
     max-width: 1200px;
 }
 
-/* Tùy chỉnh kích thước cho các ô nhập liệu và card */
+/* Custom column sizing for input fields and card */
 .col-md-6 {
     max-width: 100%;
 }
 
-/* Định dạng cho phần liên kết trong tab */
+/* Removed underline from already registered and create account links */
 .btn-link {
-    text-decoration: none;
+    text-decoration: none; /* Removed underline */
     color: #495057;
 }
 
@@ -82,18 +92,74 @@
         color: #0056b3;
     }
 
-/* Định dạng cho các trường nhập mật khẩu */
+/* Styling for password input */
 input[type="password"] {
     font-family: Arial, sans-serif;
     letter-spacing: 2px;
 }
 
-/* Định dạng cho input khi có lỗi (sai định dạng hoặc còn trống) */
-input:invalid {
-    border-color: white;
+/* Styling for radio buttons */
+.form-check-inline {
+    margin-right: 15px;
 }
 
-.text-danger {
-    color: red;
+.form-check-input {
+    margin-top: 0.2rem;
+}
+
+.form-check-label {
+    font-weight: 600;
+}
+
+/* Custom form group for gender selection */
+.custom-form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Privacy policy link styling */
+.form-group.text-center p {
     font-size: 0.875rem;
+}
+
+.form-group.text-center a {
+    text-decoration: none;
+    color: #0056b3;
+}
+
+    .form-group.text-center a:hover {
+        text-decoration: underline;
+    }
+
+/* Navigation link styling */
+.d-flexx a {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    margin: 0 15px;
+}
+
+.d-flex a:hover {
+    color: #007bff;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 576px) {
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .form-check-inline {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+}
+
+.card-body {
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
 }

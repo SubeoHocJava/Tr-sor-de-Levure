@@ -2,20 +2,20 @@
 
     // XỬ LÍ ĐĂNG NHẬP
     $('#loginForm').submit(function (event) {
-        event.preventDefault(); // Ngừng hành động sự kiện, ngừng hành động gửi submit của form
+        event.preventDefault(); // Ngừng hành động gửi form
 
         var email = $('#login-email').val();
         var password = $('#login-password').val();
 
         $.ajax({
-            url: loginUrl, // Sử dụng biến loginUrl từ View
+            url: loginUrl, // URL gửi yêu cầu
             type: 'POST',
             data: { email: email, password: password },
             success: function (response) {
                 if (response.success) {
-                    window.location.href = response.redirectUrl;
+                    window.location.href = response.redirectUrl; // Chuyển hướng sau khi đăng nhập thành công
                 } else {
-                    $('#error-message').text(response.message);
+                    $('#error-message').text(response.message); // Hiển thị thông báo lỗi
                 }
             },
             error: function () {
@@ -23,6 +23,7 @@
             }
         });
     });
+
 
     // XỬ LÍ ĐĂNG KÍ
     $('#registration-form').submit(function (event) {

@@ -20,12 +20,10 @@ namespace Web_WineShop.Models
         [Column("Country")]
         public string Country { get; set; }
 
-        [Column("Img")]
-        public string Img { get; set; }
+        [MaxLength(500)]
+        [Column("BrandImageUrl")]
+        public string ImageUrl { get; set; }
 
-        [MaxLength(50)]
-        [Column("Collab")]
-        public bool Collab { get; set; }
         public virtual ICollection<Product> Products { get; set; } // Virtual for Lazy Loading
     }
 }

@@ -115,102 +115,6 @@ function displayImages(input) {
   }
 }
 
-//edit user
-document.addEventListener("DOMContentLoaded", function () {
-  const editButtons = document.querySelectorAll(".edit-btn");
-  const userForm = document.querySelector(".edit-user-form");
-  const userTable = document.querySelector(".table tbody");
-
-  let currentRow; // Biến để lưu trữ hàng đang được chỉnh sửa
-
-  // Hide form initially
-  userForm.classList.add("d-none");
-
-  // Handle Edit button click
-  editButtons.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      // Get the row of the clicked button
-      currentRow = this.closest("tr");
-
-      // Extract user data from the row
-      const userData = {
-        fullName: currentRow.cells[1].textContent.trim(),
-        dob: currentRow.cells[2].textContent.trim(),
-        gender: currentRow.cells[3].textContent.trim(),
-        phone: currentRow.cells[4].textContent.trim(),
-        email: currentRow.cells[5].textContent.trim(),
-      };
-
-      // Populate the form with the user's data
-      document.getElementById("userFullName").value = userData.fullName;
-      document.getElementById("userDOB").value = userData.dob;
-      document.getElementById("userGender").value = userData.gender;
-      document.getElementById("userPhone").value = userData.phone;
-      document.getElementById("userEmail").value = userData.email;
-
-      // Show the form
-      userForm.classList.remove("d-none");
-    });
-  });
-
-  // Handle form submission
-  document
-    .getElementById("userForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      if (!currentRow) return; // Exit if no row is selected
-
-      // Get updated user data from the form
-      const updatedUser = {
-        fullName: document.getElementById("userFullName").value.trim(),
-        dob: document.getElementById("userDOB").value.trim(),
-        gender: document.getElementById("userGender").value,
-        phone: document.getElementById("userPhone").value.trim(),
-        email: document.getElementById("userEmail").value.trim(),
-      };
-
-      // Update the current row's cells with the new data
-      currentRow.cells[1].textContent = updatedUser.fullName;
-      currentRow.cells[2].textContent = updatedUser.dob;
-      currentRow.cells[3].textContent = updatedUser.gender;
-      currentRow.cells[4].textContent = updatedUser.phone;
-      currentRow.cells[5].textContent = updatedUser.email;
-
-      // Hide the form
-      userForm.classList.add("d-none");
-
-      // Clear the reference to the current row
-      currentRow = null;
-    });
-});
-
-//delete user
-document.addEventListener("DOMContentLoaded", function () {
-  const deleteButtons = document.querySelectorAll(".delete-btn");
-  const deleteModal = new bootstrap.Modal(
-    document.getElementById("deleteConfirmationModal")
-  );
-  const confirmDeleteBtn = document.getElementById("confirmDeleteBtn");
-
-  let rowToDelete;
-
-  deleteButtons.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      rowToDelete = this.closest("tr");
-
-      deleteModal.show();
-    });
-  });
-
-  confirmDeleteBtn.addEventListener("click", function () {
-    if (rowToDelete) {
-      rowToDelete.remove();
-
-      deleteModal.hide();
-    }
-  });
-});
 
 // voucher hover me
 document.addEventListener("DOMContentLoaded", function () {
@@ -254,4 +158,70 @@ document.addEventListener("DOMContentLoaded", function () {
       html: true,
     }
   );
+});
+//////////////////////////////////////////////////////////////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", function () {
+    const editButtons = document.querySelectorAll(".edit-btn");
+    const userForm = document.querySelector(".edit-user-form");
+
+    editButtons.forEach((btn) => {
+        btn.addEventListener("click", function () {
+            const row = this.closest("tr");
+            const userId = row.getAttribute("data-id");
+
+            // Lấy dữ liệu từ hàng và điền vào form
+            const fullName = row.cells[1].textContent.trim();
+            const phone = row.cells[2].textContent.trim();
+            const email = row.cells[3].textContent.trim();
+            const ban = row.cells[4].textContent.trim();
+            const role = row.cells[5].textContent.trim();  // Lấy giá trị Role
+            const points = row.cells[6].textContent.trim();  // Lấy giá trị Points
+
+            // Điền dữ liệu vào form
+            document.getElementById("userId").value = userId;
+            document.getElementById("userFullName").value = fullName;
+            document.getElementById("phone").value = phone;
+            document.getElementById("userEmail").value = email;
+            document.getElementById("userBan").value = ban;
+            document.getElementById("userRole").value = role;  // Điền Role vào form
+            document.getElementById("userPoints").value = points;  // Điền Points vào form
+
+            // Hiển thị form chỉnh sửa
+            userForm.classList.remove("d-none");
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const deleteButtons = document.querySelectorAll(".delete-btn");
+
+    deleteButtons.forEach((btn) => {
+        btn.addEventListener("click", function () {
+            const userId = this.getAttribute("data-id");
+
+            // Xác nhận trước khi xóa
+            if (confirm("Are you sure you want to delete this user?")) {
+                // Gửi yêu cầu POST để xóa người dùng
+                fetch(`/Admin/Delete/${userId}`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            // Sau khi xóa thành công, xóa dòng trong bảng (DOM)
+                            const row = this.closest("tr");
+                            row.remove();
+                        } else {
+                            alert("Error deleting user: " + response.statusText);
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        alert("Error deleting user");
+                    });
+            }
+        });
+    });
 });

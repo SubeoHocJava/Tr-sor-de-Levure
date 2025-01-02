@@ -1,6 +1,13 @@
-﻿.form-group {
+﻿/* General styling for the container */
+.container {
+    max-width: 1200px;
+    margin-top: 50px;
+}
+
+/* Form label styling */
+.form-group {
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     padding: 5px;
 }
 
@@ -17,24 +24,20 @@
 
 .form-control:focus ~ label,
 .form-control:not(:placeholder-shown) ~ label {
-    top: -10px;
+    top: -12px;
     font-size: 0.75rem;
     color: #495057;
 }
 
-.form-control:focus {
-    border-bottom: 2px solid #495057;
-    box-shadow: none;
-}
-
-.form-control, input[type="email"], input[type="password"], input[type="text"], input[type="tel"], input[type="address"] {
-    padding: 0.5rem 0;
+/* Input styles */
+.form-control {
+    padding: 0.75rem 0;
     border: none;
     border-bottom: 2px solid #ccc;
     border-radius: 0;
     outline: none;
     font-size: 1rem;
-    transition: border-bottom 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
     .form-control:focus {
@@ -42,6 +45,7 @@
         box-shadow: none;
     }
 
+/* Eye icon for password visibility */
 .eye-icon {
     position: absolute;
     right: 15px;
@@ -51,32 +55,152 @@
     z-index: 10;
 }
 
+/* Flexbox layout for certain form groups */
 .d-flex {
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 1.5rem;
 }
 
-.container {
-    max-width: 1200px;
+/* Responsive layout for small screens */
+@media (max-width: 576px) {
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .form-check-inline {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
 }
 
-.col-md-6 {
-    max-width: 100%;
-}
-
+/* Button and link styling */
 .btn-link {
     text-decoration: none;
     color: #495057;
+    font-weight: bold;
 }
 
     .btn-link:hover {
         color: #0056b3;
     }
 
-input[type="password"] {
-    font-family: Arial, sans-serif;
-    letter-spacing: 2px;
+button[type="submit"] {
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: #495057;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
 }
 
+    button[type="submit"]:hover {
+        background-color: #343a40;
+    }
+
+/* Input validation */
 input:invalid {
-    border-color: white;
+    border-color: #ccc; /* Gray border for invalid input */
+}
+
+
+
+
+/* Styling for radio buttons */
+.form-check-inline {
+    margin-right: 15px;
+}
+
+.form-check-input {
+    margin-top: 0.2rem;
+}
+
+.form-check-label {
+    font-weight: 600;
+}
+
+/* Custom form group for gender selection */
+.custom-form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Privacy policy link styling */
+.form-group.text-center p {
+    font-size: 0.875rem;
+}
+
+.form-group.text-center a {
+    text-decoration: none;
+    color: #0056b3;
+}
+
+    .form-group.text-center a:hover {
+        text-decoration: underline;
+    }
+
+/* Styling for the navigation links */
+.d-flex a {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    margin: 0 15px;
+}
+
+    .d-flex a:hover {
+        color: #007bff;
+    }
+
+/* Additional container adjustments */
+.col-md-6, .col-lg-8 {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.card-body {
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+
+/* Custom form group for gender selection */
+.custom-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Ensure equal spacing between radio buttons */
+    margin-bottom: 1.5rem;
+}
+
+.form-check-inline {
+    margin-right: 15px; /* Add space between radio buttons */
+}
+
+.form-check-input {
+    margin-top: 0.2rem; /* Align radio buttons properly */
+}
+
+.form-check-label {
+    font-weight: 600;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 576px) {
+    .d-flex {
+        flex-direction: column; /* Stack radio buttons vertically on small screens */
+        align-items: flex-start; /* Align them to the left */
+    }
+
+    .form-check-inline {
+        margin-right: 0; /* Remove horizontal spacing */
+        margin-bottom: 10px; /* Add space between stacked radio buttons */
+    }
 }

@@ -360,3 +360,93 @@ textarea.input-field {
             color: #f0ad4e;
             cursor: pointer;
         }
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for the edit user form */
+.edit-user-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide the form initially */
+.edit-user-form.d-none {
+    display: none;
+}
+
+/* Style for the form input fields and labels */
+.edit-user-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-user-form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.edit-user-form input[type="text"],
+.edit-user-form input[type="email"],
+.edit-user-form input[type="number"] {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Focus effect for the inputs */
+.edit-user-form input[type="text"]:focus,
+.edit-user-form input[type="email"]:focus,
+.edit-user-form input[type="number"]:focus {
+    border-color: #4A90E2;
+    outline: none;
+}
+
+/* Button styling */
+.edit-user-form button {
+    padding: 10px 20px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.edit-user-form button:hover {
+    background-color: #357ABD;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .edit-user-form {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .edit-user-form input[type="text"],
+    .edit-user-form input[type="email"],
+    .edit-user-form input[type="number"] {
+        font-size: 14px;
+    }
+
+    .edit-user-form button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

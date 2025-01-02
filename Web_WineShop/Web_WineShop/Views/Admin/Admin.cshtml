@@ -1,821 +1,762 @@
 ﻿@{
-	ViewData["Title"] = "Admin";
+    ViewData["Title"] = "Admin";
 }
 
 <div class="container-fluid">
-	<div class="row">
-		<!-- CATEGORY -->
-		<div class="col-2">
-			<div class="container body-card mt-4">
-				<div class="mb-4 text-center">
-					<!-- Circular container for the admin image -->
-					<div class="admin-image-container">
-						<img src="/admin/nhiet-do-ly-tuong-de-phuc-vu-vang.webp" alt="Admin" class="admin-image">
-					</div>
-					<h2>ADMIN PAGE</h2>
-				</div>
-				<!-- Tools -->
-				<div class="text-center">
-					<ul class="new-list cursor-pointer ">
-						<li data-target="dashboard">
-							<i class="bi bi-house-door"></i><span> Dashboard</span>
-						</li>
-						<li data-target="user-management">
-							<i class="bi bi-person-circle"></i><span> User Management</span>
-						</li>
-						<li data-target="product-management">
-							<i class="bi bi-box"></i><span> Product Management</span>
-						</li>
-						<li data-target="brand-management">
-							<i class="bi bi-map"></i><span> Brand Management</span>
-						</li>
-						<li data-target="category-management">
-							<i class="bi bi-book"></i><span> Category Management</span>
-						</li>
-						<li data-target="voucher-management">
-							<i class="bi bi-book"></i><span> Voucher Management</span>
-						</li>
-						<li data-target="solving-order">
-							<i class="bi bi-heart"></i><span>Solving Order</span>
-						</li>
-						<li data-target="payment-management">
-							<i class="bi bi-credit-card"></i><span>Payment Manager</span>
-						</li>
-						<li data-target="upload-knowledge">
-							<i class="bi bi-upload-knowledge"></i><span>Upload Knowledge</span>
-						</li>
-						<li data-target="logout">
-							<i class="bi bi-box-arrow-right"></i><span> Logout</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- CONTENT AREA -->
-		<div class="col">
-			<div class="body-card mt-4 p-4">
-				<div class="container-fluid d-flex justify-content-end mt-2">
-					<div class="d-flex align-items-center p-2">
-						<div class="search-box">
-							<input type="text" class="search-input" placeholder="Search...">
-							<button class="search-btn">
-								<i class="bi bi-search"></i>
-							</button>
-						</div>
-						<!-- <div class="search-box">
-							<button class="search-btn">
-								<i class="bi bi-plus"></i>
-							</button>
-						</div> -->
-					</div>
-				</div>
-				<!-- Product Management Section -->
-				<div class="main" data-section="product-management">
-					<h1 class="h1-title text-center title-items">Product Management</h1>
-					<h1 class="h1-title text-center title-items-add d-none">Add Product</h1>
-					<div class="container-fluid d-flex justify-content-end mt-2">
-						<div class="d-flex align-items-center p-2">
-							<div class="search-box">
-								<input type="text" class="search-input" placeholder="Search...">
-								<button class="search-btn">
-									<i class="bi bi-search"></i>
-								</button>
-							</div>
-							<div class="search-box">
-								<button class="product-btn">
-									<i class="bi bi-plus bi-plus-admin"></i>
-									<i class="bi bi-list  bi-list-admin d-none"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-					<!-- Table -->
-					<div class="container-fluid p-2">
-						<table class="table table-bordered table-items">
-							<thead>
-								<tr>
-									<th><input type="checkbox" id="select-all"></th>
-									<th>ID</th>
-									<th>Product Name</th>
-									<th>Quantity</th>
-									<th>Type</th>
-									<th>Brand</th>
-									<th>Description</th>
-									<th>Actions</th>
-								</tr>
-							</thead>
-							<tbody>
-								<!-- row 1 -->
-								<tr>
-									<td><input type="checkbox" class="select-item"></td>
-									<td>AZ12ILKJD</td>
-									<td>Ever Clear</td>
-									<td>50</td>
-									<td>Limited</td>
-									<td>Whisky</td>
-									<td>1000$</td>
-									<td class="actions">
-										<button class="btn btn-warning edit-btn">
-											<i class="bi bi-pencil"></i>
-										</button>
-										<button class="btn btn-danger delete-btn">
-											<i class="bi bi-trash"></i>
-										</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<!-- add product -->
-						<div class="container row p-4 add-items d-none">
-							<form id="productForm">
-								<!-- Form inputs -->
-								<div class="input-group">
-									<label for="productId">ID</label>
-									<input type="number" class="input-field" id="productId"
-										   placeholder="Enter product ID">
-								</div>
+    <div class="row">
+        <!-- CATEGORY -->
+        <div class="col-2">
+            <div class="container body-card mt-4">
+                <div class="mb-4 text-center">
+                    <!-- Circular container for the admin image -->
+                    <div class="admin-image-container">
+                        <img src="/admin/nhiet-do-ly-tuong-de-phuc-vu-vang.webp" alt="Admin" class="admin-image">
+                    </div>
+                    <h2>ADMIN PAGE</h2>
+                </div>
+                <!-- Tools -->
+                <div class="text-center">
+                    <ul class="new-list cursor-pointer ">
+                        <li data-target="dashboard">
+                            <i class="bi bi-house-door"></i><span> Dashboard</span>
+                        </li>
+                        <li data-target="user-management">
+                            <i class="bi bi-person-circle"></i><span> User Management</span>
+                        </li>
+                        <li data-target="product-management">
+                            <i class="bi bi-box"></i><span> Product Management</span>
+                        </li>
+                        <li data-target="brand-management">
+                            <i class="bi bi-map"></i><span> Brand Management</span>
+                        </li>
+                        <li data-target="category-management">
+                            <i class="bi bi-book"></i><span> Category Management</span>
+                        </li>
+                        <li data-target="voucher-management">
+                            <i class="bi bi-book"></i><span> Voucher Management</span>
+                        </li>
+                        <li data-target="solving-order">
+                            <i class="bi bi-heart"></i><span>Solving Order</span>
+                        </li>
+                        <li data-target="payment-management">
+                            <i class="bi bi-credit-card"></i><span>Payment Manager</span>
+                        </li>
+                        <li data-target="upload-knowledge">
+                            <i class="bi bi-upload-knowledge"></i><span>Upload Knowledge</span>
+                        </li>
+                        <li data-target="logout">
+                            <i class="bi bi-box-arrow-right"></i><span> Logout</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- CONTENT AREA -->
+        <div class="col">
+            <div class="body-card mt-4 p-4">
+                <div class="container-fluid d-flex justify-content-end mt-2">
+                    <div class="d-flex align-items-center p-2">
+                        <div class="search-box">
+                            <input type="text" class="search-input" placeholder="Search...">
+                            <button class="search-btn">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                        <!-- <div class="search-box">
+                            <button class="search-btn">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- Product Management Section -->
+                <div class="main" data-section="product-management">
+                    <h1 class="h1-title text-center title-items">Product Management</h1>
+                    <h1 class="h1-title text-center title-items-add d-none">Add Product</h1>
+                    <div class="container-fluid d-flex justify-content-end mt-2">
+                        <div class="d-flex align-items-center p-2">
+                            <div class="search-box">
+                                <input type="text" class="search-input" placeholder="Search...">
+                                <button class="search-btn">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                            <div class="search-box">
+                                <button class="product-btn">
+                                    <i class="bi bi-plus bi-plus-admin"></i>
+                                    <i class="bi bi-list  bi-list-admin d-none"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Table -->
+                    <div class="container-fluid p-2">
+                        <table class="table table-bordered table-items">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" id="select-all"></th>
+                                    <th>ID</th>
+                                    <th>Product Name</th>
+                                    <th>Quantity</th>
+                                    <th>Type</th>
+                                    <th>Brand</th>
+                                    <th>Description</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- row 1 -->
+                                <tr>
+                                    <td><input type="checkbox" class="select-item"></td>
+                                    <td>AZ12ILKJD</td>
+                                    <td>Ever Clear</td>
+                                    <td>50</td>
+                                    <td>Limited</td>
+                                    <td>Whisky</td>
+                                    <td>1000$</td>
+                                    <td class="actions">
+                                        <button class="btn btn-warning edit-btn">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                        <button class="btn btn-danger delete-btn">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- add product -->
+                        <div class="container row p-4 add-items d-none">
+                            <form id="productForm">
+                                <!-- Form inputs -->
+                                <div class="input-group">
+                                    <label for="productId">ID</label>
+                                    <input type="number" class="input-field" id="productId"
+                                           placeholder="Enter product ID">
+                                </div>
 
-								<div class="input-group">
-									<label for="productName">NAME PRODUCT</label>
-									<input type="text" class="input-field" id="productName"
-										   placeholder="Enter product name">
-								</div>
+                                <div class="input-group">
+                                    <label for="productName">NAME PRODUCT</label>
+                                    <input type="text" class="input-field" id="productName"
+                                           placeholder="Enter product name">
+                                </div>
 
-								<div class="input-group">
-									<label for="productPrice">PRICE</label>
-									<div class="d-flex">
-										<input type="number" class="input-field" id="productPrice"
-											   placeholder="Enter price">
-									</div>
+                                <div class="input-group">
+                                    <label for="productPrice">PRICE</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="input-field" id="productPrice"
+                                               placeholder="Enter price">
+                                    </div>
 
-								</div>
+                                </div>
 
-								<div class="input-group">
-									<label for="productSize">SIZE (ml)</label>
-									<input type="text" class="input-field" id="productSize"
-										   placeholder="Enter size">
-								</div>
+                                <div class="input-group">
+                                    <label for="productSize">SIZE (ml)</label>
+                                    <input type="text" class="input-field" id="productSize"
+                                           placeholder="Enter size">
+                                </div>
 
-								<div class="input-group">
-									<label for="productABV">ACOHOL BY VOLUME (%)</label>
-									<input type="text" class="input-field" id="productABV" placeholder="Enter ABV">
-								</div>
+                                <div class="input-group">
+                                    <label for="productABV">ACOHOL BY VOLUME (%)</label>
+                                    <input type="text" class="input-field" id="productABV" placeholder="Enter ABV">
+                                </div>
 
-								<div class="input-group">
-									<label for="productQuantity">QUANTITY</label>
-									<input type="number" class="input-field" id="productQuantity"
-										   placeholder="Enter quantity">
-								</div>
+                                <div class="input-group">
+                                    <label for="productQuantity">QUANTITY</label>
+                                    <input type="number" class="input-field" id="productQuantity"
+                                           placeholder="Enter quantity">
+                                </div>
 
-								<div class="input-group">
-									<label for="productDescription">DESCRIPTION</label>
-									<textarea class="input-field border" id="productNotes" rows="6"
-											  placeholder="Enter any additional notes about the product..."></textarea>
-								</div>
+                                <div class="input-group">
+                                    <label for="productDescription">DESCRIPTION</label>
+                                    <textarea class="input-field border" id="productNotes" rows="6"
+                                              placeholder="Enter any additional notes about the product..."></textarea>
+                                </div>
 
-								<div class="input-group">
-									<label for="productAge">AGE (year)</label>
-									<input type="number" class="input-field" id="productAge"
-										   placeholder="Enter age">
-								</div>
+                                <div class="input-group">
+                                    <label for="productAge">AGE (year)</label>
+                                    <input type="number" class="input-field" id="productAge"
+                                           placeholder="Enter age">
+                                </div>
 
-								<div class="input-group">
-									<label for="productVarietal">VARIETAL</label>
-									<input type="text" class="input-field" id="productVarietal"
-										   placeholder="Enter varietal">
-								</div>
+                                <div class="input-group">
+                                    <label for="productVarietal">VARIETAL</label>
+                                    <input type="text" class="input-field" id="productVarietal"
+                                           placeholder="Enter varietal">
+                                </div>
 
-								<div class="input-group">
-									<label for="productStatus">STATUS</label>
-									<input type="text" class="input-field" id="productStatus"
-										   placeholder="Enter status">
-								</div>
+                                <div class="input-group">
+                                    <label for="productStatus">STATUS</label>
+                                    <input type="text" class="input-field" id="productStatus"
+                                           placeholder="Enter status">
+                                </div>
 
-								<!-- Featured Product Checkbox -->
-								<div class=" featured-checkbox">
-									<input type="checkbox" id="productFeatured" class="checkbox-input">
-									<label for="productFeatured" class="checkbox-label">
-										<strong>
-											Make this product
-											featured
-										</strong>
-									</label>
-								</div>
-								<div class="product-image-section text-center">
-									<h5>Product Images</h5>
-									<div class="image-upload-section">
-										<input type="file" class="upload-file" id="productImages" multiple
-											   onchange="displayImages(this)">
-									</div>
-									<div id="imagePreviewContainer" class="image-preview-container">
-										<!-- Images and paths will be displayed here -->
-									</div>
-								</div>
+                                <!-- Featured Product Checkbox -->
+                                <div class=" featured-checkbox">
+                                    <input type="checkbox" id="productFeatured" class="checkbox-input">
+                                    <label for="productFeatured" class="checkbox-label">
+                                        <strong>
+                                            Make this product
+                                            featured
+                                        </strong>
+                                    </label>
+                                </div>
+                                <div class="product-image-section text-center">
+                                    <h5>Product Images</h5>
+                                    <div class="image-upload-section">
+                                        <input type="file" class="upload-file" id="productImages" multiple
+                                               onchange="displayImages(this)">
+                                    </div>
+                                    <div id="imagePreviewContainer" class="image-preview-container">
+                                        <!-- Images and paths will be displayed here -->
+                                    </div>
+                                </div>
 
-								<div class="text-center">
-									<button type="submit" class="submit-btn btn-block">
-										Add
-										Product
-									</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<!-- User Management Section -->
-				<div class="main" data-section="user-management">
-					<h1 class="h1-title text-center">User Management</h1>
-					<div class="container-fluid d-flex justify-content-end mt-2">
-						<div class="d-flex align-items-center p-2">
-							<div class="search-box">
-								<input type="text" class="search-input" placeholder="Search...">
-								<button class="search-btn">
-									<i class="bi bi-search"></i>
-								</button>
-							</div>
-							<div class="search-box">
-								<button class="search-btn">
-									<i class="bi bi-plus"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-					<!-- Table -->
-					<div class="container-fluid p-2">
-						<table class="table table-bordered">
-							<thead>
-								<tr>
-									<th><input type="checkbox" id="select-all"></th>
-									<th>Full Name</th>
-									<th>Date of Birth</th>
-									<th>Gender</th>
-									<th>Phone</th>
-									<th>Email</th>
-									<th>Actions</th>
-								</tr>
-							</thead>
-							<tbody>
-								<!-- row 1 -->
-								<tr>
-									<td><input type="checkbox" class="select-item"></td>
-									<td>John Doe</td>
-									<td>1990-01-01</td>
-									<td>Male</td>
-									<td>+1234567890</td>
-									<td>johndoe@example.com</td>
-									<td class="actions">
-										<button class="btn btn-warning edit-btn">
-											<i class="bi bi-pencil"></i>
-										</button>
-										<button class="btn btn-danger delete-btn">
-											<i class="bi bi-trash"></i>
-										</button>
-									</td>
-								</tr>
-								<!-- row 2 -->
-								<tr>
-									<td><input type="checkbox" class="select-item"></td>
-									<td>John Doe</td>
-									<td>1990-01-01</td>
-									<td>Male</td>
-									<td>+1234567890</td>
-									<td>johndoe@example.com</td>
-									<td class="actions">
-										<button class="btn btn-warning edit-btn">
-											<i class="bi bi-pencil"></i>
-										</button>
-										<button class="btn btn-danger delete-btn">
-											<i class="bi bi-trash"></i>
-										</button>
-									</td>
-								</tr>
-								<!-- row 3 -->
-								<tr>
-									<td><input type="checkbox" class="select-item"></td>
-									<td>John Doe</td>
-									<td>1990-01-01</td>
-									<td>Male</td>
-									<td>+1234567890</td>
-									<td>johndoe@example.com</td>
-									<td class="actions">
-										<button class="btn btn-warning edit-btn">
-											<i class="bi bi-pencil"></i>
-										</button>
-										<button class="btn btn-danger delete-btn">
-											<i class="bi bi-trash"></i>
-										</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<!--Edit User-->
-						<div class="container row p-4 edit-user-form d-none">
-							<form id="userForm">
-								<h2 class="text-center">Edit User</h2>
-								<!-- Form inputs -->
-								<div class="input-group">
-									<label for="userFullName">Full Name</label>
-									<input type="text" class="input-field" id="userFullName" placeholder="Enter full name">
-								</div>
+                                <div class="text-center">
+                                    <button type="submit" class="submit-btn btn-block">
+                                        Add
+                                        Product
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                @model IEnumerable<Web_WineShop.Models.User>           
 
-								<div class="input-group">
-									<label for="userDOB">Date of Birth</label>
-									<input type="date" class="input-field" id="userDOB" placeholder="Enter date of birth">
-								</div>
+                <!-- User Management Section -->
+                <div class="main" data-section="user-management">
+                    <h1 class="h1-title text-center">User Management</h1>
 
-								<div class="input-group">
-									<label for="userGender">Gender</label>
-									<select class="input-field" id="userGender">
-										<option value="Male">Male</option>
-										<option value="Female">Female</option>
-										<option value="Other">Other</option>
-									</select>
-								</div>
+                    <!-- Table -->
+                    <div class="container-fluid p-2">
+                        <!-- Table with users -->
+                        <!-- Table with users -->
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" id="select-all"></th>
+                                    <th>Full Name</th>
+                                    <th>Phone Number</th>
+                                    <th>Email</th>
+                                    <th>Ban</th>
+                                    <th>Role</th> <!-- Thay Email thành Role -->
+                                    <th>Points</th> <!-- Thêm cột Points -->
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var user in Model)
+                                {
+                                    <tr data-id="@user.Id">
+                                        <td><input type="checkbox" class="select-item"></td>
+                                        <td>@user.FullName</td>
+                                        <td>@user.Phone</td>
+                                        <td>@user.Account.Email</td>
+                                        <td>@user.Account.Ban</td>
+                                        <td>@user.Account.Role</td> <!-- Hiển thị Role -->
+                                        <td>@user.Points</td> <!-- Hiển thị Points -->
+                                        <td class="actions">
+                                            <button class="btn btn-warning edit-btn">
+                                                <i class="bi bi-pencil"></i> Edit
+                                            </button>
+                                           @*  <button class="btn btn-danger delete-btn">
+                                                <i class="bi bi-trash"></i> Delete
+                                            </button> *@
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
 
-								<div class="input-group">
-									<label for="userPhone">Phone</label>
-									<input type="text" class="input-field" id="userPhone" placeholder="Enter phone number">
-								</div>
+                    </div>
+                </div>
 
-								<div class="input-group">
-									<label for="userEmail">Email</label>
-									<input type="email" class="input-field" id="userEmail" placeholder="Enter email">
-								</div>
+                <!-- Form chỉnh sửa người dùng -->
+                <div class="edit-user-form d-none">
+                    <form id="edit-user-form" method="post" action="@Url.Action("Edit", "Admin")">
+                        <input type="hidden" id="userId" name="userId" />
+                        <div>
+                            <label for="userFullName">Full Name</label>
+                            <input type="text" id="userFullName" name="userFullName" />
+                        </div>
+                        <div>
+                            <label for="phone">Phone</label>
+                            <input type="number" id="phone" name="phone" />
+                        </div>
+                        <div>
+                            <label for="userEmail"Email</label>
+                            <input type="email" id="userEmail" name="userEmail" />
+                        </div>
+                      
+                        <div>
+                            <label for="userBan">Ban</label>
+                            <input type="text" id="userBan" name="userBan" />
+                        </div>
+                        <div>
+                            <label for="userRole">Role</label>
+                            <input type="text" id="userRole" name="userRole" /> <!-- Thêm trường Role -->
+                        </div>
+                        <div>
+                            <label for="userPoints">Points</label>
+                            <input type="number" id="userPoints" name="userPoints" /> <!-- Thêm trường Points -->
+                        </div>
+                        <div>
+                            <button type="submit">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
 
-								<div class="text-center">
-									<button type="submit" class="submit-btn btn-block">Save Changes</button>
-								</div>
-							</form>
-						</div>
 
-						<!--Delete Confirmation Modal-->
-						<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title" id="deleteConfirmationModalLabel">Confirmation of deletion</h5>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-									</div>
-									<div class="modal-body">
-										Are you sure you want to delete this user? This action cannot be undone.
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-										<button type="button" class="btn btn-danger" id="confirmDeleteBtn">Yes</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Brand Management Section -->
-				<div class="main" data-section="brand-management">
-					<h1 class="h1-title text-center title-items">Brand Management</h1>
-					<h1 class="h1-title text-center title-items-add d-none">Add Brand</h1>
-					<div class="container-fluid d-flex justify-content-end mt-2">
-						<div class="d-flex align-items-center p-2 gap-2">
-							<div class="d-flex align-items-center p-2">
-								<div class="search-box">
-									<input type="text" class="search-input" placeholder="Search...">
-									<button class="search-btn">
-										<i class="bi bi-search"></i>
-									</button>
-								</div>
-								<div class="search-box">
-									<button class="product-btn">
-										<i class="bi bi-plus bi-plus-admin"></i>
-										<i class="bi bi-list  bi-list-admin d-none"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Table -->
-					<div class="container-fluid p-2">
-						<table class="table table-bordered table-items">
-							<thead>
-								<tr>
-									<th><input type="checkbox" id="select-all"></th>
-									<th>ID</th>
-									<th>Name</th>
-									<th>Country</th>
-									<th>Image</th>
-									<th>Collab</th>
-									<th>Actions</th>
-								</tr>
-							</thead>
-							<tbody>
-								<!-- Example row -->
-								<tr>
-									<td><input type="checkbox" class="select-item"></td>
-									<td>BR001</td>
-									<td>Brand A</td>
-									<td>USA</td>
-									<td>
-										<img src="images/brand_a.jpg" alt="Brand A"
-											 style="width: 50px; height: 50px;">
-									</td>
-									<td>Yes</td>
-									<td class="actions">
-										<button class="btn btn-warning edit-btn">
-											<i class="bi bi-pencil"></i>
-										</button>
-										<button class="btn btn-danger delete-btn">
-											<i class="bi bi-trash"></i>
-										</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<!-- Add Brand Form -->
-						<div class="container row p-4 add-items d-none">
-							<form id="brandForm">
-								<!-- Form inputs -->
-								<div class="input-group">
-									<label for="brandId">ID</label>
-									<input type="text" class="input-field" id="brandId"
-										   placeholder="Enter brand ID">
-								</div>
-								<div class="input-group">
-									<label for="brandName">Name</label>
-									<input type="text" class="input-field" id="brandName"
-										   placeholder="Enter brand name">
-								</div>
-								<div class="input-group">
-									<label for="brandCountry">Country</label>
-									<input type="text" class="input-field" id="brandCountry"
-										   placeholder="Enter country">
-								</div>
-								<div class="input-group">
-									<label for="brandImage">Image</label>
-									<input type="file" class="input-field" id="brandImage">
-								</div>
-								<div class="input-group">
-									<label for="brandCollab">Collab</label>
-									<select id="brandCollab" class="input-field">
-										<option value="Yes">Yes</option>
-										<option value="No">No</option>
-									</select>
-								</div>
-								<div class="text-center">
-									<button type="submit" class="submit-btn btn btn-primary btn-block">
-										Add
-										Brand
-									</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<!-- Category Management Section -->
-				<div class="main" data-section="category-management">
-					<h1 class="h1-title text-center title-items">Category Management</h1>
-					<h1 class="h1-title text-center title-items-add d-none">Add New Category</h1>
-					<div class="container-fluid d-flex justify-content-end mt-2">
-						<div class="d-flex align-items-center p-2">
-							<div class="search-box">
-								<!-- set controller to searching -->
-								<input type="text" class="search-input" placeholder="Search..."
-									   data-target="controller">
-								<button class="search-btn">
-									<i class="bi bi-search"></i>
-								</button>
-							</div>
-							<div class="search-box">
-								<button class="product-btn">
-									<i class="bi bi-plus bi-plus-admin"></i>
-									<i class="bi bi-plus bi-list-admin d-none"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-					<!-- Table catogory -->
-					<table class="table table-bordered table-items">
-						<thead>
-							<tr>
-								<th>Active</th>
-								<th>Name</th>
-								<th>Category parent</th>
-								<th>Actions</th>
-							</tr>
-						</thead>
-						<tbody>
-							<!-- row 1 -->
-							<tr>
-								<td><input type="checkbox" class="select-item"></td>
-								<td>Whisky</td>
-								<td>Empty</td>
-								<td class="actions">
-									<!-- set id -->
-									<button class="btn btn-warning edit-btn" value="id">
-										<i class="bi bi-pencil"></i>
-									</button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="container row p-4 add-items d-none">
-						<form action="" method="post">
-							<!-- Parent Name -->
-							<div class="input-group">
-								<label class="form-label">Parent Name</label>
-								<input type="text" class="input-field" readonly value="Whisky" data-value="mã_parent">
-							</div>
-							<!-- Name -->
-							<div class="input-group">
-								<label class="form-label">Category Name</label>
-								<input type="text" class="input-field" name="name-category" placeholder="Enter category name" required />
-							</div>
-							<!-- Describe -->
-							<div class="input-group">
-								<label class="form-label">Description</label>
-								<textarea class="input-field border" name="describe-category"
-										  placeholder="Enter category description"></textarea>
-							</div>
 
-							<!-- Buttons -->
-							<div>
-								<button type="submit" class="btn btn-primary">Save</button>
-								<button type="reset" class="btn btn-secondary">Reset</button>
-							</div>
-						</form>
-					</div>
-				</div>
-				<!-- Voucher Management Section -->
-				<div class="main" data-section="voucher-management">
-					<h1 class="h1-title text-center">Voucher Management</h1>
-					<div class="container-fluid d-flex justify-content-end mt-2">
-						<div class="d-flex align-items-center p-2">
-							<div class="search-box">
-								<input type="text" class="search-input" placeholder="Search...">
-								<button class="search-btn">
-									<i class="bi bi-search"></i>
-								</button>
-							</div>
-							<div class="search-box">
-								<button class="product-btn">
-									<i class="bi bi-plus"></i>
-									<i class="bi bi-list d-none"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-					<!-- Table Voucher-->
-					<div class="container-fluid p-2">
-						<table class="table table-bordered table-items">
-							<thead>
-								<tr>
-									<th><input type="checkbox" id="select-all"></th>
-									<th>ID</th>
-									<th>Voucher Name</th>
-									<th>DECRIPTION </th>
-									<th>PERCENTAGE</th>
-									<th>MAX_DISCOUNT</th>
-									<th>EXPIRATION</th>
-									<th></th>
-								</tr>
-							</thead>
-							<tbody>
-								<!-- row 1 -->
-								<tr>
-									<td><input type="checkbox" class="select-item"></td>
-									<td>AAA1234AAA</td>
-									<td>Voucher Vip1</td>
-									<td>
-										<span data-bs-toggle="popover" title="Voucher vip1"
-											  data-bs-content="Đối tượng là khách hàng thuộc vip 1">Hover me</span>
-									</td>
-									<td>20%</td>
-									<td>2.000.000Đ</td>
-									<td>20/10/2024</td>
-									<td class="actions">
-										<button class="btn btn-warning edit-btn">
-											<i class="bi bi-pencil"></i>
-										</button>
-										<button class="btn btn-danger delete-btn">
-											<i class="bi bi-trash"></i>
-										</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<!-- add new voucher -->
-						<div class="container row p-4 add-items d-none">
-							<form id="voucher-form">
-								<div class="mb-3">
-									<label for="voucherName" class="form-label">Voucher Name</label>
-									<input type="text" class="form-control" id="voucherName" placeholder="Enter voucher name">
-								</div>
-								<div class="mb-3">
-									<label for="voucherDescription" class="form-label">Description</label>
-									<textarea class="form-control" id="voucherDescription" rows="3"
-											  placeholder="Enter description"></textarea>
-								</div>
-								<div class="mb-3">
-									<label for="percentage" class="form-label">Percentage</label>
-									<input type="number" class="form-control" id="percentage" placeholder="Enter percentage" min="1"
-										   max="50">
-								</div>
-								<div class="mb-3">
-									<label for="maxDiscount" class="form-label">Max Discount</label>
-									<input type="text" class="form-control" id="maxDiscount" placeholder="Enter max discount">
-								</div>
-								<div class="mb-3">
-									<label for="expiration" class="form-label">Expiration Date</label>
-									<input type="date" class="form-control" id="expiration">
-								</div>
-							</form>
-							<div>
-								<button type="button" class="btn btn-color-real" data-bs-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-color-real">Save</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Solving Order Section -->
-				<div class="main" data-section="solving-order">
-					<h1 class="h1-title text-center">Solving Order</h1>
-					<div class="container-fluid d-flex justify-content-end mt-2">
-						<div class="d-flex align-items-center p-2">
-							<div class="search-box">
-								<input type="text" class="search-input" placeholder="Search...">
-								<button class="search-btn">
-									<i class="bi bi-search"></i>
-								</button>
-							</div>
-							<div class="search-box">
-								<button class="search-btn">
-									<i class="bi bi-plus"></i>
-									<i class="bi bi-list d-none"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-					<div class="container-fluid p-2">
-						<table class="table table-bordered table-Voucher">
-							<thead>
-								<tr>
-									<th><input type="checkbox" id="select-all"></th>
-									<th>ID CART</th>
-									<th>NAME_CUSTOMER</th>
-									<th>USER_EMAIL</th>
-									<th>LIST_PRODUCT</th>
-									<th>TOTAL_PRICE</th>
-									<th>CREATION_DATE</th>
-									<th>STATUS</th>
-									<th>CONFIRM</th>
-								</tr>
-							</thead>
-							<tbody>
-								<!-- row 1 -->
-								<tr>
-									<td><input type="checkbox" class="select-item"></td>
-									<td>AAA1234AAA</td>
-									<td>USER_A</td>
-									<td>
-										221300@gmail.com
-									</td>
-									<td>
-										<button class="btn btn-color-real" data-bs-toggle="popover" title="list"
-												data-bs-content='
-													<ul class="product-list">
-														<li>Sản phẩm 1</li>
-														<li>Sản phẩm 2</li>
-														<li>Sản phẩm 3</li>
-													</ul>' id="productPopover">Click
-												me</button>
+                <!-- Brand Management Section -->
+                <div class="main" data-section="brand-management">
+                    <h1 class="h1-title text-center title-items">Brand Management</h1>
+                    <h1 class="h1-title text-center title-items-add d-none">Add Brand</h1>
+                    <div class="container-fluid d-flex justify-content-end mt-2">
+                        <div class="d-flex align-items-center p-2 gap-2">
+                            <div class="d-flex align-items-center p-2">
+                                <div class="search-box">
+                                    <input type="text" class="search-input" placeholder="Search...">
+                                    <button class="search-btn">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </div>
+                                <div class="search-box">
+                                    <button class="product-btn">
+                                        <i class="bi bi-plus bi-plus-admin"></i>
+                                        <i class="bi bi-list  bi-list-admin d-none"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Table -->
+                    <div class="container-fluid p-2">
+                        <table class="table table-bordered table-items">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" id="select-all"></th>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Country</th>
+                                    <th>Image</th>
+                                    <th>Collab</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Example row -->
+                                <tr>
+                                    <td><input type="checkbox" class="select-item"></td>
+                                    <td>BR001</td>
+                                    <td>Brand A</td>
+                                    <td>USA</td>
+                                    <td>
+                                        <img src="images/brand_a.jpg" alt="Brand A"
+                                             style="width: 50px; height: 50px;">
+                                    </td>
+                                    <td>Yes</td>
+                                    <td class="actions">
+                                        <button class="btn btn-warning edit-btn">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                        <button class="btn btn-danger delete-btn">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Add Brand Form -->
+                        <div class="container row p-4 add-items d-none">
+                            <form id="brandForm">
+                                <!-- Form inputs -->
+                                <div class="input-group">
+                                    <label for="brandId">ID</label>
+                                    <input type="text" class="input-field" id="brandId"
+                                           placeholder="Enter brand ID">
+                                </div>
+                                <div class="input-group">
+                                    <label for="brandName">Name</label>
+                                    <input type="text" class="input-field" id="brandName"
+                                           placeholder="Enter brand name">
+                                </div>
+                                <div class="input-group">
+                                    <label for="brandCountry">Country</label>
+                                    <input type="text" class="input-field" id="brandCountry"
+                                           placeholder="Enter country">
+                                </div>
+                                <div class="input-group">
+                                    <label for="brandImage">Image</label>
+                                    <input type="file" class="input-field" id="brandImage">
+                                </div>
+                                <div class="input-group">
+                                    <label for="brandCollab">Collab</label>
+                                    <select id="brandCollab" class="input-field">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="submit-btn btn btn-primary btn-block">
+                                        Add
+                                        Brand
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category Management Section -->
+                <div class="main" data-section="category-management">
+                    <h1 class="h1-title text-center title-items">Category Management</h1>
+                    <h1 class="h1-title text-center title-items-add d-none">Add New Category</h1>
+                    <div class="container-fluid d-flex justify-content-end mt-2">
+                        <div class="d-flex align-items-center p-2">
+                            <div class="search-box">
+                                <!-- set controller to searching -->
+                                <input type="text" class="search-input" placeholder="Search..."
+                                       data-target="controller">
+                                <button class="search-btn">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                            <div class="search-box">
+                                <button class="product-btn">
+                                    <i class="bi bi-plus bi-plus-admin"></i>
+                                    <i class="bi bi-plus bi-list-admin d-none"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Table catogory -->
+                    <table class="table table-bordered table-items">
+                        <thead>
+                            <tr>
+                                <th>Active</th>
+                                <th>Name</th>
+                                <th>Category parent</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- row 1 -->
+                            <tr>
+                                <td><input type="checkbox" class="select-item"></td>
+                                <td>Whisky</td>
+                                <td>Empty</td>
+                                <td class="actions">
+                                    <!-- set id -->
+                                    <button class="btn btn-warning edit-btn" value="id">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="container row p-4 add-items d-none">
+                        <form action="" method="post">
+                            <!-- Parent Name -->
+                            <div class="input-group">
+                                <label class="form-label">Parent Name</label>
+                                <input type="text" class="input-field" readonly value="Whisky" data-value="mã_parent">
+                            </div>
+                            <!-- Name -->
+                            <div class="input-group">
+                                <label class="form-label">Category Name</label>
+                                <input type="text" class="input-field" name="name-category" placeholder="Enter category name" required />
+                            </div>
+                            <!-- Describe -->
+                            <div class="input-group">
+                                <label class="form-label">Description</label>
+                                <textarea class="input-field border" name="describe-category"
+                                          placeholder="Enter category description"></textarea>
+                            </div>
 
-									</td>
-									<td>1.000.000Đ</td>
-									<td>20/10/2024</td>
-									<td>waiting...</td>
-									<td class="actions">
-										<!--btn xac nhan-->
-										<button class="btn btn-color-real">
-											<i class="bi bi-check-circle"></i>
-										</button>
-										<button class="btn btn-danger delete-btn">
-											<i class="bi bi-trash"></i>
-										</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-				<!-- Payment Method Section -->
-				<div class="main" data-section="payment-management">
-					<h1 class="h1-title text-center">Payment Method Management</h1>
-					<div class="container-fluid d-flex justify-content-end mt-2">
-						<div class="d-flex align-items-center p-2">
-							<div class="search-box">
-								<!-- set controller to searching -->
-								<input type="text" class="search-input" placeholder="Search..."
-									   data-target="controller">
-								<button class="search-btn">
-									<i class="bi bi-search"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-					<!-- Table catogory -->
-					<table class="table table-bordered">
-						<thead>
-							<tr>
-								<th>Active</th>
-								<th>Name</th>
-							</tr>
-						</thead>
-						<tbody>
-							<!-- row 1 -->
-							<tr>
-								<td><input type="checkbox" class="select-item"></td>
-								<td>Bank Transfer</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<!-- Upload Knowledge Section -->
-				<div class="main" data-section="upload-knowledge">
-					<h1 class="h1-title text-center">Upload Knowledge Management</h1>
-					<div class="container-fluid d-flex justify-content-end mt-2">
-						<div class="d-flex align-items-center p-2">
-							<div class="search-box">
-								<input type="text" class="search-input" placeholder="Search knowledge...">
-								<button class="search-btn">
-									<i class="bi bi-search"></i>
-								</button>
-							</div>
-							<div class="search-box">
-								<button class="upload-btn" id="knowledgeUploadBtn">
-									<i class="bi bi-plus"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-					<!-- Knowledge Table -->
-					<div class="container-fluid p-2">
-						<table class="table table-bordered">
-							<thead>
-								<tr>
-									<th><input type="checkbox" id="select-all"></th>
-									<th>Knowledge Name</th>
-									<th>Upload Date</th>
-									<th>Status</th>
-									<th>Actions</th>
-								</tr>
-							</thead>
-							<tbody>
-								<!-- Sample Row -->
-								<tr>
-									<td><input type="checkbox" class="select-item"></td>
-									<td>An AI Research Study</td>
-									<td>2024-12-01</td>
-									<td>Approved</td>
-									<td class="actions">
-										<button class="btn btn-warning edit-btn">
-											<i class="bi bi-pencil"></i>
-										</button>
-										<button class="btn btn-danger delete-btn">
-											<i class="bi bi-trash"></i>
-										</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+                            <!-- Buttons -->
+                            <div>
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="reset" class="btn btn-secondary">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Voucher Management Section -->
+                <div class="main" data-section="voucher-management">
+                    <h1 class="h1-title text-center">Voucher Management</h1>
+                    <div class="container-fluid d-flex justify-content-end mt-2">
+                        <div class="d-flex align-items-center p-2">
+                            <div class="search-box">
+                                <input type="text" class="search-input" placeholder="Search...">
+                                <button class="search-btn">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                            <div class="search-box">
+                                <button class="product-btn">
+                                    <i class="bi bi-plus"></i>
+                                    <i class="bi bi-list d-none"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Table Voucher-->
+                    <div class="container-fluid p-2">
+                        <table class="table table-bordered table-items">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" id="select-all"></th>
+                                    <th>ID</th>
+                                    <th>Voucher Name</th>
+                                    <th>DECRIPTION </th>
+                                    <th>PERCENTAGE</th>
+                                    <th>MAX_DISCOUNT</th>
+                                    <th>EXPIRATION</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- row 1 -->
+                                <tr>
+                                    <td><input type="checkbox" class="select-item"></td>
+                                    <td>AAA1234AAA</td>
+                                    <td>Voucher Vip1</td>
+                                    <td>
+                                        <span data-bs-toggle="popover" title="Voucher vip1"
+                                              data-bs-content="Đối tượng là khách hàng thuộc vip 1">Hover me</span>
+                                    </td>
+                                    <td>20%</td>
+                                    <td>2.000.000Đ</td>
+                                    <td>20/10/2024</td>
+                                    <td class="actions">
+                                        <button class="btn btn-warning edit-btn">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                        <button class="btn btn-danger delete-btn">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- add new voucher -->
+                        <div class="container row p-4 add-items d-none">
+                            <form id="voucher-form">
+                                <div class="mb-3">
+                                    <label for="voucherName" class="form-label">Voucher Name</label>
+                                    <input type="text" class="form-control" id="voucherName" placeholder="Enter voucher name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="voucherDescription" class="form-label">Description</label>
+                                    <textarea class="form-control" id="voucherDescription" rows="3"
+                                              placeholder="Enter description"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="percentage" class="form-label">Percentage</label>
+                                    <input type="number" class="form-control" id="percentage" placeholder="Enter percentage" min="1"
+                                           max="50">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="maxDiscount" class="form-label">Max Discount</label>
+                                    <input type="text" class="form-control" id="maxDiscount" placeholder="Enter max discount">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="expiration" class="form-label">Expiration Date</label>
+                                    <input type="date" class="form-control" id="expiration">
+                                </div>
+                            </form>
+                            <div>
+                                <button type="button" class="btn btn-color-real" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-color-real">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Solving Order Section -->
+                <div class="main" data-section="solving-order">
+                    <h1 class="h1-title text-center">Solving Order</h1>
+                    <div class="container-fluid d-flex justify-content-end mt-2">
+                        <div class="d-flex align-items-center p-2">
+                            <div class="search-box">
+                                <input type="text" class="search-input" placeholder="Search...">
+                                <button class="search-btn">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                            <div class="search-box">
+                                <button class="search-btn">
+                                    <i class="bi bi-plus"></i>
+                                    <i class="bi bi-list d-none"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid p-2">
+                        <table class="table table-bordered table-Voucher">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" id="select-all"></th>
+                                    <th>ID CART</th>
+                                    <th>NAME_CUSTOMER</th>
+                                    <th>USER_EMAIL</th>
+                                    <th>LIST_PRODUCT</th>
+                                    <th>TOTAL_PRICE</th>
+                                    <th>CREATION_DATE</th>
+                                    <th>STATUS</th>
+                                    <th>CONFIRM</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- row 1 -->
+                                <tr>
+                                    <td><input type="checkbox" class="select-item"></td>
+                                    <td>AAA1234AAA</td>
+                                    <td>USER_A</td>
+                                    <td>
+                                        221300@gmail.com
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-color-real" data-bs-toggle="popover" title="list"
+                                                data-bs-content='
+                                                    <ul class="product-list">
+                                                        <li>Sản phẩm 1</li>
+                                                        <li>Sản phẩm 2</li>
+                                                        <li>Sản phẩm 3</li>
+                                                    </ul>' id="productPopover">Click
+                                                me</button>
 
-					<!-- Knowledge Upload Form -->
-					<div class="container row p-4 add-items d-none" id="uploadFormContainer">
-						<form id="uploadKnowledgeForm" enctype="multipart/form-data">
-							<div class="input-group">
-								<label for="knowledgeTitle">Knowledge Title</label>
-								<input type="text" class="input-field" id="knowledgeTitle" placeholder="Enter knowledge title">
-							</div>
-							<div class="input-group">
-								<label for="knowledgeDescription">Description</label>
-								<textarea class="input-field" id="knowledgeDescription" placeholder="Enter knowledge description"></textarea>
-							</div>
-							<div class="input-group">
-								<label for="knowledgeCategory">Category</label>
-								<input type="text" class="input-field" id="knowledgeCategory" placeholder="Enter category">
-							</div>
-							<div class="input-group">
-								<label for="uploadDate">Upload Date</label>
-								<input type="date" class="input-field" id="uploadDate">
-							</div>
-							<div class="input-group">
-								<label for="fileUpload">Select Knowledge File</label>
-								<input type="file" class="input-field" id="fileUpload" name="fileUpload">
-							</div>
-							<div class="text-center">
-								<button type="submit" class="submit-btn btn-block">Upload Knowledge</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                                    </td>
+                                    <td>1.000.000Đ</td>
+                                    <td>20/10/2024</td>
+                                    <td>waiting...</td>
+                                    <td class="actions">
+                                        <!--btn xac nhan-->
+                                        <button class="btn btn-color-real">
+                                            <i class="bi bi-check-circle"></i>
+                                        </button>
+                                        <button class="btn btn-danger delete-btn">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Payment Method Section -->
+                <div class="main" data-section="payment-management">
+                    <h1 class="h1-title text-center">Payment Method Management</h1>
+                    <div class="container-fluid d-flex justify-content-end mt-2">
+                        <div class="d-flex align-items-center p-2">
+                            <div class="search-box">
+                                <!-- set controller to searching -->
+                                <input type="text" class="search-input" placeholder="Search..."
+                                       data-target="controller">
+                                <button class="search-btn">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Table catogory -->
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Active</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- row 1 -->
+                            <tr>
+                                <td><input type="checkbox" class="select-item"></td>
+                                <td>Bank Transfer</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Upload Knowledge Section -->
+                <div class="main" data-section="upload-knowledge">
+                    <h1 class="h1-title text-center">Upload Knowledge Management</h1>
+                    <div class="container-fluid d-flex justify-content-end mt-2">
+                        <div class="d-flex align-items-center p-2">
+                            <div class="search-box">
+                                <input type="text" class="search-input" placeholder="Search knowledge...">
+                                <button class="search-btn">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                            <div class="search-box">
+                                <button class="upload-btn" id="knowledgeUploadBtn">
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Knowledge Table -->
+                    <div class="container-fluid p-2">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" id="select-all"></th>
+                                    <th>Knowledge Name</th>
+                                    <th>Upload Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Sample Row -->
+                                <tr>
+                                    <td><input type="checkbox" class="select-item"></td>
+                                    <td>An AI Research Study</td>
+                                    <td>2024-12-01</td>
+                                    <td>Approved</td>
+                                    <td class="actions">
+                                        <button class="btn btn-warning edit-btn">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                        <button class="btn btn-danger delete-btn">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Knowledge Upload Form -->
+                    <div class="container row p-4 add-items d-none" id="uploadFormContainer">
+                        <form id="uploadKnowledgeForm" enctype="multipart/form-data">
+                            <div class="input-group">
+                                <label for="knowledgeTitle">Knowledge Title</label>
+                                <input type="text" class="input-field" id="knowledgeTitle" placeholder="Enter knowledge title">
+                            </div>
+                            <div class="input-group">
+                                <label for="knowledgeDescription">Description</label>
+                                <textarea class="input-field" id="knowledgeDescription" placeholder="Enter knowledge description"></textarea>
+                            </div>
+                            <div class="input-group">
+                                <label for="knowledgeCategory">Category</label>
+                                <input type="text" class="input-field" id="knowledgeCategory" placeholder="Enter category">
+                            </div>
+                            <div class="input-group">
+                                <label for="uploadDate">Upload Date</label>
+                                <input type="date" class="input-field" id="uploadDate">
+                            </div>
+                            <div class="input-group">
+                                <label for="fileUpload">Select Knowledge File</label>
+                                <input type="file" class="input-field" id="fileUpload" name="fileUpload">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="submit-btn btn-block">Upload Knowledge</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="~/js/admin.js"></script>

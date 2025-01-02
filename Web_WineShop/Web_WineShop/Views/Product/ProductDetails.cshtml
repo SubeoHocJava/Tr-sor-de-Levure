@@ -1,0 +1,65 @@
+﻿<div class="container my-5">
+    <div class="row">
+        <!-- Product Image -->
+        <div class="col-md-5">
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="@Model.ImageUrl" alt="Product Image" class="d-block w-100" />
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-md-7">
+            <h3 class="fw-bold">
+                @Model.Name
+            </h3>
+            <p>
+                <span class="fw-bold fs-4 price" id="priceSpan">£ @Model.Price</span>
+                <small class="text-muted">(INC. VAT)</small>
+            </p>
+            <p class="text-success">
+                Status: @Model.Status
+            </p>
+            <div class="d-flex mb-4">
+                <input type="number" id="quantityInput" value="1" min="1" max="100" class="form-control w-25 me-3" />
+                <button class="btn btn-warning fw-bold px-4">ADD TO BAG</button>
+            </div>
+
+            <!-- Description and Details Switch -->
+            <div class="d-flex mb-3">
+                <button class="btn btn-outline-secondary btn-switch active me-2" id="btnDescription">
+                    DESCRIPTION
+                </button>
+                <button class="btn btn-outline-secondary btn-switch" id="btnDetails">
+                    DETAILS
+                </button>
+            </div>
+
+            <!-- Hidden Product ID -->
+            <input type="hidden" id="productId" value="@Model.Id" />
+
+            <!-- Description Content -->
+            <div id="contentArea" class="content-area">
+                <p>@Model.Detail.Description</p>
+                <p><strong>ABV:</strong> @Model.Detail.ABV%</p>
+                <p><strong>Brand:</strong> @Model.Brand.Name</p>
+                <p><strong>Age:</strong> @Model.Detail.Age years</p>
+                <p><strong>Varietal:</strong> @Model.Detail.Varietal</p>
+                <p><strong>Size:</strong> @Model.Detail.Size</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/productDetails.js"></script>
