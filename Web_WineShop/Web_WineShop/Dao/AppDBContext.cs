@@ -42,16 +42,6 @@ namespace Web_WineShop.Dao
 			base.OnModelCreating(modelBuilder);
 			modelBuilder.Entity<BankAccountOwner>().HasKey(bao => new { bao.UserId, bao.BankAccountId });
 			modelBuilder.Entity<OrderItem>().HasKey(oi => new { oi.OrderDetailId, oi.ProductId });
-			modelBuilder.Entity<PaymentTransaction>()
-				.HasOne(p => p.PaymentMethod)
-				.WithMany()
-				.HasForeignKey(p => p.MethodId)
-				.OnDelete(DeleteBehavior.NoAction);
-			modelBuilder.Entity<PaymentTransaction>()
-				.HasOne(p => p.Order)
-				.WithMany()
-				.HasForeignKey(p => p.OrderId)
-				.OnDelete(DeleteBehavior.NoAction);
 		}
 
 
