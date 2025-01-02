@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Product Details";
+}
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+<link rel="stylesheet" href="~/css/productDetails.css" />
+
+<div class="container my-5">
+    <div class="row">
+        <!-- Product Image -->
+        <div class="col-md-5">
+            <div id="productCarousel"
+                 class="carousel slide"
+                 data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://watermark.lovepik.com/photo/20211122/large/lovepik-wine-picture_500726834.jpg" alt="Wine Image" class="d-block w-100" />
+                    </div>
+                </div>
+                <button class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#productCarousel"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"
+                          aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#productCarousel"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon"
+                          aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-md-7">
+            <h3 class="fw-bold">
+                A Breath Of Fresh Air - House of Hazelwood Legacy Collection
+            </h3>
+            <p class="text-muted">Blended Grain Scotch Whisky</p>
+            <p>
+                <span class="fw-bold fs-4">£1,449.90</span>
+                <small class="text-muted">(INC. VAT)</small>
+            </p>
+            <p class="text-success">
+                Item in Stock | Usually dispatched within 24 hours
+            </p>
+            <div class="d-flex mb-4">
+                <input type="number" value="1" min="1" max="100" class="form-control w-25 me-3" />
+                <button class="btn btn-warning fw-bold px-4">ADD TO BAG</button>
+            </div>
+
+            <!-- Switch Buttons -->
+            <div class="d-flex mb-3">
+                <button class="btn btn-outline-secondary btn-switch active me-2"
+                        id="btnDescription">
+                    DESCRIPTION
+                </button>
+                <button class="btn btn-outline-secondary btn-switch"
+                        id="btnDetails">
+                    DETAILS
+                </button>
+            </div>
+
+            <!-- Content Area -->
+            <div id="contentArea" class="content-area">
+                <p>
+                    Be the first to review Indri Dru Ex Bourbon Cask Strength. Write a
+                    review!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/productDetails.js"></script>
+

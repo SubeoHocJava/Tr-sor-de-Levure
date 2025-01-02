@@ -1,0 +1,53 @@
+﻿@model List<Web_WineShop.Models.Admin.PendingOrdersModel>
+@if (Model != null)
+{
+	<h1 class="h1-title text-center">Pending Order</h1>
+	<div class="container-fluid p-2">
+		<table class="table table-bordered table-Voucher">
+			<thead>
+				<tr>
+					<th>Order Id</th>
+					<th>Customer</th>
+					<th>Email</th>
+					<th>Products</th>
+					<th>Total Amount</th>
+					<th>Order Date</th>
+					<th>Confirm</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- row 1 -->
+				@foreach (var order in Model)
+				{
+					<tr>
+						<td>@order.OrderId</td>
+						<td>@order.CustomerName</td>
+						<td>
+							@order.CustomerEmail
+						</td>
+						<td>
+							<Popover>
+								<button className="btn btn-primary btn-sm">
+									View Items ({@order.Items.Count})
+								</button>
+								<ProductList items={@order.Items} />
+							</Popover>
+						</td>
+						<td>@order.TotalAmount</td>
+						<td>@order.OrderDate.ToString()</td>
+						<td class="actions">
+							<!--btn xac nhan-->
+							<button class="btn btn-color-real" onclick="window.location.href=@Url.ActionLink("ConfirmOrder","Admin",order.OrderId)">
+								<i class="bi bi-check-circle"></i>
+							</button>
+							<button class="btn btn-danger delete-btn" onclick="window.location.href=@Url.ActionLink("CancelOrder","Admin",order.OrderId)">
+								<i class="bi bi-trash"></i>
+							</button>
+						</td>
+					</tr>
+				}
+
+			</tbody>
+		</table>
+	</div>
+}

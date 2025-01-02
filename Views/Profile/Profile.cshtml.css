@@ -1,0 +1,197 @@
+/* Center the ul container */
+.new-container {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+}
+
+.new-list {
+    padding-left: 0;
+    width: 100%;
+    /* Optional: To take full width */
+    max-width: 300px;
+    /* Optional: to limit the max width */
+}
+
+    .new-list li {
+        display: flex;
+        align-items: center;
+        /* Align icon and text vertically */
+        padding: 10px 0;
+        /* Add padding for space between items */
+        border-bottom: 2px solid #ddd;
+        /* Add bottom border */
+    }
+
+    .new-list span {
+        margin-left: 20px;
+        /* Space between the icon and text */
+    }
+
+    .new-list i {
+        font-size: 1.5rem;
+        /* Adjust icon size */
+        margin-left: 50px;
+        color: #be9650;
+    }
+
+    .new-list li:hover {
+        border-bottom: 2px solid #be9650;
+        /* Change border color on hover */
+    }
+
+.border-top {
+    border-top: 2px solid #ddd !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.detail-form {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.new-list li.active {
+    border-bottom: 2px solid #be9650;
+    /* Make the border bright for active item */
+    background-color: #f4f4f4;
+    /* Optional: Add background highlight for the active item */
+    font-weight: bold;
+    /* Optional: Make the text bold */
+}
+
+    .new-list li.active i {
+        color: #be9650;
+        /* Change icon color for the active item */
+    }
+
+.h3-color {
+    color: #be9650;
+}
+
+.customer-tier-card {
+    /* Container for the entire card */
+    background-color: #fff;
+    /* Optional: Add background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.tier-title {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.tier-progress-wrapper {
+    position: relative;
+    width: 100%;
+    height: 70px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress-bar-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    /* Light grey background */
+    border-radius: 5px;
+}
+
+.progress-bar-fill {
+    position: absolute;
+    width: 50%;
+    /* Dynamic width set by JS */
+    height: 100%;
+    background-color: #ccf281;
+    /* Green fill color */
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.tier-labels-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: -20px;
+    width: 100%;
+}
+
+.tier-label {
+    position: relative;
+    font-size: 14px;
+    color: #333;
+}
+
+    .tier-label[data-tier="1"] i {
+        color: #cd7f32;
+        /* Bronze color */
+    }
+
+    .tier-label[data-tier="2"] i {
+        color: #c0c0c0;
+        /* Silver color */
+    }
+
+    .tier-label[data-tier="3"] i {
+        color: #ffd700;
+        /* Gold color */
+    }
+
+    .tier-label[data-tier="4"] i {
+        color: #b9f2ff;
+        /* Diamond color */
+    }
+
+.icon-rank {
+    font-size: 30px !important;
+    /* Increased icon size */
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cbd0d5;
+    color: white;
+    font-size: 24px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+    .service-item .icon-circle {
+        margin-right: 15px;
+    }
+
+/* Hiển   */
+
+#loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

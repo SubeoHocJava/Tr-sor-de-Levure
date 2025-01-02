@@ -1,0 +1,62 @@
+﻿@model Web_WineShop.Models.SendToFriend
+
+<div class="wishlist-container">
+    <div id="wishlist_friend_form_container" class="form-builder">
+        <h1 class="wishlist-title">Send Wishlist to a Friend</h1>
+        <p class="wishlist-description">
+            Tell a friend about your wishlist.<br>Simply fill in your name and email address, and the name and email
+            address of the friend you wish to tell.
+        </p>
+
+        <form action="@Url.Action("SendToFriend", "Wishlist")" method="post" id="wishlist_friend_form">
+            <div class="wishlist-friend-form-holder">
+                <div class="message">
+                    @if (ViewData["Message"] != null)
+
+                    {
+                        <div class="alert alert-info">@ViewData["Message"]</div>
+                    }
+                </div>
+
+                <!-- Friend's Name -->
+                <div class="form-group friend_name_wrapper">
+                    <label for="friend_name">Friend's Name <span class="mandatory">*</span></label>
+                    <input id="friend_name" class="input--expand" type="text" name="FriendName" value="@Model.FriendName" />
+                    @Html.ValidationMessageFor(model => model.FriendName, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Friend's Email -->
+                <div class="form-group friend_email_wrapper">
+                    <label for="friend_email">Friend's Email <span class="mandatory">*</span></label>
+                    <input id="friend_email" class="input--expand" type="email" name="FriendEmail" value="@Model.FriendEmail" />
+                    @Html.ValidationMessageFor(model => model.FriendEmail, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Your Name -->
+                <div class="form-group your_name_wrapper">
+                    <label for="your_name">Your Name <span class="mandatory">*</span></label>
+                    <input id="your_name" class="input--expand" type="text" name="YourName" value="@Model.YourName" />
+                    @Html.ValidationMessageFor(model => model.YourName, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Your Email -->
+                <div class="form-group your_email_wrapper">
+                    <label for="your_email">Your Email <span class="mandatory">*</span></label>
+                    <input id="your_email" class="input--expand" type="email" name="YourEmail" value="@Model.YourEmail" />
+                    @Html.ValidationMessageFor(model => model.YourEmail, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Your Message -->
+                <div class="form-group message_wrapper">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" class="textarea--expand" name="Message" rows="5">@Model.Message</textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group row">
+                    <button class="checkout-button" type="submit">Send Wishlist</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

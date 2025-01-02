@@ -1,0 +1,155 @@
+﻿@model IEnumerable<dynamic>
+@{
+    ViewData["Title"] = "Whisky";
+    Layout = "~/Views/Whisky/_LayoutWhisky.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <!-- Sidebar Filters -->
+        <div class="d-none d-md-block col-lg-3">
+            <div class="accordion accordion-flush" id="accordionExample">
+
+                <!-- Thương hiệu -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne"
+                                aria-expanded="false"
+                                aria-controls="collapseOne">
+                            <b>THƯƠNG HIỆU</b>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse">
+                        @foreach (var brand in ViewBag.Brands)
+                        {
+                            <div class="accordion-body border-bottom filter-option" data-filter-type="brand" data-value="@brand">
+                                <span>@brand</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <!-- Nồng độ -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="collapseTwo">
+                            <b>NỒNG ĐỘ</b>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse">
+                        @foreach (var abv in ViewBag.ABVs)
+                        {
+                            <div class="accordion-body border-bottom filter-option" data-filter-type="abv" data-value="@abv">
+                                <option value="@abv">@abv%</option>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <!-- Dung tích -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree"
+                                aria-expanded="false"
+                                aria-controls="collapseThree">
+                            <b>DUNG TÍCH</b>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse">
+                        @foreach (var size in ViewBag.Sizes)
+                        {
+                            <div class="accordion-body border-bottom filter-option" data-filter-type="size" data-value="@size">
+                                <option value="@size">@size</option>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <!-- Giá -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapsePrice"
+                                aria-expanded="false"
+                                aria-controls="collapsePrice">
+                            <b>LỌC THEO GIÁ</b>
+                        </button>
+                    </h2>
+                    <div id="collapsePrice" class="accordion-collapse collapse">
+                        <input type="range" class="form-range" min="0" max="@ViewBag.MaxPrice" id="priceRange">
+                        <div class="d-flex justify-content-between mt-2">
+                            <span>0 đ</span>
+                            <span>@ViewBag.MaxPrice.ToString("N0") đ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- List Products -->
+        <div class="col-xl-9 col-lg-8 col-md-12">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                @if (!Model.Any()) {
+                    <p class="text-center">Không tìm thấy sản phẩm nào phù hợp.</p>
+                }else{
+                    @foreach (var product in Model)
+                    {
+                        <div class="col">
+                            <div class="card product-card">
+                                <img src="@product.ImageUrl"
+                                     class="card-img-top"
+                                     alt="@product.Name" />
+                                <div class="card-body">
+                                    <h5 class="card-title">@product.Name</h5>
+                                    <p class="card-text">@product.Size</p>
+                                    <div class="price">
+                                        <p class="card-text">@product.Price.ToString("N0") đ</p>
+                                    </div>
+                                    <div class="hover-buttons">
+                                        <button class="btn btn-buy">Mua</button>
+                                        <button class="btn btn-view">Thêm</button>
+                                        <button class="btn btn-wishlist">
+                                            <i class="fa fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+
+            <!-- Navigation -->
+            <nav aria-label="Page navigation example" class="mt-4">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

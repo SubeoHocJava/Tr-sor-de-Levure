@@ -1,0 +1,19 @@
+﻿@model Web_WineShop.Models.ProfileModel.OrderHistoryModel
+<h3 class="font-weight-bold h3-color text-center">ORDER HISTORY</h3>
+<div class="mt-4">
+	@if (Model.Orders != null)
+	{
+		foreach (var order in Model.Orders)
+		{
+			<div class="border p-3 mb-4 order-container" data-id="@order.Id">
+				@await Html.PartialAsync("_OrderView", order)
+			</div>
+		}
+	}
+	else
+	{
+		<p>
+			Bạn chưa có đơn hàng nào
+		</p>
+	}
+</div>

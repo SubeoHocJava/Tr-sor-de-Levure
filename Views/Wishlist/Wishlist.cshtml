@@ -1,0 +1,109 @@
+﻿@model Web_WineShop.Models.WishlistViewModel
+
+<h3 class="font-weight-bold text-center">My Wishlist</h3>
+<div class="wishlist__items mt-4">
+    <form asp-action="Wishlist" method="post" id="wishlist_form">
+        <!-- Wishlist Top Bar -->
+        <div class="wishlist__top--bar">
+            <span>
+
+                @Model.WishItems.Count
+                items
+
+            </span>
+            <!--  <button type="button" class="link" data-href="SendToFriend">Send Wishlist to a Friend</button>-->
+        </div>
+
+        <!-- Wishlist Items -->
+        <ul class="wishlist__items--ul list-unstyled">
+            @foreach (var item in Model.WishItems)
+            {
+                <li class="wishlist__item d-flex justify-content-between align-items-center mb-3">
+                    <a class="wishlist__remove text-danger" href="javascript:void(0)" data-id="@item.Id">X</a>
+                    <div class="wishlist__image">
+                        <a href="@Url.Action("Details", "Product", new { id = item.ProductId })">
+                            <img src="@item.Product.ImageUrl" alt="@item.Product.Name" style="width: 100px;">
+                        </a>
+                    </div>
+                    <div class="wishlist__item--details flex-grow-1 ml-3">
+                        <div class="details--title">
+                            <a href="@Url.Action("Details", "Product", new { id = item.ProductId })">
+                                @item.Product.Name
+                            </a>
+                        </div>
+                        <div class="details--price">
+                            <span>@item.Product.Price.ToString("C")</span>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+
+        <!-- Button Area -->
+        <div class="button__area">
+            <button type="button" class="link" data-href="SendToFriend">Send Wishlist to a Friend</button>
+            <button type="button" id="purchase_wishlist">Purchase Wishlist</button>
+        </div>
+    </form>
+</div>
+    <script>
+       // Chạy khi nhấn vào nút có class .link
+document.querySelectorAll('.link').forEach(function (button) {
+    button.addEventListener('click', function () {
+        // Lấy URL từ thuộc tính data-href
+        var href = button.getAttribute('data-href');
+        // Chuyển hướng tới URL này
+        window.location.href = href;
+    });
+});
+
+//Chuyển qua Cart
+document.getElementById('purchase_wishlist').addEventListener('click', function () {
+    fetch('/Wishlist/PurchaseWishlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert(data.message);
+                window.location.href = '/CartItem'; // Chuyển hướng tới giỏ hàng hoặc nơi xử lý
+            } else {
+                alert(data.message);
+            }
+        });
+});
+
+// JavaScript để xử lý xóa mục - chỉ giữ một phiên bản này thôi
+document.querySelectorAll('.wishlist__remove').forEach(button => {
+    button.addEventListener('click', function() {
+        if(confirm('Bạn có chắc muốn xóa sản phẩm này?')) {
+            const wishItemId = parseInt(button.getAttribute('data-id'));
+            
+            fetch(`/Wishlist/RemoveFromWishlist?wishItemId=${wishItemId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Xóa item khỏi giao diện
+                    button.closest('.wishlist__item').remove();
+                    
+                    // Cập nhật số lượng items
+                    const count = document.querySelectorAll('.wishlist__item').length;
+                    document.querySelector('.wishlist__top--bar span').textContent = `${count} items`;
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error("Lỗi:", error);
+                alert("Đã xảy ra lỗi khi xóa sản phẩm!");
+            });
+        }
+    });
+});
+    </script>

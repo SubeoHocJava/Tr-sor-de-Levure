@@ -1,0 +1,57 @@
+﻿@model User
+<script>
+	$(function () {
+		function updateProgressBar(progressPercentage) {
+			$('#progressFill').css('width', progressPercentage + '%'); // Set progress width
+		}
+		updateProgressBar(@Model.Points);
+	});
+</script>
+<h3 class="font-weight-bold h3-color text-center">ACCOUNT OVERVIEW</h3>
+<!-- Rank -->
+<div class="customsr-tier-card">
+	<div class="tier-title mb-5">
+		<span><strong>Customsr Tier</strong></span>
+	</div>
+	<div class="tier-progress-wrapper">
+		<!-- Progress Bar Container -->
+		<div class="progress-bar-container">
+			<!-- Progress Bar -->
+			<div class="progress-bar-background">
+				<div class="progress-bar-fill" id="progressFill"></div>
+			</div>
+		</div>
+		<!-- Customsr Tier Labels -->
+		<div class="tier-labels-wrapper">
+			<!-- Tier 1: Bronze (Icon for 1000) -->
+			<span class="tier-label" data-tier="1">
+				<i class="bi bi-award icon-rank" aria-hidden="true"></i> 1000
+			</span>
+			<!-- Tier 2: Silver (Icon for 10000) -->
+			<span class="tier-label" data-tier="2">
+				<i class="bi bi-award icon-rank" aria-hidden="true"></i> 10000
+			</span>
+			<!-- Tier 3: Gold (Icon for 100000) -->
+			<span class="tier-label" data-tier="3">
+				<i class="bi bi-award icon-rank" aria-hidden="true"></i> 100000
+			</span>
+			<!-- Tier 4: Diamond (Icon for 1000000) -->
+			<span class="tier-label" data-tier="4">
+				<i class="bi bi-gem icon-rank" aria-hidden="true"></i> 1000000
+			</span>
+		</div>
+	</div>
+</div>
+<!-- Default Address Section -->
+<div class="mt-5 customsr-tier-card">
+	<div class="border-bottom d-flex justify-content-between align-items-center pb-3">
+		<span><strong>Default Address</strong></span>
+	</div>
+	<div class="mt-4">
+		<p><strong>Name:</strong> @Model.FullName</p>
+		<p><strong>Phone:</strong> @Model.Phone</p>
+		<p><strong>Address:</strong> @Model.Address</p>
+		<p><strong>Country:</strong> @Model.Country</p>
+	</div>
+</div>
+
