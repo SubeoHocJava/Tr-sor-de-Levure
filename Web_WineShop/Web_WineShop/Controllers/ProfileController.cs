@@ -7,14 +7,15 @@ using Newtonsoft.Json;
 using Web_WineShop.Dao;
 using Web_WineShop.Models;
 using Web_WineShop.Models.ProfileModel;
+using Web_WineShop.Services;
 
 namespace Web_WineShop.Controllers
 {
-	public class ProfileController(AppDBContext context, HttpClient httpClient, ILogger<ProfileController> logger) : Controller
+	public class ProfileController(AppDBContext context, HttpClient httpClient) : Controller
 	{
 		private readonly AppDBContext _context = context;
 		private readonly HttpClient _httpClient = httpClient;
-		private readonly ILogger<ProfileController> _logger = logger;
+		private readonly ProfileService _profileService = new ProfileService(context);
 
 		public IActionResult Profile()
 		{
@@ -51,7 +52,7 @@ namespace Web_WineShop.Controllers
 			var user = account?.User;
 			var model = new UserDetailModel();
 			if (user != null)
-				model = new UserDetailModel(user.Id, user.FullName, account.Email, user.DateOfBirth, user.Phone, user.ReceiveAddress != null ? user.ReceiveAddress : "");
+				model = new UserDetailModel(user.Id, user.FullName, account.Email, user.DateOfBirth, user.Phone, user.Address != null ? user.Address : "");
 			return PartialView("_DetailUserView", model);
 		}
 		[HttpPost]
@@ -66,25 +67,14 @@ namespace Web_WineShop.Controllers
 				return Json(new { success = false, errors });
 			}
 
-			User? u = _context.Users.Find(user.Id);
-			if (u != null)
-			{
-				u.ReceiveAddress = user.ReceiveAddress;
-				u.Phone = user.Phone;
-				u.DateOfBirth = user.DateOfBirth;
-				u.FullName = user.FullName;
-				_context.Users.Update(u);
-				_context.SaveChanges();
-				return Json(new { success = true });
-			}
-			return Json(new { success = false });
+			return Json(new { success = (_profileService.UpdateInfor(user)) });
 		}
 		#endregion
 		#region Bank Account
 		[HttpGet]
 		public IActionResult BankAccount(int id)
 		{
-			var user = _context.Users.FirstOrDefault(u => u.Id == id);
+			var user = _context.Users.First(u => u.Id == id);
 			var bankAccountOwners = _context.BankAccountOwners
 			.Where(bao => bao.UserId == user.Id)
 			.Include(bao => bao.BankAccount)
@@ -148,7 +138,6 @@ namespace Web_WineShop.Controllers
 		{
 			int idBank = data.GetProperty("idBank").GetInt32();
 			int id = data.GetProperty("id").GetInt32(); ;
-			Console.WriteLine(idBank + " " + id);
 			var user = _context.Users.FirstOrDefault(u => u.Id == id);
 			if (user == null)
 			{
@@ -278,7 +267,6 @@ namespace Web_WineShop.Controllers
 			}
 			return Json(new { success = false, message = "Order not found" });
 		}
-
 		#endregion
 		[HttpGet]
 		public IActionResult LogOut()

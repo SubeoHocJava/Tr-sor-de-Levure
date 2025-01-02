@@ -1,0 +1,278 @@
+﻿@model Web_WineShop.Models.ModelViewHomepage
+@{
+    Layout = "_LayoutMain";
+    ViewData["Title"] = "Homepage";
+}
+
+    <div class="container-fluid p-0">
+        <!-- slider-intro -->
+        <div>
+            <div>
+                <div class="carousel slide" id="slider-intro">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#slider-intro" data-bs-slide-to="0"
+                                class="active intro-indicator" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#slider-intro" data-bs-slide-to="1" aria-label="Slide 2"
+                                class="intro-indicator"></button>
+                        <button type="button" data-bs-target="#slider-intro" data-bs-slide-to="2" aria-label="Slide 3"
+                                class="intro-indicator"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="" class="d-block w-100">
+                                <img src="https://whisky.vn/wp-content/uploads/2024/07/Glengoyne-new-arrivals.jpg"
+                                     alt="intro-1" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="carousel-item active">
+                            <a href="" class="d-block w-100">
+                                <img src="https://whisky.vn/wp-content/uploads/2024/07/Glengoyne-new-arrivals.jpg"
+                                     alt="intro-1" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="carousel-item active">
+                            <a href="" class="d-block w-100">
+                                <img src="https://whisky.vn/wp-content/uploads/2024/07/Glengoyne-new-arrivals.jpg"
+                                     alt="intro-1" class="img-fluid">
+                            </a>
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev intro-controll" type="button" data-bs-target="#slider-intro"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next intro-controll" type="button" data-bs-target="#slider-intro"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="row py-4 bg-service m-0 text-center">
+                <div class="col">
+                    <div class="card border-0 bg-transparent">
+                        <img src="https://whisky.vn/wp-content/uploads/2023/10/icon1.svg" alt=""
+                             class="card-img-top w-48px m-auto">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Danh mục tuyển chọn
+                            </h4>
+                            <p class="card-text">Nhập khẩu & phân phối chính hãng</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0 bg-transparent">
+                        <img src="https://whisky.vn/wp-content/uploads/2023/10/icon1.svg" alt=""
+                             class="card-img-top w-48px  m-auto">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Danh mục tuyển chọn
+                            </h4>
+                            <p class="card-text">Nhập khẩu & phân phối chính hãng</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0 bg-transparent">
+                        <img src="https://whisky.vn/wp-content/uploads/2023/10/icon1.svg" alt=""
+                             class="card-img-top w-48px  m-auto">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Danh mục tuyển chọn
+                            </h4>
+                            <p class="card-text">Nhập khẩu & phân phối chính hãng</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0 bg-transparent">
+                        <img src="https://whisky.vn/wp-content/uploads/2023/10/icon1.svg" alt=""
+                             class="card-img-top w-48px  m-auto">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Danh mục tuyển chọn
+                            </h4>
+                            <p class="card-text">Nhập khẩu & phân phối chính hãng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Brand Shop -->
+        <div class="my-4">
+            <!-- tiêu đề -->
+            <div class="my-4">
+                <h2 class="text-center text-uppercase">Shop By Brand</h2>
+                <div class="title-line">
+                </div>
+            </div>
+            <!-- brand -->
+            <div class="p-4 wrapper-brand">
+                <div class="brand-list slider">
+                    <!---->
+                    @foreach (var item in Model.Brands)
+                    {
+                        <div>
+                            <a href="">
+                                <img src="~@item.ImageUrl"
+                                alt="brand" class="brand-img">
+                            </a>
+                        </div>
+                    }
+                    <!---->
+                </div>
+
+                <div class="p-4">
+                </div>
+            </div>
+            <!-- danh mục nhóm sản phẩm  -->
+            <div class="row m-auto">
+                <div class="col mx-3">
+                    <a href="">
+                        <img src="https://www.thewhiskyworld.com/images/modules/promo_units/1709546398-16442500.jpg"
+                             alt="" class="card-img-top img-hover-opacity">
+                    </a>
+                </div>
+                <div class="col mx-3">
+                    <a href="">
+                        <img src="https://www.thewhiskyworld.com/images/modules/promo_units/1709546398-16442500.jpg"
+                             alt="" class="card-img-top img-hover-opacity">
+                    </a>
+                </div>
+                <div class="col mx-3">
+                    <a href="">
+                        <img src="https://www.thewhiskyworld.com/images/modules/promo_units/1709546398-16442500.jpg"
+                             alt="" class="card-img-top img-hover-opacity">
+                    </a>
+                </div>
+                <div class="col mx-3">
+                    <a href="">
+                        <img src="https://www.thewhiskyworld.com/images/modules/promo_units/1709546398-16442500.jpg"
+                             alt="" class="card-img-top img-hover-opacity">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--feature tag menu -->
+        <div class="py-4 px-4">
+            <!-- tag -->
+            <div class="row g-0 container-fluid">
+                <div class="menu-tag-btn menu-tag-btn-select col">
+                    <span class="text-uppercase">
+                        New Arrivals
+                    </span>
+                </div>
+
+            </div>
+            <!-- trending menu product -->
+            <div id="trending-menu" class="my-4">
+                <!--ds sản phẩm hiện thị  -->
+                <div class="menu-item row g-0 container-fluid">
+                    @foreach (var item in Model.Products)
+                    {
+                        <a href="" class="card border-0 text-decoration-none col-3 position-relative ">
+                            <img src="~@item.ImageUrl"
+                            alt="" class="img-card-top" title=" Aberfeldy 2014 10 Year Old Single Cask Nation">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">
+                                    Aberfeldy 2014 10 Year Old Single Cask Nation
+                                </h5>
+                                <p class="card-text bold text-uppercase">74.90 (Inc. vat)</p>
+                                <div class="hover-buttons">
+                                    <button class="btn btn-buy">Mua</button>
+                                    <button class="btn btn-view">Thêm</button>
+                                    <button class="btn btn-wishlist">
+                                        <i class="fa fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="conatiner-label">
+                                <span class="label-offer-product bg-dark">
+                                    Free Gift
+                                </span>
+                            </div>
+                        </a>
+                    }
+                </div>
+            </div>
+            <!--trending bundle -->
+            <div class="container-fluid m-auto py-4">
+                <!-- ảnh và description cho bundle -->
+                <div class="row justify-content-center">
+                    <div class="col-7 me-3">
+                        <div class="row">
+                            <img src="https://whisky.vn/wp-content/uploads/2024/10/241008-Banner-Set-1-1-768x512.jpg"
+                                 class="col-8 p-0" alt="...">
+                            <div class="col-4 card m-0 border-0 bg-trending-bundle rounded-0">
+                                <div class="card-body text-white py-5">
+                                    <h3 class="font-weight-bold text-uppercase card-title">
+                                        Hộp quà Whisky "thuận bườm xuôi gió"
+                                    </h3>
+                                    <p class="card-text">
+                                        Dẫn đầu xu hướng quà tặng doanh nghiệp với hộp quà tặng whisky
+                                        thiết kế độc quyền. Món quà tri ân sang trọng, lý tưởng dành tặng đối tác và
+                                        doanh nghiệp dịp đặc biệt.
+                                    </p>
+                                    <a href="" class="btn btn-outline-w">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- danh sách hàng của bundle -->
+                    <div class="col-4 outline-trending-bundle ms-3">
+                        <p class="text-uppercase fs-4 mb-3"><b>New Arrivals</b></p>
+                        <div>
+                            <!-- sản phẩm 2 -->
+                            <div class="pb-2">
+                                <a href="" class="d-flex text-reset text-decoration-none">
+                                    <div class="flex-shrink-0 me-3">
+                                        <img src="https://whisky.vn/wp-content/uploads/2024/10/hop-qua-whisky-tamdhu-18-thuan-buom-xuoi-gio-150x150.jpg"
+                                             alt="Product 1" class="img-fluid img-100px">
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <p class="mb-1">Hộp quà whisky GlenAllachie 18 Thuận Buồm Xuôi Gió</p>
+                                        <strong>5.156.400 ₫</strong>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- line phân cách -->
+                            <div class="border-bottom mb-1"></div>
+                            <!-- sản phẩm 2 -->
+                            <div class="pb-2">
+                                <a href="" class="d-flex text-reset text-decoration-none">
+                                    <div class="flex-shrink-0 me-3">
+                                        <img src="https://whisky.vn/wp-content/uploads/2024/10/hop-qua-whisky-glenallachie-18-thuan-buom-xuoi-gio-100x100.jpg"
+                                             alt="Product 1" class="img-fluid img-100px">
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <p class="mb-1">Hộp quà whisky GlenAllachie 18 Thuận Buồm Xuôi Gió</p>
+                                        <strong>5.156.400 ₫</strong>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- Your custom JS -->
+    <script src="~/js/homepage.js"></script>

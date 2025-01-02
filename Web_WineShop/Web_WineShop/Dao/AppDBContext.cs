@@ -8,10 +8,8 @@ namespace Web_WineShop.Dao
 
 		public AppDBContext(DbContextOptions<AppDBContext> options) : base(options) { }
 
-        public DbSet<Account> Accounts { get; set; }
-        public DbSet<PasswordResetRequest> PasswordResetRequests { get; set; }  // Thêm dòng này
+		public DbSet<Account> Accounts { get; set; }
 
-        public DbSet<PaymentTransaction> Transactions { get; set; }
 		public DbSet<Bank> Banks { get; set; }
 		public DbSet<BankAccountOwner> BankAccountOwners { get; set; }
 		public DbSet<Brand> Brands { get; set; }
@@ -38,11 +36,11 @@ namespace Web_WineShop.Dao
 		public DbSet<WishItem> WishItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-		{
-			base.OnModelCreating(modelBuilder);
-			modelBuilder.Entity<BankAccountOwner>().HasKey(bao => new { bao.UserId, bao.BankAccountId });
-			modelBuilder.Entity<OrderItem>().HasKey(oi => new { oi.OrderDetailId, oi.ProductId });
-		}
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<BankAccountOwner>().HasKey(bao => new { bao.UserId, bao.BankAccountId });
+            modelBuilder.Entity<OrderItem>().HasKey(oi => new { oi.OrderDetailId, oi.ProductId });
+        }
 
 
 	}

@@ -1,64 +1,62 @@
-﻿
-@{
-    ViewData["Title"] = "Home Page";
-}
-  <div class="wishlist-container">
-        <div id="wishlist_friend_form_container" class="form-builder">
-            <h1 class="wishlist-title">Send Wishlist to a Friend</h1>
-            <p class="wishlist-description">
-                Tell a friend about your wishlist.<br>Simply fill in your name and email address, and the name and email
-                address of the friend you wish to tell.
-            </p>
+﻿@model Web_WineShop.Models.SendToFriend
 
-            <form action="/wishlist/send_to_friend/381748" method="post" id="wishlist_friend_form">
-                <div class="wishlist-friend-form-holder">
-                    <div class="message"></div>
+<div class="wishlist-container">
+    <div id="wishlist_friend_form_container" class="form-builder">
+        <h1 class="wishlist-title">Send Wishlist to a Friend</h1>
+        <p class="wishlist-description">
+            Tell a friend about your wishlist.<br>Simply fill in your name and email address, and the name and email
+            address of the friend you wish to tell.
+        </p>
 
-                    <div class="form-group friend_name_wrapper">
-                        <label for="friend_name">Friend's Name <span class="mandatory">*</span></label>
-                        <input id="friend_name" class="input--expand" type="text" name="friend_name" value="">
-                        <div class="checkout-select-message--error" >Name required</div> <!-- Chỉnh lại lớp ở đây -->
-                    </div>
+        <form action="@Url.Action("SendToFriend", "Wishlist")" method="post" id="wishlist_friend_form">
+            <div class="wishlist-friend-form-holder">
+                <div class="message">
+                    @if (ViewData["Message"] != null)
 
-                    <div class="form-group friend_email_wrapper">
-                        <label for="friend_email">Friend's Email <span class="mandatory">*</span></label>
-                        <input id="friend_email" class="input--expand" type="email" name="friend_email" value="">
-                        <div class="checkout-select-message--error";">Email required</div> <!-- Chỉnh lại lớp ở đây -->
-                    </div>
-
-                    <div class="form-group your_name_wrapper">
-                        <label for="your_name">Your Name <span class="mandatory">*</span></label>
-                        <input id="your_name" class="input--expand" type="text" name="your_name" value="">
-                        <div class="checkout-select-message--error" >Your name is required</div> <!-- Chỉnh lại lớp ở đây -->
-                    </div>
-
-                    <div class="form-group your_email_wrapper">
-                        <label for="your_email">Your Email <span class="mandatory">*</span></label>
-                        <input id="your_email" class="input--expand" type="email" name="your_email" value="">
-                        <div class="checkout-select-message--error">Your email is required</div> <!-- Chỉnh lại lớp ở đây -->
-                    </div>
-
-                    <div class="form-group message_wrapper">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" class="textarea--expand" name="message" rows="5"></textarea>
-                    </div>
-
-                    <!-- reCAPTCHA -->
-                    <div class="form-group g_recaptcha_response_wrapper">
-                        <div id="g-recaptcha_wishlist_friend" class="g-recaptcha"
-                             data-sitekey="6Lc-9PAUAAAAAKOHaVHGDTmqVN_jN9Wjv7eYMzOI"></div>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div class="form-group row">
-                        <button class="checkout-button" type="submit">Send Wishlist</button>
-                    </div>
+                    {
+                        <div class="alert alert-info">@ViewData["Message"]</div>
+                    }
                 </div>
-            </form>
-        </div>
+
+                <!-- Friend's Name -->
+                <div class="form-group friend_name_wrapper">
+                    <label for="friend_name">Friend's Name <span class="mandatory">*</span></label>
+                    <input id="friend_name" class="input--expand" type="text" name="FriendName" value="@Model.FriendName" />
+                    @Html.ValidationMessageFor(model => model.FriendName, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Friend's Email -->
+                <div class="form-group friend_email_wrapper">
+                    <label for="friend_email">Friend's Email <span class="mandatory">*</span></label>
+                    <input id="friend_email" class="input--expand" type="email" name="FriendEmail" value="@Model.FriendEmail" />
+                    @Html.ValidationMessageFor(model => model.FriendEmail, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Your Name -->
+                <div class="form-group your_name_wrapper">
+                    <label for="your_name">Your Name <span class="mandatory">*</span></label>
+                    <input id="your_name" class="input--expand" type="text" name="YourName" value="@Model.YourName" />
+                    @Html.ValidationMessageFor(model => model.YourName, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Your Email -->
+                <div class="form-group your_email_wrapper">
+                    <label for="your_email">Your Email <span class="mandatory">*</span></label>
+                    <input id="your_email" class="input--expand" type="email" name="YourEmail" value="@Model.YourEmail" />
+                    @Html.ValidationMessageFor(model => model.YourEmail, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Your Message -->
+                <div class="form-group message_wrapper">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" class="textarea--expand" name="Message" rows="5">@Model.Message</textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group row">
+                    <button class="checkout-button" type="submit">Send Wishlist</button>
+                </div>
+            </div>
+        </form>
     </div>
-
-    <script src="~/js/Wishlist/Send_to_friend.js"></script>
-
-
-
+</div>

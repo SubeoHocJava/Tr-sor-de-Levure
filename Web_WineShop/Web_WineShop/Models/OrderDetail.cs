@@ -19,6 +19,8 @@ namespace Web_WineShop.Models
 
 		[Column("PAYMENT_METHOD_ID")]
 		public int PaymentMethodId { get; set; }
+		[Column("RECEIVE_ADDRESS")]
+		public string ReceiveAddress { get; set; }
 
 		// Mối quan hệ với Voucher
 		[ForeignKey("VoucherId")]
