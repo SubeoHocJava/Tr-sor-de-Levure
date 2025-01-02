@@ -1,33 +1,46 @@
-﻿$(document).ready(function () {
-    // Hàm tải danh sách các quốc gia
-    function loadCountries() {
-        $.ajax({
-            url: 'https://restcountries.com/v3.1/all',  // URL để lấy dữ liệu quốc gia
-            type: 'GET',
-            dataType: 'json',
-            beforeSend: function () {
-                // Thông báo "Đang tải..." khi đang tải quốc gia
-                $('#country').html('<option>Loading...</option>');
-            },
-            success: function (data) {
-                // Xóa các lựa chọn cũ
-                $('#country').html('<option value="">Choose your country...</option>');
+﻿// country.js
 
-                // Lặp qua dữ liệu và điền vào dropdown
-                $.each(data, function (index, country) {
-                    // Tên quốc gia trong trường 'name.common' 
-                    var countryName = country.name.common;
-                    var countryCode = country.cca2; // Mã quốc gia ngắn (ví dụ: "US", "VN")
-                    $('#country').append('<option value="' + countryCode + '">' + countryName + '</option>');
-                });
-            },
-            error: function () {
-                // Nếu có lỗi xảy ra, hiển thị thông báo lỗi
-                $('#country').html('<option>Error</option>');
+// Function to load countries and populate the country dropdown
+function loadCountries() {
+    const countrySelect = document.getElementById('country'); // Get the country select element
+
+    // Clear any existing options
+    countrySelect.innerHTML = '';
+
+    console.log("Loading countries...");
+
+    // Fetch countries from the API
+    fetch('https://restcountries.com/v3.1/all')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch countries');
             }
-        });
-    }
+            return response.json();
+        })
+        .then(countries => {
+            console.log("Countries fetched:", countries);
 
-    // Gọi hàm để tải danh sách quốc gia khi trang web được tải
-    loadCountries();
-});
+            // Add a default option at the top
+            let defaultOption = document.createElement('option');
+            defaultOption.textContent = 'Select a Country';
+            defaultOption.value = '';
+            countrySelect.appendChild(defaultOption);
+
+            // Loop through countries and add each as an option
+            countries.forEach(country => {
+                let option = document.createElement('option');
+                option.value = country.cca2; // Using the country code (e.g., "US" for United States)
+                option.textContent = country.name.common; // Country name (e.g., "United States")
+                countrySelect.appendChild(option);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching country data:', error);
+            let defaultOption = document.createElement('option');
+            defaultOption.textContent = 'Failed to load countries';
+            countrySelect.appendChild(defaultOption);
+        });
+}
+
+// Call the function to load countries when the page loads
+window.onload = loadCountries;
