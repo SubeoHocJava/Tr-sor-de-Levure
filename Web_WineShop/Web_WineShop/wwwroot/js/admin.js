@@ -160,68 +160,68 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////
-document.addEventListener("DOMContentLoaded", function () {
-    const editButtons = document.querySelectorAll(".edit-btn");
-    const userForm = document.querySelector(".edit-user-form");
+//document.addEventListener("DOMContentLoaded", function () {
+//    const editButtons = document.querySelectorAll(".edit-btn");
+//    const userForm = document.querySelector(".edit-user-form");
 
-    editButtons.forEach((btn) => {
-        btn.addEventListener("click", function () {
-            const row = this.closest("tr");
-            const userId = row.getAttribute("data-id");
+//    editButtons.forEach((btn) => {
+//        btn.addEventListener("click", function () {
+//            const row = this.closest("tr");
+//            const userId = row.getAttribute("data-id");
 
-            // Lấy dữ liệu từ hàng và điền vào form
-            const fullName = row.cells[1].textContent.trim();
-            const phone = row.cells[2].textContent.trim();
-            const email = row.cells[3].textContent.trim();
-            const ban = row.cells[4].textContent.trim();
-            const role = row.cells[5].textContent.trim();  // Lấy giá trị Role
-            const points = row.cells[6].textContent.trim();  // Lấy giá trị Points
+//            // Lấy dữ liệu từ hàng và điền vào form
+//            const fullName = row.cells[1].textContent.trim();
+//            const phone = row.cells[2].textContent.trim();
+//            const email = row.cells[3].textContent.trim();
+//            const ban = row.cells[4].textContent.trim();
+//            const role = row.cells[5].textContent.trim();  // Lấy giá trị Role
+//            const points = row.cells[6].textContent.trim();  // Lấy giá trị Points
 
-            // Điền dữ liệu vào form
-            document.getElementById("userId").value = userId;
-            document.getElementById("userFullName").value = fullName;
-            document.getElementById("phone").value = phone;
-            document.getElementById("userEmail").value = email;
-            document.getElementById("userBan").value = ban;
-            document.getElementById("userRole").value = role;  // Điền Role vào form
-            document.getElementById("userPoints").value = points;  // Điền Points vào form
+//            // Điền dữ liệu vào form
+//            document.getElementById("userId").value = userId;
+//            document.getElementById("userFullName").value = fullName;
+//            document.getElementById("phone").value = phone;
+//            document.getElementById("userEmail").value = email;
+//            document.getElementById("userBan").value = ban;
+//            document.getElementById("userRole").value = role;  // Điền Role vào form
+//            document.getElementById("userPoints").value = points;  // Điền Points vào form
 
-            // Hiển thị form chỉnh sửa
-            userForm.classList.remove("d-none");
-        });
-    });
-});
+//            // Hiển thị form chỉnh sửa
+//            userForm.classList.remove("d-none");
+//        });
+//    });
+//});
 
-document.addEventListener("DOMContentLoaded", function () {
-    const deleteButtons = document.querySelectorAll(".delete-btn");
+//document.addEventListener("DOMContentLoaded", function () {
+//    const deleteButtons = document.querySelectorAll(".delete-btn");
 
-    deleteButtons.forEach((btn) => {
-        btn.addEventListener("click", function () {
-            const userId = this.getAttribute("data-id");
+//    deleteButtons.forEach((btn) => {
+//        btn.addEventListener("click", function () {
+//            const userId = this.getAttribute("data-id");
 
-            // Xác nhận trước khi xóa
-            if (confirm("Are you sure you want to delete this user?")) {
-                // Gửi yêu cầu POST để xóa người dùng
-                fetch(`/Admin/Delete/${userId}`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                })
-                    .then(response => {
-                        if (response.ok) {
-                            // Sau khi xóa thành công, xóa dòng trong bảng (DOM)
-                            const row = this.closest("tr");
-                            row.remove();
-                        } else {
-                            alert("Error deleting user: " + response.statusText);
-                        }
-                    })
-                    .catch(error => {
-                        console.error("Error:", error);
-                        alert("Error deleting user");
-                    });
-            }
-        });
-    });
-});
+//            // Xác nhận trước khi xóa
+//            if (confirm("Are you sure you want to delete this user?")) {
+//                // Gửi yêu cầu POST để xóa người dùng
+//                fetch(`/Admin/Delete/${userId}`, {
+//                    method: "POST",
+//                    headers: {
+//                        "Content-Type": "application/json"
+//                    },
+//                })
+//                    .then(response => {
+//                        if (response.ok) {
+//                            // Sau khi xóa thành công, xóa dòng trong bảng (DOM)
+//                            const row = this.closest("tr");
+//                            row.remove();
+//                        } else {
+//                            alert("Error deleting user: " + response.statusText);
+//                        }
+//                    })
+//                    .catch(error => {
+//                        console.error("Error:", error);
+//                        alert("Error deleting user");
+//                    });
+//            }
+//        });
+//    });
+//});
